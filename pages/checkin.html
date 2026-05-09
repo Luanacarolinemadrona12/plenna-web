@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check-in | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/checkin.js" defer></script>
+  </head>
+  <body data-page="home" data-screen="checkin">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page checkin-page">
+        <header class="page-header figma-topbar">
+          <h1>Check-in diário</h1>
+          <p>Seu estado ajusta tela inicial, foco e planejamento.</p>
+          <div class="ux-stepper" aria-label="Progresso do check-in">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <small id="checkinProgressText">1 de 3 · humor</small>
+          </div>
+        </header>
+
+        <form class="form" id="checkinForm">
+          <section class="card checkin-card mood-card" data-checkin-step="1">
+            <h2>Como você está se sentindo?</h2>
+            <p>Ajuda a ajustar suas recomendações.</p>
+            <div class="choice-grid" id="humorChoices"></div>
+          </section>
+
+          <section class="card checkin-card energy-card" data-checkin-step="2">
+            <h2>Nível de energia</h2>
+            <input id="energyRange" type="range" min="1" max="10" value="7" aria-label="Nível de energia">
+            <input id="energyValue" name="energia" type="hidden" value="media">
+            <p id="energyLabel">⚡ 7 / 10 · energia média-alta</p>
+            <div class="energy-scale"><span>Baixa</span><span>Média</span><span>Alta</span></div>
+          </section>
+
+          <section class="card checkin-card factor-card" data-checkin-step="2">
+            <h2>O que influenciou seu humor?</h2>
+            <div class="choice-grid two" id="factorChoices"></div>
+          </section>
+
+          <section class="card checkin-card need-card" data-checkin-step="3">
+            <h2>O que você precisa hoje?</h2>
+            <p>Escolha uma necessidade para guiar as próximas ações.</p>
+            <div class="choice-grid" id="needChoices"></div>
+          </section>
+
+          <div class="checkin-actions">
+            <div class="checkin-step-actions">
+              <button class="button secondary" type="button" id="checkinBack">Voltar</button>
+              <button class="button primary" type="button" id="checkinNext">Continuar</button>
+            </div>
+            <button class="button primary full" type="submit" id="checkinSubmit">Salvar check-in</button>
+            <button class="button secondary full" type="button" id="skipCheckin">Pular por hoje</button>
+          </div>
+        </form>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

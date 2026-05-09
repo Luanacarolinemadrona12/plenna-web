@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lembretes | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
+  </head>
+  <body data-page="more" data-screen="reminders">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page reminders-figma-page">
+        <header class="reminders-figma-header">
+          <h1>Lembretes personalizados</h1>
+          <p>Veja o que está ativo hoje e como os lembretes mudam com o contexto do dia.</p>
+        </header>
+
+        <section class="reminder-summary-card">
+          <h2>Resumo de hoje</h2>
+          <p>Modo atual: equilíbrio. O sistema mantém check-in cedo, pausa após foco e hidratação à tarde com intensidade diferente conforme sua energia.</p>
+          <div class="reminder-chip-row">
+            <span class="chip" data-reminder-total>4 lembretes ativos</span>
+            <span class="chip">ajustado por energia</span>
+            <span class="chip">modo silencioso 20h</span>
+          </div>
+        </section>
+
+        <section class="reminder-card-list" id="reminderList"></section>
+
+        <section class="reminder-connected-card">
+          <h2>Lembretes conectados ao sistema</h2>
+          <p>Os lembretes mudam com energia, hábitos pendentes, foco do dia e modo difícil. Eles sugerem, não pressionam.</p>
+          <div class="reminder-action-row">
+            <a href="settings.html">Ver configurações</a>
+            <a href="micro-pauses.html">Ver micro pausas</a>
+          </div>
+        </section>
+
+        <form class="reminder-create-form reminder-create-panel" data-dedicated-reminder-form>
+          <input name="title" required placeholder="Novo lembrete">
+          <input name="body" required placeholder="Mensagem">
+          <div class="grid-2">
+            <input name="time" type="time" value="09:00">
+            <select name="active">
+              <option value="true">Ativo</option>
+              <option value="false">Pausado</option>
+            </select>
+          </div>
+          <button type="submit">Criar lembrete</button>
+        </form>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

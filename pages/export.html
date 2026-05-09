@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exportar | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
+  </head>
+  <body data-page="more" data-screen="export">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page dedicated-page export-figma">
+        <header class="proto-topbar">
+          <h1>Exportar relatórios</h1>
+          <p>Escolha período e módulos para baixar um JSON local completo.</p>
+        </header>
+
+        <section class="export-format-card">
+          <h2>O que cada formato leva</h2>
+          <div class="chip-row">
+            <span class="chip active">PDF · resumo visual</span>
+            <span class="chip">CSV · dados brutos</span>
+            <span class="chip active">JSON · funcional</span>
+          </div>
+          <p>O arquivo gerado agora respeita o período selecionado e mantém dados brutos de tarefas, hábitos, foco, diário e check-ins.</p>
+        </section>
+
+        <section class="export-simple-card">
+          <h2>Período</h2>
+          <div class="chip-row export-period-tabs">
+            <button class="chip active" type="button" data-export-period="7">Semana</button>
+            <button class="chip" type="button" data-export-period="30">Mês</button>
+            <button class="chip" type="button" data-export-period="all">Tudo</button>
+          </div>
+        </section>
+
+        <section class="export-simple-card">
+          <h2>Módulos selecionados</h2>
+          <p data-export-preview-copy>Humor, produtividade, hábitos, foco, diário e resumo semanal.</p>
+          <div class="export-modules-list" id="exportModules">
+            <label class="dedicated-check-line"><span><strong>Check-ins</strong><small>Humor, energia e fatores</small></span><input type="checkbox" data-export-module="checkins" checked></label>
+            <label class="dedicated-check-line"><span><strong>Tarefas</strong><small>Prioridades, prazos e subtarefas</small></span><input type="checkbox" data-export-module="tasks" checked></label>
+            <label class="dedicated-check-line"><span><strong>Hábitos</strong><small>Templates e registros por dia</small></span><input type="checkbox" data-export-module="habits" checked></label>
+            <label class="dedicated-check-line"><span><strong>Foco</strong><small>Sessões e duração</small></span><input type="checkbox" data-export-module="focusSessions" checked></label>
+            <label class="dedicated-check-line"><span><strong>Diário e notas</strong><small>Entradas conectadas</small></span><input type="checkbox" data-export-module="entries" checked></label>
+          </div>
+        </section>
+
+        <section class="export-simple-card">
+          <h2>Prévia do arquivo</h2>
+          <pre class="export-preview" data-dedicated-export-preview>{ periodo: "7", modulos: 5, registros: 0 }</pre>
+        </section>
+
+        <section class="export-actions-row">
+          <button class="button primary" type="button" data-dedicated-export>Gerar relatório simulado</button>
+          <a class="button secondary" href="dashboard.html">Usar na revisão</a>
+        </section>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+.app-shell {
+  position: relative;
+  width: min(100%, var(--mobile-width));
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--bg);
+  box-shadow: 0 20px 55px rgba(18, 31, 46, 0.12);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 58px 20px 78px;
+  background: var(--bg);
+}
+
+.page.compact-top {
+  padding-top: 32px;
+}
+
+.page-center {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px 20px;
+}
+
+.screen-page {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 100vh;
+  padding: 58px 20px 78px;
+  background: var(--bg);
+}
+
+.status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 66px 0 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 18px;
+  pointer-events: none;
+}
+
+.page-header,
+.proto-topbar {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.page-header.with-action {
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.page-header p,
+.proto-topbar p {
+  max-width: 34ch;
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.proto-topbar h1 {
+  color: var(--text-heading);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28px;
+}
+
+.stack,
+.stack-lg,
+.content-list {
+  display: grid;
+  gap: 10px;
+}
+
+.stack-lg {
+  gap: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row.between {
+  justify-content: space-between;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bottom-space {
+  height: 18px;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .app-shell {
+    min-height: 844px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .grid-2,
+  .grid-3,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

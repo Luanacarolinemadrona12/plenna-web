@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foco | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../js/mood-states.js?v=20260430-figma" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/focus.js?v=20260430-figma" defer></script>
+  </head>
+  <body data-page="focus" data-screen="focus">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page focus-page" id="focusPage">
+        <header class="page-header">
+          <h1 id="focusTitle">Foco: energia média</h1>
+          <p id="focusSubtitle">Tarefa média, boa para uma sessão leve.</p>
+          <div class="chip-row focus-top-chips" id="focusTopChips"></div>
+        </header>
+
+        <section class="stack-lg">
+          <section class="focus-timer-cluster">
+            <div class="timer">
+              <img id="timerRing" src="../assets/images/focus-ring-neutral.svg" alt="">
+              <strong id="timerDisplay">25:00</strong>
+              <span id="timerModeLabel">Foco leve</span>
+            </div>
+            <div class="focus-controls">
+              <button class="focus-control secondary" id="pauseFocus" type="button" disabled><span class="focus-control-glyph" aria-hidden="true">↺</span></button>
+              <button class="focus-control primary" id="startFocus" type="button"><span class="focus-control-glyph" aria-hidden="true">▶</span></button>
+              <button class="focus-control secondary" id="finishFocus" type="button" disabled><span class="focus-control-glyph" aria-hidden="true">⏭</span></button>
+            </div>
+          </section>
+
+          <section class="focus-presets">
+            <h2 id="focusPresetTitle">Escolher sessão ideal</h2>
+            <div class="preset-row"></div>
+          </section>
+
+          <section class="focus-task-card">
+            <h2 id="focusTaskSectionTitle">Tarefa recomendada</h2>
+            <div class="focus-task-summary">
+              <h3 id="focusTaskTitle">Revisar relatório com calma</h3>
+              <p id="suggestedTaskText">Média prioridade · esforço médio · 1 sessão</p>
+            </div>
+            <p class="focus-context-line" id="focusContextLine">Energia 6/10 · média prioridade · esforço médio · 1 sessão</p>
+            <div class="chip-row focus-task-chips" id="focusTaskChips"></div>
+            <a class="button secondary focus-change-task" href="tasks.html">Trocar tarefa</a>
+            <label class="field sr-only">
+              <span>Tarefa do foco</span>
+              <select id="focusTaskSelect"></select>
+            </label>
+            <button class="button secondary sr-only" id="useSuggestedTask" type="button">Trocar tarefa</button>
+          </section>
+
+          <section class="focus-context-card" id="focusContextCard"></section>
+        </section>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novo hábito | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
+  </head>
+  <body data-page="habits" data-screen="habit-new">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page habit-new-figma">
+        <header class="proto-topbar">
+          <h1>Novo hábito</h1>
+          <p>Crie algo simples, sustentável e útil</p>
+        </header>
+
+        <form id="dedicatedHabitForm" class="habit-create-flow">
+          <section class="habit-create-hero">
+            <span class="habit-edit-icon">📚</span>
+            <div>
+              <h2>Leitura</h2>
+              <p>mínimo 10 min · horário ideal 18:30</p>
+              <small>Impacto no bem-estar: desacelerar antes da noite</small>
+              <div class="chip-row">
+                <span class="chip">pode pular 1x/semana</span>
+                <span class="chip">ajustado por você</span>
+              </div>
+            </div>
+            <i class="habit-edit-radio" aria-hidden="true"></i>
+          </section>
+
+          <input type="hidden" name="nome" value="Leitura">
+          <input type="hidden" name="categoria" value="Mente">
+          <input type="hidden" name="frequencia" value="Todos os dias">
+          <input type="hidden" name="metaMinima" value="10 min por sessão">
+
+          <section class="habit-create-info"><span>Meta mínima</span><strong>10 min por sessão</strong></section>
+          <section class="habit-create-info"><span>Horário ideal</span><strong>18:30 · depois do trabalho</strong></section>
+          <section class="habit-create-info"><span>Frequência</span><strong>Todos os dias · ajuste quando precisar</strong></section>
+          <section class="habit-create-info"><span>Flexibilidade saudável</span><strong>Pode ser movido para 20h sem perder a sequência</strong></section>
+          <section class="habit-create-info"><span>Impacto no bem-estar</span><strong>Ajuda a desligar a mente antes da noite</strong></section>
+
+          <button class="button primary full" type="submit">Criar Hábito</button>
+          <a class="button secondary full" href="habit-templates.html">Criar a partir de template</a>
+          <a class="button secondary full muted-button" href="habits.html">Cancelar</a>
+        </form>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

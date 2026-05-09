@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar tarefa | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/task-form.js" defer></script>
+  </head>
+  <body data-page="tasks" data-screen="task-edit">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page task-form-page figma-task-form-page">
+        <header class="task-form-title-only">
+          <h1 id="formTitle">Editar tarefa</h1>
+        </header>
+
+        <form class="form figma-task-form" id="taskForm" data-skip-example="true">
+          <section class="card task-title-card figma-task-title-card">
+            <label class="field">
+              <span>Título</span>
+              <input name="titulo" required maxlength="90" value="Preparar apresentação Q2">
+            </label>
+            <label class="field">
+              <span>Descrição</span>
+              <textarea name="descricao">Revisar narrativa, métricas e próximos passos.</textarea>
+            </label>
+          </section>
+
+          <section class="card task-fields-card figma-task-fields-card">
+            <h3>Campos da tarefa</h3>
+            <div class="figma-field-row">
+              <span>Prioridade</span>
+              <label class="choice-chip strong"><input type="radio" name="prioridade" value="alta" checked>Alta</label>
+              <label class="choice-chip muted"><input type="radio" name="prioridade" value="media">Média</label>
+              <label class="choice-chip muted"><input type="radio" name="prioridade" value="baixa">Baixa</label>
+              <label class="choice-chip muted"><input type="radio" name="prioridade" value="nenhuma">Nenhuma</label>
+            </div>
+            <div class="figma-field-grid">
+              <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" value="--:--"></label>
+              <label class="figma-pill-input"><span>Prazo</span><input name="prazo" value="Hoje · 16:00"></label>
+              <label class="figma-pill-input yellow"><span>Esforço</span><input name="esforco" value="Médio"></label>
+              <label class="figma-pill-input mint"><span>Impacto emocional</span><input name="impactoEmocional" value="Motivadora"></label>
+              <label class="figma-pill-input"><span>Projeto</span><input name="projeto" value="Trabalho"></label>
+              <label class="figma-pill-input"><span>Categoria</span><input name="categoria" value="Cliente ABC"></label>
+            </div>
+          </section>
+
+          <section class="card figma-subtasks-card">
+            <div class="figma-card-head">
+              <h3>Subtarefas</h3>
+              <span class="chip">2 de 5 concluídas</span>
+            </div>
+            <ol class="figma-subtask-list edit">
+              <li><b>✓</b><span>Revisar roteiro</span><i>≡</i></li>
+              <li><b>✓</b><span>Separar imagens</span><i>≡</i></li>
+              <li><b>!</b><span>Ajustar gráficos</span><i>≡</i></li>
+            </ol>
+            <textarea class="visually-hidden" name="subtarefas">Revisar roteiro
+Separar imagens
+Ajustar gráficos</textarea>
+          </section>
+
+          <section class="card figma-task-meta-card">
+            <h3>Recorrência, lembretes e etiquetas</h3>
+            <div class="figma-meta-row"><span>Recorrência</span><label class="choice-chip mint"><input type="radio" name="recorrencia" value="mensal" checked>mensal</label><label class="choice-chip"><input type="radio" name="recorrencia" value="após conclusão">após conclusão</label><label class="choice-chip"><input type="radio" name="recorrencia" value="dias específicos">dias específicos</label></div>
+            <div class="figma-meta-row"><span>Lembretes</span><label class="choice-chip warm"><input type="radio" name="lembrete" value="30 min antes" checked>30 min antes</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="no horário">no horário</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="múltiplos">múltiplos</label></div>
+            <div class="figma-meta-row"><span>Tags</span><label class="choice-chip"><input type="checkbox" name="tags" value="#cliente" checked>#cliente</label><label class="choice-chip"><input type="checkbox" name="tags" value="#apresentação" checked>#apresentação</label></div>
+          </section>
+
+          <section class="card figma-task-submit-card">
+            <button class="button primary full" type="submit">Salvar alterações</button>
+            <button class="button danger full" type="button" id="deleteTask">Excluir</button>
+            <a class="button secondary full" href="tasks.html">Cancelar</a>
+          </section>
+        </form>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

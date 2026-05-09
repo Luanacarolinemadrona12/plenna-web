@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configurações | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
+  </head>
+  <body data-page="more" data-screen="settings">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page settings-figma-page">
+        <header class="settings-figma-header">
+          <h1>Configurações</h1>
+          <p>Ajuste o sistema do Plenna sem perder contexto do seu dia.</p>
+        </header>
+
+        <section class="settings-summary-card">
+          <h2>Resumo do sistema</h2>
+          <div class="settings-profile-row">
+            <span class="avatar" data-settings-initial>L</span>
+            <div>
+              <h3 data-settings-name>Luana Caroline</h3>
+              <p>Modo atual: equilíbrio · foco leve · dia difícil automático</p>
+            </div>
+            <button type="button" data-edit-settings>Editar</button>
+          </div>
+          <div class="settings-chip-row">
+            <span class="chip" data-reminder-count>4 lembretes ativos</span>
+            <span class="chip" data-focus-default>foco leve · 25 min</span>
+          </div>
+        </section>
+
+        <section class="settings-card-list">
+          <article class="setting-card">
+            <div>
+              <h3>Check-in e lembretes</h3>
+              <p>08:30 em dias úteis · muda com contexto do dia</p>
+            </div>
+            <span class="chip" data-setting-key="checkinDiario">ativo</span>
+            <button type="button" data-toggle-setting="checkinDiario">Editar</button>
+          </article>
+
+          <article class="setting-card">
+            <div>
+              <h3>Pausas inteligentes</h3>
+              <p>ativas · entram antes quando a energia cai</p>
+            </div>
+            <span class="chip" data-setting-key="pausasInteligentes">contextual</span>
+            <button type="button" data-toggle-setting="pausasInteligentes">Editar</button>
+          </article>
+
+          <article class="setting-card">
+            <div>
+              <h3>Foco preferido</h3>
+              <p><span data-focus-default>foco leve · 25 min</span> com pausa guiada</p>
+            </div>
+            <span class="chip">ativo</span>
+            <button type="button" data-edit-focus-default>Editar</button>
+          </article>
+
+          <article class="setting-card">
+            <div>
+              <h3>Modo dia difícil</h3>
+              <p>automático · reduz cobrança e prioriza acolhimento</p>
+            </div>
+            <span class="chip" data-setting-key="modoDificil">protetivo</span>
+            <button type="button" data-toggle-setting="modoDificil">Editar</button>
+          </article>
+
+          <article class="setting-card">
+            <div>
+              <h3>Acessibilidade</h3>
+              <p>contraste, tamanho de texto e áreas de toque mais confortáveis</p>
+            </div>
+            <span class="chip">legível</span>
+            <a href="reminders.html">Ver lembretes</a>
+          </article>
+
+          <article class="setting-card">
+            <div>
+              <h3>Privacidade e exportação</h3>
+              <p>controle de dados, JSON local e exportação simulada</p>
+            </div>
+            <span class="chip">dados</span>
+            <a href="export.html">Exportar</a>
+          </article>
+        </section>
+
+        <button class="settings-clear-button" type="button" data-clear-local>Limpar dados locais</button>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

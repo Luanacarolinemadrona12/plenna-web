@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("./css/base.css");
+@import url("./css/layout.css");
+@import url("./css/components.css");
+@import url("./css/pages.css");
+
+/* Final cascade lock for the highest-diff 390x844 Figma comparison screens. */
+body[data-screen="checkin"] .ux-stepper {
+  display: none !important;
+}
+
+body[data-screen="checkin"] .page-header p {
+  max-width: none !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="checkin"] #skipCheckin {
+  display: none !important;
+}
+
+.figma-adjust-screen {
+  gap: 8px !important;
+  padding-top: 45px !important;
+}
+
+.figma-adjust-main {
+  min-height: 228px !important;
+  gap: 10px !important;
+  margin-top: 0 !important;
+  padding: 14px !important;
+}
+
+.figma-adjust-main .adjust-reason-panel {
+  display: none !important;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 56px !important;
+}
+
+.figma-adjust-main .row {
+  grid-template-columns: 1fr 108px;
+}
+
+.figma-adjust-main .button {
+  min-height: 44px !important;
+}
+
+.figma-adjust-schedule-card {
+  gap: 9px !important;
+  margin-top: 14px !important;
+  padding: 13px !important;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 66px 1fr 58px !important;
+  min-height: 58px !important;
+  padding: 7px 10px !important;
+}
+
+.adjust-schedule-item > span {
+  min-height: 42px !important;
+}
+
+.adjust-block-action {
+  min-height: 28px !important;
+  min-width: 56px !important;
+}
+
+.settings-figma-page {
+  padding-top: 51px !important;
+}
+
+.reminders-figma-page {
+  gap: 8px !important;
+  padding-top: 59px !important;
+}
+
+.reminder-summary-card {
+  min-height: 0 !important;
+  padding: 11px 12px !important;
+}
+
+.reminder-card-list {
+  gap: 8px !important;
+}
+
+.reminder-card {
+  min-height: 94px !important;
+  padding: 10px 12px !important;
+}
+
+.reminder-card-copy {
+  min-height: 31px !important;
+}
+
+.reminder-card h3 {
+  font-size: 12.6px !important;
+  line-height: 14px !important;
+}
+
+.reminder-card p {
+  font-size: 9.2px !important;
+  line-height: 10.5px !important;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 92px !important;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a {
+  min-height: 31px !important;
+  border-radius: 10px !important;
+  font-size: 10px !important;
+}
+
+.figma-night-screen {
+  padding-top: 55px !important;
+}

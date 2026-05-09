@@ -1,0 +1,66 @@
+[
+  {
+    "name": "home-high",
+    "sourceUrl": "http://127.0.0.1:5177/pages/home.html?demo=alta&v=mood7",
+    "state": "high",
+    "title": "Humor bom + energia alta",
+    "primary": "Bom momento para avançar na prioridade mais importante.",
+    "consoleErrors": 0
+  },
+  {
+    "name": "home-neutral",
+    "sourceUrl": "http://127.0.0.1:5177/pages/home.html?demo=media&v=mood7",
+    "state": "neutral",
+    "title": "Humor neutro + energia média",
+    "primary": "Escolha 3 prioridades, proteja uma pausa e evite excesso.",
+    "consoleErrors": 0
+  },
+  {
+    "name": "home-low",
+    "sourceUrl": "http://127.0.0.1:5177/pages/home.html?demo=baixa&v=mood7",
+    "state": "low",
+    "title": "Humor ruim + energia baixa",
+    "primary": "Seu dia parece carregado. Faça o essencial e proteja energia.",
+    "consoleErrors": 0
+  },
+  {
+    "name": "home-protect",
+    "sourceUrl": "http://127.0.0.1:5177/pages/home.html?demo=protetivo&v=mood7",
+    "state": "protect",
+    "title": "Humor baixo por vários dias",
+    "primary": "Hoje o foco é reduzir pressão, registrar sinais e cuidar de você.",
+    "consoleErrors": 0
+  },
+  {
+    "name": "focus-high",
+    "sourceUrl": "http://127.0.0.1:5177/pages/focus.html?demo=alta&v=mood7",
+    "state": "high",
+    "title": "Foco: energia alta",
+    "primary": "45:00",
+    "consoleErrors": 0
+  },
+  {
+    "name": "focus-neutral",
+    "sourceUrl": "http://127.0.0.1:5177/pages/focus.html?demo=media&v=mood7",
+    "state": "neutral",
+    "title": "Foco: energia média",
+    "primary": "25:00",
+    "consoleErrors": 0
+  },
+  {
+    "name": "focus-low",
+    "sourceUrl": "http://127.0.0.1:5177/pages/focus.html?demo=baixa&v=mood7",
+    "state": "low",
+    "title": "Foco: começo leve",
+    "primary": "15:00",
+    "consoleErrors": 0
+  },
+  {
+    "name": "focus-protect",
+    "sourceUrl": "http://127.0.0.1:5177/pages/focus.html?demo=protetivo&v=mood7",
+    "state": "protect",
+    "title": "Foco: pausa antes",
+    "primary": "03:00",
+    "consoleErrors": 0
+  }
+]

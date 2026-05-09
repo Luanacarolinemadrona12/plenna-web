@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diário e Notas | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/data.js" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/journal.js" defer></script>
+  </head>
+  <body data-page="more" data-screen="journal">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page journal-page">
+        <header class="page-header">
+          <h1>Diário</h1>
+          <p>Transforme reflexão em insight, tarefa ou aprendizado da semana.</p>
+        </header>
+
+        <section class="stack-lg">
+          <section class="journal-banner">
+            <h2>Da reflexão para a ação</h2>
+            <p>As entradas do diário podem gerar insight, virar tarefa e alimentar a revisão semanal.</p>
+            <div class="chip-row">
+              <span class="chip">gerar insight</span>
+              <span class="chip">criar tarefa</span>
+              <span class="chip">salvar aprendizado</span>
+            </div>
+            <div class="row">
+              <a class="button primary small" href="journal-night.html">Fechamento noturno</a>
+              <a class="button secondary small" href="notes.html">Notas conectadas</a>
+            </div>
+          </section>
+
+          <details class="journal-create">
+            <summary>Novo registro</summary>
+            <form class="card form" id="entryForm">
+              <div class="segmented" role="tablist" aria-label="Tipo de registro">
+                <button class="active" type="button" data-entry-type="diario">Diário</button>
+                <button type="button" data-entry-type="nota">Nota</button>
+              </div>
+              <input type="hidden" name="tipo" value="diario" id="entryType">
+              <label class="field">
+                <span>Título</span>
+                <input name="titulo" required placeholder="Ex.: Fechamento do dia">
+              </label>
+              <label class="field">
+                <span>Conteúdo</span>
+                <textarea name="conteudo" required placeholder="Escreva o que precisa ficar fora da cabeça."></textarea>
+              </label>
+              <label class="field">
+                <span>Tags</span>
+                <input name="tags" placeholder="energia, trabalho, casa">
+              </label>
+              <button class="button primary full" type="submit">Salvar registro</button>
+            </form>
+          </details>
+
+          <section class="journal-list-wrap">
+            <div class="row between">
+              <h2>Registros</h2>
+              <small id="entryCount">0 itens</small>
+            </div>
+            <div class="content-list" id="entryList"></div>
+          </section>
+        </section>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>

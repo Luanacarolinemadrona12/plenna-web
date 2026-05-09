@@ -1,0 +1,610 @@
+127.0.0.1 - - [07/May/2026 00:11:09] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:23] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:30] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:11:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:11:31] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:31] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:31] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:31] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:31] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:32] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:32] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:33] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:34] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:34] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:35] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:35] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:36] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:36] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:37] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:37] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:38] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:38] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:39] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:39] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:40] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:41] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:42] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:44] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:46] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:47] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:47] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:47] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:47] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:48] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:48] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:49] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:49] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:49] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:50] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:50] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:51] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:52] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:52] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:53] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:54] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:55] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:56] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:57] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:58] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:11:58] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:11:59] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:12:00] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:12:01] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:12:01] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:12:02] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50848)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:46] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:13:46] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:47] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:48] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:48] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:48] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:49] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:49] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:49] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:50] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:50] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:50] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:50] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:50] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:51] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:51] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:51] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:52] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:52] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:52] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:53] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:54] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:54] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:55] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:55] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:55] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:56] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:13:57] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:13:59] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:00] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:00] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:01] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:01] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:02] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:02] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:02] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:03] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:03] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:03] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:04] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:04] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:05] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:05] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:06] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:06] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:07] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:08] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:09] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:09] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:10] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:11] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:12] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:13] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:13] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:13] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:14] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:15] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:16] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:16] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:14:17] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:14:18] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51021)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:26] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:27] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:27] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:28] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:28] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:29] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:29] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:29] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:30] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:30] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:31] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:31] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:32] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:32] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:32] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:32] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:33] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:35] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:38] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:39] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:39] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:40] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:40] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:40] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:41] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:42] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:42] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:43] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:43] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:43] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:43] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:44] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:44] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:45] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:45] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:46] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:46] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:47] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:47] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:48] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:49] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:50] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:51] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:51] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:52] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:53] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:53] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:54] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:55] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:55] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:16:56] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:57] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:58] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:16:59] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51186)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:08] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:19:08] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:19:09] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:09] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:09] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:09] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:09] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:10] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:10] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:11] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:11] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:11] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:12] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:12] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:12] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:12] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:13] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:13] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:14] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:14] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:19:14] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:15] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:16] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:17] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:17] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:18] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:20] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:21] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:19:22] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:23] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:24] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:25] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:25] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:25] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:26] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:26] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:27] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:27] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:28] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:28] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:28] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:29] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:19:29] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:29] "GET /js/dedicated-pages.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:19:30] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:31] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:32] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:33] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:34] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:35] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:36] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:37] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:38] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:38] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:19:39] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:40] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:19:41] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51353)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:34] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:35] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:36] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:36] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:36] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:37] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:37] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:37] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:37] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:38] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:38] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:38] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:39] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:39] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:39] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:39] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:39] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:40] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:40] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:40] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:41] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:41] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:42] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:43] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:43] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:44] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:44] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:45] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:45] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:46] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:47] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:47] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:49] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:49] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:50] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:50] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:50] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:51] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:51] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:51] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:52] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:52] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:53] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:53] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:54] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:54] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:55] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:56] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:57] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:57] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:21:58] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:58] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:21:59] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:00] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:00] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:22:01] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:02] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:03] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:03] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:22:04] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:05] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:22:06] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51519)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /index.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /style.css?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /assets/images/plenna-leaf.png HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /js/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /js/icons.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /app.js?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /css/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /css/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /css/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /css/pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:13] "GET /assets/icons/plenna-icons.svg?v=20260429-icons HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:14] code 404, message File not found
+127.0.0.1 - - [07/May/2026 00:24:14] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /pages/checkin.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /style.css?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /js/data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /app.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /js/checkin.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:15] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:16] "GET /pages/checkin-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:16] "GET /js/screens.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:16] "GET /pages/home.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:16] "GET /js/mood-states.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:16] "GET /js/home.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:17] "GET /pages/planning.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:17] "GET /js/planning.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:17] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:18] "GET /pages/planning-adjust.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:18] "GET /js/dedicated-pages.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:19] "GET /pages/tasks.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:19] "GET /js/tasks.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:19] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:20] "GET /pages/task-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:20] "GET /js/task-form.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:21] "GET /pages/task-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:23] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:24] "GET /pages/calendar-week.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:25] "GET /pages/calendar-month.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:26] "GET /pages/habits.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:26] "GET /js/habits.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:26] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:27] "GET /pages/habit-new.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:28] "GET /pages/habit-edit.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:29] "GET /pages/habit-templates.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:29] "GET /pages/micro-pauses.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:30] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:30] "GET /pages/focus.html?demo=media&v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:30] "GET /assets/images/focus-ring-neutral.svg HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:30] "GET /js/focus.js?v=20260430-figma HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:31] "GET /pages/focus-session.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:31] "GET /js/focus-session.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:32] "GET /pages/focus-break.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:32] "GET /js/focus-break.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:33] "GET /pages/journal.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:33] "GET /js/journal.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:33] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:34] "GET /pages/journal-night.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:35] "GET /pages/notes.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:36] "GET /pages/dashboard.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:37] "GET /pages/dashboard-history.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:37] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:38] "GET /pages/dashboard-operational.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:39] "GET /pages/export.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:40] "GET /pages/export-success.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:41] "GET /pages/export-ready.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:41] "GET /pages/goals.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:42] "GET /css/pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/May/2026 00:24:42] "GET /pages/settings.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:43] "GET /pages/reminders.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:44] "GET /pages/empty-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:45] "GET /pages/prototype-overview.html?v=visual-compare-cdp HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 00:24:46] "GET /pages/checkin-states.html?v=visual-compare-cdp HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51695)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 464, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+----------------------------------------

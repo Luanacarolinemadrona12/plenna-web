@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pausa inteligente | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/focus-break.js" defer></script>
+  </head>
+  <body data-page="focus" data-screen="focus-break">
+    <div class="app-shell">
+      <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
+      <main class="page dedicated-page dedicated-break focus-break-figma">
+        <header class="proto-topbar">
+          <h1>Modo Foco</h1>
+          <p>Pausa inteligente sugerida antes do próximo bloco.</p>
+        </header>
+
+        <section class="focus-break-warning">
+          <h2>Sugerida automaticamente após um bloco intenso</h2>
+          <p>Sua energia caiu um pouco. Uma pausa curta agora ajuda a voltar com mais clareza.</p>
+        </section>
+
+        <section class="focus-break-suggestion">
+          <h2>Pausa inteligente sugerida</h2>
+          <p>Escolha uma pausa curta agora ou reorganize o restante do dia se a energia continuar caindo.</p>
+          <article>
+            <strong>Respiração guiada · 3 min</strong>
+            <small>Melhor para voltar ao foco sem perder ritmo.</small>
+          </article>
+          <article>
+            <strong>Alongamento rápido · 5 min</strong>
+            <small>Bom quando o corpo já começou a pesar.</small>
+          </article>
+          <div class="figma-pause-timer break-timer" id="breakTimer" data-break-duration="180" hidden>3:00</div>
+          <div class="row">
+            <button class="button primary" type="button" id="breakStart">Abrir micro pausa</button>
+            <button class="button secondary" type="button" id="breakDone">Voltar ao foco</button>
+          </div>
+          <a class="button secondary full" href="micro-pauses.html">Escolher outra micro pausa</a>
+        </section>
+
+        <section class="focus-break-after">
+          <h2>Depois da pausa</h2>
+          <p>Se a energia voltar, siga para o foco. Se não, troque para uma tarefa leve ou reorganize o dia.</p>
+          <div class="row">
+            <a class="button primary" href="focus.html">Voltar ao foco</a>
+            <a class="button secondary" href="tasks.html">Tarefa leve</a>
+          </div>
+          <a class="button secondary full" href="planning-adjust.html">Reorganizar meu dia</a>
+        </section>
+      </main>
+      <div data-bottom-nav></div>
+    </div>
+  </body>
+</html>
