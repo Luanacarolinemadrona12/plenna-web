@@ -24,15 +24,46 @@
 
   function renderControlIcons() {
     if (!window.PlennaIcons) return;
-    Utils.qs("#pauseFocus").innerHTML = window.PlennaIcons.svg("reset", "control-icon");
-    Utils.qs("#startFocus").innerHTML = window.PlennaIcons.svg("play", "control-icon");
-    Utils.qs("#finishFocus").innerHTML = window.PlennaIcons.svg("skip", "control-icon");
+    Utils.qs("#pauseFocus").innerHTML = window.PlennaIcons.svg("reset", "control-icon") + '<span class="focus-control-label">Voltar</span>';
+    Utils.qs("#startFocus").innerHTML = window.PlennaIcons.svg("play", "control-icon") + '<span class="focus-control-label">Iniciar</span>';
+    Utils.qs("#finishFocus").innerHTML = window.PlennaIcons.svg("skip", "control-icon") + '<span class="focus-control-label">Depois</span>';
   }
 
   function syncDuration() {
     var minutes = Math.max(1, Number(Utils.qs("#durationInput").value) || focusData.minutes);
     targetSeconds = minutes * 60;
     renderTimer();
+    updateFocusChoiceSummary();
+  }
+
+  function ensureFocusChoiceSummary() {
+    var card = Utils.qs(".focus-task-card");
+    if (!card || Utils.qs("#focusChoiceSummary")) return;
+    var switcher = Utils.qs(".focus-task-switcher", card);
+    var html = [
+      '<section class="recognition-card focus-choice-summary" id="focusChoiceSummary" aria-live="polite">',
+      '<span class="recognition-label">Sessao preparada</span>',
+      '<div class="recognition-stack">',
+      '<p><small>Tarefa escolhida</small><strong id="focusChosenTask">Revisar proposta</strong></p>',
+      '<p><small>Duracao</small><strong id="focusChosenDuration">25 min</strong></p>',
+      '<p><small>Tipo</small><strong id="focusChosenType">Foco leve</strong></p>',
+      "</div>",
+      '<button class="button secondary full" type="button" id="repeatLastFocus">Repetir última sessão</button>',
+      "</section>"
+    ].join("");
+    if (switcher) switcher.insertAdjacentHTML("beforebegin", html);
+    else card.insertAdjacentHTML("beforeend", html);
+  }
+
+  function updateFocusChoiceSummary() {
+    if (!Utils.qs("#focusChoiceSummary") || !focusData) return;
+    var select = Utils.qs("#focusTaskSelect");
+    var tasks = openTasks();
+    var selected = select && select.value ? tasks.find(function (task) { return String(task.id) === String(select.value); }) : null;
+    var minutes = Math.max(1, Number(Utils.qs("#durationInput") ? Utils.qs("#durationInput").value : focusData.minutes) || focusData.minutes);
+    Utils.setText("#focusChosenTask", selected ? selected.titulo : "Sessao livre");
+    Utils.setText("#focusChosenDuration", minutes + " min");
+    Utils.setText("#focusChosenType", focusData.timerLabel || "Foco leve");
   }
 
   function renderPresetRow() {
@@ -44,6 +75,19 @@
           "<span>" + Utils.escapeHtml(preset[0]) + "</span>",
           "<strong>" + Utils.escapeHtml(activeDuration) + "</strong>",
           '<input class="sr-only" id="durationInput" type="number" min="1" max="120" value="' + Utils.escapeHtml(preset[2]) + '">',
+          "</label>"
+        ].join("");
+      }
+      if (String(preset[0] || "").toLowerCase().indexOf("som") >= 0) {
+        return [
+          '<label class="preset-card focus-sound-preset">',
+          '<span>Som ambiente</span>',
+          '<select id="focusSoundSelect" aria-label="Selecionar som ambiente">',
+          '<option value="chuva">Chuva · café</option>',
+          '<option value="silencio">Silêncio</option>',
+          '<option value="floresta">Floresta leve</option>',
+          '<option value="ondas">Ondas baixas</option>',
+          "</select>",
           "</label>"
         ].join("");
       }
@@ -59,12 +103,13 @@
   function renderTaskSelect() {
     var select = Utils.qs("#focusTaskSelect");
     var tasks = openTasks();
-    suggestedTask = Utils.suggestFocusTask(tasks, Storage.latest(Storage.KEYS.checkins));
+    suggestedTask = Utils.suggestFocusTask(tasks, Utils.activeCheckin());
 
     if (!tasks.length) {
       select.innerHTML = '<option value="">Nenhuma tarefa aberta</option>';
       select.disabled = true;
       Utils.qs("#useSuggestedTask").disabled = true;
+      updateFocusChoiceSummary();
       return;
     }
 
@@ -73,6 +118,7 @@
       return '<option value="' + Utils.escapeHtml(task.id) + '">' + Utils.escapeHtml(task.titulo) + "</option>";
     }).join("");
     if (suggestedTask) select.value = suggestedTask.id;
+    updateFocusChoiceSummary();
   }
 
   function renderFocusState(checkin) {
@@ -112,6 +158,7 @@
     Utils.qs("#focusContextCard").hidden = true;
 
     renderPresetRow();
+    ensureFocusChoiceSummary();
     Utils.qs("#durationInput").value = focusData.minutes;
     syncDuration();
   }
@@ -119,22 +166,61 @@
   function start() {
     var minutes = Math.max(1, Number(Utils.qs("#durationInput").value) || focusData.minutes);
     var select = Utils.qs("#focusTaskSelect");
+    var sound = Utils.qs("#focusSoundSelect");
     var taskId = select.disabled ? null : select.value || null;
     Storage.write("focusDraft", {
       id: Utils.uid("draft"),
       taskId: taskId,
       minutos: minutes,
       tipo: focusData.timerLabel,
+      somAmbiente: sound ? sound.value : "chuva",
       iniciadoEm: new Date().toISOString()
     });
     window.location.href = "focus-session.html";
   }
 
+  function repeatLastFocus() {
+    var last = Storage.latest(Storage.KEYS.focusSessions);
+    if (!last) {
+      Utils.notify("Ainda não há sessão anterior. Use a sugestão de agora.", { kind: "warning" });
+      return;
+    }
+    Storage.write("focusDraft", {
+      id: Utils.uid("draft"),
+      taskId: last.taskId || null,
+      minutos: Number(last.duracaoMinutos || Math.round((last.duracao || 0) / 60) || focusData.minutes || 25),
+      tipo: last.tipo || focusData.timerLabel || "Foco leve",
+      iniciadoEm: new Date().toISOString(),
+      origem: "focus-repeat"
+    });
+    Utils.notify("Última sessão preparada.", { kind: "success" });
+    window.setTimeout(function () { window.location.href = "focus-session.html"; }, 220);
+  }
+
   function bindEvents() {
     Utils.qs("#durationInput").addEventListener("input", syncDuration);
+    Utils.qs("#focusTaskSelect").addEventListener("change", updateFocusChoiceSummary);
+    var sound = Utils.qs("#focusSoundSelect");
+    if (sound) {
+      sound.value = Storage.read("focusSound", "chuva");
+      sound.addEventListener("change", function () {
+        Storage.write("focusSound", sound.value);
+        Utils.notify("Som ambiente selecionado.", { kind: "success" });
+      });
+    }
     Utils.qs("#startFocus").addEventListener("click", start);
+    var repeatButton = Utils.qs("#repeatLastFocus");
+    if (repeatButton) repeatButton.addEventListener("click", repeatLastFocus);
     Utils.qs("#useSuggestedTask").addEventListener("click", function () {
-      if (suggestedTask) Utils.qs("#focusTaskSelect").value = suggestedTask.id;
+      if (!suggestedTask) {
+        Utils.notify("Nenhuma tarefa sugerida disponível agora.", { kind: "warning" });
+        return;
+      }
+      var select = Utils.qs("#focusTaskSelect");
+      var alreadySelected = String(select.value) === String(suggestedTask.id);
+      select.value = suggestedTask.id;
+      updateFocusChoiceSummary();
+      Utils.notify(alreadySelected ? "A tarefa sugerida já está selecionada." : "Tarefa sugerida selecionada.", { kind: "success" });
     });
     Utils.qsa("[data-focus-duration]").forEach(function (button) {
       button.addEventListener("click", function () {

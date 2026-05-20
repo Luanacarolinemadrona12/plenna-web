@@ -1,0 +1,148 @@
+{
+  "steps": [
+    {
+      "name": "check-in salva",
+      "ok": true,
+      "value": {
+        "url": "/pages/checkin-success.html",
+        "checkins": 12,
+        "tasks": 50,
+        "habits": 4,
+        "entries": 3,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "nova tarefa salva",
+      "ok": true,
+      "value": {
+        "url": "/pages/tasks.html",
+        "checkins": 12,
+        "tasks": 51,
+        "habits": 4,
+        "entries": 3,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "h?bito salva e marca",
+      "ok": true,
+      "value": {
+        "url": "/pages/habits.html",
+        "checkins": 12,
+        "tasks": 51,
+        "habits": 5,
+        "entries": 3,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "di?rio salva",
+      "ok": true,
+      "value": {
+        "url": "/pages/journal.html",
+        "checkins": 12,
+        "tasks": 51,
+        "habits": 5,
+        "entries": 4,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "nota salva e vira tarefa/h?bito",
+      "ok": true,
+      "value": {
+        "url": "/pages/notes.html",
+        "checkins": 12,
+        "tasks": 52,
+        "habits": 6,
+        "entries": 5,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "foco cria rascunho e abre sess?o",
+      "ok": true,
+      "value": {
+        "url": "/pages/focus-session.html",
+        "checkins": 12,
+        "tasks": 52,
+        "habits": 6,
+        "entries": 5,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "sess?o de foco salva",
+      "ok": true,
+      "value": {
+        "url": "/pages/focus-session.html",
+        "checkins": 12,
+        "tasks": 52,
+        "habits": 6,
+        "entries": 5,
+        "sessions": 3,
+        "reminders": 4,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "micro pausa seleciona",
+      "ok": true,
+      "value": {
+        "selected": true,
+        "status": "Respiração preparada"
+      }
+    },
+    {
+      "name": "lembrete salva",
+      "ok": true,
+      "value": {
+        "url": "/pages/reminders.html",
+        "checkins": 12,
+        "tasks": 52,
+        "habits": 6,
+        "entries": 5,
+        "sessions": 3,
+        "reminders": 5,
+        "exports": 1,
+        "draft": true
+      }
+    },
+    {
+      "name": "exporta??o salva hist?rico",
+      "ok": true,
+      "value": {
+        "url": "/pages/export-success.html",
+        "checkins": 12,
+        "tasks": 52,
+        "habits": 6,
+        "entries": 5,
+        "sessions": 3,
+        "reminders": 5,
+        "exports": 2,
+        "draft": true
+      }
+    }
+  ],
+  "failures": []
+}

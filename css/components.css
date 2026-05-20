@@ -524,6 +524,21 @@ input:checked + .choice-card {
   line-height: 15px;
 }
 
+.error-recovery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.error-recovery-actions .button {
+  min-height: 34px;
+  border-color: #f0c9bd;
+  background: #ffffff;
+  color: #bd4f3d;
+  box-shadow: none;
+}
+
 @keyframes plenna-spin {
   to {
     transform: rotate(360deg);
@@ -812,4 +827,63 @@ details summary {
 .break-status.done {
   background: #35c98d;
   color: #fff;
+}
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: end center;
+  padding: 20px;
+  background: rgba(26, 26, 46, 0.22);
+}
+
+.confirm-dialog {
+  width: min(100%, 350px);
+  padding: 18px;
+  border: 1px solid #e7ecf1;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 22px 48px rgba(26, 26, 46, 0.22);
+}
+
+.confirm-dialog h2 {
+  margin: 0 0 8px;
+  color: #1a1a2e;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.confirm-dialog p {
+  margin: 0;
+  color: #526378;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.page-back-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  width: fit-content;
+  margin: 0 20px 8px;
+  color: #136e47;
+  font-size: 13px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.page-back-link::before {
+  margin-right: 6px;
+  content: "‹";
+  font-size: 20px;
+  line-height: 1;
 }

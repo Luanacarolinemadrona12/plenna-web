@@ -1,0 +1,1 @@
+chrome.storage.sync.get({sidepanelWebappHash:"#",domain:"dida365.com"},(function(e){document.getElementById("webapp").setAttribute("src","https://"+e.domain+"/webapp"+e.sidepanelWebappHash+"?sidepanel=true")}));

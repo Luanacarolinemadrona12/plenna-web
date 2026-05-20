@@ -1,0 +1,21 @@
+{
+  "startFocus": {
+    "ok": true,
+    "text": "Iniciar"
+  },
+  "pathAfterStart": "/pages/focus-session.html",
+  "startTimer": {
+    "ok": true,
+    "text": "Iniciar"
+  },
+  "timerText": "",
+  "finish": {
+    "ok": true,
+    "text": "Concluir"
+  },
+  "confirmed": true,
+  "before": 3,
+  "after": 4,
+  "incremented": true,
+  "finalPath": "/pages/focus-break.html"
+}

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Notas conectadas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -24,9 +24,9 @@
         <section class="note-card quick">
           <span>Ideia rápida</span>
           <h2>“Preciso beber mais água durante a manhã.”</h2>
-          <p>Sugestão do sistema: isso parece um hábito de hidratação.</p>
+          <p>Sugestão do Plenna: isso parece um hábito de hidratação.</p>
           <div class="row">
-            <button class="button primary" type="button" data-static-note-habit="Hidratação 15h">Criar hábito</button>
+            <button class="button primary" type="button" data-static-note-habit="Hidratação 15h">Virar hábito</button>
             <button class="button secondary" type="button" data-static-note-task="Beber mais água" data-static-note-body="Preciso beber mais água durante a manhã.">Virar tarefa</button>
           </div>
         </section>
@@ -40,7 +40,7 @@
           </div>
           <div class="row">
             <button class="button primary" type="button" data-static-note-task="Revisar roteiro amanhã" data-static-note-body="Nota anexada à apresentação Q2.">Transformar em tarefa</button>
-            <button class="button secondary" type="button" data-toast="Nota movida para projeto">Mover para projeto</button>
+            <button class="button secondary" type="button" data-static-note-project="Projeto Q2">Mover para projeto</button>
           </div>
         </section>
 
@@ -60,12 +60,20 @@
         </section>
 
         <form class="note-create-form" data-local-form="note">
-          <input name="titulo" required placeholder="Título da nota rápida">
-          <textarea name="conteudo" required placeholder="Escreva uma nota"></textarea>
-          <button class="button primary full" type="submit">Salvar nota</button>
+          <label class="field compact-field">
+            <span>Título da nota rápida</span>
+            <input name="titulo" required placeholder="Ex.: Ideia para amanhã" aria-label="Título da nota rápida">
+          </label>
+          <label class="field compact-field">
+            <span>Conteúdo da nota</span>
+            <textarea name="conteudo" required placeholder="Escreva uma nota" aria-label="Conteúdo da nota"></textarea>
+          </label>
+          <button class="button primary full" type="submit">Salvar</button>
+          <a class="button secondary full" href="more.html">Cancelar</a>
         </form>
       </main>
       <div data-bottom-nav></div>
     </div>
   </body>
 </html>
+

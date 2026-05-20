@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<meta charset="utf-8">
+<style>html,body{margin:0;width:390px;height:844px;overflow:hidden;background:#e8eef4}iframe{width:390px;height:844px;border:0;display:block}</style>
+<iframe id="app" src="http://127.0.0.1:8999/pages/task-new.html"></iframe>
+<script>
+const frame = document.getElementById('app');
+frame.addEventListener('load', function(){
+  const run = function(){
+    const win = frame.contentWindow;
+    const doc = frame.contentDocument;
+    if (!win.PlennaUtils) { setTimeout(run, 200); return; }
+    const input = doc.querySelector('input[name="titulo"]');
+    const form = doc.querySelector('#taskForm');
+    if (input) { input.value = ''; input.dispatchEvent(new Event('input', { bubbles: true })); }
+    if (form) win.PlennaUtils.validateRequiredForm(form, { message: 'Dê um título para salvar a tarefa.' });
+  };
+  setTimeout(run, 1000);
+});
+</script>

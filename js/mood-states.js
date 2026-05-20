@@ -3,11 +3,51 @@
 
   var Utils = window.PlennaUtils;
 
+  function energyScore(checkin) {
+    var score = Number(checkin && checkin.energiaValor);
+    if (score >= 1 && score <= 10) return Math.round(score);
+    if (checkin && checkin.energia === "alta") return 8;
+    if (checkin && checkin.energia === "baixa") return 3;
+    return 6;
+  }
+
+  function energyLevel(checkin) {
+    var score = energyScore(checkin);
+    if (score <= 4) return "baixa";
+    if (score >= 8) return "alta";
+    return "media";
+  }
+
+  function isLowMood(checkin) {
+    return checkin && (checkin.humor === "ruim" || checkin.humor === "sensivel");
+  }
+
+  function moodChip(checkin, fallback) {
+    if (!checkin) return fallback || "Humor não informado";
+    var map = {
+      sensivel: "Muito sensível",
+      ruim: "Cansada",
+      neutro: "Neutra",
+      bom: "Bem",
+      otimo: "Ótima"
+    };
+    return map[checkin.humor] || fallback || "Humor registrado";
+  }
+
+  function clone(value) {
+    return JSON.parse(JSON.stringify(value));
+  }
+
+  function stripEnergyPrefix(value) {
+    return String(value || "").replace(/^Energia\s+\d+\/10\s*(?:·|Â·|-)\s*/i, "");
+  }
+
   function stateKey(checkin) {
     if (!checkin) return "neutral";
     if (checkin.protetivo || Utils.hasLowMoodStreak()) return "protect";
-    if ((checkin.humor === "bom" || checkin.humor === "otimo") && checkin.energia === "alta") return "high";
-    if ((checkin.humor === "ruim" || checkin.humor === "sensivel") && checkin.energia === "baixa") return "low";
+    var level = energyLevel(checkin);
+    if (level === "baixa") return "low";
+    if (level === "alta" && !isLowMood(checkin)) return "high";
     return "neutral";
   }
 
@@ -246,17 +286,72 @@
 
   function focus(checkin) {
     var data = state(checkin);
-    return Object.assign({ stateKey: data.key, className: data.className }, data.focus, {
+    var result = Object.assign({ stateKey: data.key, className: data.className }, clone(data.focus), {
       ringSrc: assetPath(data.focus.ring)
     });
+    if (!checkin) return result;
+
+    var score = energyScore(checkin);
+    var level = energyLevel(checkin);
+    var contextWithoutEnergy = stripEnergyPrefix(result.contextLine);
+    var secondaryChips = result.topChips ? result.topChips.slice(1) : contextWithoutEnergy.split("·").slice(0, 2).map(function (item) {
+      return item.trim();
+    }).filter(Boolean);
+    result.contextLine = "Energia " + score + "/10 - " + contextWithoutEnergy;
+    result.topChips = ["energia " + score + "/10"].concat(secondaryChips);
+    if (level === "baixa" && result.stateKey !== "protect") {
+      result.title = "Foco: energia baixa";
+      result.subtitle = "Comece curto, com menos pressão e uma pausa visível.";
+      result.minutes = Math.min(result.minutes || 15, 15);
+      result.timerLabel = "Começo leve";
+      result.finalTitle = "Sessão curta - 15 min";
+      result.finalBody = "Sua energia está em " + score + "/10. Hoje o plano favorece tarefas leves, pausa protegida e menos carga.";
+      result.finalBadge = "energia baixa";
+    } else if (level === "alta") {
+      result.minutes = Math.max(result.minutes || 45, 45);
+      result.timerLabel = "Foco profundo";
+      result.finalBody = "Sua energia está em " + score + "/10. Reserve o melhor bloco para uma tarefa importante e mantenha pausa curta depois.";
+      result.finalBadge = "energia alta";
+    } else if (level === "media") {
+      result.minutes = 25;
+      result.timerLabel = "Foco leve";
+      result.finalBody = "Sua energia está em " + score + "/10. Uma sessão leve com objetivo claro tende a funcionar melhor agora.";
+      result.finalBadge = "energia média";
+    }
+    return result;
   }
 
   function home(checkin) {
     var data = state(checkin);
-    return Object.assign({ stateKey: data.key, className: data.className }, data.home);
+    var result = Object.assign({ stateKey: data.key, className: data.className }, clone(data.home));
+    if (!checkin) return result;
+
+    var score = energyScore(checkin);
+    var level = energyLevel(checkin);
+    result.energyChip = "Energia " + score + "/10";
+    result.moodChip = moodChip(checkin, result.moodChip);
+    if (level === "baixa" && result.stateKey !== "protect") {
+      result.title = isLowMood(checkin) ? "Humor baixo + energia baixa" : "Energia baixa";
+      result.actionTag = "Reduzir carga";
+      result.actionTitle = "Sua energia está em " + score + "/10. Faça o essencial e proteja pausas.";
+      result.message.body = "Energia baixa: prefira tarefas leves, adie o que puder e deixe recuperação no plano.";
+    } else if (level === "alta") {
+      result.title = "Energia alta";
+      result.actionTag = "Avançar agora";
+      result.actionTitle = "Sua energia está em " + score + "/10. Bom momento para uma prioridade importante.";
+      result.message.body = "Energia alta: use um bloco de foco para o que mais importa e mantenha uma pausa curta.";
+    } else if (level === "media") {
+      result.title = "Energia média";
+      result.actionTag = "O que fazer agora";
+      result.actionTitle = "Sua energia está em " + score + "/10. Organize 3 prioridades possíveis.";
+      result.message.body = "Energia média: combine uma tarefa importante, uma leve e uma pausa visível.";
+    }
+    return result;
   }
 
   window.PlennaMood = {
+    energyScore: energyScore,
+    energyLevel: energyLevel,
     stateKey: stateKey,
     state: state,
     home: home,

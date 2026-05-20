@@ -3,6 +3,7 @@
 
   var Utils = window.PlennaUtils;
   var Mood = window.PlennaMood;
+  var Storage = window.PlennaStorage;
 
   function setStateClass(page, data) {
     page.classList.remove("state-high", "state-neutral", "state-low", "state-protect");
@@ -18,7 +19,8 @@
     Utils.setText("#homeDate", data.date);
     Utils.qs("#checkinChips").innerHTML = [
       '<span class="chip solid">' + Utils.escapeHtml(data.moodChip) + "</span>",
-      '<span class="chip">' + Utils.escapeHtml(data.energyChip) + "</span>"
+      '<span class="chip">' + Utils.escapeHtml(data.energyChip) + "</span>",
+      '<a class="chip" href="checkin.html">' + (checkin ? "Editar check-in" : "Fazer check-in") + "</a>"
     ].join("");
   }
 
@@ -27,19 +29,47 @@
       '<span class="eyebrow">' + Utils.escapeHtml(data.actionTag) + "</span>",
       "<h2>" + Utils.escapeHtml(data.actionTitle) + "</h2>",
       '<div class="row">',
-      '<a class="button primary" href="' + Utils.escapeHtml(data.primaryHref) + '">' + Utils.escapeHtml(data.primaryLabel) + "</a>",
-      '<a class="button secondary" href="' + Utils.escapeHtml(data.secondaryHref) + '">' + Utils.escapeHtml(data.secondaryLabel) + "</a>",
+      '<a class="button primary" href="' + Utils.escapeHtml(data.primaryHref || "planning.html") + '">' + Utils.escapeHtml(data.primaryLabel || "Planejar meu dia") + "</a>",
+      '<button class="button secondary" type="button" data-home-action="start-focus">' + Utils.escapeHtml(data.secondaryLabel || "Iniciar foco") + "</button>",
       "</div>"
     ].join("");
   }
 
+  function taskCategory(task, fallback) {
+    return task ? task.categoria || task.projeto || fallback || "Tarefa" : fallback || "Tarefa";
+  }
+
+  function priorityItems(data) {
+    if (Utils.getQueryParam("demo")) {
+      return data.priorities.map(function (item) {
+        return { id: "", title: item[0], category: item[1], done: false };
+      });
+    }
+    var openTasks = Utils.sortTasks(Storage.all(Storage.KEYS.tasks).filter(function (task) {
+      return !task.concluida;
+    }));
+    if (openTasks.length) {
+      return openTasks.slice(0, 3).map(function (task) {
+        return {
+          id: task.id,
+          title: task.titulo,
+          category: taskCategory(task, "Tarefa"),
+          done: Boolean(task.concluida)
+        };
+      });
+    }
+    return data.priorities.map(function (item) {
+      return { id: "", title: item[0], category: item[1], done: false };
+    });
+  }
+
   function renderPriorities(data) {
-    Utils.qs("#priorityList").innerHTML = data.priorities.map(function (item, index) {
+    Utils.qs("#priorityList").innerHTML = priorityItems(data).map(function (item, index) {
       return [
-        '<article class="priority-row home-priority-row">',
-        '<span class="home-check-dot" aria-hidden="true"></span>',
-        '<p><strong>' + (index + 1) + ".</strong> " + Utils.escapeHtml(item[0]) + "</p>",
-        '<a class="chip home-priority-chip" href="tasks.html">' + Utils.escapeHtml(item[1]) + "</a>",
+        '<article class="priority-row home-priority-row' + (item.done ? " done" : "") + '" data-home-priority-row' + (item.id ? ' data-task-id="' + Utils.escapeHtml(item.id) + '"' : "") + ">",
+        '<button class="home-check-dot" type="button" data-home-complete-task aria-label="Marcar tarefa como feita">' + (item.done ? "✓" : "") + "</button>",
+        '<p><strong>' + (index + 1) + ".</strong> " + Utils.escapeHtml(item.title) + "</p>",
+        '<a class="chip home-priority-chip" href="tasks.html">' + Utils.escapeHtml(item.category) + "</a>",
         "</article>"
       ].join("");
     }).join("");
@@ -70,21 +100,25 @@
   }
 
   function metricCard(kind, label, value) {
+    var href = kind === "focus" ? "focus.html" : kind === "habits" ? "habits.html" : "dashboard.html";
     return [
-      '<div class="home-metric-card ' + Utils.escapeHtml(kind) + '">',
+      '<a class="home-metric-card ' + Utils.escapeHtml(kind) + '" href="' + href + '">',
       '<span class="metric-dot" aria-hidden="true"></span>',
       "<div>",
       "<b>" + Utils.escapeHtml(label) + "</b>",
       "<strong>" + Utils.escapeHtml(value) + "</strong>",
       "</div>",
-      "</div>"
+      "</a>"
     ].join("");
   }
 
   function renderExtras(data) {
     var shortcuts = Utils.qs("#homeShortcuts");
     var note = Utils.qs("#homeFinalNote");
-    if (shortcuts) shortcuts.hidden = false;
+    if (shortcuts) {
+      shortcuts.hidden = false;
+      renderShortcuts(data);
+    }
     if (!note) return;
     if (data.banner) {
       note.hidden = false;
@@ -93,6 +127,122 @@
       note.hidden = true;
       note.textContent = "";
     }
+  }
+
+  function focusSuggestion() {
+    return Utils.suggestFocusTask(Utils.getOpenTasks(), Utils.activeCheckin());
+  }
+
+  function focusMode() {
+    var focus = Mood.focus(Utils.activeCheckin());
+    return {
+      minutes: Number(focus.minutes || 25),
+      type: focus.timerLabel || "Foco leve"
+    };
+  }
+
+  function renderShortcuts(data) {
+    var shortcuts = Utils.qs("#homeShortcuts");
+    if (!shortcuts) return;
+    shortcuts.innerHTML = [
+      '<button class="shortcut home-action-shortcut" type="button" data-home-action="breathe">Respirar 3 min</button>',
+      '<a class="shortcut home-action-shortcut" href="journal-night.html">Diário rápido</a>',
+      '<a class="shortcut home-action-shortcut always-visible" href="planning.html">Planejar semana</a>'
+    ].join("");
+  }
+
+  function writeFocusDraft(options) {
+    var mode = focusMode();
+    var suggested = focusSuggestion();
+    Storage.write("focusDraft", {
+      id: Utils.uid("draft"),
+      taskId: options.taskId || (suggested ? suggested.id : null),
+      minutos: options.minutes || mode.minutes,
+      tipo: options.type || mode.type,
+      iniciadoEm: new Date().toISOString(),
+      origem: options.origin || "home"
+    });
+  }
+
+  function startSuggestedFocus() {
+    writeFocusDraft({ origin: "home-suggested" });
+    Utils.notify("Foco preparado com a tarefa sugerida.", { kind: "success" });
+    window.setTimeout(function () { window.location.href = "focus-session.html"; }, 220);
+  }
+
+  function repeatLastFocus() {
+    var last = Storage.latest(Storage.KEYS.focusSessions);
+    if (!last) {
+      Utils.notify("Ainda não há sessão anterior. Preparei o foco sugerido.", { kind: "warning" });
+      startSuggestedFocus();
+      return;
+    }
+    writeFocusDraft({
+      taskId: last.taskId || null,
+      minutes: Number(last.duracaoMinutos || Math.round((last.duracao || 0) / 60) || 25),
+      type: last.tipo || "Foco leve",
+      origin: "home-repeat"
+    });
+    Utils.notify("Última sessão de foco preparada.", { kind: "success" });
+    window.setTimeout(function () { window.location.href = "focus-session.html"; }, 220);
+  }
+
+  function startBreathingPause() {
+    Storage.write("microPauseDraft", {
+      id: Utils.uid("pause"),
+      tipo: "Respiração",
+      minutos: 3,
+      criadoEm: new Date().toISOString(),
+      origem: "home"
+    });
+    Utils.notify("Pausa de respiração de 3 min preparada.", { kind: "success" });
+    window.setTimeout(function () { window.location.href = "micro-pauses.html?quick=breath"; }, 220);
+  }
+
+  function bindHomeActions() {
+    var page = Utils.qs("#homePage");
+    if (!page) return;
+    page.addEventListener("click", function (event) {
+      var complete = event.target.closest("[data-home-complete-task]");
+      if (complete) {
+        event.preventDefault();
+        var row = complete.closest("[data-task-id]");
+        if (!row) {
+          Utils.notify("Abra a lista para marcar esta prioridade.", { kind: "warning" });
+          return;
+        }
+        var task = Storage.find(Storage.KEYS.tasks, row.dataset.taskId);
+        if (!task) return;
+        Storage.update(Storage.KEYS.tasks, task.id, {
+          concluida: true,
+          concluidaEm: new Date().toISOString()
+        });
+        row.classList.add("done", "just-updated");
+        complete.textContent = "✓";
+        Utils.notify("Tarefa concluída. Prioridades atualizadas.", {
+          kind: "success",
+          actionLabel: "Desfazer",
+          onAction: function () {
+            Storage.update(Storage.KEYS.tasks, task.id, {
+              concluida: false,
+              concluidaEm: null
+            });
+            var data = Mood.home(Utils.activeCheckin());
+            renderPriorities(data);
+          }
+        });
+        window.setTimeout(function () {
+          renderPriorities(Mood.home(Utils.activeCheckin()));
+        }, 350);
+        return;
+      }
+      var action = event.target.closest("[data-home-action]");
+      if (!action) return;
+      event.preventDefault();
+      if (action.dataset.homeAction === "start-focus") startSuggestedFocus();
+      if (action.dataset.homeAction === "repeat-focus") repeatLastFocus();
+      if (action.dataset.homeAction === "breathe") startBreathingPause();
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -106,5 +256,6 @@
     renderMessage(data);
     renderMetrics(data);
     renderExtras(data);
+    bindHomeActions();
   });
 })();

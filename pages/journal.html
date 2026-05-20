@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diário e Notas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/journal.js" defer></script>
+    <script src="../js/journal.js?v=20260518-journal-night" defer></script>
   </head>
   <body data-page="more" data-screen="journal">
     <div class="app-shell">
@@ -32,7 +32,7 @@
               <span class="chip">salvar aprendizado</span>
             </div>
             <div class="row">
-              <a class="button primary small" href="journal-night.html">Fechamento noturno</a>
+              <a class="button primary small" href="journal-night.html">Criar fechamento de hoje</a>
               <a class="button secondary small" href="notes.html">Notas conectadas</a>
             </div>
           </section>
@@ -41,23 +41,24 @@
             <summary>Novo registro</summary>
             <form class="card form" id="entryForm">
               <div class="segmented" role="tablist" aria-label="Tipo de registro">
-                <button class="active" type="button" data-entry-type="diario">Diário</button>
-                <button type="button" data-entry-type="nota">Nota</button>
+                <button class="active" type="button" data-entry-type="diario" aria-label="Criar entrada de diário">Diário</button>
+                <button type="button" data-entry-type="nota" aria-label="Criar nota rápida">Nota</button>
               </div>
               <input type="hidden" name="tipo" value="diario" id="entryType">
               <label class="field">
                 <span>Título</span>
-                <input name="titulo" required placeholder="Ex.: Fechamento do dia">
+                <input name="titulo" required placeholder="Ex.: Fechamento do dia" aria-label="Título do registro">
               </label>
               <label class="field">
                 <span>Conteúdo</span>
-                <textarea name="conteudo" required placeholder="Escreva o que precisa ficar fora da cabeça."></textarea>
+                <textarea name="conteudo" required placeholder="Escreva o que precisa ficar fora da cabeça." aria-label="Conteúdo do registro"></textarea>
               </label>
               <label class="field">
                 <span>Tags</span>
-                <input name="tags" placeholder="energia, trabalho, casa">
+                <input name="tags" placeholder="energia, trabalho, casa" aria-label="Tags do registro">
               </label>
-              <button class="button primary full" type="submit">Salvar registro</button>
+              <button class="button primary full" type="submit" aria-label="Salvar registro">Salvar</button>
+              <button class="button secondary full" type="reset" data-close-details aria-label="Cancelar registro">Cancelar</button>
             </form>
           </details>
 
@@ -74,3 +75,4 @@
     </div>
   </body>
 </html>
+

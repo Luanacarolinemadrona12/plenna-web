@@ -72,15 +72,15 @@
   }
 
   function emptyForFilter() {
-    if (query) return ["Busca sem resultados", "Tente outro termo ou crie um item rápido a partir do que procura.", "Criar tarefa"];
-    if (activeFilter === "caixa") return ["Caixa de entrada vazia", "Nenhuma captura pendente. Seu dia está limpo para priorizar.", "Criar tarefa"];
-    if (activeFilter === "hoje") return ["Sem tarefas", "Quando não houver tarefas, sugerir criar uma prioridade leve.", "Planejar semana"];
-    if (activeFilter === "proximas") return ["Tarefa sem prazo ou data", "Ela ainda não entrou no seu fluxo. Defina quando fazer ou deixe na lista sem data.", "Definir data"];
-    if (activeFilter === "concluidas") return ["Sem tarefas", "Conclua uma tarefa para acompanhar seu avanço.", "Ver tarefas"];
-    if (activeFilter === "alta") return ["Sem tarefas", "Nenhuma prioridade alta agora. Crie uma prioridade leve se precisar.", "Criar tarefa"];
-    if (activeFilter === "com-prazo") return ["Tarefa sem prazo ou data", "Ela ainda não entrou no seu fluxo. Defina quando fazer ou deixe na lista sem data.", "Definir data"];
-    if (activeFilter === "projeto") return ["Projeto sem tarefas", "Crie a primeira tarefa quando esse projeto virar ação.", "Criar tarefa"];
-    return ["Sem tarefas", "Quando não houver tarefas, sugerir criar uma prioridade leve.", "Criar tarefa"];
+    if (query) return { title: "Nenhuma tarefa encontrada com esse termo.", body: "Limpe a busca para voltar à sua lista ou aperte Enter para criar uma tarefa com esse texto.", action: "Limpar busca", type: "clear-search" };
+    if (activeFilter === "caixa") return { title: "Caixa de entrada vazia", body: "Sua lista está limpa. Crie uma tarefa pequena se aparecer algo que precise sair da cabeça.", action: "Criar tarefa", href: "task-new.html" };
+    if (activeFilter === "hoje") return { title: "Sua lista de hoje está vazia", body: "Crie uma tarefa pequena ou planeje o dia para começar com clareza.", action: "Planejar dia", href: "planning.html" };
+    if (activeFilter === "proximas") return { title: "Nada agendado para depois", body: "Quando uma tarefa não couber hoje, adie com calma e ela aparece aqui.", action: "Criar tarefa", href: "task-new.html" };
+    if (activeFilter === "concluidas") return { title: "Nenhuma tarefa concluída ainda", body: "Conclua uma tarefa pequena para acompanhar seu avanço sem pressão.", action: "Ver tarefas", href: "tasks.html" };
+    if (activeFilter === "alta") return { title: "Nenhuma prioridade alta agora", body: "Seu dia não precisa de urgência extra. Adicione uma prioridade só se ela for realmente importante.", action: "Criar tarefa", href: "task-new.html" };
+    if (activeFilter === "com-prazo") return { title: "Nenhuma tarefa com prazo", body: "Defina uma data apenas quando ela ajudar. O que não tem prazo pode ficar na caixa de entrada.", action: "Criar tarefa", href: "task-new.html" };
+    if (activeFilter === "projeto") return { title: "Projeto sem tarefas", body: "Crie a primeira ação quando esse projeto virar algo concreto para fazer.", action: "Criar tarefa", href: "task-new.html" };
+    return { title: "Sua lista está vazia", body: "Crie uma tarefa pequena para começar o dia com clareza.", action: "Criar tarefa", href: "task-new.html" };
   }
 
   function renderTasks() {
@@ -93,9 +93,9 @@
       var empty = emptyForFilter();
       Utils.qs("#taskList").innerHTML = [
         '<div class="empty-state proto-empty">',
-        "<h3>" + empty[0] + "</h3>",
-        "<p>" + empty[1] + "</p>",
-        '<a class="button small primary" href="' + (activeFilter === "hoje" ? "planning.html" : "task-new.html") + '">' + empty[2] + "</a>",
+        "<h3>" + Utils.escapeHtml(empty.title) + "</h3>",
+        "<p>" + Utils.escapeHtml(empty.body) + "</p>",
+        empty.type === "clear-search" ? '<button class="button small secondary" type="button" data-action="clear-search">' + Utils.escapeHtml(empty.action) + "</button>" : '<a class="button small primary" href="' + Utils.escapeHtml(empty.href || "task-new.html") + '">' + Utils.escapeHtml(empty.action) + "</a>",
         "</div>"
       ].join("");
       return;
@@ -133,13 +133,22 @@
 
   function dueLabel(task) {
     if (task.figmaDue) return task.figmaDue;
-    if (!task.prazo) return "sem prazo";
+    if (!task.prazo) return "Sem prazo definido.";
     if (task.prazo === Utils.todayISO()) return "hoje";
     if (task.prazo === Utils.addDaysISO(1)) return "amanhã";
     return Utils.formatDate(task.prazo);
   }
 
   function handleClick(event) {
+    var clearSearch = event.target.closest("[data-action='clear-search']");
+    if (clearSearch) {
+      query = "";
+      var input = Utils.qs("#taskSearch");
+      if (input) input.value = "";
+      renderTasks();
+      Utils.notify("Busca limpa. Sua lista voltou a aparecer.", { kind: "success" });
+      return;
+    }
     var filter = event.target.closest("[data-filter]");
     if (filter) {
       activeFilter = filter.dataset.filter;
@@ -151,6 +160,7 @@
     var action = event.target.closest("[data-action]");
     if (!action) return;
     var item = event.target.closest("[data-task-id]");
+    if (!item) return;
     var task = Storage.find(Storage.KEYS.tasks, item.dataset.taskId);
     if (!task) return;
     if (action.dataset.action === "postpone") {

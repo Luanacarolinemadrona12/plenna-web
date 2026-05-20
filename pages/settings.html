@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Configurações | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -16,18 +16,18 @@
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page settings-figma-page">
-        <header class="settings-figma-header">
+        <header class="proto-topbar settings-figma-header">
           <h1>Configurações</h1>
-          <p>Ajuste o sistema do Plenna sem perder contexto do seu dia.</p>
+          <p>Ajuste o Plenna sem perder o ritmo do seu dia.</p>
         </header>
 
         <section class="settings-summary-card">
-          <h2>Resumo do sistema</h2>
+          <h2>Seu Plenna</h2>
           <div class="settings-profile-row">
             <span class="avatar" data-settings-initial>L</span>
             <div>
               <h3 data-settings-name>Luana Caroline</h3>
-              <p>Modo atual: equilíbrio · foco leve · dia difícil automático</p>
+              <p>Equilíbrio · foco leve · apoio em dias difíceis</p>
             </div>
             <button type="button" data-edit-settings>Editar</button>
           </div>
@@ -37,63 +37,92 @@
           </div>
         </section>
 
-        <section class="settings-card-list">
-          <article class="setting-card">
-            <div>
-              <h3>Check-in e lembretes</h3>
-              <p>08:30 em dias úteis · muda com contexto do dia</p>
+        <section class="settings-card-list settings-groups">
+          <section class="settings-group-card" aria-labelledby="settingsFocusTitle">
+            <div class="settings-group-heading">
+              <h2 id="settingsFocusTitle">Preferências de foco</h2>
+              <p>Comece rápido com uma duração confortável.</p>
             </div>
-            <span class="chip" data-setting-key="checkinDiario">ativo</span>
-            <button type="button" data-toggle-setting="checkinDiario">Editar</button>
-          </article>
+            <article class="setting-card">
+              <div>
+                <h3>Foco preferido</h3>
+                <p><span data-focus-default>foco leve · 25 min</span> com pausa guiada</p>
+              </div>
+              <span class="chip">ativo</span>
+              <button type="button" data-edit-focus-default>Editar</button>
+            </article>
+            <article class="setting-card">
+              <div>
+                <h3>Pausas inteligentes</h3>
+                <p>Entram antes quando sua energia cai.</p>
+              </div>
+              <span class="chip" data-setting-key="pausasInteligentes">contextual</span>
+              <button type="button" data-toggle-setting="pausasInteligentes">Editar</button>
+            </article>
+            <article class="setting-card">
+              <div>
+                <h3>Modo dia difícil</h3>
+                <p>Reduz cobrança e prioriza acolhimento.</p>
+              </div>
+              <span class="chip" data-setting-key="modoDificil">protetivo</span>
+              <button type="button" data-toggle-setting="modoDificil">Editar</button>
+            </article>
+          </section>
 
-          <article class="setting-card">
-            <div>
-              <h3>Pausas inteligentes</h3>
-              <p>ativas · entram antes quando a energia cai</p>
+          <section class="settings-group-card" aria-labelledby="settingsCheckinTitle">
+            <div class="settings-group-heading">
+              <h2 id="settingsCheckinTitle">Check-in</h2>
+              <p>Defina quando registrar humor e energia.</p>
             </div>
-            <span class="chip" data-setting-key="pausasInteligentes">contextual</span>
-            <button type="button" data-toggle-setting="pausasInteligentes">Editar</button>
-          </article>
+            <article class="setting-card">
+              <div>
+                <h3>Check-in e lembretes</h3>
+                <p>08:30 em dias úteis, com ajuste pelo dia.</p>
+              </div>
+              <span class="chip" data-setting-key="checkinDiario">ativo</span>
+              <button type="button" data-toggle-setting="checkinDiario">Editar</button>
+            </article>
+            <article class="setting-card">
+              <div>
+                <h3>Acessibilidade</h3>
+                <p>Contraste, texto e áreas de toque mais confortáveis.</p>
+              </div>
+              <span class="chip">legível</span>
+              <a href="reminders.html">Ver lembretes</a>
+            </article>
+          </section>
 
-          <article class="setting-card">
-            <div>
-              <h3>Foco preferido</h3>
-              <p><span data-focus-default>foco leve · 25 min</span> com pausa guiada</p>
+          <section class="settings-group-card" aria-labelledby="settingsRemindersTitle">
+            <div class="settings-group-heading">
+              <h2 id="settingsRemindersTitle">Lembretes</h2>
+              <p>Avisos gentis para rotina, foco e pausas.</p>
             </div>
-            <span class="chip">ativo</span>
-            <button type="button" data-edit-focus-default>Editar</button>
-          </article>
+            <article class="setting-card">
+              <div>
+                <h3>Lembretes salvos neste aparelho</h3>
+                <p>Check-in, pausas, hábitos e modo silencioso ficam em uma tela própria.</p>
+              </div>
+              <span class="chip" data-reminder-count>4 lembretes ativos</span>
+              <a href="reminders.html">Editar</a>
+            </article>
+          </section>
 
-          <article class="setting-card">
-            <div>
-              <h3>Modo dia difícil</h3>
-              <p>automático · reduz cobrança e prioriza acolhimento</p>
+          <section class="settings-group-card" aria-labelledby="settingsDataTitle">
+            <div class="settings-group-heading">
+              <h2 id="settingsDataTitle">Dados do app</h2>
+              <p>Relatórios e informações salvas neste aparelho.</p>
             </div>
-            <span class="chip" data-setting-key="modoDificil">protetivo</span>
-            <button type="button" data-toggle-setting="modoDificil">Editar</button>
-          </article>
-
-          <article class="setting-card">
-            <div>
-              <h3>Acessibilidade</h3>
-              <p>contraste, tamanho de texto e áreas de toque mais confortáveis</p>
-            </div>
-            <span class="chip">legível</span>
-            <a href="reminders.html">Ver lembretes</a>
-          </article>
-
-          <article class="setting-card">
-            <div>
-              <h3>Privacidade e exportação</h3>
-              <p>controle de dados, JSON local e exportação simulada</p>
-            </div>
-            <span class="chip">dados</span>
-            <a href="export.html">Exportar</a>
-          </article>
+            <article class="setting-card">
+              <div>
+                <h3>Privacidade e exportação</h3>
+                <p>Exportação local e controle dos seus dados.</p>
+              </div>
+              <span class="chip">relatório</span>
+              <a href="export.html">Exportar</a>
+            </article>
+            <button class="button danger full settings-clear-button" type="button" data-clear-local>Limpar informações deste aparelho</button>
+          </section>
         </section>
-
-        <button class="settings-clear-button" type="button" data-clear-local>Limpar dados locais</button>
       </main>
       <div data-bottom-nav></div>
     </div>

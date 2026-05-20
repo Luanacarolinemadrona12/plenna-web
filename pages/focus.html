@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Foco | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js" defer></script>
+    <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../js/mood-states.js?v=20260430-figma" defer></script>
+    <script src="../js/mood-states.js?v=20260520-energy-rules" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/focus.js?v=20260430-figma" defer></script>
+    <script src="../js/focus.js?v=20260520-energy-rules" defer></script>
   </head>
   <body data-page="focus" data-screen="focus">
     <div class="app-shell">
@@ -25,6 +25,8 @@
         </header>
 
         <section class="stack-lg">
+          <p class="context-help">Escolha uma tarefa e uma duração confortável. Você pode pausar quando precisar.</p>
+
           <section class="focus-timer-cluster">
             <div class="timer">
               <img id="timerRing" src="../assets/images/focus-ring-neutral.svg" alt="">
@@ -32,9 +34,9 @@
               <span id="timerModeLabel">Foco leve</span>
             </div>
             <div class="focus-controls">
-              <button class="focus-control secondary" id="pauseFocus" type="button" disabled><span class="focus-control-glyph" aria-hidden="true">↺</span></button>
-              <button class="focus-control primary" id="startFocus" type="button"><span class="focus-control-glyph" aria-hidden="true">▶</span></button>
-              <button class="focus-control secondary" id="finishFocus" type="button" disabled><span class="focus-control-glyph" aria-hidden="true">⏭</span></button>
+              <button class="focus-control secondary" id="pauseFocus" type="button" aria-label="Pausar ou voltar foco" disabled><span class="focus-control-glyph" aria-hidden="true">↺</span></button>
+              <button class="focus-control primary" id="startFocus" type="button" aria-label="Iniciar sessão de foco"><span class="focus-control-glyph" aria-hidden="true">▶</span></button>
+              <button class="focus-control secondary" id="finishFocus" type="button" aria-label="Finalizar ou deixar para depois" disabled><span class="focus-control-glyph" aria-hidden="true">⏭</span></button>
             </div>
           </section>
 
@@ -51,12 +53,11 @@
             </div>
             <p class="focus-context-line" id="focusContextLine">Energia 6/10 · média prioridade · esforço médio · 1 sessão</p>
             <div class="chip-row focus-task-chips" id="focusTaskChips"></div>
-            <a class="button secondary focus-change-task" href="tasks.html">Trocar tarefa</a>
-            <label class="field sr-only">
+            <label class="field focus-task-switcher">
               <span>Tarefa do foco</span>
               <select id="focusTaskSelect"></select>
             </label>
-            <button class="button secondary sr-only" id="useSuggestedTask" type="button">Trocar tarefa</button>
+            <button class="button secondary full" id="useSuggestedTask" type="button">Usar tarefa sugerida</button>
           </section>
 
           <section class="focus-context-card" id="focusContextCard"></section>
@@ -66,3 +67,4 @@
     </div>
   </body>
 </html>
+

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ajustar planejamento | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260518-planning-adjust-save" defer></script>
   </head>
   <body data-page="tasks" data-screen="planning-adjust">
     <div class="app-shell">
@@ -18,50 +18,83 @@
       <main class="page dedicated-page dedicated-adjust figma-adjust-screen">
         <header class="proto-topbar">
           <h1>Ajustar planejamento</h1>
-          <p>Edite carga, horário e pausas sem perder o contexto do check-in.</p>
+          <p>Ajuste carga, horário e pausas com leveza.</p>
         </header>
 
-        <div class="chip-row adjust-top-chips">
-          <button class="chip" type="button" data-adjust-kind="pausa" data-adjust-block="pausa">pausa protegida</button>
-          <button class="chip" type="button" data-adjust-kind="carga" data-adjust-block="contrato">carga reduzida</button>
+        <div class="adjust-top-chips" aria-label="Resumo dos ajustes ativos">
+          <span class="chip">pausa protegida</span>
+          <span class="chip">carga reduzida</span>
         </div>
 
         <section class="figma-adjust-main">
           <span class="eyebrow">AJUSTADO POR VOCÊ</span>
           <h2>Seu dia ficou mais leve e realista.</h2>
-          <p>O foco saiu de 09h para 10h, a tarefa pesada foi movida e a pausa virou compromisso protegido.</p>
+          <p>Foco às 10h, tarefa pesada movida e pausa protegida.</p>
           <div class="figma-compare-grid compact">
-            <span><small>Antes</small><strong>Foco 09h + tarefa pesada hoje</strong></span>
-            <span><small>Depois</small><strong data-adjust-summary>Foco 10h + pausa protegida</strong></span>
+            <span class="planning-compare-card before"><small>Antes</small><strong>Foco 09h + tarefa pesada hoje</strong></span>
+            <span class="planning-compare-card after" data-adjust-after-card><small>Depois</small><strong data-adjust-summary>Foco 10h + pausa protegida</strong><em data-adjust-detail>Pausa protegida e tarefa pesada fora do pico.</em></span>
           </div>
-          <div class="adjust-reason-panel" data-conflict-panel>
-            <strong>Motivo do ajuste</strong>
-            <p data-adjust-reason>Energia média-baixa detectada. O plano redistribui a tarefa mais pesada e protege recuperação depois da reunião.</p>
-            <small data-conflict-copy>Conflito previsto: foco pesado às 09h + reunião fixa às 14h reduz margem de recuperação.</small>
+          <p class="adjust-reason-panel" data-conflict-panel aria-live="polite" data-adjust-reason>Energia média-baixa detectada. O plano redistribui a tarefa mais pesada e protege recuperação depois da reunião.</p>
+          <div class="save-summary-card compact-save-summary visually-hidden" aria-live="polite">
+            <strong>Resumo antes de salvar</strong>
+            <p data-save-summary>Foco às 10h, pausa protegida às 15h30 e tarefa pesada movida para amanhã.</p>
           </div>
-          <div class="row">
+          <div class="planning-main-save-row">
             <button class="button primary" type="button" data-save-adjust>Salvar ajustes</button>
             <a class="button secondary" href="planning.html">Cancelar</a>
           </div>
         </section>
 
-        <section class="figma-adjust-schedule-card">
+        <section class="figma-adjust-schedule-card minimal-adjust-schedule">
           <h2>Cronograma ajustado</h2>
-          <p>Toque no selo de cada bloco para ajustar horário, carga, prioridade ou pausa.</p>
-          <article class="adjust-schedule-item" data-block-id="rotina"><span>09:00</span><div><strong>Rotina leve de início</strong><small>Responder 2 pendências pequenas antes do foco.</small></div><button class="adjust-block-action" type="button" data-adjust-kind="carga" data-adjust-block="rotina">reduzido</button></article>
-          <article class="adjust-schedule-item" data-block-id="foco"><span>10:00</span><div><strong>Foco leve · Apresentação Q2</strong><small>Movido para um horário com mais energia.</small></div><button class="adjust-block-action" type="button" data-adjust-kind="horario" data-adjust-block="foco">movido</button></article>
-          <article class="adjust-schedule-item" data-block-id="reuniao"><span>14:00</span><div><strong>Reunião com cliente ABC</strong><small>Compromisso mantido na agenda.</small></div><button class="adjust-block-action" type="button" data-adjust-kind="prioridade" data-adjust-block="reuniao">fixo</button></article>
-          <article class="adjust-schedule-item" data-block-id="pausa"><span>15:30</span><div><strong>Pausa protegida</strong><small>Bloqueada para recuperar energia depois da reunião.</small></div><button class="adjust-block-action" type="button" data-adjust-kind="pausa" data-adjust-block="pausa">travado</button></article>
-          <article class="adjust-schedule-item warm" data-block-id="contrato"><span>Amanhã</span><div><strong>Revisar contrato completo</strong><small>Tarefa pesada adiada para evitar sobrecarga hoje.</small></div><button class="adjust-block-action" type="button" data-adjust-kind="carga" data-adjust-block="contrato">adiado</button></article>
+          <p>Veja o que mudou antes de salvar.</p>
+
+          <section class="planning-period-group">
+            <div class="planning-period-heading">
+              <h3>Manhã</h3>
+              <p>Comece com menos atrito.</p>
+            </div>
+            <article class="adjust-schedule-item" data-block-id="rotina"><span>09:00</span><div><strong>Rotina leve de início</strong><small>Responder 2 pendências pequenas antes do foco.</small></div><em class="adjust-block-action">leve</em></article>
+            <article class="adjust-schedule-item" data-block-id="foco"><span>10:00</span><div><strong>Foco leve · Apresentação Q2</strong><small>Movido para um horário com mais energia.</small></div><em class="adjust-block-action">movido</em></article>
+          </section>
+
+          <section class="planning-period-group">
+            <div class="planning-period-heading">
+              <h3>Tarde</h3>
+              <p>Compromissos fixos com respiro.</p>
+            </div>
+            <article class="adjust-schedule-item" data-block-id="reuniao"><span>14:00</span><div><strong>Reunião com cliente ABC</strong><small>Compromisso fixo mantido no dia.</small></div><em class="adjust-block-action">fixo</em></article>
+          </section>
+
+          <section class="planning-period-group">
+            <div class="planning-period-heading">
+              <h3>Pausas protegidas</h3>
+              <p>Recuperação sem virar tarefa extra.</p>
+            </div>
+            <article class="adjust-schedule-item" data-block-id="pausa"><span>15:30</span><div><strong>Pausa protegida</strong><small>Bloqueada para recuperar energia depois da reunião.</small></div><em class="adjust-block-action">travado</em></article>
+          </section>
+
+          <section class="planning-period-group">
+            <div class="planning-period-heading">
+              <h3>Noite</h3>
+              <p>Fechamento sem cobrança.</p>
+            </div>
+            <article class="adjust-schedule-item warm" data-block-id="contrato"><span>Amanhã</span><div><strong>Revisar contrato completo</strong><small>Tarefa pesada adiada para evitar sobrecarga hoje.</small></div><em class="adjust-block-action">adiado</em></article>
+          </section>
         </section>
 
-        <section class="adjust-quick-controls">
-          <h2>Controles rápidos</h2>
-          <div class="grid-2">
-            <button type="button" data-adjust-kind="horario" data-adjust-block="foco"><strong>Trocar horário</strong><span>Move o foco para um período com mais energia.</span></button>
-            <button type="button" data-adjust-kind="carga" data-adjust-block="contrato"><strong>Reduzir carga</strong><span>Recalcula o dia com menos tarefas pesadas.</span></button>
-            <a href="calendar-week.html"><strong>Ver semana</strong><span>Conferir impacto no plano semanal.</span></a>
-            <a href="tasks.html"><strong>Abrir tarefa</strong><span>Ver detalhes antes de salvar.</span></a>
+        <section class="planning-adjust-actions" aria-label="Ações de ajuste">
+          <button class="planning-adjust-action" type="button" data-adjust-kind="horario" data-adjust-block="foco"><strong>Trocar horário</strong><span>Mover para um período melhor.</span></button>
+          <button class="planning-adjust-action" type="button" data-adjust-kind="carga" data-adjust-block="contrato"><strong>Reduzir carga</strong><span>Menos tarefas pesadas hoje.</span></button>
+          <a class="planning-adjust-action" href="calendar-week.html"><strong>Ver semana</strong><span>Conferir impacto.</span></a>
+          <a class="planning-adjust-action" href="task-edit.html"><strong>Abrir tarefa</strong><span>Revisar detalhes.</span></a>
+        </section>
+
+        <section class="planning-minimal-support">
+          <strong>Controles rápidos</strong>
+          <div class="planning-support-actions">
+            <button class="button secondary planning-control-tile" type="button" data-reset-adjust><span>Desfazer ajustes</span><small>Restaurar comparação inicial.</small></button>
+            <a class="button secondary planning-control-tile" href="planning.html"><span>Voltar ao plano</span><small>Conferir resultado salvo.</small></a>
           </div>
         </section>
       </main>

@@ -4,28 +4,28 @@
     <link rel="icon" href="data:,">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard operacional | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <title>Sua rotina | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260518-routine" defer></script>
   </head>
   <body data-page="more" data-screen="dashboard-operational">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page dedicated-page dedicated-operational figma-operational-screen">
         <header class="proto-topbar">
-          <h1>Painel</h1>
-          <p>Métricas operacionais separadas dos insights emocionais.</p>
+          <h1>Sua rotina</h1>
+          <p>Um resumo simples do que está aberto, feito e pedindo cuidado.</p>
         </header>
 
-        <section class="operational-tabs" aria-label="Tipo de painel">
+        <nav class="dashboard-mode-tabs" aria-label="Áreas do painel">
           <a href="dashboard.html">Emocional</a>
           <a href="dashboard-history.html">Histórico</a>
-          <a class="active" href="dashboard-operational.html">Operacional</a>
-        </section>
+          <a class="active" href="dashboard-operational.html" aria-current="page">Rotina</a>
+        </nav>
 
         <section class="operational-period-tabs" aria-label="Período">
           <button type="button" data-operational-period="1">Hoje</button>
@@ -33,20 +33,27 @@
           <button type="button" data-operational-period="30">Mês</button>
         </section>
 
-        <h2 class="operational-section-title">Métricas operacionais</h2>
+        <h2 class="operational-section-title">Resumo da rotina</h2>
 
         <section class="operational-figma-metrics">
-          <article><small>Tarefas concluídas</small><strong data-operational="done">0</strong><span data-operational-label="done">na semana</span></article>
-          <article><small>Taxa de conclusão</small><strong data-operational="rate">0%</strong><span>consistência boa</span></article>
-          <article><small>Tarefas atrasadas</small><strong data-operational="delayed">0</strong><span>precisam redistribuição</span></article>
-          <article><small>Volume do período</small><strong data-operational="weekly">0</strong><span data-operational-label="period">itens planejados</span></article>
-          <article><small>Foco por projeto</small><strong data-operational="focusProject">0h00</strong><span>faculdade puxou mais</span></article>
-          <article><small>Prioridade alta</small><strong data-operational="high">0</strong><span>tarefas no período</span></article>
+          <article><small>Tarefas abertas</small><strong data-operational="open">0</strong><span>em aberto</span></article>
+          <article><small>Concluídas</small><strong data-operational="done">0</strong><span data-operational-label="done">na semana</span></article>
+          <article><small>Foco total</small><strong data-operational="focusProject">0h00</strong><span>registrado</span></article>
+          <article><small>Hábitos feitos</small><strong data-operational="habits">0</strong><span>marcados</span></article>
+        </section>
+
+        <section class="operational-empty-state" data-operational-empty hidden>
+          <h2>Ainda não há dados suficientes da sua rotina</h2>
+          <p>Crie uma tarefa ou faça o check-in para começar a montar seu resumo.</p>
+          <div class="row">
+            <a class="button primary" href="task-new.html">Criar tarefa</a>
+            <a class="button secondary" href="checkin.html">Fazer check-in</a>
+          </div>
         </section>
 
         <section class="operational-card">
-          <h2>Tarefas e foco por projeto</h2>
-          <div class="operational-progress-row"><span>Faculdade · <b data-project="faculdade">0 tarefas · 0h00 foco</b></span><i style="--bar:78%;--bar-color:#6f8fb8"></i></div>
+          <h2>Áreas com mais movimento</h2>
+          <div class="operational-progress-row"><span>Estudos · <b data-project="estudos">0 tarefas · 0h00 foco</b></span><i style="--bar:78%;--bar-color:#6f8fb8"></i></div>
           <div class="operational-progress-row"><span>Trabalho · <b data-project="trabalho">0 tarefas · 0h00 foco</b></span><i style="--bar:58%;--bar-color:#35c98d"></i></div>
           <div class="operational-progress-row"><span>Pessoal · <b data-project="pessoal">0 tarefas · 0h00 foco</b></span><i style="--bar:34%;--bar-color:#e2aa42"></i></div>
         </section>
@@ -60,16 +67,16 @@
         </section>
 
         <section class="operational-reading-card">
-          <h2>Leitura operacional</h2>
-          <p data-operational-reading>Projeto com mais carga: Faculdade. Período mais produtivo: manhã. Excesso detectado: tarefas pesadas concentradas na quinta.</p>
+          <h2>Recomendação da rotina</h2>
+          <p data-operational-reading>Sua carga está mais alta no meio da semana. Proteja uma pausa antes do próximo foco.</p>
         </section>
 
         <section class="operational-action-card">
-          <h2>Ação recomendada</h2>
-          <p data-operational-action>Move uma tarefa pesada para sexta, abre o calendário semanal e redistribui a quinta para reduzir atraso.</p>
+          <h2>Próximo passo</h2>
+          <p data-operational-action>Revise a semana e mova uma tarefa pesada para proteger sua energia.</p>
           <div class="row">
-            <a class="button primary" href="planning-adjust.html">Redistribuir quinta</a>
-            <a class="button secondary" href="calendar-week.html">Abrir calendário</a>
+            <a class="button primary" href="planning-adjust.html">Ajustar semana</a>
+            <a class="button secondary" href="calendar-week.html">Ver semana</a>
           </div>
           <a class="button secondary full" href="tasks.html">Ver tarefas</a>
         </section>
@@ -78,3 +85,4 @@
     </div>
   </body>
 </html>
+

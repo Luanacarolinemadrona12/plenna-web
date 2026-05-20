@@ -1,0 +1,34 @@
+{
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Default Popup Title"
+   },
+   "content_scripts": [ {
+      "js": [ "content-scripts/content.js" ],
+      "matches": [ "https://*.youtube.com/*" ]
+   } ],
+   "icons": {
+      "128": "icon/128.png",
+      "16": "icon/16.png",
+      "32": "icon/32.png",
+      "48": "icon/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv7TXyVg/v00oQedNDkAJvzTBlBw0PxwmKZKdo57FgTTz9/MhbcWSXtzKxQNSrAnDEYnWcq9D5ffEJFG9uI3QBquqpPdLdozGDEcyuFPwG3zkNggIfMCXno30kS+ruu4gr33Z2pOObNjzuRrlQdJ1sJbmlua5N+459TJAgE9vlogIEtVJs05wa9QDLMyG9CZGL5bUrb+28O/fKNzzEz5MnJ/W8uIpBL6X+GiHbOgxD/Bt432Unuf6muZzpNbprFFDap5VCqBmNP8ny7CJ9wlplqYNnabBfRFrHEDnQmzlGyD7VbeCOdo2JDOTdS1y3quCukHCC3F3KiNqFR0F5CKhNwIDAQAB",
+   "manifest_version": 3,
+   "name": "SummarizeYou",
+   "oauth2": {
+      "client_id": "137765951450-li7ba2frqni1et66geksj81s51i63b60.apps.googleusercontent.com",
+      "scopes": [ "openid", "email", "profile" ]
+   },
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "identity" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.youtube.com/*" ],
+      "resources": [ "content-scripts/content.css" ]
+   } ]
+}

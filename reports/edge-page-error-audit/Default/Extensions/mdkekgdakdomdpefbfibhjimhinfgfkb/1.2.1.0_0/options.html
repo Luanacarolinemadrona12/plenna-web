@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button {
+        transition: opacity 200ms linear;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body style="background-color: #fafafa">
+    <div
+      style="
+        background-color: #ffffff;
+        border-radius: 6px;
+        margin: 60px auto 20px;
+        padding: 48px;
+        width: 80%;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        fill="none"
+        version="1.1"
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        style="flex: none"
+      >
+        <g style="mix-blend-mode: passthrough">
+          <g style="mix-blend-mode: passthrough">
+            <g style="mix-blend-mode: passthrough">
+              <path
+                d="M23.75607214202881,24.952252779388427L20.29617214202881,29.163952779388428L28.49037214202881,35.883552779388424C28.98030214202881,36.28585277938843,29.59209214202881,36.503052779388426,30.220372142028808,36.503052779388426C30.31437214202881,36.503052779388426,30.40877214202881,36.49825277938842,30.50297214202881,36.48835277938843C31.22797214202881,36.41275277938843,31.89207214202881,36.04995277938843,32.34767214202881,35.48135277938843L47.045672142028806,17.129072779388427L42.79107214202881,13.721852779388428L29.81818214202881,29.919952779388428L23.75607214202881,24.952252779388427Z"
+                fill-rule="evenodd"
+                fill="#FFB000"
+                fill-opacity="1"
+              />
+            </g>
+            <g style="mix-blend-mode: passthrough">
+              <path
+                d="M30.0000125,46.0752125C21.1361125,46.0752125,13.9248025,38.8639125,13.9248025,30.0000125C13.9248025,21.1361125,21.1361125,13.9248025,30.0000125,13.9248025L30.0000125,9.2578125C18.562752500000002,9.2578125,9.2578125,18.562752500000002,9.2578125,30.0000125C9.2578125,41.4372125,18.562752500000002,50.7422125,30.0000125,50.7422125C41.4372125,50.7422125,50.7422125,41.4372125,50.7422125,30.0000125L46.0752125,30.0000125C46.0752125,38.8639125,38.8639125,46.0752125,30.0000125,46.0752125Z"
+                fill-rule="evenodd"
+                fill="#4772FA"
+                fill-opacity="1"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <h1
+        data-intl="extensionOptions"
+        style="
+          color: #191919;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+          flex: none;
+          margin-top: 48px;
+        "
+      ></h1>
+      <div
+        style="
+          border-radius: 8px;
+          background-color: white;
+          box-shadow: color(srgb 0 0 0 / 0.15) 0px 1px 2px 0px,
+            color(srgb 0 0 0 / 0.15) 0px 2px 6px 2px;
+          width: 100%;
+          min-width: 455px;
+          max-width: 680px;
+          margin-top: 24px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            height: 48px;
+            padding: 0 20px;
+            justify-content: space-between;
+          "
+        >
+          <p
+            data-intl="chooseTaskToBeCountedInExtended"
+            style="
+              padding-right: 8px;
+              white-space: nowrap;
+              font-size: 13px;
+              line-height: 18px;
+              color: rgb(31, 31, 31);
+            "
+          ></p>
+          <div style="position: relative">
+            <select
+              id="type"
+              style="
+                border: 1px solid rgba(25, 25, 25, 0.2);
+                border-radius: 4px;
+                color: #191919;
+                -webkit-appearance: none;
+                padding: 6px 38px 6px 8px;
+                width: 200px;
+                background-color: rgb(241, 243, 244);
+                color: rgb(31, 31, 31);
+                outline-color: rgba(26, 115, 232, 0.4);
+                border: none;
+              "
+            >
+              <option value="none" data-intl="none"></option>
+              <option value="today" data-intl="today"></option>
+            </select>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="none"
+              version="1.1"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              style="
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+              "
+            >
+              <g style="mix-blend-mode: passthrough">
+                <g
+                  style="
+                    opacity: 0.20000000298023224;
+                    mix-blend-mode: passthrough;
+                  "
+                >
+                  <path
+                    d="M2.5348097740249633,3.6486848830596923L5.998786774024963,7.112663183059692L9.462776774024963,3.6486848830596923C9.511586774024963,3.5998692830596926,9.590736774024963,3.5998692830596926,9.639546774024964,3.6486848830596923L10.153046774024963,4.162179183059692C10.201856774024963,4.210994183059692,10.201856774024963,4.290140183059693,10.153046774024963,4.338956183059692L6.175566774024963,8.316433183059694C6.0779367740249635,8.414063183059692,5.919646774024963,8.414063183059692,5.822016774024964,8.316433183059694L1.8445384740249633,4.338956183059692C1.7957228740249633,4.290140183059693,1.7957228740249633,4.210994183059692,1.8445384740249633,4.162179183059692L2.3580327740249634,3.6486848830596923C2.406847774024963,3.5998692830596926,2.4859937740249634,3.5998692830596926,2.5348097740249633,3.6486848830596923Z"
+                    fill-rule="evenodd"
+                    fill="#191919"
+                    fill-opacity="1"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div style="height: 1px; background-color: rgba(0, 0, 0, 0.06)"></div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            height: 48px;
+            padding: 0 20px;
+            justify-content: space-between;
+          "
+        >
+          <p
+            data-intl="openIn"
+            style="
+              padding-right: 8px;
+              white-space: nowrap;
+              font-size: 13px;
+              line-height: 18px;
+              color: rgb(31, 31, 31);
+            "
+          ></p>
+          <div style="position: relative">
+            <select
+              id="view-type"
+              style="
+                border: 1px solid rgba(25, 25, 25, 0.2);
+                border-radius: 4px;
+                -webkit-appearance: none;
+                padding: 6px 38px 6px 8px;
+                width: 200px;
+                background-color: rgb(241, 243, 244);
+                color: rgb(31, 31, 31);
+                outline-color: rgba(26, 115, 232, 0.4);
+                border: none;
+              "
+            >
+              <option value="popup" data-intl="popupWindow"></option>
+              <option value="sidepanel" data-intl="sidePanel"></option>
+            </select>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="none"
+              version="1.1"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              style="
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+              "
+            >
+              <g style="mix-blend-mode: passthrough">
+                <g
+                  style="
+                    opacity: 0.20000000298023224;
+                    mix-blend-mode: passthrough;
+                  "
+                >
+                  <path
+                    d="M2.5348097740249633,3.6486848830596923L5.998786774024963,7.112663183059692L9.462776774024963,3.6486848830596923C9.511586774024963,3.5998692830596926,9.590736774024963,3.5998692830596926,9.639546774024964,3.6486848830596923L10.153046774024963,4.162179183059692C10.201856774024963,4.210994183059692,10.201856774024963,4.290140183059693,10.153046774024963,4.338956183059692L6.175566774024963,8.316433183059694C6.0779367740249635,8.414063183059692,5.919646774024963,8.414063183059692,5.822016774024964,8.316433183059694L1.8445384740249633,4.338956183059692C1.7957228740249633,4.290140183059693,1.7957228740249633,4.210994183059692,1.8445384740249633,4.162179183059692L2.3580327740249634,3.6486848830596923C2.406847774024963,3.5998692830596926,2.4859937740249634,3.5998692830596926,2.5348097740249633,3.6486848830596923Z"
+                    fill-rule="evenodd"
+                    fill="#191919"
+                    fill-opacity="1"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button
+        id="save"
+        data-intl="save"
+        style="
+          margin-top: 80px;
+          background-color: #4772fa;
+          border: none;
+          color: white;
+          font-size: 14px;
+          width: 100px;
+          height: 30px;
+          border-radius: 4px;
+          margin-bottom: 12px;
+        "
+      ></button>
+      <div id="status"></div>
+    </div>
+
+    <script src="./scripts/options.js"></script>
+  </body>
+</html>

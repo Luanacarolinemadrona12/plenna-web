@@ -1,0 +1,10 @@
+{
+  "issues": [
+    {
+      "file": "pages\\checkin.html",
+      "formId": "checkinForm",
+      "class": "form",
+      "issue": "formul?rio com envio sem required vis?vel"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar tarefa | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -44,11 +44,11 @@
             </div>
             <div class="figma-field-grid">
               <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" value="--:--"></label>
-              <label class="figma-pill-input"><span>Prazo</span><input name="prazo" value="Hoje · 16:00"></label>
-              <label class="figma-pill-input yellow"><span>Esforço</span><input name="esforco" value="Médio"></label>
-              <label class="figma-pill-input mint"><span>Impacto emocional</span><input name="impactoEmocional" value="Motivadora"></label>
-              <label class="figma-pill-input"><span>Projeto</span><input name="projeto" value="Trabalho"></label>
-              <label class="figma-pill-input"><span>Categoria</span><input name="categoria" value="Cliente ABC"></label>
+              <label class="figma-pill-input"><span>Prazo</span><input name="prazo" type="date" aria-label="Prazo da tarefa"></label>
+              <label class="figma-pill-input yellow"><span>Esforço</span><select name="esforco"><option value="nenhum">Nenhum</option><option value="baixo">Baixo</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></label>
+              <label class="figma-pill-input mint"><span>Impacto emocional</span><select name="impactoEmocional"><option value="neutro">Neutro</option><option value="leve">Leve</option><option value="positivo">Positivo</option><option value="motivadora" selected>Motivadora</option><option value="pesado">Pesado</option></select></label>
+              <label class="figma-pill-input"><span>Projeto</span><select name="projeto"><option>Trabalho</option><option>Pessoal</option><option>Saúde</option><option>Nenhum</option></select></label>
+              <label class="figma-pill-input"><span>Categoria</span><select name="categoria"><option>Cliente ABC</option><option>Rotina</option><option>Casa</option><option>Nenhuma</option></select></label>
             </div>
           </section>
 
@@ -62,7 +62,7 @@
               <li><b>✓</b><span>Separar imagens</span><i>≡</i></li>
               <li><b>!</b><span>Ajustar gráficos</span><i>≡</i></li>
             </ol>
-            <textarea class="visually-hidden" name="subtarefas">Revisar roteiro
+            <textarea class="visually-hidden" name="subtarefas" aria-label="Subtarefas">Revisar roteiro
 Separar imagens
 Ajustar gráficos</textarea>
           </section>
@@ -76,8 +76,8 @@ Ajustar gráficos</textarea>
 
           <section class="card figma-task-submit-card">
             <button class="button primary full" type="submit">Salvar alterações</button>
-            <button class="button danger full" type="button" id="deleteTask">Excluir</button>
             <a class="button secondary full" href="tasks.html">Cancelar</a>
+            <button class="button danger full" type="button" id="deleteTask">Excluir</button>
           </section>
         </form>
       </main>
@@ -85,3 +85,4 @@ Ajustar gráficos</textarea>
     </div>
   </body>
 </html>
+

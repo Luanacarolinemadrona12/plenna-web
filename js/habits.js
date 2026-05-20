@@ -34,9 +34,9 @@
     if (!habits.length) {
       Utils.qs("#habitList").innerHTML = [
         '<div class="empty-state proto-empty">',
-        "<h3>Sem hábitos</h3>",
-        "<p>Comece por um template simples, como hidratação ou sono.</p>",
-        '<a class="button small primary" href="habit-templates.html">Ver templates</a>',
+        "<h3>Sua rotina de hábitos ainda está vazia</h3>",
+        "<p>Use um template simples para começar com uma meta pequena e fácil de cumprir hoje.</p>",
+        '<a class="button small primary" href="habit-templates.html">Escolher template</a>',
         "</div>"
       ].join("");
       return;
@@ -97,12 +97,12 @@
     var color = ["#35c98d", "#15a6f4", "#e5ad4d", "#35c98d", "#9b7bea"][index % 5];
     var Icons = window.PlennaIcons;
     var checkIcon = Icons ? Icons.svg("check", "check-mark") : "";
-    var habitIcon = Icons ? Icons.svg(iconForHabit(habit), "habit-icon-svg") : "";
+    var habitIcon = habit.emoji || emojiForHabit(habit);
     var streak = Object.keys(habit.registrosPorData || {}).length;
     return [
       '<article class="habit-item ' + (state === "overdue" ? "overdue" : "") + (done ? " done" : "") + (String(habit.id) === String(lastHabitId) ? " just-updated" : "") + '" data-habit-id="' + Utils.escapeHtml(habit.id) + '" style="--habit-color:' + color + '">',
       '<div class="item-top">',
-      '<span class="habit-icon">' + habitIcon + "</span>",
+      '<button class="habit-icon habit-emoji-button" type="button" data-action="icon" aria-label="Alterar emoji do hábito"><span aria-hidden="true">' + Utils.escapeHtml(habitIcon) + "</span></button>",
       "<div>",
       '<div class="task-title">' + Utils.escapeHtml(habit.nome) + "</div>",
       '<small>' + Utils.escapeHtml(habit.metaMinima || "Meta mínima") + " · " + Utils.escapeHtml(habit.frequencia || "Diário") + "</small>",
@@ -111,7 +111,7 @@
       '<button class="habit-day' + (done ? " done" : "") + '" type="button" data-action="toggle" aria-label="Marcar hábito">' + (done ? checkIcon : "") + "</button>",
       "</div>",
       String(habit.id) === String(lastHabitId) && lastHabitMessage ? '<span class="inline-status">' + Utils.escapeHtml(lastHabitMessage) + "</span>" : "",
-      '<div class="chip-row"><span class="chip">sequência ' + streak + ' dias</span><span class="chip neutral">' + (done ? "feito hoje" : state === "overdue" ? "retomar hoje" : "pode mover para 09h") + '</span><a class="chip habit-edit-chip" href="habit-edit.html?id=' + Utils.escapeHtml(habit.id) + '">Editar</a></div>',
+      '<div class="habit-meta-line"><span>sequência ' + streak + ' dias</span><span>' + (done ? "feito hoje" : state === "overdue" ? "retomar hoje" : "pode mover para 09h") + '</span><a href="habit-edit.html?id=' + Utils.escapeHtml(habit.id) + '">Editar</a></div>',
       "</article>"
     ].join("");
   }
@@ -125,6 +125,22 @@
     return "nav-habits";
   }
 
+  function emojiForHabit(habit) {
+    var text = (habit.nome + " " + habit.categoria).toLowerCase();
+    if (text.includes("água") || text.includes("hidr")) return "💧";
+    if (text.includes("medita") || text.includes("mente") || text.includes("respira")) return "🌿";
+    if (text.includes("leitura") || text.includes("livro")) return "📘";
+    if (text.includes("diário") || text.includes("escre")) return "✍️";
+    if (text.includes("along") || text.includes("exerc")) return "☀️";
+    return "♡";
+  }
+
+  function nextEmoji(current) {
+    var options = ["♡", "💧", "🌿", "📘", "✍️", "☀️", "🧘"];
+    var index = options.indexOf(current);
+    return options[(index + 1) % options.length];
+  }
+
   function impactForHabit(habit) {
     var text = (habit.nome + " " + habit.categoria).toLowerCase();
     if (text.includes("água") || text.includes("hidr")) return "proteger energia da tarde";
@@ -135,6 +151,7 @@
 
   function createHabit(event) {
     event.preventDefault();
+    if (!Utils.validateRequiredForm(event.currentTarget, { message: "Dê um nome para salvar o hábito." })) return;
     var formData = new FormData(event.currentTarget);
     var habit = {
       id: Utils.uid("habit"),
@@ -142,6 +159,7 @@
       categoria: formData.get("categoria"),
       frequencia: formData.get("frequencia"),
       metaMinima: String(formData.get("metaMinima") || "").trim(),
+      emoji: "♡",
       registrosPorData: {},
       criadoEm: new Date().toISOString()
     };
@@ -154,6 +172,19 @@
   }
 
   function toggleHabit(event) {
+    var iconButton = event.target.closest("[data-action='icon']");
+    if (iconButton) {
+      var iconItem = event.target.closest("[data-habit-id]");
+      var iconHabit = Storage.find(Storage.KEYS.habits, iconItem.dataset.habitId);
+      if (!iconHabit) return;
+      var emoji = nextEmoji(iconHabit.emoji || emojiForHabit(iconHabit));
+      Storage.update(Storage.KEYS.habits, iconHabit.id, { emoji: emoji });
+      lastHabitId = iconHabit.id;
+      lastHabitMessage = "Emoji atualizado";
+      renderHabits();
+      Utils.notify("Emoji do hábito atualizado.", { kind: "success" });
+      return;
+    }
     var button = event.target.closest("[data-action='toggle']");
     if (!button) return;
     var item = event.target.closest("[data-habit-id]");
@@ -189,6 +220,13 @@
     renderHabits();
     var form = Utils.qs("#habitForm");
     if (form) form.addEventListener("submit", createHabit);
+    Utils.qsa("[data-close-details]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var details = button.closest("details");
+        if (details) details.open = false;
+        Utils.notify("Criação cancelada. Nada foi salvo.", { kind: "warning" });
+      });
+    });
     var list = Utils.qs("#habitList");
     if (list) list.addEventListener("click", toggleHabit);
   });

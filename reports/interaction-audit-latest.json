@@ -1,0 +1,274 @@
+{
+  "results": [
+    {
+      "name": "checkin-submit-inicial-oculto",
+      "ok": true,
+      "detail": {
+        "before": {
+          "submitHidden": true,
+          "nextHidden": false,
+          "backHidden": true
+        },
+        "after": {
+          "submitHidden": false,
+          "nextHidden": true,
+          "progress": "4 de 4 · necessidade"
+        },
+        "dialogOpen": true,
+        "dialogClosed": true
+      }
+    },
+    {
+      "name": "checkin-submit-final-visivel",
+      "ok": true,
+      "detail": {
+        "before": {
+          "submitHidden": true,
+          "nextHidden": false,
+          "backHidden": true
+        },
+        "after": {
+          "submitHidden": false,
+          "nextHidden": true,
+          "progress": "4 de 4 · necessidade"
+        },
+        "dialogOpen": true,
+        "dialogClosed": true
+      }
+    },
+    {
+      "name": "checkin-modal-pular-abre-fecha",
+      "ok": true,
+      "detail": {
+        "before": {
+          "submitHidden": true,
+          "nextHidden": false,
+          "backHidden": true
+        },
+        "after": {
+          "submitHidden": false,
+          "nextHidden": true,
+          "progress": "4 de 4 · necessidade"
+        },
+        "dialogOpen": true,
+        "dialogClosed": true
+      }
+    },
+    {
+      "name": "planning-adiar-salva-snapshot",
+      "ok": true,
+      "detail": {
+        "clicked": true,
+        "before": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ],
+        "after": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "2026-05-21",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0,
+            "adiada": true
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ],
+        "snapshot": {
+          "tasks": [
+            {
+              "id": "audit-a",
+              "ordem": 0,
+              "prioridade": "alta",
+              "prazo": ""
+            },
+            {
+              "id": "audit-b",
+              "ordem": 1,
+              "prioridade": "media",
+              "prazo": ""
+            }
+          ],
+          "atualizadoEm": "2026-05-20T11:42:48.281Z"
+        },
+        "undone": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "planning-desfazer-restaura-prazo",
+      "ok": true,
+      "detail": {
+        "clicked": true,
+        "before": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ],
+        "after": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "2026-05-21",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0,
+            "adiada": true
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ],
+        "snapshot": {
+          "tasks": [
+            {
+              "id": "audit-a",
+              "ordem": 0,
+              "prioridade": "alta",
+              "prazo": ""
+            },
+            {
+              "id": "audit-b",
+              "ordem": 1,
+              "prioridade": "media",
+              "prazo": ""
+            }
+          ],
+          "atualizadoEm": "2026-05-20T11:42:48.281Z"
+        },
+        "undone": [
+          {
+            "id": "audit-a",
+            "titulo": "Tarefa audit A",
+            "prioridade": "alta",
+            "esforco": "alto",
+            "tempoEstimado": "30 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 0
+          },
+          {
+            "id": "audit-b",
+            "titulo": "Tarefa audit B",
+            "prioridade": "media",
+            "esforco": "baixo",
+            "tempoEstimado": "10 min",
+            "prazo": "",
+            "categoria": "Teste",
+            "concluida": false,
+            "criadoEm": "2026-05-20T11:42:47.289Z",
+            "ordem": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "settings-limpar-dados-confirma-cancela",
+      "ok": true,
+      "detail": {
+        "button": true,
+        "open": true,
+        "closed": true
+      }
+    }
+  ],
+  "failures": []
+}

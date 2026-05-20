@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Planejamento | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js" defer></script>
+    <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/planning.js" defer></script>
+    <script src="../js/planning.js?v=20260520-energy-rules" defer></script>
   </head>
   <body data-page="tasks" data-screen="planning">
     <div class="app-shell">
@@ -23,6 +23,8 @@
         </header>
 
         <section class="stack-lg">
+          <p class="context-help">A sugestão considera seu check-in e suas tarefas abertas.</p>
+
           <section class="planning-alert">
             <strong>Energia 4/10 · risco de sobrecarga</strong>
             <p>O Plenna reduziu a carga e protegeu uma pausa antes do período mais cheio.</p>
@@ -47,10 +49,13 @@
             <h2>Blocos de horário</h2>
             <p>Veja primeiro o essencial e ajuste só se precisar.</p>
             <div class="content-list" id="planningList"></div>
-            <div class="row">
-              <a class="button secondary small" href="calendar-week.html">Agenda semana</a>
-              <a class="button secondary small" href="calendar-month.html">Agenda mês</a>
-            </div>
+            <section class="planning-minimal-support planning-view-links" aria-label="Outras visualizações">
+              <strong>Outras visualizações</strong>
+              <div class="planning-support-actions">
+                <a class="button secondary small" href="calendar-week.html">Ver tarefas por semana</a>
+                <a class="button secondary small" href="calendar-month.html">Ver tarefas por mês</a>
+              </div>
+            </section>
           </section>
         </section>
       </main>
@@ -58,3 +63,4 @@
     </div>
   </body>
 </html>
+

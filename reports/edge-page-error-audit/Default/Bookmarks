@@ -1,0 +1,1012 @@
+{
+   "checksum": "33158ad42a57ae2feb54ea42527080e6",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13235426637256204",
+               "date_last_used": "13350233262374920",
+               "guid": "27f20525-68a1-48eb-963f-67f6c354b68f",
+               "id": "9",
+               "name": "",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.ev.org.br/Cursos",
+               "visit_count": 0
+            }, {
+               "date_added": "13235426835730179",
+               "date_last_used": "0",
+               "guid": "106b77a1-43af-456f-849e-596266fe9ba9",
+               "id": "10",
+               "name": "Busca de Cursos | FGV Educação Executiva",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://educacao-executiva.fgv.br/busca?keys=&curso_tipo%5B%5D=517&modalidade%5B%5D=45&area-conhec%5B%5D=571&tipo_invest%5B1%5D=1&estados=27&cidades=212&unidade=All&sort_by=field_oferta_data_inicio_turma_value&items_per_page=10&mail_address_me=",
+               "visit_count": 0
+            }, {
+               "date_added": "13235426875287307",
+               "date_last_used": "13350233283939914",
+               "guid": "e17a9904-7652-4149-bb33-fab163ac1afe",
+               "id": "11",
+               "name": "Mooc Centro Paula Souza",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://mooc.cps.sp.gov.br/ead/",
+               "visit_count": 0
+            } ],
+            "date_added": "13235426765730502",
+            "date_last_used": "0",
+            "date_modified": "13235426875287307",
+            "guid": "ef79c813-afcc-467a-a61d-bfa29b1443b3",
+            "id": "8",
+            "name": "cursos",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13346725772000000",
+               "date_last_used": "0",
+               "guid": "3230f7bf-b0bf-49fa-91c3-61e1d64de0bf",
+               "id": "13",
+               "name": "IGGGAMES » Free Download PC Games - Direct Links - Torrent",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://igg-games.cc/",
+               "visit_count": 0
+            }, {
+               "date_added": "13347470577000000",
+               "date_last_used": "13365034306970322",
+               "guid": "c2d8447f-4845-42ae-a4e4-ddaf5f93cc87",
+               "id": "14",
+               "name": "CrackWatcher - Crack Status, Game release calendar",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://crackwatcher.com/search",
+               "visit_count": 0
+            }, {
+               "date_added": "13346725763000000",
+               "date_last_used": "13350592649576126",
+               "guid": "984ea4d5-3f3a-4339-8712-9cf844908b27",
+               "id": "15",
+               "name": "ElAmigos Games | Download games for PC",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.elamigos-games.com/",
+               "visit_count": 0
+            }, {
+               "date_added": "13254855715000000",
+               "date_last_used": "0",
+               "guid": "2c133487-82ad-4841-a1e6-157e4f017d20",
+               "id": "16",
+               "name": "KnySims",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.knysims.com.br/",
+               "visit_count": 0
+            }, {
+               "date_added": "13254855757000000",
+               "date_last_used": "13350592725189262",
+               "guid": "743f44a7-5785-4231-8ca0-1ef6268270b9",
+               "id": "17",
+               "name": "Skidrowcodex",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.skidrowcodex.net/",
+               "visit_count": 0
+            }, {
+               "date_added": "13254855775000000",
+               "date_last_used": "0",
+               "guid": "d11c887f-c16e-4adb-b298-313849c3ed9f",
+               "id": "18",
+               "name": "The Sims Resource",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.thesimsresource.com/",
+               "visit_count": 0
+            } ],
+            "date_added": "13350232813002524",
+            "date_last_used": "0",
+            "date_modified": "13350232813002524",
+            "guid": "eaf31d01-d46b-47b2-9028-d98649420cce",
+            "id": "12",
+            "name": "Jogos",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13329409939000000",
+               "date_last_used": "13350233208385633",
+               "guid": "7624dc20-9445-48f2-be83-868bd833ff19",
+               "id": "20",
+               "name": "Consultório Online",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://consultorioonline.psicologiaviva.com.br/",
+               "visit_count": 0
+            }, {
+               "date_added": "13349726988000000",
+               "date_last_used": "0",
+               "guid": "27ee35c4-1fd8-4658-8003-092d7fb7bc71",
+               "id": "21",
+               "name": "GoldeN Formula Filhotes Frango & Arroz - PremieRpet",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://premierpet.com.br/produto/golden-formula-caes-filhotes-frango-arroz/",
+               "visit_count": 0
+            }, {
+               "children": [ {
+                  "date_added": "13272643245000000",
+                  "date_last_used": "0",
+                  "guid": "28631d41-e01b-4727-9add-16d49ac424e5",
+                  "id": "23",
+                  "name": "Planner 2021 - Mensal, Semanal, Diário e mais - Não Me Mande Flores",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://naomemandeflores.com/planner-2021-mensal-semanal-diario-e-mais/",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255121102000000",
+                  "date_last_used": "0",
+                  "guid": "b4191593-e8a2-416c-84e6-91220a00c39a",
+                  "id": "24",
+                  "name": "Planner Shop - YouTube",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.youtube.com/channel/UC7yx91KRfANWpPcOmnzR3pg",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255121102000000",
+                  "date_last_used": "0",
+                  "guid": "612dd66f-4fa5-40f0-b2e4-53d98605050c",
+                  "id": "25",
+                  "name": "MasterPlanner2020.pdf - Google Drive",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://drive.google.com/file/d/1CC4_mj9v9hkdIb2mGD8foKfrL3410yng/view",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255121102000000",
+                  "date_last_used": "0",
+                  "guid": "2796c6d5-d9a3-4697-9f06-1088908c91ee",
+                  "id": "26",
+                  "name": "titulos bonitos - Pesquisa Google",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.google.com/search?q=titulos+bonitos&sxsrf=ALeKk01baSkfyhe3dwoNjRhMbveCf5-zdA:1610639469721&tbm=isch&source=iu&ictx=1&fir=_a1Y9ZMBB0YwHM%252C2wIWD3yBCcm5RM%252C_&vet=1&usg=AI4_-kSuhIIdeZcB9wxaE2612lE_AH8xtw&sa=X&ved=2ahUKEwiMu9DL45vuAhW_ErkGHRHmBKgQ9QF6BAgKEAE&biw=1318&bih=628#imgrc=eQEOhFIE_fTZdM&imgdii=wDlkJYBjksm3tM",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255121102000000",
+                  "date_last_used": "0",
+                  "guid": "b9ee71c7-c917-4b6a-b27e-733a58c6591c",
+                  "id": "27",
+                  "name": "planner financeiro - Pesquisa Google",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.google.com/search?q=planner+financeiro&sxsrf=ALeKk02BiXP_pdSXWSj_H_E485nSqucSOA:1610639830556&tbm=isch&source=iu&ictx=1&fir=iXKJ0w11sgG-1M%252ChzRjMT9FMGzqLM%252C_&vet=1&usg=AI4_-kQXR8101x60WwoFe4kVdaKkvlvZ2Q&sa=X&ved=2ahUKEwjVg9j35JvuAhWJF7kGHegcDTMQ9QF6BAgFEAE&biw=1318&bih=628#imgrc=zEAUb-TiwE39gM",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255121102000000",
+                  "date_last_used": "0",
+                  "guid": "dfe2e198-9999-40ee-ade7-b0cc8cb18e5a",
+                  "id": "28",
+                  "name": "planner-financeiro-a5-pdf-bloquinho.jpg (1748×2480)",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://img.elo7.com.br/product/original/30F0366/planner-financeiro-a5-pdf-bloquinho.jpg",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255123832000000",
+                  "date_last_used": "0",
+                  "guid": "a2cccc2e-12ef-451a-80b5-31dbbc01a28f",
+                  "id": "29",
+                  "name": "88b560269ff5a3b5317795f4e8530067be434565r1-712-706v2_uhq.jpg (712×706)",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://pm1.narvii.com/6908/88b560269ff5a3b5317795f4e8530067be434565r1-712-706v2_uhq.jpg",
+                  "visit_count": 0
+               }, {
+                  "date_added": "13255725352000000",
+                  "date_last_used": "0",
+                  "guid": "d3a9d274-d3b3-4acc-b2f8-80e752170eaa",
+                  "id": "30",
+                  "name": "Planner 2021 Gratuito – Ufa, tá feito – Ufa, tá feito! – Produtos digitais",
+                  "show_icon": false,
+                  "source": "sync",
+                  "type": "url",
+                  "url": "https://www.ufatafeito.com/2020/08/15/planner-2021-gratuito/",
+                  "visit_count": 0
+               } ],
+               "date_added": "13350232813003489",
+               "date_last_used": "0",
+               "date_modified": "13350232813003489",
+               "guid": "eeccd881-9778-4115-b896-8e4343da644c",
+               "id": "22",
+               "name": "Planner",
+               "source": "unknown",
+               "type": "folder"
+            }, {
+               "date_added": "13279833398000000",
+               "date_last_used": "0",
+               "guid": "277d65db-0ae6-4e6b-8428-d3dee583bfd9",
+               "id": "31",
+               "name": "Notion Template Gallery",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.notion.so/Notion-Template-Gallery-181e961aeb5c4ee6915307c0dfd5156d",
+               "visit_count": 0
+            }, {
+               "date_added": "13279831896000000",
+               "date_last_used": "0",
+               "guid": "be2a3286-0ee8-4951-83c6-9c6ca5c99a14",
+               "id": "32",
+               "name": "Indify – Notion Widgets",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://indify.co/",
+               "visit_count": 0
+            }, {
+               "date_added": "13254855582000000",
+               "date_last_used": "0",
+               "guid": "7c44540b-e539-44aa-9a54-7646b5d57c42",
+               "id": "33",
+               "name": "Speed Test",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.speedtest.net/pt",
+               "visit_count": 0
+            }, {
+               "date_added": "13254855618000000",
+               "date_last_used": "0",
+               "guid": "c34566af-8543-4d13-9707-a91f3a0bfcee",
+               "id": "34",
+               "name": "Letras",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://letrasdiferentesbonitas.com/",
+               "visit_count": 0
+            }, {
+               "date_added": "13259707641000000",
+               "date_last_used": "0",
+               "guid": "9f367787-e6fc-4493-b438-0bbc54a4dd16",
+               "id": "35",
+               "name": "DaFont - Baixar fontes",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.dafont.com/pt/",
+               "visit_count": 0
+            }, {
+               "date_added": "13260277299000000",
+               "date_last_used": "0",
+               "guid": "9d96d2dd-eb67-4059-aabd-fcbb28bb24c2",
+               "id": "36",
+               "name": "Ícones Grátis, 81.000+ nos formatos PNG, EPS, SVG",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://br.freepik.com/icones-gratis",
+               "visit_count": 0
+            }, {
+               "date_added": "13247601359000000",
+               "date_last_used": "0",
+               "guid": "1304c59f-60fb-4add-8815-11ae8296cd4e",
+               "id": "37",
+               "name": "Letras Diferentes e Bonitas ✅ Conversor Copiar & Colar",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://letrasdiferentesbonitas.com/",
+               "visit_count": 0
+            }, {
+               "date_added": "13270231648000000",
+               "date_last_used": "0",
+               "guid": "631f4ab8-ebb7-4923-92e6-710fae184949",
+               "id": "38",
+               "name": "Calculadora de Horas - Calcule a Diferença entre Horas",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://devtools.com.br/calculadora-de-horas/",
+               "visit_count": 0
+            }, {
+               "date_added": "13329586656000000",
+               "date_last_used": "0",
+               "guid": "a56f83c1-4fb2-4b80-af33-677b9f51a64f",
+               "id": "39",
+               "name": "(1) AI Transcriptions - Ready",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://riverside.fm/transcription",
+               "visit_count": 0
+            }, {
+               "date_added": "13264035900000000",
+               "date_last_used": "13350233392077145",
+               "guid": "9862dbed-2f44-410c-a15d-1e4a359ca3bf",
+               "id": "40",
+               "name": "Baixar video do YouTube: Downloader do YouTube Online",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://pt.savefrom.net/11/",
+               "visit_count": 0
+            } ],
+            "date_added": "13350232813003210",
+            "date_last_used": "0",
+            "date_modified": "13350232813003210",
+            "guid": "b7d698a8-3ac4-4e81-9b1a-8159ca090947",
+            "id": "19",
+            "name": "Geral",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13318973281000000",
+               "date_last_used": "0",
+               "guid": "04804c9e-5539-4157-8709-ba004ba8f36c",
+               "id": "42",
+               "name": "Jimo Lava-Máquinas Pastilha – Blister c/02 pastilhas | Amazon.com.br",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.amazon.com.br/gp/product/B09PGQZN18/ref=ox_sc_act_title_3?smid=A2F804PD0QVE37&psc=1",
+               "visit_count": 0
+            }, {
+               "date_added": "13318973277000000",
+               "date_last_used": "0",
+               "guid": "d80c3b12-af31-4ad8-b011-2beb7af5a95e",
+               "id": "43",
+               "name": "Porta Facas, 38.2cm, Cinza, Arthi | Amazon.com.br",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.amazon.com.br/gp/product/B08GDR9P3D/ref=ox_sc_act_title_2?smid=A1ZZFT5FULY4LN&psc=1",
+               "visit_count": 0
+            }, {
+               "date_added": "13318717736000000",
+               "date_last_used": "0",
+               "guid": "f281769f-a226-405c-a276-9914e4bcdb87",
+               "id": "44",
+               "name": "Lava E Seca Healthguard Smart 14 Programas Wi-fi 11kg Midea - Carrefour",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.carrefour.com.br/lava-e-seca-healthguard-smart-14-programas-wifi-11kg-midea-mp929306291/p?utm_campaign=zoom_buscape_3p&bigclid=eyJvZmZlcklkIjoyNTE0MjQyNDEsInNrdSI6IjMyMjExNDU0NiIsImdyb3VwSWQiOiIzMjIxMTQ1NDYiLCJsb2ciOiIxOC8wMS8yMDIzIDEyOjI4In0&utm_source=zoom_buscape_3p&utm_medium=comp&utm_content=6699e277556a44228b9933fcbd277269",
+               "visit_count": 0
+            } ],
+            "date_added": "13350232813008178",
+            "date_last_used": "0",
+            "date_modified": "13350232813008178",
+            "guid": "b7682366-6ad0-4e7d-b7ae-b86491b5e5ca",
+            "id": "41",
+            "name": "Casa",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13328198921000000",
+               "date_last_used": "13351376049372195",
+               "guid": "46e44cb5-44bd-495b-a485-41028dfde5f5",
+               "id": "46",
+               "name": "Programa de Estágio Bradesco 2023",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.ciadetalentos.com.br/estagiobradesco2023/#",
+               "visit_count": 0
+            }, {
+               "date_added": "13342812077000000",
+               "date_last_used": "0",
+               "guid": "60c25017-b3b1-41a5-84e9-f622b0eb52de",
+               "id": "47",
+               "name": "Estágio em Desenvolvimento de Software (Banco de Talentos) - dti",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.dtidigital.com.br/vagas/estagio-em-desenvolvimento-de-software-vaga-remota",
+               "visit_count": 0
+            }, {
+               "date_added": "13366573622672928",
+               "date_last_used": "0",
+               "guid": "d4a890ef-63a7-4003-8e42-09de66af6db2",
+               "id": "48",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Página da Vaga | ESTÁGIO - DESENVOLVIMENTO EM SISTEMAS DE CRM",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://estagiomercantil.gupy.io/jobs/7405703?jobBoardSource=gupy_public_page",
+               "visit_count": 0
+            }, {
+               "date_added": "13380421314526370",
+               "date_last_used": "0",
+               "guid": "929190fb-dd42-4b3e-9355-ec815e6bdec2",
+               "id": "49",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Bootcamps de Laboratória",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://bootcamp.laboratoria.la/pt?utm_source=laboratoria_web&utm_campaign=footer_laboratoria-web&utm_medium=footer",
+               "visit_count": 1
+            } ],
+            "date_added": "13350234228750521",
+            "date_last_used": "0",
+            "date_modified": "13380421314526370",
+            "guid": "89aa2a21-6870-4196-951e-1ff33511afe0",
+            "id": "45",
+            "name": "Estágios",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13290432332060185",
+               "date_last_used": "0",
+               "guid": "aa366067-1cb5-488c-a248-20cf7e8f0158",
+               "id": "51",
+               "name": "eLivros - Livros para Baixar em ePub Mobi ou Ler Online",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://elivros.love/",
+               "visit_count": 0
+            } ],
+            "date_added": "13350234457109376",
+            "date_last_used": "0",
+            "date_modified": "13350234457109376",
+            "guid": "b76e5ade-38ef-4adb-9443-24b1bc6cf076",
+            "id": "50",
+            "name": "Livros",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13350579084136000",
+               "date_last_used": "0",
+               "guid": "718fc198-4f5b-44d0-b89c-f4bdb76418fd",
+               "id": "53",
+               "name": "Humata",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://app.humata.ai/ask/file/44c096e9-7a68-407a-be6c-d99bebef7b6c",
+               "visit_count": 0
+            }, {
+               "date_added": "13350579084133000",
+               "date_last_used": "0",
+               "guid": "a5d1ca90-7d0c-4fe9-8db3-cb3c17af8444",
+               "id": "54",
+               "name": "DIO | Codifique o seu futuro global agora",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://web.dio.me/home",
+               "visit_count": 0
+            }, {
+               "date_added": "13350579084132000",
+               "date_last_used": "13386079572525628",
+               "guid": "feddc2fe-9ef9-4a11-a452-2aa19264a8dc",
+               "id": "55",
+               "name": "(6) 🔴 RUIDO BRANCO ⚪ TELA PRETA ⬛ Sono Relaxamento Estudando Zumbido Meditacao, 10 horas, Cólica Do Bebê - YouTube",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=YxJHtxXPTeQ",
+               "visit_count": 1
+            }, {
+               "date_added": "13350579084131000",
+               "date_last_used": "13386432256408948",
+               "guid": "c37e4a48-1b03-4ba2-84ed-e9d1c4a38eaa",
+               "id": "56",
+               "name": "Smoothed Brown Noise 8-Hours - Remastered, for Relaxation, Sleep, Studying and Tinnitus ☯108 - YouTube",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=RqzGzwTY-6w&t=27677s",
+               "visit_count": 1
+            }, {
+               "date_added": "13350579084130000",
+               "date_last_used": "0",
+               "guid": "6f58dd51-4291-413c-906d-520b0624b999",
+               "id": "57",
+               "name": "Meus arquivos - OneDrive",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://animaedu-my.sharepoint.com/personal/70053953606_ulife_com_br/_layouts/15/onedrive.aspx?view=0",
+               "visit_count": 0
+            }, {
+               "date_added": "13350579084135000",
+               "date_last_used": "13380898775848067",
+               "guid": "8ff1486a-c6e2-43e0-9955-6b307d0168aa",
+               "id": "58",
+               "name": "Suas listas | Quizlet",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://quizlet.com/latest",
+               "visit_count": 1
+            }, {
+               "date_added": "13350579084134000",
+               "date_last_used": "0",
+               "guid": "0f0ea305-e6ae-4168-a8f5-9252ebd4fb4d",
+               "id": "59",
+               "name": "Meus Cursos - Curso em Vídeo",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.cursoemvideo.com/meus-cursos/",
+               "visit_count": 0
+            }, {
+               "date_added": "13350574797605983",
+               "date_last_used": "13351465584171988",
+               "guid": "0d4b4698-71eb-48f3-a3fe-83160b69e15a",
+               "id": "60",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "hackers",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://ava.hackersdobem.org.br/",
+               "visit_count": 0
+            }, {
+               "date_added": "13385053254156590",
+               "date_last_used": "0",
+               "guid": "35ba7cf5-a020-4330-8946-283103b3a4c5",
+               "id": "61",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Início",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://classroom.google.com/u/2/?cjc=5aunhgz",
+               "visit_count": 1
+            }, {
+               "date_added": "13386078090878157",
+               "date_last_used": "0",
+               "guid": "0358ac3e-7763-4010-a1ed-4dc67c373342",
+               "id": "62",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Fundamentos (Python) | Comunidade OneBitCode",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://comunidade.onebitcode.com/c/formacao-completa",
+               "visit_count": 1
+            }, {
+               "date_added": "13387037712984983",
+               "date_last_used": "0",
+               "guid": "1000e3ed-a145-49ae-b4d7-29053898d07d",
+               "id": "63",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Java - Curso em Vídeo",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.cursoemvideo.com/curso/java-basico/aulas/java/",
+               "visit_count": 1
+            }, {
+               "date_added": "13387556275218401",
+               "date_last_used": "0",
+               "guid": "e689a1a1-1aad-452e-a695-e003166a3f04",
+               "id": "64",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Início",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://classroom.google.com/?cjc=5aunhgz&pli=1",
+               "visit_count": 1
+            }, {
+               "date_added": "13388072851248872",
+               "date_last_used": "0",
+               "guid": "d9fad211-f534-4664-ac1e-97f3ab9133eb",
+               "id": "65",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Krisp | Resumidor de vídeos do Youtube - Grátis",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://krisp.ai/youtube-video-summarizer/?utm_source=chatgpt.com",
+               "visit_count": 1
+            } ],
+            "date_added": "13350579084129000",
+            "date_last_used": "0",
+            "date_modified": "13388072851248872",
+            "guid": "5a8b34bf-2f37-4bc2-820e-84f5d38e740d",
+            "id": "52",
+            "name": "Faculdade",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13356292980456065",
+            "date_last_used": "0",
+            "guid": "0d057a3a-4d5b-46fa-b6cd-a3ab3008e5e0",
+            "id": "66",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Anime Force - Assistir Animes Online em FHD, HD e SD",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://animeforce.net/",
+            "visit_count": 0
+         }, {
+            "date_added": "13351459283275182",
+            "date_last_used": "13391030384763662",
+            "guid": "8c9c14ed-e540-45e7-af04-c91396abaf29",
+            "id": "67",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Mobills",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://web.mobills.com.br/dashboard",
+            "visit_count": 7
+         }, {
+            "date_added": "13357176955084110",
+            "date_last_used": "13389814279608501",
+            "guid": "821844e3-cc3e-4ee9-ab9a-955cc947d12a",
+            "id": "68",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru - GoAnimes",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://goanimes.net/series/loop-7-kaime-no-akuyaku-reijou-wa-moto-tekikoku-de-jiyuu-kimama-na-hanayome-seikatsu-wo-mankitsu-suru/",
+            "visit_count": 1
+         }, {
+            "date_added": "13357413280668099",
+            "date_last_used": "0",
+            "guid": "409c2ebb-b656-47fd-9ca4-3392236ea3ac",
+            "id": "69",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Sousou no Frieren Dublado - GoAnimes",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://goanimes.net/series/sousou-no-frieren-dublado/",
+            "visit_count": 0
+         }, {
+            "date_added": "13383932067369628",
+            "date_last_used": "0",
+            "guid": "5f587d80-ea6e-4eb4-96d8-c0c8dbfadf91",
+            "id": "70",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Email – LUANA CAROLINE MADRONA CORDEIRO - 70053953606 – Outlook",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://outlook.office365.com/mail/inbox/id/AAQkAGU0Y2FiZGFhLWM5ZmYtNDdhMi05ZDYyLWRkZWQ0MzI4YjZkYwAQAILLVDhzy8NOhQAJu0EM1RY%3D",
+            "visit_count": 1
+         }, {
+            "date_added": "13358513107187919",
+            "date_last_used": "13366159601702556",
+            "guid": "d41208f8-94ad-4325-beed-502559e4c35a",
+            "id": "71",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Max",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://play.max.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13360512899612944",
+            "date_last_used": "13361798812991244",
+            "guid": "3895fe52-868e-45c0-ae4e-93489e581d6d",
+            "id": "72",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Assistir Kage no Jitsuryokusha ni Naritakute! 2 - Episódio 2 Online em PT-BR - Animes Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://animesonline.nz/episodio/kage-no-jitsuryokusha-ni-naritakute-2-episodio-2/",
+            "visit_count": 0
+         }, {
+            "date_added": "13365163917779855",
+            "date_last_used": "0",
+            "guid": "f354996c-5b46-4a00-bdf4-764cfdb5c678",
+            "id": "73",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hotmart - Minhas compras",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://consumer.hotmart.com/main",
+            "visit_count": 0
+         }, {
+            "date_added": "13365160760565016",
+            "date_last_used": "0",
+            "guid": "74dbdafd-461f-4842-8e61-652af9fc2cfd",
+            "id": "74",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Kiwify",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://dashboard.kiwify.com.br/courses",
+            "visit_count": 0
+         }, {
+            "date_added": "13376085497094764",
+            "date_last_used": "0",
+            "guid": "4cafb06a-9726-400e-8460-7c2d2ceab667",
+            "id": "75",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Cópia de Custo Material por Cliente.xlsx - Planilhas Google",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.google.com/spreadsheets/d/1s4TLjQeYyDPhZ_WpapLwaPvmVfTKWtIo/edit?gid=1252224420#gid=1252224420",
+            "visit_count": 1
+         }, {
+            "date_added": "13376222918300732",
+            "date_last_used": "0",
+            "guid": "d6eaa86d-a1e8-43b9-a243-e28b43b7bfb1",
+            "id": "76",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Home - Volume Rica",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://caroldoscilios.cademi.com.br/area/vitrine",
+            "visit_count": 1
+         } ],
+         "date_added": "13423751016114941",
+         "date_last_used": "0",
+         "date_modified": "13383932067369628",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13423751016114941",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13141148377254636",
+            "date_last_used": "0",
+            "guid": "d820f1f5-efb0-461e-87df-e9aa98e33de3",
+            "id": "77",
+            "name": "RecipeBook Addon | Minecraft PE Mods & Addons",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://mcpedl.com/recipebook-addon/",
+            "visit_count": 0
+         }, {
+            "date_added": "13141616001692921",
+            "date_last_used": "0",
+            "guid": "3419aa69-43a1-4dc1-acef-81401f52e80f",
+            "id": "78",
+            "name": "Delícia de Ver: Como remover Pêlos do Rosto e Corpo IMEDIATAMENTE | Remover pêlos indesejáveis permanentemente",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://deliciadiver.blogspot.com.br/2017/04/como-remover-pelo-facial-imediatamente.html?m=1",
+            "visit_count": 0
+         }, {
+            "date_added": "13142369033584314",
+            "date_last_used": "0",
+            "guid": "1cffd29b-9b05-4f2d-a343-4c42fd2dcdf1",
+            "id": "79",
+            "name": "Netflix",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.netflix.com/YourAccount",
+            "visit_count": 0
+         }, {
+            "date_added": "13159396802998869",
+            "date_last_used": "0",
+            "guid": "a6f2dcff-cfc5-4c1e-ad81-c69afd44001f",
+            "id": "80",
+            "name": "Supernatural 12ª Temporada (2016) Dublado - Torrent Download - Rapido Torrents - Rápido é Aqui!!!",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://www.rapidotorrents.net/supernatural-12a-temporada-2016-dublado-torrent-download/",
+            "visit_count": 0
+         }, {
+            "date_added": "13206123569541805",
+            "date_last_used": "0",
+            "guid": "3f922f02-d1f7-48e5-b1ee-5bdb571c9828",
+            "id": "81",
+            "name": "Lua Mart Sims: TRADUÇÃO DO DESAFIO NOT SO BERRY | The Sims 4",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://luamartsims.blogspot.com/2017/04/traducao-do-desafio-not-so-berry-sims-4.html?m=1",
+            "visit_count": 0
+         }, {
+            "date_added": "13227999736522710",
+            "date_last_used": "0",
+            "guid": "a5e7511f-cc3e-4e6a-9968-5d9564417a63",
+            "id": "82",
+            "name": "Os principais conectivos em inglês – Inglês Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.inglesonline.com.br/conectivos-em-ingles/",
+            "visit_count": 0
+         }, {
+            "date_added": "13228174574282857",
+            "date_last_used": "0",
+            "guid": "9edcdcc9-dc29-4777-ac91-458567d7fd7b",
+            "id": "83",
+            "name": "Passado simples (Simple past) - Inglês - InfoEscola",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.infoescola.com/ingles/passado-simples-simple-past/",
+            "visit_count": 0
+         }, {
+            "date_added": "13228174588735673",
+            "date_last_used": "0",
+            "guid": "f0ad417f-07da-4f6f-a0c4-2bf45cb47df6",
+            "id": "84",
+            "name": "Nova guia",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "chrome://newtab/",
+            "visit_count": 0
+         }, {
+            "date_added": "13228174778632788",
+            "date_last_used": "0",
+            "guid": "5ec7fe8e-7eff-4cf1-852d-0a29e7c220b5",
+            "id": "85",
+            "name": "Simple Past - passado simples em inglês - Toda Matéria",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.todamateria.com.br/simple-past/",
+            "visit_count": 0
+         }, {
+            "date_added": "13233932193388620",
+            "date_last_used": "0",
+            "guid": "f4f085d0-2620-4ddb-a4ea-0912b41b3433",
+            "id": "86",
+            "name": "2020.1-ProgrComp: Calendário: Visualizar mês em detalhes: maio 2020",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://ava.betim.ifmg.edu.br/moodle/calendar/view.php?course=544&view=month&time=1589425200",
+            "visit_count": 0
+         }, {
+            "date_added": "13297215286099791",
+            "date_last_used": "0",
+            "guid": "b2fec24d-134f-4e78-989b-93234062f57c",
+            "id": "87",
+            "name": "Chromos | Portal do Aluno - 9.4.2",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://areadoaluno.chromos.com.br/login",
+            "visit_count": 0
+         }, {
+            "date_added": "13298087017871225",
+            "date_last_used": "0",
+            "guid": "2b48fa84-56c3-4e29-9536-d16a5da72d2d",
+            "id": "88",
+            "name": "Spotify - Web Player: Music for everyone",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://open.spotify.com/?_gl=1*18xzq3z*_gcl_aw*R0NMLjE2NTM2MTMzOTkuQ2p3S0NBand5cnlVQmhCU0Vpd0FHTjVPQ0tZN08zREtNbGpienNBQXczc0JDV2dyaktPV3RXVVpFNzh2OG5zX2pCY2MyeGp0dERWLVV4b0NJSDBRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2NTM2MTMzOTkuQ2p3S0NBand5cnlVQmhCU0Vpd0FHTjVPQ0tZN08zREtNbGpienNBQXczc0JDV2dyaktPV3RXVVpFNzh2OG5zX2pCY2MyeGp0dERWLVV4b0NJSDBRQXZEX0J3RQ..",
+            "visit_count": 0
+         }, {
+            "date_added": "13315101473525500",
+            "date_last_used": "0",
+            "guid": "860dc2b1-7573-4886-9faa-ba9516a46419",
+            "id": "89",
+            "name": "Status do Pedido | Madeira Madeira - O Maior Home Center da Internet",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://eagle.madeiramadeira.com.br/tracking/Z29905059/11793116",
+            "visit_count": 0
+         } ],
+         "date_added": "13423751016114941",
+         "date_last_used": "0",
+         "date_modified": "13315101473525500",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "workspaces_v2": {
+         "children": [ {
+            "children": [  ],
+            "date_added": "13421116652022015",
+            "date_last_used": "0",
+            "date_modified": "13421116652022015",
+            "guid": "2a46bc05-15e5-4862-a8c6-3bda823ba389",
+            "id": "7",
+            "name": "Workspace 1",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13423751016114941",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "75aa6670-344f-549d-b742-660f029506ab",
+         "id": "5",
+         "name": "Espaços de trabalho",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCAnv6/KdAQAAEgAqGHRVQUVYeG1CNmYzc2hadllGNE5PTFE9PUgDoAYHEq4BCFkSqQEKHDlwRmtLM3ZTa3dLSnh1c0NRSDVKeDlTSjdSOD0SJDg2MGRjMmIxLTc1NzMtNDg4Ni05ZmFhLWJhOTUxNmE0NjQxORgAIAAoADDG08O50jE4vNXDudIxQLzVw7nSMUocbVpWYU5sT0ZSYkhEQ2xSMSsvZnc4TUliUmkwPVogIh7/+282NWtLTklpMWR5Z2pzRE0wdjQvQ3dQYUNUYz1l2dMSKsI+AmAFEq4BCFgSqQEKHFQ3RTFpMXFVckh5OWxFRVVqcFozWmdVL0pBcz0SJDJiNDhmYTg0LTU2YzMtNGUyOS05NTM2LWQxNmE1ZGE3MmQyZBgAIAAoADDt4/Hl7TE4zbTEudIxQM20xLnSMUocU2JIRU9ReklIMTVyV3pGVFVTTUZhZzR1bHljPVogIh7/9m1HTnh5Mjh2NlcrRHIvaWxYT0Z2SXRQeUNkbz1lD2ImeMI+AmAFEq0BCFISqAEKHGlDYWIxZjMwWExVemVsYkdTdlR4UnVweFVCaz0SJGE1ZTc1MTFmLWNjM2UtNGU2YS05OTY4LTVkOTU2NDQxN2E2MxgAIAAoADCLicW50jE4i4zFudIxQIuMxbnSMUocTE00aUJGRjNKK1d4ZFBLanJGanF1a1p5Z1M0PVofIh37a3VRL1I1ak13amxXRk02aGU1eFR4UERtaUFrPWVFE59Owj4CYAUSrQEIVBKoAQocb0lUQkpCWHpmYk1sam9YWG9kMldRMHQ5VHRJPRIkZjBhZDQxN2YtMDdkYS00ZjZmLWEwYzQtMmJmNDVjYjQ3ZGY2GAAgACgAMPWyxLnSMTjBtsS50jFAwbbEudIxShxFWHFUcExldWZBZUNGcGFKQzkwamFOT1FzRTg9Wh8iHf4wL2pING1YRUozaVhSOWthUzFvWllaclBBM1E9ZQAAAADCPgJgBRKtAQhREqgBChxPSFBmeTJjQi96YXcrRDdxT0lyV1pkZEtkYzA9EiQzZjkyMmYwMi1kMWY3LTQ4ZTUtYjFlZS01YmRiNTcxYzk4MjgYACAAKAAw9sPEudIxOJ3GxLnSMUCdxsS50jFKHGxJT0U2dE5IT1JhaFRmcW1xR0U3OXc0WnI1WT1aHyId905xYWgrWTJDb1lrNG9FT3NwZzNmUitDdFZpUT1lTh7i0cI+AmAFEq0BCE8SqAEKHFdDYnQ4blJHTUcyWlFWTUpWTjhkVEEyYVFZUT0SJDFjZmZkMjliLTliMDUtNGYyZC1hMzQzLTRjNDJmZDJkY2RmMRgAIAAoADDehcel4jE4zM7EudIxQMzOxLnSMUocQXVNNFhIQzR1aUlYQ1FucFpHN01XazBsdldVPVofIh3dMEtMcmJqRUtTS2N2WW1aNElkNUd6SElJeVpzPWUNU0CUwj4CYAUSrQEIThKoAQocTGVGMGU0ckZKUUFEWlozSmx3dFRHQ1BORlNZPRIkMzQxOWFhNjktNDNhMS00ZGMxLWFjZWYtODE0MDFmNTJlODBmGAAgACgAMOepxLnSMTi0q8S50jFAtKvEudIxShxMbGdJcmdGNXZXQ0ZBWkNmK2RGY3JMclFQOVk9Wh8iHbtidHRHVndBZFNpTFBUek9QcXZ4MHN6OVordnM9ZRYtgAPCPgJgBRKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ0M2FlMjE3ZC1hYjczLTVlMTktYWFhZC1lNjhkNDFjZWU1N2IYACAAKAAwlp3nmqMuOKn/9bP/L0Cp//Wz/y9KHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAAStQEISRKwAQocczZJRW9WVVdiOVFpam95ODJaZFZLK2dnSVFRPRIkZjM1NDk5NmMtNWI0Ni00YTAwLWJkZjQtNzY0Y2ZkYjVjNjc4GAAgACgAMMDtkt+MMji59YiJijJAufWIiYoyShxYTjRrMXVmUDdMdW1lRXBXUm5KdjBPNnZWYnM9WiciJf////8AAAAF/WVlSkFWaTJWdW1OcnR0WUF2aUVMMDljTjQvbz1lWUFxW8I+AmAFErUBCEUSsAEKHFBNTW1qVHBqbTB2bHV0b0JQcFFKM3BKbkpScz0SJDQwOWMyZWJiLWI2NTYtNDdmZC05Y2E0LTMzOTIyMzZlYTNhYxgAIAAoADC/7ZLfjDI44p6sme0xQOKerJntMUocUExrOEdSVytGREpyV2lSbEtEeFB4b05wRTZ3PVonIiX/////AAAABOppQnlSQjJlblREM3k5TDIyM1pmcHAyZnJ0Ujg9ZcfIy6PCPgJgBRK1AQhEErABChxmSnZTUURuMmM4QW5NVnJaL3hqVkprYjJYK0E9EiQ4MjE4NDRlMy1jYzNlLTRlZTktYWI5YS05NTVjYzk0N2QxMmEYACAAKAAw2Mum8+UyOMSL1KjsMUDEi9So7DFKHGU1SEJ4TGpVYkxRaXBReDR4OGcrT25JUU5paz1aJyIl/////wAAAATVYjlxanNEbm45U0FuQXRTUDhKU2RmZ0gvZTFvPWVwr+EOwj4CYAUStQEIQxKwAQocZ2VvZEloR0ljKzJnZjdTNjFWVVVMN1FlVnNrPRIkOGM5YzE0ZWQtZTU0MC00NWU3LWFmMDQtYzkxMzk2YWJhZjI5GAAgACgAMOu9mLfqMjiQ0pyC1zFAkNKcgtcxShxUakYxQndkdk83d0RvVUVEVTBOMVFtc3dmNkU9WiciJf////8AAAAEv1VvVWVVYk9lQzNveUM0bUphZXZMNE5WMk10cz1l5ZclWsI+AmAFErUBCEISsAEKHGQzZ2p4K2VWL2pFVW55aXFUWWdPUWNndDFTST0SJDBkMDU3YTNhLTRkNWItNDZmYS1iNmNkLWEzYWIzMDA4ZTVlMBgAIAAoADC57ZLfjDI4rfGRg+kxQK3xkYPpMUocWHNPTXh5TWtYZkRLQlVpc2pnWGkvMCtNSHFvPVonIiX/////AAAABKpTSStIa0xVcnZZMG52cnBsRmJXZklONEU0VUE9ZZdFG2DCPgJgBRKuAQhWEqkBChxaL2ZRTDZpTmJjSXdsa0dlV1ZVdGxrdWxydGs9EiRmNGYwODVkMC0yNjIwLTRkZGItYTRlYS0wOTEyYjQxYjM0MzMYACAAKAAwkMzEudIxOMvNxLnSMUDLzcS50jFKHGVCYzFRZUFqSG45Z1grYU1rZitlVEJnb0JOOD1aICIe/7RSK24ybUdQNGpTeWg4Q3REQ3Q5R3I1L3A5RG89ZeeZE3TCPgJgBRK1AQhGErABChx5MFJXeWdxdFNFakMxUlN1dnd1SlMrTS9HRmM9EiQ1ZjU4N2Q4MC1lYTZlLTRlYjQtOTZkOC1jMGM4ZGJmYWRmOTEYACAAKAAwyrnD/s8yOMSFw/7PMkDEhcP+zzJKHDl2UGZZcFF1TlNnT1kzTEVtSWJzM1NLY3d5UT1aJyIl/////wAAAATvYWVQSjFXU1FSY0RhWTlkSnVUbVdwaWx2ZlQwPWXhvbfLwj4CYAUSrgEIQRKpAQocRjhuWnhJQUhIK094ZW5XSlpzZ0YzclZPVlJVPRIkZDlmYWQyMTEtZjUzNC00NjY0LWFjMWUtOTdmM2FiOTEzM2ViGAAgACgAML+F9bTfMji0iPW03zJAtIj1tN8yShxhR1RqREdGNXZPMzg2N0pKWlgvdzI1ZGZjOW89WiAiHv//Sk1ybWYrcHFrclZRYkNPV05GNnE5S25hd2RrPWXafRuswj4CYAUSrgEIPhKpAQocMm16U21GaVpCWWY2UUduLzNIK0duaWhKNVZBPRIkMDM1OGFjM2UtNzc2My00MDEwLWExZWQtNGRjNjdjMzczMzQyGAAgACgAML6u6/3XMjigsuv91zJAoLLr/dcyShx0OWlTRVV3VDVvMThMK1dlakZXK1lSK004ZFE9WiAiHv/7VHZtV0JnZzlXU1kyYXFxV2NQYUpJcjk3Qm4wPWVf4KdZwj4CYAUSrgEIPRKpAQocYzkvamc2d2k3UXVCN3RnbzZVclNOUzlISmhVPRIkMzViYTdjZjUtYTAyMC00MzMwLTg5NDYtMjgzMTAzYjNhNGM1GAAgACgAMJXMk5XUMji30pOV1DJAt9KTldQyShxrVW5TZThzY1p2V2ZFVVpLb0o1bitPdU5uVms9WiAiHv/ubVBTVU52WklVZ3FFcDU2S3VodUY1bGo1bWpBPWUER1j5wj4CYAUSrQEIOxKoAQocZTVSRHlnLy9QR1liamo1Tm92SUNJNFpOR0drPRIkMGYwZWEzMDUtZTZhZS00MTY4LWE4ZjUtOTI1MmViZDRmYjRkGAAgACgAMJeryIGQMjj3pMS50jFA96TEudIxShxOY1ZnaWUwOEtOeTR1Z0JmekR6dmZuZzg4Zzg9Wh8iHf03THFyNlVYRWkyeDZoMEZSNkorY3A1eThLSUk9Zas6kdXCPgJgBRKtAQg4EqgBChxQSDM3VWI5V1hxMnlmaVdTeHJrVElGdkxuK2c9EiRjMzdlNGE0OC0xYjAzLTRiYTItODRlZC1lOWQxYzRhMzhlYWEYACAAKAAw46HcptkyOJyYsrnSMUCcmLK50jFKHERYd0NNc1lveUNmMVJncGVxcGdvU1BPd2s4Zz1aHyId3Gk3a3Nkbms5WXRhOWR2bDd5UEI3cHZwVXNTZz1l/ZyMSsI+AmAFEqwBCDUSpwEKHDhEb0JMYytUK3pRS1VSb2FkV1JhaU4wemdCQT0SJDcxOGZjMTk4LTRmNWItNDRkMC1iODljLWY0YmRiNzY0MThmZBgAIAAoADDH0sTe0zE4mabEudIxQJmmxLnSMUocTXJVdEVLRDBXM0tJSjN0NTMzL2Q2T2ZxTklVPVoeIhxJdElNbGJuOGN1K2ZTTERHay81TU4rNnVXUEU9ZbBra/nCPgJgBRKuAQhXEqkBChxzNnVFQlBZelREaWYzWitGWG43cUZ4cEk0OG89EiRiMmZlYzI0ZC0xMzRmLTRlNzgtOTg5Yi05MzIzNDA2MmY1N2MYACAAKAAwmuXDudIxOMzow7nSMUDM6MO50jFKHEdXT01DdlJTc2pqcnRkNGlUS3A4a3JhOEtYQT1aICIe/+1COEZQYnpJQlRSWlUrYUVqcXFXK3VuUzNQd3M9ZflIwafCPgJgBRKsAQg2EqcBChxaREZUYzlpLzhHS1F4OFEwREd5TFZVUUk2V0U9EiRhNWQxY2E5MC03ZDBjLTRmZTktOGRiMy1jYjNjMTdhZjg0NDQYACAAKAAwioW4pNoyONWlxLnSMUDVpcS50jFKHHpOL0htN3FpME55T0h3SXZpMlAvK2h0TlpSYz1aHiIccmZVUFhaZDgwRjJ1eFBKZndmK0s3QjdpRUI4PWVnzL6lwj4CYAUSrQEIEhKoAQocUk90NHc4bnVza0FUVjNRMnRHLzVoSGNTOEg0PRIkZDExYzg4N2YtYzE2ZS00YWRiLWIyOTgtMzEzODQ5YzNlZDlmGAAgACgAMIONsrnSMTj6k7K50jFA+pOyudIxShxzVDFVK25yYVBST0MwSXQ4SHJvOENYYVBZK3c9Wh8iHe1BcHFKKzJNQTJCOUZUNFRpZGRQRktzQUh5QTg9ZQAAAADCPgJgBRKtAQgYEqgBChw4NGYxQ2pWT0RnNXZYaEtQdnRZdkp6T1dwdjQ9EiRiNDE5MTU5My1lOGEyLTQxNmMtODRlNi05MTIyMGEwMGMzOWEYACAAKAAwhJeyudIxOMuZsrnSMUDLmbK50jFKHG5nSjk1TEFvS2NzZzdYYTBKKzFLWUFKTTYrOD1aHyIdpEVsK1RCd040ZHVUTEE1RUxNNlZWa3RlZm5MUT1lAAAAAMI+AmAFErABCDISqwEKHHVuR08zMWk4N1JsaDBYVW5GVC9JcGpUaWp1TT0SJGI3NmU1YWRlLTM4ZWYtNGFkYi05NDQzLTI0YjFiYzZjZjA3NhgAIAAoADCln5a60jE42aCWutIxQNmglrrSMUocNG1pMlhFTHg0MWdMQWpGUnVVazFDM1VCMkJVPVoiIiD////0cDduNlFmeE10a1E1YW9nRzl4b0RFSStQUTBnPWUAAAAAwj4CYAASsAEILRKrAQocUHlGb0ZBZUxaRzYxbmhJblZ2cnU1VWNQRDdzPRIkODlhYTJhMjEtNjg3MC00MTk2LTk1MWUtMWZmMzM1MTFhZmUwGAAgACgAMJqniLrSMTjBqIi60jFAwaiIutIxShxaS2M4TzRid2ZUZ2dNZkJIclpoK2JOb29IL1U9WiIiIP///9JoT1BKSWcyOEY3aTB3R2xwZGlENWQ5aXppd2c9ZQAAAADCPgJgABKtAQgsEqgBChxIbEpITkYrUXVNc2NqaVMrUG5HNks0bkdoUjQ9EiRmMjgxNzY5Zi1hMjI2LTQwNWMtYTI3Ni05OTE0ZTRiY2RiODcYACAAKAAwodfV6f4xONS9srnSMUDUvbK50jFKHDBzL0ZBN1M2SkJMVFNMSzFSdFV3TTY0NzUxVT1aHyId/TE0SFZYNStMNWllaCtmL290Y24rVXN4djR4QT1lyBns58I+AmAFEq0BCBASqAEKHDE2Qnp0YU94OFpKVEtlMUdmaFNHTlNhWmpTQT0SJDJjMTMzNDg3LTgyYWQtNDg0MS1hMWU2LTE1N2U0ZjAxN2QyMBgAIAAoADCj19Xp/jE4yJOyudIxQMiTsrnSMUocd0lxUnJNU0kydjRvUHdiNWw0NVh1YWI1U3hvPVofIh23N2h2TnlkZ01lZU9FQ21HTnhQZjhjR2tNTmJvPWUoh8xkwj4CYAUSrQEIKxKoAQocbVNQc1hxM1ZYbUx4R0VjZ3hFZm5GVUtkT1NvPRIkZDgwYzNiMTItYWYzMS00YWQ4LWIwMTEtMmJlYjdhZjVhOTVlGAAgACgAMMS5srnSMTiVvbK50jFAlb2yudIxShx5aGFzVnlscVdsVEJMQkp1bXNRQ2lZTlFNMmc9Wh8iHfczM3JhZ3hudE9xL1FsME83NXFESmxZbFRYRTg9ZXW+NVLCPgJgBRK1AQhLErABChwwcTcvVkFpcUNiSmJKMUIzWk5RcEhXalRjcG89EiQ0Y2FmYjA2YS05NzI2LTQwMGUtODQ2MC03YzJkMmNlYWI2NjcYACAAKAAw++X44LIyOODn+OCyMkDg5/jgsjJKHFpTbWhsV1B6T2svTzhTdnU1NVRVZGJ3ZkNsTT1aJyIl/////wAAAAbaZWlNTkFXc1E3OG5oaFdObWZmS2pZUkVzQS9VPWW+K+5Hwj4CYAUSrwEIKBKqAQocY2lkSVI0ZkZydmRVajB0ZTNqWTBRWGZOWVp3PRIkOTg2MmRiZWQtMmY0NC00MTBjLWExNWQtMWU0YTM1OWNhM2JmGAAgACgAMMSMibrSMTjH/7G50jFAx/+xudIxShxJRnorM0FtcDBKMGRDcnUxMm5lc1k1YTFZanc9WiEiH///sTJDV1pHZ1B4UWF5WGVFTWY1MUhSbEtNODR3bz1lAufSsMI+AmAFEq0BCDESqAEKHCtTVHZsaEZlalVwdnRLZ3pZVkFHZmZydktpaz0SJDkyOTE5MGZiLWRkNDItNGIzZS05MzU1LWVjODE1ZTZiZGVjMhgAIAAoADCbpbn0wjI4uZG59MIyQLmRufTCMkocL3gyVEgzdUQxVVdlSzFlS29lNVJkT0FmTkJzPVofIh3dVTM2aDB2dnRDald5Z0phdVFwT0Z3c0dSK1BvPWWMpaifwj4CYAUSsAEINBKrAQocU1Z6dm5MWnNkczBxR2JhWC9NVW9HR1grejFJPRIkNWE4YjM0YmYtMmYzNy00YmMyLTgyMGUtODRmNWQzOGU3NDBkGAAgACgAMPG/xt7TMTjdvou60jFA3b6LutIxShxzVzFwT0NCb0tZcnVaeVhTTzZnbzJ1Tm9vVms9WiIiIP////ovN2NQZWNuTCtiekRJYWZmd1JjS0ZMQTlUVDA9ZQAAAADCPgJgABKsAQguEqcBChxxT243Zm5LV0FFNnFQc3F2OUI2c3NUdW5tSG89EiQ0NmU0NGNiNS00NGJkLTQ5NWItYTQ4NS00MTAyOGRmZGU1ZjUYACAAKAAwjMjE2tYxOK3/sbnSMUCt/7G50jFKHGJmYU14VWs2VUNJL2tWSURYeURGNFBoY1ZoZz1aHiIcczBjL0VQWDBBaTVRVUdFTjhscWxUcFNJMmNJPWWOp91awj4CYAUSrgEIJxKpAQocWS9nTHNLa2I3YkpEUS9jY3YwYm4rTXB3YU5zPRIkYTU2ZjgzYzEtNGZiMi00YjgwLWFmMzMtNjc3YjlmNTFhNjRmGAAgACgAMKTX1en+MTjmoLK50jFA5qCyudIxShx1YUlvbVV3eFplUDNaYmdVQnozYzhoWDNFN1k9WiAiHv//YmtEK2RPVXN1MjJmWkk4Rk1YWGtaT1pmSERrPWUN1gmdwj4CYAUStQEITBKwAQocZGRCb0NOdFFVT3VlMHBSbUdybVZ5VitTNXRrPRIkZDZlYWE4NmQtYTFlOC00M2I5LWEyNDMtZTI4YjQzYjdiZmIxGAAgACgAMJaqvKKzMjjOrryiszJAzq68orMyShxVTVFQNkRkVkxHTWQycmZCZElCUnZ2QXNycTg9WiciJf////8AAAAG7WZRVXQ2UnRtSy9IdVpFckNzSGt4Vk5ULzRtbz1la4qJNcI+AmAFEq4BCCYSqQEKHC9VNEJQeVFSWkNvZzY2eWcrWkhjR1FGV1JYYz0SJDYzMWY0YWI4LWViYjctNDkyMy05MmU2LTcxMGZhZTE4NDk0ORgAIAAoADD++rPt3DE4j6WyudIxQI+lsrnSMUocblplcWxSWllpbWN0QldrZGNJS0dETTB3Qk1ZPVogIh7/+2cxRUtLa3VZVExXaWFJSGtjWTRzdmdFbDhMTT1lpnZlocI+AmAFEq0BCDASqAEKHDhGOWRZRmxIMkFBbUdPTkhmZ2tYTlFxZWhSbz0SJGQ0YTg5MGVmLTYzYTctNDAwMy04ZTQyLTA5ZGU2NmFmNmRiMhgAIAAoADC516OpjzI4mbmjqY8yQJm5o6mPMkocWWZOSVFBMnZCM0ppSDVKM2dLckg3Rk5UT3R3PVofIh27RHVqbjYwRkx1RnBnbFdSR1dOb09oTkY0dGpNPWUAAAAAwj4CYAUSrQEIIhKoAQocYmFPV3c1SHZqS3diazViODkybUJrWGZ4S0ZNPRIkYzM0NTY2YWYtODU0My00ZDEzLTk3MDctYTkxZjNhMGJmY2VlGAAgACgAMJ/X1en+MTjVm7K50jFA1ZuyudIxShxObnJITy93amw0U3Y5UVVTUWpmby9WcFRucnM9Wh8iHfoyQloyM285ZW9yYnBETDc2bXNIUkFqZ2locTg9ZbN662fCPgJgBRKtAQghEqgBChw2WlJlbGkybitqdStXcCtnYlJDclppVFhENFU9EiQ3YzQ0NTQwYi1lNTM5LTQ0YWEtOWE1NC03NjQ2YjVkNTdjNDIYACAAKAAwjZeyudIxOLubsrnSMUC7m7K50jFKHHpqakFHRjlHSWRrcC9JQSt0SkdxQWlTMXVzWT1aHyId9Uc2QjdnQjJDa2RkdXRnaW9YWE1XTGdUYUpJOD1lucycKsI+AmAFEq0BCFMSqAEKHEd4cHkrQ0lVWlhzeWFKdWpLTENTekMzNlQyTT0SJDllZGNkY2M5LWRjMjktNDc3Ny1hYzkxLTQ1ODU2N2Q3ZmQ3YhgAIAAoADDx9cO50jE4ufnDudIxQLn5w7nSMUocNGRXTUlTVS9hcWcvRG1kb2ZYZHFUdCtpTi9NPVofIh39Q1ZxZ2xWUUF3Q2w5dkc4Vm1veExla1FwSzNRPWVxggjYwj4CYAUSrQEIPBKoAQocRGF0QW1SSlRWaVg5ZXNYRlBmQWx1aUJqVkc0PRIkMGQ0YjQ2OTgtNzFlYi00OGYzLWEzZmUtODMxNjBiNjllMTVhGAAgACgAML/PnYXXMTi4prvc0zFAuKa73NMxShw1NzVFU0czbnJKR1E2Z3k5YjY0eWpmOEhYK289Wh8iHf9XeU1PazA0bGV5K0YvTG93amhmbEk0YXBKY3M9ZZrNNUPCPgJgBRKtAQggEqgBChx0YUxFbGxPY2I4SDRIRmZuRC9TUVhFZkFVam89EiRiZTJhMzI4Ni0wZWU4LTQ5NTEtODNjNi05YzZjYTVjOTlhMTQYACAAKAAwptfV6f4xOKGbsrnSMUChm7K50jFKHFdZS2lTeFN1MEQwREdqVjZMd3lJMnZmR0ZXST1aHyId6jh5dGd2Yk9EK0F2L0l3aVRPNnpQT09odkp0WT1lgskUesI+AmAFEq4BCD8SqQEKHDgxa3R6ekJ2MUdobmQrUEJ2RkFiRDdlZk9Raz0SJDEwMDBlM2VkLWExNDUtNDlhZS1iNGQ3LTI5MDUzODk4ZDA3ZBgAIAAoADCoxqjH2zI4jsiox9syQI7IqMfbMkocZmJJdWdRYXA2Z1Z5VGpSeGNXUm1TMDJkVlNBPVogIh7//XJaSUlOeDJUeEVwWVZmV0NmRmx2WkZQY0gycz1lqzqR1cI+AmAFEq0BCB8SqAEKHDRHNjRiS3RMczlUVGMvMzJnMHJLVVNyVEtyQT0SJDI3N2Q2NWRiLTBhZTYtNGU2Yi04NDI4LWQzZGVlNTgzYmZkORgAIAAoADDSjdbl3DE4hpuyudIxQIabsrnSMUocVCtMWXRtOFgrdXJ0UHh2VzNWbGJJNEUrN1Y4PVofIh3UNk5mUEQvWFk3TlZnV2xNbGZpMElwZ3lvc3RFPWXM8kkewj4CYAUSrAEITRKnAQocOG8zSWRzaHZtd29iYXVlQkp4QjdnWU5DTENVPRIkZDgyMGYxZjUtZWZiMC00NjFlLTg3ZGYtZTlhYTk4ZTMzZGUzGAAgACgAMNuGxLnSMTigicS50jFAoInEudIxShxhZ2pocFNwV1dTc2dacFZPV0xBM0thcFRjNlE9Wh4iHHdrSnNBd3A2a2d4eEFuTU9uN3dsaFFWWmltTT1lLfJPOcI+AmAFErUBCEgSsAEKHFNkUjJGczZ4Vk16NHh6bmNXcEkzRW1xNFpNUT0SJDM4OTVmZTUyLTg2OGUtNDVjMC1hZTRlLTkzNDg5ZTU4MWQ2ZBgAIAAoADC47ZLfjDI406ew3/gxQNOnsN/4MUocRkluem5idnE1ZDQ3WThLRXdvanlHNVIwL0kwPVonIiX/////AAAABbVFVUkzbFdJTnNBRUEybnBjZ29ha0ZiQVdMTms9ZWXkVufCPgJgBRKtAQgeEqgBChxzZ3B0aTFueXhrSTZKYk10WDNWVjk0TkZYcXc9EiRkM2E5ZDI3NC1kM2IzLTRhY2MtYjJmOC04MGU3NTIxNzBlYWEYACAAKAAwl8SbldQyOO2asrnSMUDtmrK50jFKHEVlSk9ZRkYzUHY3UzVFOXpYaWcwRmlyeEI2QT1aHyId/mZtcEd1aTU3NUtUK2xMeHhYRkNGc0FxN3RuOD1la+IG6sI+AmAFEq0BCBwSqAEKHFpnVUJRV1ZWQ29EcVUrM3R6NEF4WU9ueU1DYz0SJGRmZTJlMTk4LTk5OTktNDBlZS1hZGU3LWIwY2M4Y2IxOGU1YRgAIAAoADCIl7K50jE4tJqyudIxQLSasrnSMUocTDZYUklleW9JbitBNTV1RG5SS2lSeEkvcmNzPVofIh36T0NLUzg0bWMwa3JtVm1vSUc5UWN6M2FYcXdFPWUAAAAAwj4CYAUSrgEIQBKpAQoca0RqK2pOU05yQlBxUHpCSnU5b2dIanR5N0QwPRIkZTY4OWExYTEtMWFhZC00NTJlLWE2OTUtZTAwMzE2NmEzZjA0GAAgACgAMIjFy77dMjjRyMu+3TJA0cjLvt0yShxuLzJsMVQydVNDNExrM1Y2aUE2SVM2dXVNcHc9WiAiHv/+aWxTUHFNQkJnUUlpU0wrOEN5M1hFRU5uUTl3PWUER1j5wj4CYAUSrQEIKRKoAQoca1RxUkxKbDZueFdOSWNndXpEUjdEb0Z0T1JjPRIkYjc2ODIzNjYtNmFkMC00ZTdkLWI3YWUtYjg2NDkxYjVlNWNhGAAgACgAMJenwtzTMTiUvLK50jFAlLyyudIxShxBRlNMejB3Q1RmN0gwQjFSbmpXQWMyN0VOWmM9Wh8iHf9vNm50cDJWalpVWWIwSmY1eEFjdWs0S3BSNHM9ZQAAAADCPgJgABKtAQgbEqgBChx3SE9MZ3dlMXA2c1l1Rkt0WVFZQnJyZGprNEU9EiRiOWVlNzFjNy1jOTE3LTRiNmEtYjI3ZS03MzNhNThjNjU5MWMYACAAKAAwh5eyudIxOJqasrnSMUCamrK50jFKHG1WbHBUNnJER2VmT2VIN0hZdmtiUC9sbG54WT1aHyId9FpxYmp3dWxXeW9IMEk0cGQvbEwwVTI0RlJCMD1lAAAAAMI+AmAFEq0BCBkSqAEKHHN6UGlvdGR0SE85UWNFRUtwNlY3eVJRVXdGMD0SJDYxMmRkNjZmLTRmYTUtNDBmMC1iMmU0LTUzZDk4NjA1MDUwYxgAIAAoADCFl7K50jE45pmyudIxQOaZsrnSMUocdlJMcWFLWXV3YnpEdWlNQ05nOW9PQnlFNDVzPVofIh3SNzJ3RVJLQ0FqRVVLeEYzbFNxcW8xTmErMVIwPWUAAAAAwj4CYAUSrQEIKhKoAQocMlhDSUdzK0dhK2lUeWJKbkFlYzh3MGFpTk1RPRIkMDQ4MDRjOWUtNTUzOS00MTU3LTg3MDktYmEwMDRiYThmMzZjGAAgACgAMKXX1en+MTj7vLK50jFA+7yyudIxShxnYnBOU3dlcGhrZ1ZtdUNFMG9WOG4rK2FucjQ9Wh8iHe9sQjhOTVV5U2hWM1BPNHB4YVhFNEswR0MyTGc9ZSzF7QrCPgJgBRKtAQgIEqgBChxJNHJ1SVk0WFQ2VVVPRHBCbS9McWI1SXRxZzQ9EiQwNDZjNmUyMS00OWM4LTQ4N2ItODA3NS0zYjczOTdmMDM5MDUYACAAKAAwu5fL4aYuOJCC9rP/L0CQgvaz/y9KHDJqdEJaNnY3bXpNQ2ltQTJFbGd6QnZ6eCtmdz1aHyIduGpzUENyZ2xyYUN0YjZPdUQ2RTlQZ1VrSUcrUT1lAAAAAMI+AmAAEqwBCBcSpwEKHGRONzRzY3NLUEpTSHhZS3kzM0NWcmRjdTM5ST0SJDI4NjMxZDQxLWUwMWItNDcyNy05YWRkLTE2ZDQ5YWM0MjRlNRgAIAAoADCDl7K50jE4spmyudIxQLKZsrnSMUocbkZUQkxObXpiNjF3ZDlsVG9BOWtPMTdnR3B3PVoeIhxJQUJxdE16YngrRk9IeC9KSW5mTGw0anNJeW89ZZxvUXbCPgJgBRKsAQgHEqcBChw3RFN6OENTQ0RBcVRHT2dnUGY4SnNsS3ZWd2c9EiQyYTQ2YmMwNS0xNWU1LTQ4NjItYThjNi0zYmRhODIzYmEzODkYACAAKAAwiN6vl98zOPzkr5ffM0D85K+X3zNKHHBmb0hYbHkvcVA3M1B5aHh2a040K2sxTjFZYz1aHiIcWlpvYTVXVkk4VlpIR2M2bUsvOFNPTVhROWRzPWUAAAAAwj4CYAASrQEIORKoAQocb3R5dDdIeGVpZnpGNENZamZpYVNxWXRaVStNPRIkNmY1OGRkNTEtNDI5MS00MTNjLTkwNmQtNTIwYjA2MjRiOTk5GAAgACgAMI+X4cn7MTjcpMS50jFA3KTEudIxShw1OFdRdnpQUVg4MjVKYkpQQ1BHSnZVbmpUN1E9Wh8iHe4yVkR4QUhmRUlwRmxKdGYybzZIRXdiUGNRWFU9ZeOpvYDCPgJgBRKsAQgVEqcBChxDeXpZMm5OU2ZjRTJPbXNyN1dwSlN6Y2dSd3M9EiQyN2VlMzVjNC0xZmQ4LTQ2NTgtODAwMy0wOTJkN2ZiN2JjNzEYACAAKAAwgZeyudIxOPGYsrnSMUDxmLK50jFKHENyNVV3ZGhXV1dJZ3NJejJHQWFFRStJbUkvQT1aHiIcU2tlbVdvNmFETlZudE1WOUpVdmt0VDdiS3ZBPWXwibfJwj4CYAUSrQEIFhKoAQocVTl1cTBxVTd6TXlscVNlRUU5SEc2YUM2Nm84PRIkZWVjY2Q4ODEtOTc3OC00MTE1LWI4OTYtOGU0MzQzZGE2NDRjGAAgACgAMIKXsrnSMTiYmbK50jFAmJmyudIxShxhRm92eTgzZHJ2OTgxWStZSjRmL0dNK1dBeE09Wh8iHalISFROWkp4c1lmb0V4MDFrU2Rxczh2SWxZemM9ZQAAAADCPgJgABKtAQgMEqgBChxKWkVycGRWU2FJS1VrcFQvdmNpK3d3L0hBWEk9EiRlYWYzMWQwMS1kNDZiLTQ3YjItOTAyOC1kOTg2NDk0MjBjY2UYACAAKAAw/YyyudIxONSSsrnSMUDUkrK50jFKHE9WSEpXYyt6UnBaYVBmOEZXcFFHbmVGSVlLMD1aHyId/zBDZFZRKzk2M0o0aEVSVEdJSk9iZkRqS3ZUTT1lAAAAAMI+AmAAEqwBCBQSpwEKHHFldmZHOHh4QjhNb09aOGFZbHRUSWI5VFEwWT0SJDc2MjRkYzIwLTk0NDUtNDhmMi1iZTgzLTg2OGJkODMzZmYxORgAIAAoADCu7JC60jE44v+xudIxQOL/sbnSMUocaTJBSG55V3hkd2pKNUJpWGdZU2hxUGpmd3o4PVoeIhxTN0cvOHNaWWRxazVJQ3RjYlI5cmpTYmtjSnc9ZajkUmDCPgJgBRKuAQglEqkBChx1dnRxM256Vy9GbGhRdDIrRGZ1Tk9OSzFyWUk9EiQxMzA0YzU5Zi02MGZiLTRhZGQtODgxNS0xMWFlODI5NmNkNGUYACAAKAAwoNfV6f4xONuhsrnSMUDbobK50jFKHDJLOWVaMGpKcndndUxqZTlTZGE4QzBrRlNSaz1aICIe/95Rby9hdjkwZlpXeG1hWWsvdFp4MkxQTmxjMjA9ZbN662fCPgJgBRKtAQgJEqgBChxiT09YTXdhOStQaWNGNFd4bWIyeXJCWTJRZDg9EiQ3NzYzNTBmYi03Nzk2LTRjNzUtOWUyOC1lYTY5NDdmNDgzNDIYACAAKAAwm8PNudIxOKmE9rP/L0CphPaz/y9KHHczd0NJVWk1Sis5Z0NhT0dUT0lndWF3MlpYdz1aHyIduDJ4ZUszNGFpa1hlN21YY0p0eUdTaGdpMmdFMD1lma7JW8I+AmAFEq0BCBoSqAEKHFBoYjFYS3d3MFRTckNhdy8vdnJKeXpZeGw3cz0SJDI3OTZjNmQ1LWQ5YTMtNDY5Ny05ZjA2LTEwODg5MDhjOTFlZRgAIAAoADCGl7K50jE4gZqyudIxQIGasrnSMUocVHg0d1U0d0RIUVpGcmlZQTVKTGV4V1I0NmpvPVofIh3pb09HL2hrdjRZMTJLcEV2RnhWVk9aRDFrOTlvPWUAAAAAwj4CYAUSrQEIHRKoAQocRmtZeEhDQWdNYlVTQzU5cm1xMzM5RzlGK0JjPRIkYTJjY2NjMmUtMTJlZi00NTFhLTgwYjUtMzFkYmJjMDFhMjhmGAAgACgAMImXsrnSMTjPmrK50jFAz5qyudIxShxMdzFERXBlNS9FRFcxR2VGWGRPTFpJWVArQzQ9Wh8iHf1OcUJMVC9BdEJZL3dzMmtlaDNQV3hyOUhMaGs9ZQAAAADCPgJgBRK1AQhKErABChw3OXA4NXJpMHdGWFJENHd2bCtGa2RKanh2Zm89EiQ3NGRiZGFmZC00NjFmLTQ4NDItOGU2MS02NTJhZjlmYzJjZmQYACAAKAAwu+2S34wyOIaRyIeKMkCGkciHijJKHE1NVVIwczFyTTV6clE5QmpNZjdkY1ZyRktIVT1aJyIl/////wAAAAX+QWdHRFM1R3NiSHMwTFp3Wm9nQ2NvWTZtMStzPWWoUSnswj4CYAUSrQEIExKoAQocazJkbGw5UXlldG1kZzZwV0lsaS9QTkZMbXZjPRIkYjdkNjk4YTgtM2FjNC00ZTgxLTliMWEtODE1OWNhMDkwOTQ3GAAgACgAMICXsrnSMTjXmLK50jFA15iyudIxShxVNVRLYkVic1RiYmF5VVJSQ3YzclRXUktEYlE9Wh8iHf9iUlRqSXAvRXZmc3g1WWxZRk05N1lqaXhDZ1U9ZQAAAADCPgJgABKtAQgREqgBChxldVFXMVhBMk90YmRsYnpXMTJUbG9ldG9DVnM9EiQ3NDNmNDRhNy01Nzg1LTQyMzEtOGNhMC0xZWY2MjY4MjcwYjkYACAAKAAwy9CB5dMxOOGTsrnSMUDhk7K50jFKHDd4clQwSno4bEM1ZDlRQThxK25Hb2VQRnlkYz1aHyId22NBeDVwNE9pSk5lcGo5Rk9xSmtMZTgrd1NzTT1l4oARc8I+AmAFEqwBCA4SpwEKHDNDUUFTR2d1bkphcVFFTlhaMmVsU3EzMExyVT0SJGMyZDg0NDdmLTQ4NDUtNDJhZS1hNGU0LWRkYWY1ZjkzY2M4NxgAIAAoADD8o8LkoDI475KyudIxQO+SsrnSMUocSEVPT1NMNjQ3aE14Y2ZQSTBRMUNWYjZ5UllzPVoeIhxnM0lvaHZINFY1WWdTMHI4SGF3d0F4VSsrYW89Zetg/GTCPgJgBRKsAQgvEqcBChxtRjFWWkttL2ptR1gwSU00MGhCdWZyMkVUU3M9EiQ2MGMyNTAxNy1iM2IxLTQxYTUtODRlOS1mNjIyYjBlYjUyZGUYACAAKAAwje6KutIxOP6lxLnSMUD+pcS50jFKHGVCNW5QK01paDJad3hyYjV5ZDQ3WFJUMGVhRT1aHiIcdzRYYWxzV3BUdDdPZ0NoQ2dqOWRBT29UWFpRPWU9RRFLwj4CYAUSrQEIUBKoAQoca1ZncGZOZHh5QlBlNGR3S2RSNjlJcjNPUkNRPRIkYTZmMmRjZmYtY2ZjNS00YzFlLWFkODEtYzY5YWZkNDQwMDFmGAAgACgAMPL1w7nSMTjT+cO50jFA0/nDudIxShxOUkxmVElkY3V6eFgyakgwOUN2ZnhlYU56NEU9Wh8iHe50eHpGRmRJL0tFVm1sL04xR2Z0OGo3ekZoelk9ZdZKyZfCPgJgBRKtAQg6EqgBChxoZ2NPU2d4UE8xQXk3azNVWTE4VmZ5cnJmYzg9EiQ4ZmYxNDg2YS1jNmUyLTQzZTAtOTk1NS02YjMwN2QwMTY4YWEYACAAKAAwpLeP2MQyOJelxLnSMUCXpcS50jFKHDgxVGV1NHNJUGRacC9IRnlHL2x1aEJ0WlptYz1aHyId+0lnQUpyUW4yUDZZamFRRHdaSTFTYkVrNlE4Zz1lyinnhMI+AmAFEqwBCDMSpwEKHHRZbHNITURZZms1ckEwYlBjUUhMN3gvd2ZKVT0SJGFhMzY2MDY3LTFjYjUtNDg4Yy1hMjQ4LTIwY2Y3ZThmMDE1OBgAIAAoADCmn5a60jE4lqvEudIxQJarxLnSMUocZzdxM1BMSkUxSks0UThma0U5KzNqYTByZldRPVoeIhxNZmRSeVpYN0JVcmdoSjV5V0dFb01jbWgvWUk9ZWPQcbXCPgJgBRKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiRiNDg3MmM1ZC03YzE4LTUwMzQtYmU5OC05OTI4NzMwNTJiNTAYACAAKAAwkp3nmqMuOMv+9bP/L0DL/vWz/y9KHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAASrQEINxKoAQocQk0vRko3bytmRHViQk1TTFA3VFNoV3IzdzBJPRIkZmVkZGMyZmUtOWVmOS00YTExLWE0NTItMmFhMTkyNjRhOGRjGAAgACgAMKrwxf7XMjiRrLK50jFAkayyudIxShxZeUwzbENTd1hMZFgyUWIwdDNOK2VKYjFUZmc9Wh8iHblFWTNhZXFOTDd1MVBaNGJ3c3RZRDFieEliT1k9Zf2cjErCPgJgBRKOAQgFEokBChx3UkJyWkwrNlBBOWF2S2dqTlA3SlhETGNmdnM9EiQ3OTU1YzNkOC1kMDU2LTUyN2YtYTJkMS0zNTEzMmUxMTYzMDIYACAAKAAwuszS9M8zOOLQ0vTPM0Di0NL0zzNKHG5teDY1c1FEdnhJOFRnRWV2K0ErbnR0b1NuND1aAGUAAAAAwj4CYAASrQEIChKoAQocOTVjMTdabHJyclE2ZGFBQ3pOS2JDSWJ2WjRrPRIkNjJmZjNmMDMtNDFlNy00YmFjLTk3ZDgtOGVhOGM0YjA1ZjljGAAgACgAMKy6z+GmLji5hPaz/y9AuYT2s/8vShxSV1hScEdNQlBScmRMQ0duWjVQVmFuZzU1djA9Wh8iHdx6eDdjenZMaTNaMGlESnpvQmx1VGpHeG5zaEk9ZdapXNXCPgJgBRKtAQhVEqgBChw4RW9jeEVsUFJHcUpxY0lkdXpZN1NmV20xWkE9EiQ1ZWM3ZmU4ZS03ZWZmLTRjZjEtODUyZC0wYTI5ZTdjMjIwYjUYACAAKAAwnMzEudIxOPXPxLnSMUD1z8S50jFKHFUwQ04zbFU3ZG9FeTNuWStBUkNmSGpURWpoQT1aHyId/2lGcUo5b1hOVlFYTUQ5OXNOazhPRENRRXFjUT1ls4F9bMI+AmAFErUBCEcSsAEKHFkzTDVwQ09DMW9nL0NVYjlyL1gyS3NYWENjUT0SJGQ0MTIwOGY4LTk0YWQtNDMyNS1iZWVkLTUwMjU1OWU0YzM1YRgAIAAoADCwrPTjjTI45JTlpfExQOSU5aXxMUocWmlSdjlLQk0zUEQvVWJVd0Eyd0FMM1VnTFNRPVonIiX/////AAAABPVySGM1N1dHVGdRRFk1Y0sxNnc5S1V2MVVsOWc9ZRpP7ZTCPgJgBRKtAQgkEqgBChx3ZWgxUzRLeW5sTTF0OWtvYno2SHlhV3YyRDA9EiQ5ZDk2ZDJkZC1lYjY3LTQwNTktYWFiZC1mY2JiMjhiYjI0YzIYACAAKAAw1J+yudIxOPSksrnSMUD0pLK50jFKHGMzdndKeEwrTlZzNUhRd2hhK1BMcVpyejZNZz1aHyId/3hvZnJWczNPZXFGLzBVMjBNdWFzQkZoZlE2ND1lAAAAAMI+AmAFEo4BCAESiQEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJGVjOTA5YmQ5LTc5ZmMtNTViOC1hMWM4LTM4ZGRlN2M2Yjg2NxgAIAAoADCRneeaoy44rP71s/8vQKz+9bP/L0ocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAADCPgJgABKtAQgjEqgBChxJN0RJYjdzZWFxV2NRd1FRQjN0L1VrbTZLckE9EiQ5ZjM2Nzc4Ny1lNmZjLTQ0OTMtYjQzOC0wYmJjNTRhNGRkMTYYACAAKAAwkJeyudIxOJGcsrnSMUCRnLK50jFKHE8zS2prdGNvdmZXUWd1Rnl4QnRHWkYrcFlyZz1aHyId/jVKaFBTaGVEVGhOeWJFNDNwdDZMc2g2dG5Rbz1lAAAAAMI+AmAFEqwBCA8SpwEKHFcrM0xrclg2eEczWGdWV0xadUtDV2s2aStOZz0SJDk4NGVhNGQ1LTNmM2EtNDMzOS04NzEyLTljZjg0NDkwOGIyNxgAIAAoADCIjv3k0zE4qZOyudIxQKmTsrnSMUocYmtFTm5DeEtxai83VXdqQ21RU3Boakp5b1l3PVoeIhxueEJmWER6c2syMm52MWNWSFRwVnEyd0NidTA9ZQbZmgLCPgJgBRKsAQgNEqcBChxzY0pTdzh6WjE0akVnQWZCOXBHVmFkeFQzMU09EiQzMjMwZjdiZi1iMGJmLTQ5ZmEtOTFjMy02MWUxZDY0ZGUwYmYYACAAKAAw/4yyudIxOI+TsrnSMUCPk7K50jFKHHNQQlp5QUQrQUFVYTJwMHZqZFpibE9ET01Ydz1aHiIcWTE3N1VoTDhWMFM3MmJRd0xwSTNHOUQ4S1ZNPWVOcPwLwj4CYAUSrQEICxKoAQoccHBHcVdiM2lLUnp1YVZsZXJvSTN6ODFpSDdRPRIkYzNkYjNlZjUtNjkxNy00NWE5LWFjNzUtMDNmZjJkMDBhMzYwGAAgACgAMKnbzrnSMTjYhPaz/y9A2IT2s/8vShxtemdaQVZ3RG9oVk9JTHlTa1RKMnQ3WE84ajg9Wh8iHe52dDlVa0F0L0ZnV2JoWEx2SlZzOGsxTERrUjA9ZeziQtrCPgJgBTAAOAA=",
+   "version": 1
+}

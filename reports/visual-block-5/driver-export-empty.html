@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<meta charset="utf-8">
+<style>html,body{margin:0;width:390px;height:844px;overflow:hidden;background:#e8eef4}iframe{width:390px;height:844px;border:0;display:block}</style>
+<iframe id="app" src="http://127.0.0.1:8849/pages/export.html"></iframe>
+<script>
+const frame = document.getElementById('app');
+frame.addEventListener('load', function(){
+  setTimeout(function(){
+    try {
+      const win = frame.contentWindow;
+      const doc = frame.contentDocument;
+      if (!win.sessionStorage.getItem('plenna-empty-export-ready')) {
+        Object.keys(win.localStorage).filter(function(key){ return key.startsWith('plenna:'); }).forEach(function(key){ win.localStorage.removeItem(key); });
+        win.localStorage.setItem('plenna:demoSeedState', JSON.stringify('cleared'));
+        win.sessionStorage.setItem('plenna-empty-export-ready', '1');
+        win.location.reload();
+      }
+    } catch (error) { console.error(error); }
+  }, 1000);
+});
+</script>

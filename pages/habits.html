@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hábitos | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -33,7 +33,7 @@
             <form class="card form" id="habitForm">
               <label class="field">
                 <span>Nome</span>
-                <input name="nome" required placeholder="Ex.: Beber água">
+                <input name="nome" required placeholder="Ex.: Beber água" aria-label="Nome do hábito">
               </label>
               <div class="grid-2">
                 <label class="field">
@@ -47,22 +47,27 @@
               </div>
               <label class="field">
                 <span>Meta mínima</span>
-                <input name="metaMinima" placeholder="Ex.: 1 copo, 5 minutos">
+                <input name="metaMinima" placeholder="Ex.: 1 copo, 5 minutos" aria-label="Meta mínima do hábito">
               </label>
-              <button class="button primary full" type="submit">Criar hábito</button>
+              <button class="button primary full" type="submit" aria-label="Adicionar hábito">Adicionar hábito</button>
+              <button class="button secondary full" type="reset" data-close-details aria-label="Cancelar criação de hábito">Cancelar</button>
             </form>
           </details>
 
           <div class="content-list" id="habitList"></div>
 
-          <section class="shortcut-grid compact-shortcuts" aria-label="Apoios para hábitos">
-            <a class="shortcut" href="habit-templates.html"><svg class="plenna-icon shortcut-icon"><use href="../assets/icons/plenna-icons.svg?v=20260429-icons#icon-heart"></use></svg>Templates</a>
-            <a class="shortcut" href="micro-pauses.html"><svg class="plenna-icon shortcut-icon"><use href="../assets/icons/plenna-icons.svg?v=20260429-icons#icon-focus"></use></svg>Micro pausas</a>
+          <section class="habit-support-minimal" aria-label="Apoios para hábitos">
+            <div>
+              <h2>Apoios leves</h2>
+              <p>Templates e pausas ficam à mão, sem competir com a lista de hoje.</p>
+            </div>
+            <a href="habit-templates.html">Templates</a>
+            <a href="micro-pauses.html">Micro pausas</a>
           </section>
 
-          <section class="habit-insight">
-            <h2>Insight do hábito</h2>
-            <p>Você mantém mais hábitos quando começa o dia com hidratação e check-in cedo.</p>
+          <section class="habit-insight compact">
+            <strong>Insight</strong>
+            <p>Hidratação + check-in cedo ajudam a manter constância.</p>
           </section>
         </section>
       </main>
@@ -70,3 +75,4 @@
     </div>
   </body>
 </html>
+

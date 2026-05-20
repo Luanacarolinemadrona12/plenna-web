@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar hábito | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -23,10 +23,7 @@
         </header>
 
         <form id="dedicatedHabitForm">
-          <input name="nome" type="hidden" value="Leitura">
-          <input name="categoria" type="hidden" value="Mente">
-          <input name="frequencia" type="hidden" value="5x por semana">
-          <input name="metaMinima" type="hidden" value="10 min por sessão">
+          <input name="categoria" id="habitCategory" type="hidden" value="Mente">
 
           <section class="habit-edit-alert">
             <strong>AJUSTE SUGERIDO AUTOMATICAMENTE</strong>
@@ -37,9 +34,12 @@
           <section class="habit-edit-main">
             <div class="habit-edit-icon">📚</div>
             <div>
-              <h2 data-habit-title>Leitura</h2>
-              <p>mínimo 10 min · horário ideal 18:30</p>
-              <small>Impacto no bem-estar: desacelerar antes da noite</small>
+              <label class="habit-inline-title">
+                <span class="sr-only">Nome do hábito</span>
+                <input name="nome" required maxlength="70" value="Leitura" data-habit-title-input>
+              </label>
+              <p data-habit-meta>mínimo 10 min · horário ideal 18:30</p>
+              <small data-habit-impact>Impacto no bem-estar: desacelerar antes da noite</small>
               <div class="chip-row">
                 <span class="chip">pode pular 1x/semana</span>
                 <span class="chip">ajustado por você</span>
@@ -48,15 +48,16 @@
             <span class="habit-edit-radio"></span>
           </section>
 
-          <section class="habit-edit-info"><span>Meta mínima</span><strong>10 min por sessão</strong></section>
+          <label class="habit-edit-info habit-inline-field"><span>Meta mínima</span><input name="metaMinima" required maxlength="80" value="10 min por sessão"></label>
           <section class="habit-edit-info"><span>Horário ideal</span><strong>18:30 · depois do trabalho</strong></section>
-          <section class="habit-edit-info"><span>Frequência</span><strong>5x por semana</strong></section>
-          <section class="habit-edit-info"><span>Flexibilidade saudável</span><strong>Pode ser movido para 20h sem perder a sequência</strong></section>
+          <label class="habit-edit-info habit-inline-field"><span>Frequência</span><select name="frequencia" id="habitFrequency"><option>Diário</option><option>5x por semana</option><option>3x por semana</option><option>Flexível</option></select></label>
+          <section class="habit-edit-info"><span>Flexibilidade saudável</span><strong>Pode mover para 20h sem perder sequência</strong></section>
           <section class="habit-edit-info"><span>Impacto no bem-estar</span><strong>Ajuda a desligar a mente antes da noite</strong></section>
 
           <div class="habit-edit-actions">
             <button class="button primary" type="submit">Salvar Alterações</button>
             <a class="button muted-action" href="habits.html">Cancelar</a>
+            <button class="button danger" type="button" data-dedicated-delete-habit>Excluir</button>
           </div>
         </form>
       </main>
@@ -64,3 +65,4 @@
     </div>
   </body>
 </html>
+

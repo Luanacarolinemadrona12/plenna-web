@@ -1,0 +1,78 @@
+{
+   "addTaskFailed": {
+      "message": "Add Failed"
+   },
+   "addTaskSuccess": {
+      "message": "Task has been saved in "
+   },
+   "addTaskTo": {
+      "message": "Add To "
+   },
+   "addTaskToInboxSuccess": {
+      "message": "Task has been saved in Inbox"
+   },
+   "addTo": {
+      "description": "The title of the menu item",
+      "message": "Add To %s"
+   },
+   "addingTask": {
+      "message": "Adding task to "
+   },
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "Your wonderful to-do & task list to make all things done and get life well organized."
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "TickTick - Todo & Task List"
+   },
+   "appShortName": {
+      "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name.",
+      "message": "TickTick"
+   },
+   "checkLink": {
+      "message": "check here"
+   },
+   "chooseTaskToBeCountedInExtended": {
+      "message": "Choose task to be counted in Extended:"
+   },
+   "commandAddTo": {
+      "message": "Add To TickTick"
+   },
+   "extensionOptions": {
+      "message": "Extension Options"
+   },
+   "loginWarningPrefix": {
+      "message": "Please sign in "
+   },
+   "loginWarningSuffix": {
+      "message": " before adding tasks"
+   },
+   "markComplete": {
+      "message": "Mark complete"
+   },
+   "none": {
+      "message": "None"
+   },
+   "openIn": {
+      "message": "Open in"
+   },
+   "popupFailedExplain": {
+      "message": "To add task to %s, you need to disable Block pop-up windows on Preference - Privacy & Security first."
+   },
+   "popupWindow": {
+      "message": "Popup window"
+   },
+   "save": {
+      "message": "Save"
+   },
+   "sidePanel": {
+      "message": "Side panel"
+   },
+   "snooze15minutes": {
+      "message": "Snooze 15mins"
+   },
+   "today": {
+      "message": "Today"
+   }
+}

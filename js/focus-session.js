@@ -26,6 +26,29 @@
     return draft && draft.taskId ? Storage.find(Storage.KEYS.tasks, draft.taskId) : null;
   }
 
+  function ensureSessionContext() {
+    var card = Utils.qs(".focus-task-card");
+    if (!card || Utils.qs("#sessionContextSummary")) return;
+    card.insertAdjacentHTML("afterbegin", [
+      '<section class="recognition-card focus-session-context" id="sessionContextSummary" aria-live="polite">',
+      '<span class="recognition-label">Contexto da sessao</span>',
+      '<div class="recognition-stack">',
+      '<p><small>Tarefa escolhida</small><strong id="sessionContextTask">Foco sem tarefa associada</strong></p>',
+      '<p><small>Duracao</small><strong id="sessionContextDuration">25 min</strong></p>',
+      '<p><small>Tipo</small><strong id="sessionContextType">Foco leve</strong></p>',
+      "</div>",
+      '<div class="session-switcher-slot" id="sessionSwitcherSlot"></div>',
+      "</section>"
+    ].join(""));
+  }
+
+  function updateSessionContext(task) {
+    if (!Utils.qs("#sessionContextSummary")) return;
+    Utils.setText("#sessionContextTask", task ? task.titulo : "Foco sem tarefa associada");
+    Utils.setText("#sessionContextDuration", (draft.minutos || 25) + " min");
+    Utils.setText("#sessionContextType", draft.tipo || "Foco leve");
+  }
+
   function start() {
     if (timerId) return;
     timerId = window.setInterval(function () {
@@ -51,18 +74,60 @@
   function finish(completed) {
     if (timerId) window.clearInterval(timerId);
     timerId = null;
+    var recordedSeconds = elapsed || (completed ? totalSeconds : 0);
     Storage.add(Storage.KEYS.focusSessions, {
       id: Utils.uid("focus"),
       taskId: draft.taskId || null,
-      duracao: elapsed || totalSeconds,
-      duracaoMinutos: Math.max(1, Math.round((elapsed || totalSeconds) / 60)),
+      duracao: recordedSeconds,
+      duracaoMinutos: Math.max(recordedSeconds > 0 ? 1 : 0, Math.round(recordedSeconds / 60)),
       concluida: Boolean(completed),
       data: new Date().toISOString(),
       tipo: draft.tipo || "Foco"
     });
     setStatus(completed ? "Sessão concluída" : "Sessão encerrada", completed ? "done" : "skipped");
-    Utils.notify(completed ? "Sessão de foco salva no Dashboard." : "Sessão encerrada e salva.", { kind: completed ? "success" : "warning" });
+    Utils.notify(completed ? "Sessão de foco salva em Seu progresso." : "Sessão encerrada sem culpa. Tempo parcial registrado.", { kind: completed ? "success" : "warning" });
     window.setTimeout(function () { window.location.href = "focus-break.html"; }, 450);
+  }
+
+  async function complete() {
+    if (elapsed <= 0) {
+      Utils.notify("Inicie o timer antes de concluir a sessão.", { kind: "warning" });
+      setStatus("Preparando foco", "ready");
+      return;
+    }
+    if (elapsed < totalSeconds) {
+      if (timerId) pause();
+      var confirmed = await Utils.confirmAction({
+        title: "Finalizar agora?",
+        body: "A sessão será salva com o tempo já realizado.",
+        cancelLabel: "Voltar ao foco",
+        confirmLabel: "Finalizar",
+        danger: false
+      });
+      if (!confirmed) {
+        setStatus("Pausado", "paused");
+        return;
+      }
+      finish(false);
+      return;
+    }
+    finish(true);
+  }
+
+  async function abandon() {
+    if (timerId) pause();
+    var confirmed = await Utils.confirmAction({
+      title: "Encerrar esta sessão?",
+      body: "Você pode voltar ao foco ou encerrar sem marcar isso como erro.",
+      cancelLabel: "Voltar ao foco",
+      confirmLabel: "Encerrar sessão",
+      danger: false
+    });
+    if (!confirmed) {
+      setStatus("Pausado", "paused");
+      return;
+    }
+    finish(false);
   }
 
   function taskOptions() {
@@ -79,6 +144,7 @@
       task.esforco || "esforço médio",
       task.tempoEstimado || draft.minutos + " min"
     ].join(" · ") : "Sessão livre · " + draft.minutos + " min");
+    updateSessionContext(task);
   }
 
   function renderTaskSwitcher() {
@@ -86,7 +152,8 @@
     if (!card || Utils.qs("#sessionTaskSelect")) return;
     var tasks = taskOptions();
     if (!tasks.length) return;
-    card.insertAdjacentHTML("beforeend", [
+    var slot = Utils.qs("#sessionSwitcherSlot") || card;
+    slot.insertAdjacentHTML("beforeend", [
       '<label class="field session-task-switcher">',
       "<span>Trocar tarefa sem sair da sessão</span>",
       '<select id="sessionTaskSelect">',
@@ -116,12 +183,13 @@
     totalSeconds = Math.max(1, Number(draft.minutos) || 25) * 60;
     Utils.setText("#sessionMode", draft.tipo || "Foco leve");
     setStatus("Preparando foco", "ready");
+    ensureSessionContext();
     updateTaskCopy();
     renderTaskSwitcher();
     render();
     Utils.qs("#sessionStart").addEventListener("click", start);
     Utils.qs("#sessionPause").addEventListener("click", pause);
-    Utils.qs("#sessionFinish").addEventListener("click", function () { finish(true); });
-    Utils.qs("#sessionSkip").addEventListener("click", function () { finish(false); });
+    Utils.qs("#sessionFinish").addEventListener("click", complete);
+    Utils.qs("#sessionSkip").addEventListener("click", abandon);
   });
 })();

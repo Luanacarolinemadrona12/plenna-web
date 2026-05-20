@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exportar | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -18,17 +18,19 @@
       <main class="page dedicated-page export-figma">
         <header class="proto-topbar">
           <h1>Exportar relatórios</h1>
-          <p>Escolha período e módulos para baixar um JSON local completo.</p>
+          <p>Escolha o período e o que você quer guardar no relatório.</p>
         </header>
 
+        <p class="context-help">O relatório é gerado localmente neste navegador.</p>
+
         <section class="export-format-card">
-          <h2>O que cada formato leva</h2>
+          <h2>Como o relatório é preparado</h2>
           <div class="chip-row">
-            <span class="chip active">PDF · resumo visual</span>
-            <span class="chip">CSV · dados brutos</span>
-            <span class="chip active">JSON · funcional</span>
+            <button class="chip active" type="button" data-export-format="resumo">PDF · resumo visual</button>
+            <button class="chip" type="button" data-export-format="planilha">Planilha · detalhes</button>
+            <button class="chip" type="button" data-export-format="backup">Arquivo · backup</button>
           </div>
-          <p>O arquivo gerado agora respeita o período selecionado e mantém dados brutos de tarefas, hábitos, foco, diário e check-ins.</p>
+          <p>O arquivo respeita o período escolhido e reúne tarefas, hábitos, foco, diário e check-ins em um lugar só.</p>
         </section>
 
         <section class="export-simple-card">
@@ -41,12 +43,12 @@
         </section>
 
         <section class="export-simple-card">
-          <h2>Módulos selecionados</h2>
+          <h2>O que você quer incluir no relatório?</h2>
           <p data-export-preview-copy>Humor, produtividade, hábitos, foco, diário e resumo semanal.</p>
           <div class="export-modules-list" id="exportModules">
             <label class="dedicated-check-line"><span><strong>Check-ins</strong><small>Humor, energia e fatores</small></span><input type="checkbox" data-export-module="checkins" checked></label>
             <label class="dedicated-check-line"><span><strong>Tarefas</strong><small>Prioridades, prazos e subtarefas</small></span><input type="checkbox" data-export-module="tasks" checked></label>
-            <label class="dedicated-check-line"><span><strong>Hábitos</strong><small>Templates e registros por dia</small></span><input type="checkbox" data-export-module="habits" checked></label>
+            <label class="dedicated-check-line"><span><strong>Hábitos</strong><small>Sugestões e dias marcados</small></span><input type="checkbox" data-export-module="habits" checked></label>
             <label class="dedicated-check-line"><span><strong>Foco</strong><small>Sessões e duração</small></span><input type="checkbox" data-export-module="focusSessions" checked></label>
             <label class="dedicated-check-line"><span><strong>Diário e notas</strong><small>Entradas conectadas</small></span><input type="checkbox" data-export-module="entries" checked></label>
           </div>
@@ -54,11 +56,13 @@
 
         <section class="export-simple-card">
           <h2>Prévia do arquivo</h2>
-          <pre class="export-preview" data-dedicated-export-preview>{ periodo: "7", modulos: 5, registros: 0 }</pre>
+          <pre class="export-preview" data-dedicated-export-preview>Período: Semana
+Inclui: 5 áreas
+Informações encontradas: 0</pre>
         </section>
 
         <section class="export-actions-row">
-          <button class="button primary" type="button" data-dedicated-export>Gerar relatório simulado</button>
+          <button class="button primary" type="button" data-dedicated-export>Concluir relatório</button>
           <a class="button secondary" href="dashboard.html">Usar na revisão</a>
         </section>
       </main>
@@ -66,3 +70,4 @@
     </div>
   </body>
 </html>
+

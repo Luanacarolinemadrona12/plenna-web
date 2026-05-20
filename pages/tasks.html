@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tarefas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -25,8 +25,15 @@
         </header>
 
         <section class="stack">
+          <nav class="task-view-tabs" aria-label="Visualização de tarefas">
+            <a class="active" aria-current="page" href="tasks.html">Lista</a>
+            <a href="calendar-week.html">Semana</a>
+            <a href="calendar-month.html">Mês</a>
+          </nav>
+
           <div class="quick-add">
-            <input id="taskSearch" type="search" placeholder="Adicionar rápido ou buscar tarefa...">
+            <label class="sr-only" for="taskSearch">Adicionar rápido ou buscar tarefa</label>
+            <input id="taskSearch" type="search" placeholder="Adicionar rápido ou buscar tarefa..." aria-label="Adicionar rápido ou buscar tarefa">
             <a class="button primary small" href="task-new.html">+ Nova</a>
           </div>
 
@@ -53,3 +60,4 @@
     </div>
   </body>
 </html>
+

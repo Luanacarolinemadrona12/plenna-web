@@ -1,0 +1,5 @@
+2026/05/20-07:24:52.733 918 Creating DB C:\Users\Luana\Desktop\plenna prototipo web\plenna-web\reports\edge-focus-check-2\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/05/20-07:24:52.752 918 Reusing MANIFEST C:\Users\Luana\Desktop\plenna prototipo web\plenna-web\reports\edge-focus-check-2\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/05/20-07:24:52.952 12ec Level-0 table #5: started
+2026/05/20-07:24:52.956 12ec Level-0 table #5: 682457 bytes OK
+2026/05/20-07:24:52.959 12ec Delete type=0 #3

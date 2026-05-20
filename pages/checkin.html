@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Check-in | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js" defer></script>
+    <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/checkin.js" defer></script>
+    <script src="../js/checkin.js?v=20260520-checkin-energy" defer></script>
   </head>
   <body data-page="home" data-screen="checkin">
     <div class="app-shell">
@@ -24,7 +24,8 @@
             <span class="active"></span>
             <span></span>
             <span></span>
-            <small id="checkinProgressText">1 de 3 · humor</small>
+            <span></span>
+            <small id="checkinProgressText">1 de 4 · humor</small>
           </div>
         </header>
 
@@ -39,16 +40,17 @@
             <h2>Nível de energia</h2>
             <input id="energyRange" type="range" min="1" max="10" value="7" aria-label="Nível de energia">
             <input id="energyValue" name="energia" type="hidden" value="media">
-            <p id="energyLabel">⚡ 7 / 10 · energia média-alta</p>
+            <p id="energyLabel">7 / 10 · energia média-alta</p>
             <div class="energy-scale"><span>Baixa</span><span>Média</span><span>Alta</span></div>
           </section>
 
-          <section class="card checkin-card factor-card" data-checkin-step="2">
+          <section class="card checkin-card factor-card" data-checkin-step="3">
             <h2>O que influenciou seu humor?</h2>
+            <p>Marque apenas o que fez diferença hoje.</p>
             <div class="choice-grid two" id="factorChoices"></div>
           </section>
 
-          <section class="card checkin-card need-card" data-checkin-step="3">
+          <section class="card checkin-card need-card" data-checkin-step="4">
             <h2>O que você precisa hoje?</h2>
             <p>Escolha uma necessidade para guiar as próximas ações.</p>
             <div class="choice-grid" id="needChoices"></div>
@@ -59,8 +61,12 @@
               <button class="button secondary" type="button" id="checkinBack">Voltar</button>
               <button class="button primary" type="button" id="checkinNext">Continuar</button>
             </div>
-            <button class="button primary full" type="submit" id="checkinSubmit">Salvar check-in</button>
-            <button class="button secondary full" type="button" id="skipCheckin">Pular por hoje</button>
+            <button class="button primary full" type="submit" id="checkinSubmit" hidden>Salvar check-in</button>
+            <div class="checkin-secondary-actions">
+              <button class="button secondary" type="button" id="skipCheckin">Pular por hoje</button>
+              <a class="button secondary" href="home.html">Cancelar</a>
+            </div>
+            <p class="checkin-skip-note">A Home e o Foco não serão ajustados pelo seu estado de hoje.</p>
           </div>
         </form>
       </main>
@@ -68,3 +74,4 @@
     </div>
   </body>
 </html>
+

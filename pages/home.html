@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Início | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260430-figma">
+    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js" defer></script>
+    <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../js/mood-states.js?v=20260430-figma" defer></script>
+    <script src="../js/mood-states.js?v=20260520-energy-rules" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
     <script src="../js/home.js?v=20260430-figma" defer></script>
   </head>
@@ -41,10 +41,20 @@
 
           <div class="grid-3" id="homeMetrics"></div>
 
+          <section class="home-week-card" aria-label="Sua semana">
+            <div>
+              <h2>Sua semana</h2>
+              <p>Veja tarefas distribuídas por dia.</p>
+            </div>
+            <a class="button secondary small" href="calendar-week.html">Ver semana</a>
+          </section>
+
           <section class="shortcut-grid home-shortcuts" id="homeShortcuts" aria-label="Atalhos rápidos">
+            <a class="shortcut" href="task-new.html">+ Tarefa</a>
+            <a class="shortcut" href="focus.html">Iniciar foco</a>
             <a class="shortcut" href="micro-pauses.html">Respirar 3 min</a>
             <a class="shortcut" href="journal-night.html">Diário rápido</a>
-            <a class="shortcut" href="calendar-week.html">Planejar semana</a>
+            <a class="shortcut" href="planning.html">Planejar</a>
           </section>
 
           <p class="home-final-note" id="homeFinalNote">Seu plano está equilibrado para hoje.</p>
@@ -54,3 +64,4 @@
     </div>
   </body>
 </html>
+

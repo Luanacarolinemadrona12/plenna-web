@@ -1,0 +1,78 @@
+{
+   "addTaskFailed": {
+      "message": "添加失败"
+   },
+   "addTaskSuccess": {
+      "message": "任务已经被添加到"
+   },
+   "addTaskTo": {
+      "message": "添加至"
+   },
+   "addTaskToInboxSuccess": {
+      "message": "任务已经被添加到收集箱"
+   },
+   "addTo": {
+      "description": "The title of the menu item",
+      "message": "添加到%s"
+   },
+   "addingTask": {
+      "message": "添加任务至"
+   },
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "简洁, 易用的待办和任务管理工具, 帮助您高效完成所有的事情, 合理规划时间, 让生活更轻松！"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "滴答清单 - Todo & 任务提醒"
+   },
+   "appShortName": {
+      "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name.",
+      "message": "滴答清单"
+   },
+   "checkLink": {
+      "message": "点击查看"
+   },
+   "chooseTaskToBeCountedInExtended": {
+      "message": "在扩展图标中显示任务数量"
+   },
+   "commandAddTo": {
+      "message": "添加到滴答清单"
+   },
+   "extensionOptions": {
+      "message": "扩展程序选项"
+   },
+   "loginWarningPrefix": {
+      "message": "请先登录 "
+   },
+   "loginWarningSuffix": {
+      "message": " 然后添加任务"
+   },
+   "markComplete": {
+      "message": "标记已完成"
+   },
+   "none": {
+      "message": "无"
+   },
+   "openIn": {
+      "message": "打开方式"
+   },
+   "popupFailedExplain": {
+      "message": "需要关闭「设置」- 「隐私与安全」中的「阻止弹出式窗口」，才能添加任务到%s。"
+   },
+   "popupWindow": {
+      "message": "独立窗口"
+   },
+   "save": {
+      "message": "保存"
+   },
+   "sidePanel": {
+      "message": "侧边栏"
+   },
+   "snooze15minutes": {
+      "message": "稍后提醒15分钟"
+   },
+   "today": {
+      "message": "今天"
+   }
+}

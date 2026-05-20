@@ -1,0 +1,7587 @@
+.cover-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.onboarding-app,
+.onboarding-v2,
+.onboarding-screen {
+  background: var(--bg);
+}
+
+.onboarding-v2 {
+  min-height: 100vh;
+  padding: 0 20px 30px;
+}
+
+.onboarding-hero {
+  display: grid;
+  min-height: 360px;
+  justify-items: center;
+  align-content: start;
+  gap: 12px;
+  margin: 0 -20px;
+  padding: 73px 20px 36px;
+  background: linear-gradient(135deg, #35c98d 0%, #148c52 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.leaf-mark {
+  display: grid;
+  width: 132px;
+  height: 146px;
+  place-items: center;
+  color: #fff;
+}
+
+.leaf-mark img {
+  display: block;
+  width: 132px;
+  height: 146px;
+  object-fit: contain;
+}
+
+.onboarding-hero h1 {
+  color: #fff;
+  font-size: 46px;
+  font-weight: 850;
+  line-height: 50px;
+}
+
+.onboarding-hero p {
+  width: 330px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.onboarding-cards {
+  display: grid;
+  gap: 10px;
+  margin-top: 69px;
+}
+
+.onboarding-feature {
+  display: grid;
+  min-height: 58px;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.onboarding-feature span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 16px;
+  background: #d3f4ea;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.onboarding-feature .plenna-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.onboarding-feature strong {
+  color: var(--text-strong);
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 18px;
+}
+
+.onboarding-actions {
+  display: grid;
+  gap: 14px;
+  margin-top: 52px;
+  text-align: center;
+}
+
+.onboarding-start {
+  min-height: 56px;
+  border-radius: 28px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.onboarding-login {
+  color: #6b7a8d;
+  font-size: 14px;
+}
+
+.home-page {
+  padding-top: 58px;
+}
+
+.home-hero {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.home-hero h1 {
+  color: var(--text-heading);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28px;
+}
+
+.home-date {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.now-card {
+  min-height: 162px;
+  padding: 16px;
+  border-color: #d8efe4;
+  border-width: 1.2px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: var(--shadow-lift);
+}
+
+.now-card h2 {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.now-card .row {
+  display: grid;
+  grid-template-columns: 150px 132px;
+  gap: 12px;
+}
+
+.home-final-note {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid #cbefdf;
+  border-radius: 15px;
+  background: #eaf8f1;
+  color: #05724d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.appointment-card {
+  min-height: 74px;
+  border-color: var(--border);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.appointment-row {
+  display: grid;
+  grid-template-columns: 44px 1fr 102px;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.appointment-time {
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.quick-add {
+  display: grid;
+  min-height: 42px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px 6px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.quick-add span {
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quick-add input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.task-tabs {
+  display: grid;
+  min-height: 52px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.task-tab {
+  display: flex;
+  min-width: 0;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: #526378;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.task-tab.active {
+  background: var(--primary-alt);
+  color: #fff;
+}
+
+.task-tab strong {
+  color: var(--primary-deep);
+}
+
+.task-tab.active strong {
+  color: #fff;
+}
+
+.filter-card {
+  display: grid;
+  gap: 10px;
+  min-height: 68px;
+  padding: 12px 18px;
+  border-radius: 28px;
+  background: #fff;
+}
+
+.filter-card strong,
+.task-section-heading strong {
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.filter-card > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.filter-card span {
+  display: grid;
+  min-height: 36px;
+  place-items: center;
+  border: 1px solid #e5f1ea;
+  border-radius: 999px;
+  color: var(--primary-dark);
+  font-size: 11px;
+}
+
+.task-section-heading {
+  margin-top: 2px;
+}
+
+.task-section-heading a {
+  color: #b96a26;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.task-card {
+  min-height: 72px;
+  padding: 13px;
+  border-radius: 18px;
+  box-shadow: 0 14px 22px rgba(28, 47, 64, 0.06);
+}
+
+.task-form-page {
+  padding-top: 68px;
+}
+
+.task-form-page .form {
+  gap: 20px;
+}
+
+.task-form-header {
+  width: 260px;
+  margin: 0 auto 20px;
+}
+
+.task-form-header h1 {
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.task-form-page .card {
+  width: 350px;
+  max-width: 100%;
+  border: 0;
+  box-shadow: none;
+}
+
+.task-title-card {
+  gap: 4px;
+  padding: 10px 14px;
+}
+
+.task-title-card .field input,
+.task-title-card .field textarea {
+  min-height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #191b29;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 18px;
+  box-shadow: none;
+}
+
+.task-title-card .field textarea {
+  min-height: 16px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.task-fields-card {
+  gap: 11px;
+  padding: 10px 14px 12px;
+}
+
+.task-fields-card h3 {
+  color: var(--text-heading);
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.task-fields-card .field {
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  gap: 2px;
+}
+
+.task-fields-card .grid-2 {
+  gap: 8px 10px;
+}
+
+.task-fields-card .field input,
+.task-fields-card .field select {
+  min-height: 24px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: #526378;
+  font-size: 10.5px;
+  font-weight: 650;
+  text-align: center;
+}
+
+.task-fields-card .field select[name="prioridade"] {
+  background: var(--danger-soft);
+}
+
+.task-fields-card .field select[name="esforco"] {
+  background: rgba(250, 240, 130, 0.53);
+}
+
+.task-fields-card .field select[name="impactoEmocional"] {
+  background: #dbedff;
+}
+
+.task-form-page .button.full {
+  width: 322px;
+  max-width: calc(100% - 28px);
+  margin: 0 auto;
+}
+
+.figma-topbar {
+  margin-bottom: 16px;
+}
+
+.figma-topbar h1 {
+  color: var(--text-heading);
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.figma-topbar p {
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.checkin-page {
+  padding-top: 76px;
+}
+
+.checkin-page .form {
+  gap: 16px;
+}
+
+.checkin-card {
+  width: 350px;
+  max-width: 100%;
+  gap: 2px;
+  padding: 13px;
+  border-color: #f0f3f1;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.checkin-card h2 {
+  color: var(--text-heading);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.checkin-card > p {
+  color: #7b8797;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.mood-card {
+  min-height: 132px;
+}
+
+.mood-card .choice-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.mood-card .choice-card {
+  min-height: 66px;
+  padding: 7px 2px 8px;
+  justify-items: center;
+  border-color: #e8eee9;
+  border-radius: 18px;
+  background: #f6f8f7;
+  color: var(--text-soft);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.choice-emoji {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 2px solid #c9e5d8;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.choice-emoji.sensivel,
+.choice-emoji.ruim {
+  border-color: #fae0d6;
+  background: #fff5e8;
+}
+
+.choice-emoji.neutro {
+  border-color: #dce8e2;
+  background: #f7faf8;
+}
+
+.choice-emoji.bom,
+.choice-emoji.otimo {
+  border-color: #35c98d;
+  background: #ddf7ea;
+}
+
+.mood-card input:checked + .choice-card {
+  border-color: var(--primary);
+  border-width: 1.5px;
+  background: var(--primary-soft);
+  color: #0b8a59;
+  box-shadow: none;
+}
+
+.energy-card {
+  min-height: 106px;
+}
+
+.energy-card input[type="range"] {
+  width: 100%;
+  margin: 16px 0 7px;
+  accent-color: var(--primary-alt);
+  --energy-fill: 67%;
+  appearance: none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+.energy-card input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #35c98d 0 var(--energy-fill), #e8eef2 var(--energy-fill) 100%);
+}
+
+.energy-card input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -6px;
+  border: 3px solid #35c98d;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-appearance: none;
+}
+
+.energy-card input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #35c98d 0 var(--energy-fill), #e8eef2 var(--energy-fill) 100%);
+}
+
+.energy-card input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #35c98d;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.energy-card #energyLabel {
+  color: var(--text-soft);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.energy-scale {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #5c708a;
+  font-size: 10.5px;
+}
+
+.energy-scale span:nth-child(2) {
+  text-align: center;
+}
+
+.energy-scale span:nth-child(3) {
+  text-align: right;
+}
+
+.factor-card,
+.need-card {
+  min-height: 126px;
+}
+
+.factor-card .choice-grid,
+.need-card .choice-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 17px;
+}
+
+.factor-card .choice-card,
+.need-card .choice-card {
+  min-height: 34px;
+  min-width: 72px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.factor-card input:checked + .choice-card,
+.need-card input:checked + .choice-card {
+  background: var(--primary-alt);
+  color: #fff;
+  box-shadow: none;
+}
+
+.need-card {
+  min-height: 150px;
+}
+
+.recommendation {
+  border-color: #f5c987;
+  background: var(--warning-soft);
+}
+
+.priority-number {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: var(--primary-deep);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.priority-row {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-row small {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.shortcut-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shortcut {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.shortcut span {
+  color: var(--primary-dark);
+  font-size: 13px;
+}
+
+.shortcut-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--primary-dark);
+  stroke: currentColor;
+}
+
+.timer-card {
+  justify-items: center;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.focus-page {
+  padding-top: 20px;
+  background: var(--bg);
+}
+
+.focus-page .page-header h1 {
+  color: #293047;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.focus-page .page-header p {
+  color: #4a5e80;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.focus-context {
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.focus-timer-cluster {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  min-height: 326px;
+  padding-top: 14px;
+}
+
+.timer {
+  display: grid;
+  width: 210px;
+  height: 210px;
+  place-items: center;
+  border: 18px solid #3bc994;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.focus-timer-cluster > p {
+  margin-top: -102px;
+  color: #4a5e80;
+  font-size: 14px;
+}
+
+.focus-controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.focus-control {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.focus-control:disabled {
+  opacity: 1;
+}
+
+.focus-control-glyph {
+  display: block;
+  width: 18px;
+  color: currentColor;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  opacity: 0.72;
+  text-align: center;
+}
+
+.focus-control .control-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.72;
+}
+
+.focus-control.primary {
+  background: #3bc994;
+  color: #fff;
+}
+
+.focus-control.primary .focus-control-glyph,
+.focus-control.primary .control-icon {
+  width: 13px;
+  height: 13px;
+  opacity: 1;
+  transform: translateX(1px);
+}
+
+.focus-control.secondary {
+  background: #e8f2fc;
+  color: #4a5e80;
+}
+
+.focus-presets,
+.focus-task-card {
+  border-color: #e0ebf2;
+  border-radius: 22px;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.focus-presets h2,
+.focus-task-card h2 {
+  color: var(--primary-dark);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.preset-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.preset-card {
+  display: grid;
+  min-height: 57px;
+  align-content: center;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid #e0ebf2;
+  border-radius: 20px;
+  background: #fff;
+  color: #293047;
+  text-align: left;
+}
+
+.preset-card.active {
+  border-color: var(--primary-pale);
+  background: var(--primary-pale);
+}
+
+.preset-card span {
+  color: #4a5e80;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.preset-card strong,
+.preset-card input {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #293047;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 16px;
+}
+
+.focus-task-card h3 {
+  color: #293047;
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.focus-task-card > p {
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.habit-day {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface-muted);
+  color: var(--text-soft);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.habit-day.done {
+  background: var(--primary);
+  color: #fff;
+}
+
+.habits-page {
+  padding-top: 80px;
+}
+
+.habits-page .page-header h1 {
+  color: var(--text-strong);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.habit-today strong {
+  color: var(--primary-dark);
+  font-size: 15px;
+}
+
+.habit-progress {
+  height: 8px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.habit-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+.habit-create summary {
+  display: grid;
+  width: 78px;
+  min-height: 28px;
+  place-items: center;
+  margin-left: auto;
+  border: 1px solid #1f9761;
+  border-radius: 14px;
+  background: var(--primary-alt);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.habit-create summary::-webkit-details-marker,
+.journal-create summary::-webkit-details-marker {
+  display: none;
+}
+
+.habit-create .card {
+  margin-top: 10px;
+}
+
+.habit-item {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 93px;
+  padding: 10px 14px 10px 18px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.habit-item::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--habit-color, var(--primary));
+  content: "";
+}
+
+.habit-icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  color: #293047;
+}
+
+.habit-item .item-top {
+  grid-template-columns: 24px 1fr auto;
+}
+
+.habit-icon .plenna-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.habit-day .plenna-icon {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+}
+
+.habit-item p {
+  color: var(--primary-dark);
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.habit-insight {
+  display: grid;
+  gap: 8px;
+  padding: 16px 14px;
+  border-radius: 22px;
+  background: var(--primary-pale);
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+}
+
+.segmented button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 850;
+}
+
+.segmented button.active {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.journal-page {
+  padding-top: 52px;
+  background: var(--bg);
+}
+
+.journal-banner {
+  display: grid;
+  gap: 10px;
+  min-height: 126px;
+  padding: 13px;
+  border: 1px solid #c9e5d8;
+  border-radius: 18px;
+  background: #f7fcfa;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.journal-create summary {
+  display: grid;
+  min-height: 38px;
+  place-items: center;
+  border: 1px solid #c9e5d8;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.journal-entry {
+  display: grid;
+  gap: 12px;
+  min-height: 180px;
+  padding: 22px 13px 18px;
+  border: 1px solid #e0ebf2;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.journal-entry h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.journal-title-icon {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  color: var(--primary);
+  stroke: currentColor;
+}
+
+.journal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.journal-actions button {
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #c9e5d8;
+  border-radius: 14px;
+  background: var(--primary-pale);
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.planning-page {
+  padding-top: 64px;
+  background: var(--bg);
+}
+
+.planning-alert {
+  display: grid;
+  gap: 3px;
+  min-height: 61px;
+  padding: 9px 11px;
+  border-radius: 18px;
+  background: var(--warning-soft);
+}
+
+.planning-alert strong {
+  color: var(--warning);
+  font-size: 13px;
+}
+
+.planning-main-card,
+.planning-block-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(107, 64, 38, 0.08);
+}
+
+.planning-main-card h2 {
+  color: var(--text);
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.planning-metrics {
+  display: grid;
+  grid-template-columns: 92px 92px 1fr;
+  gap: 8px;
+}
+
+.planning-metrics span,
+.proto-metric {
+  display: grid;
+  gap: 3px;
+  min-height: 54px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.planning-metrics span:nth-child(1) {
+  background: #fef9f1;
+}
+
+.planning-metrics span:nth-child(2) {
+  background: var(--primary-pale);
+}
+
+.planning-metrics span:nth-child(3) {
+  background: var(--peach);
+}
+
+.planning-metrics strong,
+.proto-metric strong {
+  color: var(--primary-deep);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.planning-block-card {
+  padding: 14px;
+  border-radius: 22px;
+  gap: 9px;
+}
+
+.planning-block-card h2 {
+  color: var(--primary-dark);
+  font-size: 16px;
+}
+
+.planning-block {
+  display: grid;
+  gap: 6px;
+  min-height: 83px;
+  padding: 12px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.planning-block .item-top {
+  grid-template-columns: 58px 1fr auto;
+  align-items: center;
+}
+
+.planning-hour {
+  display: grid;
+  width: 58px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--surface-muted);
+  color: #000;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.planning-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.planning-actions .button {
+  min-height: 32px;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.success-card {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 24px 18px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.success-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.success-icon .plenna-icon {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+}
+
+.focus-control .plenna-icon {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+}
+
+.focus-control.primary .plenna-icon {
+  fill: currentColor;
+}
+
+.icon-list-item {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.inline-list-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  stroke: currentColor;
+}
+
+.calendar-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 8px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.calendar-strip span {
+  display: grid;
+  min-height: 52px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--surface-muted);
+  color: #526378;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.calendar-strip .active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 14px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.month-grid span,
+.month-grid button {
+  display: grid;
+  min-height: 42px;
+  place-items: center;
+  border: 0;
+  border-radius: 14px;
+  background: #f6f8f7;
+  color: #526378;
+  font-weight: 750;
+}
+
+.month-grid .busy {
+  background: #fff0cc;
+  color: #8a4b12;
+}
+
+.month-grid .soft,
+.month-grid .active {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+}
+
+.break-timer {
+  width: 142px;
+  height: 142px;
+  border-width: 12px;
+  font-size: 28px;
+}
+
+.subtask-list {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #526378;
+  font-size: 12px;
+}
+
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #526378;
+  font-weight: 750;
+}
+
+.settings-row {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.session-active .timer {
+  border-color: var(--primary);
+}
+
+.session-active .focus-controls {
+  gap: 10px;
+}
+
+.session-active .focus-control {
+  width: 52px;
+  height: 52px;
+}
+
+/* Figma parity: specific screens rendered by js/screens.js */
+.figma-screen {
+  display: grid;
+  gap: 14px;
+}
+
+.figma-screen .proto-topbar {
+  margin-bottom: 0;
+}
+
+.figma-screen .proto-topbar h1 {
+  color: #1f2a24;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28px;
+}
+
+.figma-screen .proto-topbar p {
+  max-width: 31ch;
+  color: #45546b;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.figma-card,
+.figma-profile-card,
+.figma-success-card,
+.figma-month-template {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #e0ebf2;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.figma-card h2,
+.figma-profile-card h2,
+.figma-success-card h2,
+.figma-inline-form h2 {
+  color: #222636;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.figma-card p,
+.figma-line p,
+.figma-profile-card p,
+.figma-success-card p {
+  color: #526378;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.figma-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 5px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 7px 14px rgba(38, 59, 92, 0.06);
+}
+
+.figma-tabs button,
+.figma-tabs a {
+  display: grid;
+  min-height: 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: #526378;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14px;
+}
+
+.figma-tabs .active,
+.figma-tabs button.active {
+  background: #35c98d;
+  color: #ffffff;
+}
+
+.figma-week-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+  padding: 8px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.figma-week-strip button {
+  display: grid;
+  min-width: 0;
+  min-height: 54px;
+  place-items: center;
+  border: 0;
+  border-radius: 15px;
+  background: #f4f7f4;
+  color: #526378;
+}
+
+.figma-week-strip span {
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 12px;
+}
+
+.figma-week-strip strong {
+  color: inherit;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.figma-week-strip .active {
+  background: #35c98d;
+  color: #ffffff;
+}
+
+.figma-week-strip .foco,
+.figma-week-strip .agenda {
+  background: #ddf7ea;
+  color: #136e47;
+}
+
+.figma-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e7ecf1;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.figma-line-main {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.figma-line h3 {
+  color: #222636;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 17px;
+}
+
+.figma-mini-action,
+.figma-note-actions button,
+.figma-reminder-actions button {
+  display: inline-grid;
+  min-height: 32px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: #ddf7ea;
+  color: #136e47;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 12px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.figma-mini-action.danger,
+.figma-reminder-actions button:last-child {
+  background: #fae0d6;
+  color: #bd4f3d;
+}
+
+.figma-schedule-card .planning-block {
+  border: 1px solid #e7ecf1;
+  box-shadow: none;
+}
+
+.figma-load-card {
+  gap: 10px;
+}
+
+.figma-load-row {
+  display: grid;
+  grid-template-columns: 34px 1fr 42px;
+  gap: 8px;
+  align-items: center;
+  color: #526378;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.figma-load-row b {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #35c98d 55%, #e7ecf1 55%);
+}
+
+.figma-load-row.strong b {
+  background: linear-gradient(90deg, #bd7b2c 78%, #e7ecf1 78%);
+}
+
+.figma-month-head,
+.figma-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.figma-month-head strong,
+.figma-progress-head strong {
+  color: #222636;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.figma-month-head span,
+.figma-progress-head span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.figma-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.figma-month-grid button {
+  display: grid;
+  min-height: 42px;
+  place-items: center;
+  border: 0;
+  border-radius: 14px;
+  background: #f4f7f4;
+  color: #526378;
+  font-weight: 800;
+}
+
+.figma-month-grid .busy {
+  background: #fff5e8;
+  color: #bd7b2c;
+}
+
+.figma-month-grid .soft,
+.figma-month-grid .active {
+  background: #ddf7ea;
+  color: #136e47;
+}
+
+.figma-progress-card {
+  min-height: 84px;
+}
+
+.figma-progress {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7ecf1;
+}
+
+.figma-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #35c98d;
+}
+
+.figma-progress.amber span {
+  background: #bd7b2c;
+}
+
+.figma-progress.blue span {
+  background: #6ba6f0;
+}
+
+.figma-pause-hero {
+  justify-items: start;
+  background: linear-gradient(180deg, #ffffff 0%, #f1fbf6 100%);
+}
+
+.figma-pause-timer {
+  display: grid;
+  width: 132px;
+  height: 132px;
+  place-items: center;
+  border: 12px solid #35c98d;
+  border-radius: 50%;
+  color: #136e47;
+  font-size: 30px;
+  font-weight: 850;
+  line-height: 34px;
+}
+
+.habit-section,
+.suggested-habits,
+.session-task-switcher {
+  display: grid;
+  gap: 10px;
+}
+
+.session-task-switcher {
+  margin-top: 14px;
+}
+
+.checkin-page .ux-stepper {
+  display: grid;
+}
+
+.reminder-toggle-chip {
+  border: 1px solid #cbe9dc;
+  cursor: pointer;
+}
+
+.reminder-card-actions a {
+  display: grid;
+  min-height: 31px;
+  place-items: center;
+  border: 1px solid #d8efe4;
+  border-radius: 10px;
+  background: #fff;
+  color: #0b7048;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.figma-pause-list,
+.figma-history-list,
+.figma-settings-list,
+.figma-reminder-list,
+.figma-note-history {
+  display: grid;
+  gap: 10px;
+}
+
+.figma-note-card.quick {
+  min-height: 145px;
+}
+
+.figma-note-card.long {
+  min-height: 169px;
+  background: #e8f2fc;
+}
+
+.figma-note-card.connected {
+  min-height: 210px;
+}
+
+.figma-note-actions,
+.figma-reminder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.figma-note-body {
+  color: #45546b;
+}
+
+.figma-inline-form {
+  display: grid;
+  gap: 10px;
+}
+
+.figma-inline-form input,
+.figma-inline-form select,
+.figma-inline-form textarea,
+.figma-profile-card input:not([type="checkbox"]) {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #dce8e2;
+  border-radius: 14px;
+  background: #f7faf8;
+  color: #222636;
+  padding: 10px 12px;
+}
+
+.figma-inline-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.figma-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.figma-shortcuts a {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #136e47;
+  font-size: 12px;
+  font-weight: 850;
+  box-shadow: 0 7px 14px rgba(38, 59, 92, 0.06);
+}
+
+.figma-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.figma-metric-grid .proto-metric {
+  min-height: 86px;
+  padding: 16px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.08);
+}
+
+.figma-history-chart {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  align-items: end;
+  min-height: 82px;
+  padding-top: 12px;
+}
+
+.figma-history-chart span {
+  display: grid;
+  align-items: end;
+  height: 82px;
+}
+
+.figma-history-chart b {
+  display: block;
+  min-height: 22px;
+  border-radius: 999px 999px 10px 10px;
+  background: #35c98d;
+}
+
+.figma-check-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 0;
+  border-top: 1px solid #e7ecf1;
+}
+
+.figma-check-line:first-of-type {
+  border-top: 0;
+}
+
+.figma-check-line span {
+  display: grid;
+  gap: 3px;
+}
+
+.figma-check-line strong {
+  color: #222636;
+  font-size: 14px;
+}
+
+.figma-check-line input {
+  width: 22px;
+  height: 22px;
+  appearance: none;
+  position: relative;
+  border: 1.5px solid #35c98d;
+  border-radius: 7px;
+  background: #ffffff;
+  accent-color: #35c98d;
+}
+
+.figma-check-line input:checked {
+  background: #35c98d;
+}
+
+.figma-check-line input:checked::after,
+.figma-profile-card .settings-toggle input:checked::after {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.figma-success-card {
+  justify-items: start;
+  min-height: 260px;
+}
+
+.figma-badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}
+
+.figma-badges span {
+  display: grid;
+  min-height: 56px;
+  place-items: center;
+  border-radius: 16px;
+  background: #f1fbf6;
+  color: #136e47;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.figma-profile-card .avatar {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  place-items: center;
+  border-radius: 20px;
+  background: #35c98d;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.figma-profile-card .settings-toggle {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #e7ecf1;
+  border-radius: 15px;
+  background: #f7faf8;
+  color: #45546b;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14px;
+}
+
+.figma-profile-card .settings-toggle input {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  position: relative;
+  border: 1.5px solid #35c98d;
+  border-radius: 6px;
+  background: #ffffff;
+  accent-color: #35c98d;
+}
+
+.figma-profile-card .settings-toggle input:checked {
+  background: #35c98d;
+}
+
+.figma-reminder-summary {
+  min-height: 134px;
+}
+
+.figma-reminder-list .figma-line {
+  grid-template-columns: 1fr;
+}
+
+.figma-reminder-actions {
+  justify-content: flex-start;
+}
+
+.figma-reminder-actions button {
+  min-height: 28px;
+  padding: 0 10px;
+}
+
+@media (max-width: 360px) {
+  .mood-card .choice-grid,
+  .preset-row,
+  .planning-actions,
+  .planning-metrics,
+  .now-card .row {
+    grid-template-columns: 1fr;
+  }
+
+  .timer {
+    width: 190px;
+    height: 190px;
+    font-size: 30px;
+  }
+}
+
+/* Figma parity: 05 Home inteligente */
+.home-page {
+  padding: 58px 20px 78px;
+}
+
+.home-hero {
+  gap: 0;
+  margin-bottom: 14px;
+}
+
+.home-hero h1 {
+  height: 28px;
+  color: #1f2a24;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28px;
+}
+
+.home-date {
+  height: 18px;
+  margin-top: 2px;
+  color: #45546b;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.home-hero .chip-row {
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.home-hero .chip {
+  min-width: 112px;
+  min-height: 28px;
+  padding: 0 16px;
+  border-color: transparent;
+  background: #f1fbf6;
+  color: #222636;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.home-hero .chip.solid {
+  min-width: 126px;
+  background: #33c985;
+  color: #222636;
+}
+
+.home-stack {
+  gap: 14px;
+}
+
+.now-card {
+  min-height: 162px;
+  align-content: start;
+  gap: 0;
+  margin-bottom: 4px;
+  padding: 14px 17px;
+  border-color: #d8efe4;
+  border-width: 1.2px;
+  border-radius: 22px;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.08);
+}
+
+.now-card .eyebrow {
+  color: #0d6b45;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.now-card h2 {
+  width: 306px;
+  margin-top: 10px;
+  color: #222636;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+}
+
+.now-card .row {
+  display: grid;
+  grid-template-columns: 150px 132px;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.now-card .button {
+  min-height: 42px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.now-card .button.primary {
+  background: #2fbf7a;
+  color: #212e45;
+}
+
+.home-priority-card {
+  min-height: 138px;
+  gap: 0;
+  padding: 13px 15px 10px 8px;
+  border-color: #edf2f0;
+  border-radius: 18px;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.04);
+}
+
+.home-priority-card .row {
+  height: 20px;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+
+.home-priority-card h2 {
+  color: #1f2a24;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.home-priority-card .button.small {
+  min-height: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0d6b45;
+  font-size: 12px;
+}
+
+.home-priority-card .content-list {
+  gap: 0;
+}
+
+.home-priority-row {
+  min-height: 28px;
+  grid-template-columns: 18px minmax(0, 1fr) 72px;
+  gap: 4px;
+}
+
+.home-check-dot {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: #e2e8f0;
+}
+
+.home-priority-row p {
+  overflow: hidden;
+  color: #45546b;
+  font-size: 12px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-priority-row p strong {
+  color: #0d6b45;
+  font-weight: 800;
+}
+
+.home-priority-chip {
+  width: 72px;
+  min-height: 28px;
+  padding: 0;
+  border-color: #c9e5d8;
+  background: #f1fbf6;
+  color: #136e47;
+  font-size: 11px;
+}
+
+.appointment-card {
+  min-height: 74px;
+  gap: 9px;
+  padding: 9px 15px;
+  border-color: #e8efea;
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.appointment-card h2 {
+  color: #136e47;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.appointment-row {
+  grid-template-columns: 34px 148px 102px;
+  gap: 10px;
+  align-items: start;
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.appointment-time {
+  color: #0d6b45;
+  font-weight: 800;
+}
+
+.appointment-title {
+  color: #000;
+}
+
+.appointment-row p {
+  color: #45546b;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+#homeMetrics {
+  grid-template-columns: 104px 115px 104px;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 4px 0;
+}
+
+.home-metric-card {
+  display: grid;
+  min-height: 66px;
+  grid-template-columns: 22px 1fr;
+  gap: 5px;
+  align-items: center;
+  padding: 9px 11px 8px 13px;
+  border: 1px solid #dce8e2;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.home-metric-card .metric-dot {
+  align-self: start;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background: #6ba6f0;
+}
+
+.home-metric-card.streak .metric-dot {
+  background: #9b7bea;
+}
+
+.home-metric-card.habits .metric-dot {
+  background: #31c77f;
+}
+
+.home-metric-card b {
+  display: block;
+  color: #0d6b45;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.home-metric-card strong {
+  display: block;
+  color: #212e45;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.home-shortcuts {
+  display: grid;
+  grid-template-columns: 108px 120px 126px;
+  gap: 0;
+  justify-content: space-between;
+  margin-top: -3px;
+}
+
+.home-shortcuts .shortcut {
+  width: auto;
+  min-height: 28px;
+  padding: 0;
+  border-color: #dce8e2;
+  background: #e7ecf1;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.home-final-note {
+  min-height: 30px;
+  margin-top: 10px;
+  border-color: #cbefdf;
+  border-radius: 15px;
+  color: #05724d;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* Figma parity: 06 Tarefas - Lista */
+.tasks-page {
+  padding: 58px 20px 78px;
+}
+
+.tasks-page .page-header {
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.tasks-page .page-header h1 {
+  height: 28px;
+  color: #222636;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28px;
+}
+
+.tasks-page .page-header p {
+  max-width: 330px;
+  color: #45546b;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tasks-page .stack {
+  gap: 10px;
+}
+
+.tasks-page .quick-add {
+  width: 350px;
+  min-height: 42px;
+  padding: 6px 12px 6px 15px;
+  border-color: #e8efea;
+  border-radius: 21px;
+  background: #fff;
+}
+
+.tasks-page .quick-add input {
+  color: #45546b;
+  font-size: 12px;
+}
+
+.tasks-page .quick-add .button {
+  width: 78px;
+  min-height: 27px;
+  padding: 0;
+  border-color: #1f9761;
+  border-radius: 14px;
+  background: #2fc77f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tasks-page .task-tabs {
+  width: 350px;
+  min-height: 52px;
+  grid-template-columns: 94px 60px 70px 86px;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 18px;
+}
+
+.tasks-page .task-tab {
+  min-height: 36px;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 10px;
+  border-radius: 18px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tasks-page .filter-card {
+  width: 350px;
+  min-height: 68px;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 4px 14px 10px 20px;
+  border-radius: 999px;
+}
+
+.tasks-page .filter-card strong {
+  height: 14px;
+  color: #136e47;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tasks-page .filter-card > div {
+  grid-template-columns: 92px 92px 92px;
+  gap: 20px;
+}
+
+.tasks-page .filter-card button {
+  min-height: 36px;
+  border: 1px solid #e5f1ea;
+  border-radius: 999px;
+  background: #fff;
+  color: #136e47;
+  font-size: 11px;
+}
+
+.tasks-page .task-section-heading {
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+.tasks-page .task-section-heading strong {
+  color: #0d6b45;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tasks-page .task-section-heading a {
+  color: #b96a26;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tasks-page #taskList {
+  gap: 16px;
+  margin-top: 2px;
+}
+
+.task-row-card {
+  width: 350px;
+  min-height: 72px;
+  padding: 9px 13px;
+  border-color: #ecf1ee;
+  border-radius: 18px;
+  box-shadow: 0 8px 9px rgba(18, 31, 46, 0.06);
+}
+
+.task-row-card:nth-child(3) {
+  min-height: 58px;
+}
+
+.task-row-card .item-top {
+  grid-template-columns: 22px minmax(0, 1fr) 90px;
+  gap: 10px;
+  align-items: start;
+}
+
+.task-row-card .check-control {
+  width: 22px;
+  height: 22px;
+  margin-top: 6px;
+}
+
+.task-row-main {
+  display: grid;
+  min-width: 0;
+  gap: 1px;
+  padding-top: 2px;
+}
+
+.task-row-main .task-title {
+  overflow: hidden;
+  color: #222636;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-row-main small {
+  color: #45546b;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.task-badge {
+  width: 90px;
+  min-height: 28px;
+  padding: 0;
+  border-color: transparent;
+  background: #ddf7ea;
+  color: #526378;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.task-badge::before,
+.home-priority-chip::before {
+  width: 5px;
+  height: 5px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  opacity: 0.6;
+}
+
+.task-badge::before {
+  content: none;
+}
+
+.task-badge.warning {
+  background: #fff4e6;
+  color: #526378;
+}
+
+.task-badge.blue {
+  background: #eaf4ff;
+  color: #526378;
+}
+
+/* Mood-state parity: Home and Focus variations */
+.home-page.state-high,
+.focus-page.state-high {
+  --state-accent: #278f68;
+  --state-accent-dark: #05724d;
+  --state-card-bg: #f0faf4;
+  --state-card-border: #b8e4cc;
+  --state-badge-bg: #eaf7f0;
+  --state-message-bg: #f4fbf7;
+  --state-final-bg: #d4f6e4;
+}
+
+.home-page.state-neutral,
+.focus-page.state-neutral {
+  --state-accent: #35c98d;
+  --state-accent-dark: #0d6b45;
+  --state-card-bg: #ffffff;
+  --state-card-border: #d8efe4;
+  --state-badge-bg: #f1fbf6;
+  --state-message-bg: #f4fbf7;
+  --state-final-bg: #d4f6e4;
+}
+
+.home-page.state-low,
+.focus-page.state-low {
+  --state-accent: #b96a26;
+  --state-accent-dark: #8a4b12;
+  --state-card-bg: #fff8ef;
+  --state-card-border: #f5c987;
+  --state-badge-bg: #fff4e5;
+  --state-message-bg: #fff8ef;
+  --state-final-bg: #fff0cc;
+}
+
+.home-page.state-protect,
+.focus-page.state-protect {
+  --state-accent: #9a4e70;
+  --state-accent-dark: #8a3a5e;
+  --state-card-bg: #fff1f6;
+  --state-card-border: #f4bbd2;
+  --state-badge-bg: #fdecf4;
+  --state-message-bg: #fff1f6;
+  --state-final-bg: #ffe0e0;
+}
+
+.home-page {
+  padding: 58px 20px 72px;
+  background: #f4f7f4;
+}
+
+body[data-page="home"] .bottom-nav {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+}
+
+body[data-page="home"][data-mood-state="high"] .bottom-nav {
+  top: auto;
+}
+
+body[data-page="home"][data-mood-state="neutral"] .bottom-nav {
+  top: auto;
+}
+
+body[data-page="home"][data-mood-state="low"] .bottom-nav {
+  top: auto;
+}
+
+body[data-page="home"][data-mood-state="protect"] .bottom-nav {
+  top: auto;
+}
+
+.home-page.state-neutral .home-hero h1 {
+  font-size: 20px;
+}
+
+.home-page.state-protect .home-date {
+  color: #718093;
+  font-weight: 400;
+}
+
+.home-hero h1 {
+  color: #222636;
+  font-weight: 800;
+}
+
+.home-date {
+  color: #136e47;
+  font-weight: 800;
+}
+
+.home-hero .chip {
+  border-color: #c9e5d8;
+  color: #136e47;
+}
+
+.home-hero .chip.solid {
+  border-color: #33c985;
+  background: #33c985;
+  color: #136e47;
+}
+
+.state-protect .home-hero .chip.solid {
+  min-width: 140px;
+}
+
+.now-card {
+  position: relative;
+  min-height: 162px;
+  border-color: var(--state-card-border);
+  background: var(--state-card-bg);
+}
+
+.state-neutral .now-card {
+  min-height: 155px;
+  margin-bottom: 0;
+}
+
+.now-card .eyebrow {
+  color: var(--state-accent-dark);
+}
+
+.state-badge {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  display: inline-flex;
+  width: 142px;
+  min-height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border: 1px solid var(--state-card-border);
+  border-radius: 999px;
+  background: var(--state-badge-bg);
+  color: #5c708a;
+  font-size: 10.5px;
+  font-weight: 650;
+  line-height: 12px;
+  text-align: center;
+}
+
+.now-card .button.primary {
+  border-color: var(--state-accent);
+  background: var(--state-accent);
+  color: #fff;
+}
+
+.now-card .button.secondary {
+  border-color: var(--state-card-border);
+  color: var(--state-accent);
+}
+
+.home-priority-card {
+  padding: 13px 15px 10px;
+}
+
+.home-priority-card .row {
+  padding-left: 0;
+}
+
+.home-priority-row {
+  min-height: 30px;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  gap: 8px;
+}
+
+.home-priority-row p strong {
+  color: inherit;
+}
+
+.home-priority-chip::before {
+  content: none;
+}
+
+.appointment-card {
+  min-height: 58px;
+  padding: 9px 15px;
+}
+
+.state-high .appointment-card,
+.state-protect .appointment-card {
+  min-height: 70px;
+}
+
+.appointment-card h2 {
+  color: #253044;
+}
+
+.appointment-time {
+  color: var(--state-accent);
+}
+
+.home-message-card {
+  min-height: 68px;
+  gap: 2px;
+  margin-top: -14px;
+  padding: 11px 15px;
+  border-color: var(--state-message-bg);
+  border-radius: 18px;
+  background: var(--state-message-bg);
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.04);
+}
+
+.state-low .home-message-card,
+.state-protect .home-message-card {
+  border-color: var(--state-card-border);
+}
+
+.home-message-card h2 {
+  color: var(--state-accent-dark);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.state-high .home-message-card h2,
+.state-neutral .home-message-card h2 {
+  color: #253044;
+}
+
+.home-message-card p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#homeMetrics {
+  grid-template-columns: repeat(3, 104px);
+  gap: 19px;
+  padding: 0;
+  margin-top: -8px;
+}
+
+.home-metric-card {
+  display: block;
+  min-height: 76px;
+  padding: 9px 11px 8px 13px;
+  border-color: #f3f6f4;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.04);
+}
+
+.home-metric-card .metric-dot {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.home-metric-card b {
+  color: #6b778c;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.home-metric-card strong {
+  color: #253044;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.home-final-note {
+  display: block;
+  min-height: 64px;
+  padding: 7px 13px;
+  border: 1px solid #c9e5d8;
+  background: #eaf8f1;
+}
+
+.home-final-note[hidden],
+.home-shortcuts[hidden] {
+  display: none;
+}
+
+.focus-page {
+  padding: 58px 20px 70px;
+  background: #f4f7f4;
+}
+
+.focus-page .page-header {
+  margin-bottom: 5px;
+}
+
+.focus-page .page-header h1 {
+  color: #1a1a2e;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 22px;
+}
+
+.focus-page .page-header p {
+  max-width: 250px;
+  color: #6b7a8f;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.focus-page.state-low .page-header p {
+  max-width: 285px;
+}
+
+.focus-page .stack-lg {
+  gap: 13px;
+}
+
+.focus-timer-cluster {
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 344px;
+  min-height: 344px;
+  padding-top: 0;
+  justify-self: start;
+}
+
+.timer {
+  position: relative;
+  display: block;
+  width: 210px;
+  height: 210px;
+  border: 0;
+}
+
+.focus-timer-cluster .timer {
+  position: absolute;
+  top: 11px;
+  left: 73px;
+}
+
+.timer img {
+  position: absolute;
+  inset: 0;
+  width: 210px;
+  height: 210px;
+  max-width: none;
+}
+
+.timer strong {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  width: 210px;
+  color: #293047;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 35px;
+  text-align: center;
+}
+
+.timer span {
+  position: absolute;
+  top: 114px;
+  left: 0;
+  width: 210px;
+  color: #4a5e80;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.focus-controls {
+  position: absolute;
+  top: 248px;
+  left: 64px;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 228px;
+  height: 100px;
+  margin-top: 0;
+}
+
+.focus-presets,
+.focus-task-card {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.focus-presets h2,
+.focus-task-card h2 {
+  color: #292e3d;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 18px;
+}
+
+.focus-presets {
+  margin-bottom: 0;
+}
+
+.focus-presets h2 {
+  position: relative;
+  top: -4px;
+  margin-bottom: 4px;
+}
+
+.focus-task-card h2 {
+  margin-bottom: 6px;
+}
+
+.preset-row {
+  grid-template-columns: repeat(3, 112px);
+  gap: 10px;
+}
+
+.preset-card {
+  height: 90px;
+  min-height: 90px;
+  padding: 10px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.preset-card.active {
+  border: 2px solid #35c98d;
+  background: #fff;
+}
+
+.preset-card.active span,
+.preset-card.active strong,
+.preset-card.active input {
+  color: #33c780;
+}
+
+.preset-card span {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.preset-card strong,
+.preset-card input {
+  color: #292e3d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.preset-card:last-child strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.preset-card:last-child span {
+  display: block;
+  max-width: 62px;
+  font-size: 10.5px;
+  line-height: 13px;
+}
+
+.focus-task-summary {
+  width: 350px;
+  min-height: 70px;
+  margin-top: 0;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.state-high .focus-task-summary {
+  height: 59px;
+  min-height: 59px;
+}
+
+.focus-task-card h3 {
+  color: #1a1a2e;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.focus-task-card #suggestedTaskText {
+  margin-top: 7px;
+  color: #6b7a8d;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.focus-task-card .focus-context-line {
+  width: 340px;
+  margin: 12px 0 0 10px;
+  color: #05724d;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.focus-page.state-high .focus-task-card .focus-context-line {
+  margin-top: 17px;
+}
+
+.focus-context-card {
+  position: relative;
+  width: 356px;
+  height: 76px;
+  min-height: 76px;
+  margin-top: -3px;
+  margin-left: 0;
+  padding: 12px 15px;
+  border-radius: 18px;
+  background: var(--state-final-bg);
+}
+
+.focus-page.state-high .focus-context-card {
+  margin-top: -1px;
+}
+
+.focus-page.state-neutral .focus-context-card,
+.focus-page.state-low .focus-context-card,
+.focus-page.state-protect .focus-context-card {
+  margin-top: -3px;
+}
+
+.focus-context-card .state-badge {
+  top: 8px;
+  right: 14px;
+  width: 150px;
+  min-height: 22px;
+  padding: 0 7px;
+  font-size: 10px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.focus-final-copy h2 {
+  width: 186px;
+  color: #191b29;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.focus-final-copy p {
+  margin-top: 8px;
+  color: #6a7587;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.figma-hero-panel {
+  display: grid;
+  gap: 13px;
+  min-height: 250px;
+  padding: 24px 22px;
+  align-content: center;
+  border-radius: 28px;
+  color: #fff;
+  background: linear-gradient(180deg, #35c98d 0%, #148c52 100%);
+  box-shadow: 0 18px 32px rgba(20, 140, 82, 0.18);
+}
+
+.figma-hero-panel .leaf-mark {
+  width: 58px;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.17);
+}
+
+.figma-hero-panel h2 {
+  max-width: 285px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 850;
+  line-height: 30px;
+}
+
+.figma-hero-panel p {
+  max-width: 302px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.figma-hero-panel .chip {
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.prototype-links {
+  grid-template-columns: 1fr;
+}
+
+.prototype-links a {
+  min-height: 54px;
+  justify-items: start;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.checkin-state-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.checkin-state-card {
+  border-color: #dbe9e3;
+}
+
+.checkin-state-card .eyebrow {
+  color: #148c52;
+}
+
+.checkin-state-card .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.export-ready-card {
+  min-height: 272px;
+  align-content: center;
+}
+
+.polished-template {
+  gap: 14px;
+}
+
+.figma-adjust-hero,
+.figma-night-hero,
+.figma-export-summary,
+.figma-more-profile,
+.figma-break-hero {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f1fbf6 100%);
+  border: 1px solid #dcefe5;
+  box-shadow: 0 12px 24px rgba(38, 59, 92, 0.08);
+}
+
+.figma-adjust-hero h2,
+.figma-night-hero h2,
+.figma-export-summary h2,
+.figma-break-hero h2 {
+  color: #202538;
+  font-size: 21px;
+  font-weight: 850;
+  line-height: 25px;
+}
+
+.figma-adjust-hero p,
+.figma-night-hero p,
+.figma-export-summary p,
+.figma-break-hero p {
+  color: #526378;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.figma-compare-grid,
+.settings-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.settings-summary-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.figma-compare-grid span,
+.settings-summary-grid span {
+  display: grid;
+  gap: 4px;
+  min-height: 64px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e7ecf1;
+}
+
+.figma-compare-grid small,
+.settings-summary-grid small {
+  color: #64748b;
+  font-size: 10.5px;
+  font-weight: 750;
+  line-height: 12px;
+}
+
+.figma-compare-grid strong,
+.settings-summary-grid strong {
+  color: #136e47;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 16px;
+}
+
+.figma-adjust-controls,
+.reminder-presets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.figma-adjust-controls button,
+.reminder-presets button {
+  display: grid;
+  min-height: 84px;
+  gap: 6px;
+  align-content: center;
+  text-align: left;
+  border: 1px solid #dce8e2;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #202538;
+  padding: 13px;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.figma-adjust-controls strong,
+.reminder-presets strong {
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 15px;
+}
+
+.figma-adjust-controls span,
+.reminder-presets span {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.figma-adjust-controls button:active,
+.reminder-presets button:active {
+  transform: translateY(1px);
+}
+
+.figma-mini-panel {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f1fbf6;
+  border: 1px solid #dcefe5;
+}
+
+.figma-mini-panel strong {
+  color: #136e47;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.figma-mini-panel p {
+  color: #526378;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.habit-editor-card,
+.settings-form-card,
+.night-form-card {
+  gap: 13px;
+}
+
+.habit-editor-icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 18px;
+  background: #ddf7ea;
+}
+
+.figma-break-hero {
+  justify-items: center;
+  text-align: center;
+}
+
+.figma-break-hero .row {
+  width: 100%;
+}
+
+.figma-night-hero {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  border-color: #dce8f7;
+}
+
+.figma-export-summary {
+  background: linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
+}
+
+.export-preview {
+  overflow: hidden;
+  margin: 0;
+  padding: 12px;
+  border-radius: 16px;
+  background: #f4f7f4;
+  color: #526378;
+  font-size: 11px;
+  line-height: 15px;
+  white-space: pre-wrap;
+}
+
+.figma-toggle-line {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px;
+  color: #202538;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.figma-toggle-line input {
+  width: 42px;
+  height: 24px;
+  accent-color: #35c98d;
+}
+
+.figma-more-profile {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: #ffffff;
+}
+
+.figma-more-profile h2 {
+  color: #202538;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.figma-more-profile p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.settings-summary-figma {
+  gap: 14px;
+  padding: 16px;
+}
+
+.settings-summary-figma h2 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.settings-summary-figma h3 {
+  color: #202538;
+  font-size: 16px;
+  font-weight: 850;
+  line-height: 19px;
+}
+
+.settings-summary-figma .avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+}
+
+.settings-list-figma .figma-line,
+.reminders-list-figma .figma-line {
+  align-items: stretch;
+  padding: 14px 12px;
+  border-radius: 22px;
+}
+
+.settings-list-figma .figma-line {
+  grid-template-columns: 1fr 72px;
+}
+
+.settings-list-figma .figma-line .button {
+  align-self: end;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+
+.settings-list-figma .figma-line-main,
+.reminders-list-figma .figma-line-main {
+  gap: 4px;
+}
+
+.settings-list-figma .figma-line h3,
+.reminders-list-figma .figma-line h3 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.settings-list-figma .figma-line p,
+.reminders-list-figma .figma-line p {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.reminders-list-figma .figma-line {
+  min-height: 128px;
+}
+
+.reminders-list-figma .figma-reminder-actions {
+  align-content: end;
+  justify-content: end;
+}
+
+.reminders-list-figma .figma-reminder-actions button,
+.reminders-list-figma .figma-reminder-actions a {
+  min-width: 92px;
+  min-height: 36px;
+}
+
+.figma-reminder-connected {
+  background: linear-gradient(180deg, #effbf5 0%, #ffffff 100%);
+}
+
+.compact-reminder-form {
+  margin-top: 4px;
+}
+
+.operational-metrics .proto-metric {
+  min-height: 78px;
+}
+
+.checkin-hero {
+  display: grid;
+  gap: 10px;
+  width: 350px;
+  margin: 0 auto 18px;
+  padding: 20px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #35c98d 0%, #148c52 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(20, 140, 82, 0.18);
+}
+
+.checkin-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0;
+}
+
+.checkin-hero h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 850;
+  line-height: 29px;
+}
+
+.checkin-hero p {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.checkin-progress {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.checkin-progress span {
+  display: block;
+  width: 55%;
+  height: 100%;
+  border-radius: inherit;
+  background: #ffffff;
+}
+
+.checkin-impact-card {
+  display: grid;
+  gap: 8px;
+  width: 350px;
+  padding: 14px;
+  border-radius: 20px;
+  background: #effbf5;
+  border: 1px solid #d4f0e2;
+}
+
+.checkin-impact-card strong {
+  color: #136e47;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.checkin-impact-card p {
+  color: #526378;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+/* Final Figma parity pass: Home and Focus */
+.home-page .home-message-card[hidden],
+.focus-context-card[hidden] {
+  display: none !important;
+}
+
+.home-page .home-hero h1 {
+  color: #1f2a24;
+}
+
+.home-page .now-card .eyebrow {
+  display: block;
+  color: #0d6b45;
+}
+
+.home-page .now-card h2 {
+  max-width: 302px;
+}
+
+.home-page .home-priority-row {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) 72px;
+  align-items: center;
+}
+
+.home-page .home-shortcuts {
+  display: grid;
+}
+
+.focus-page .page-header {
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.focus-page .page-header h1 {
+  color: #293047;
+}
+
+.focus-page .page-header p {
+  color: #4a5e80;
+}
+
+.focus-top-chips {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.focus-top-chips .chip {
+  min-height: 24px;
+  padding: 0 13px;
+  border: 0;
+  background: #f1fbf6;
+  color: #0b744e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.focus-page .focus-timer-cluster {
+  height: 320px;
+  min-height: 320px;
+}
+
+.focus-page .focus-controls {
+  top: 232px;
+}
+
+.focus-page .focus-presets,
+.focus-page .focus-task-card {
+  width: 350px;
+  padding: 14px;
+  border: 1px solid #dfe9e4;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(28, 40, 45, 0.08);
+}
+
+.focus-page .focus-presets {
+  display: grid;
+  gap: 10px;
+}
+
+.focus-page .preset-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.focus-page .preset-card {
+  height: 58px;
+  min-height: 58px;
+  padding: 9px 11px;
+  border: 1px solid #dfe9e4;
+  box-shadow: none;
+}
+
+.focus-page .preset-card.active {
+  background: #effaf5;
+}
+
+.focus-page .preset-card:last-child strong {
+  font-size: 13px;
+  line-height: 14px;
+}
+
+.focus-page .focus-task-summary {
+  width: auto;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.focus-page .focus-task-card h3 {
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.focus-page .focus-task-card #suggestedTaskText {
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.focus-page .focus-task-card .focus-context-line {
+  width: auto;
+  margin: 12px 0 0;
+  white-space: normal;
+}
+
+.focus-page .focus-task-chips {
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.focus-page .focus-task-chips .chip {
+  min-height: 28px;
+  border: 0;
+  background: #f1fbf6;
+  color: #0b744e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.focus-page .focus-change-task {
+  width: 112px;
+  min-height: 42px;
+  margin-top: 10px;
+  border-radius: 14px;
+}
+
+body[data-page="focus"] .status-bar,
+body[data-screen="settings"] .status-bar,
+body[data-screen="reminders"] .status-bar,
+body[data-screen="journal-night"] .status-bar,
+body[data-screen="dashboard-operational"] .status-bar,
+body[data-screen="planning-adjust"] .status-bar {
+  display: none;
+}
+
+body[data-page="focus"] .focus-page {
+  padding-top: 22px;
+}
+
+body[data-screen="settings"] .screen-page {
+  padding-top: 50px;
+}
+
+body[data-screen="settings"] .figma-screen {
+  gap: 9px;
+}
+
+body[data-screen="settings"] .settings-summary-figma {
+  padding: 14px;
+}
+
+body[data-screen="settings"] .settings-summary-figma .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+body[data-screen="settings"] .settings-list-figma .figma-line {
+  min-height: 98px;
+  padding: 8px 10px;
+}
+
+body[data-screen="settings"] .settings-list-figma .figma-line .button {
+  min-height: 40px;
+}
+
+/* Dedicated high-fidelity pages */
+.dedicated-page {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.dedicated-page .proto-topbar {
+  margin-bottom: 0;
+}
+
+.dedicated-page .proto-topbar h1 {
+  color: #1f2a24;
+  font-size: 24px;
+  font-weight: 850;
+  line-height: 28px;
+}
+
+.dedicated-page .proto-topbar p {
+  max-width: 31ch;
+  color: #45546b;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.figma-action-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 9px 12px;
+  align-items: start;
+  padding: 12px 10px;
+  border: 1px solid #e0ebf2;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 9px 18px rgba(38, 59, 92, 0.07);
+  color: inherit;
+  text-decoration: none;
+}
+
+.figma-action-main {
+  min-width: 0;
+}
+
+.figma-action-card h2 {
+  color: #222636;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 20px;
+}
+
+.figma-action-card p {
+  margin-top: 3px;
+  color: #526378;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.figma-action-card > .button,
+.figma-action-card > .dedicated-card-actions {
+  grid-column: 1 / -1;
+}
+
+.figma-action-card > .button {
+  min-height: 40px;
+  border-radius: 10px;
+}
+
+.dedicated-action-list {
+  display: grid;
+  gap: 10px;
+}
+
+.dedicated-profile-card {
+  padding: 14px;
+}
+
+.dedicated-profile-card .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.dedicated-settings,
+.dedicated-reminders,
+.dedicated-more {
+  padding-top: 50px;
+}
+
+.dedicated-clear {
+  min-height: 42px;
+}
+
+.dedicated-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.dedicated-card-actions .button {
+  min-height: 38px;
+  border-radius: 12px;
+}
+
+.dedicated-reminder-summary,
+.dedicated-reminders .figma-card {
+  padding: 16px;
+  border-radius: 22px;
+}
+
+.dedicated-reminders .figma-inline-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.dedicated-reminders input,
+.dedicated-reminders select {
+  min-height: 42px;
+  border: 1px solid #dce8e2;
+  border-radius: 14px;
+  background: #fff;
+  padding: 0 12px;
+  color: #1a1a2e;
+  font: inherit;
+}
+
+.dedicated-more-profile {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e0ebf2;
+  border-radius: 22px;
+  box-shadow: 0 9px 18px rgba(38, 59, 92, 0.07);
+}
+
+.more-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.more-hub-tile {
+  display: grid;
+  gap: 5px;
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid #e0ebf2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+  color: #222636;
+  text-decoration: none;
+}
+
+.more-hub-tile span {
+  color: #136e47;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.more-hub-tile strong {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.more-hub-tile small,
+.more-row-link p {
+  color: #526378;
+}
+
+.more-row-link {
+  grid-template-columns: 1fr auto;
+}
+
+.dedicated-night-hero,
+.figma-night-hero {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid #dce8f7;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f7fbff 0%, #fff 100%);
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.06);
+}
+
+.dedicated-night-hero h2 {
+  color: #222636;
+  font-size: 22px;
+  font-weight: 850;
+  line-height: 27px;
+}
+
+.figma-night-screen {
+  gap: 12px;
+  padding-top: 54px;
+}
+
+.figma-night-screen .proto-topbar h1 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.figma-night-screen .proto-topbar p {
+  max-width: 36ch;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.night-summary-flow {
+  display: grid;
+  gap: 13px;
+}
+
+.figma-night-main-card,
+.night-prompt-card {
+  display: grid;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 1px solid #dde9ef;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.07);
+}
+
+.figma-night-main-card {
+  padding: 15px 14px 13px;
+}
+
+.figma-night-main-card > span,
+.night-prompt-card strong {
+  color: #178153;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 15px;
+}
+
+.figma-night-main-card h2,
+.night-prompt-card h2 {
+  color: #222636;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 20px;
+}
+
+.figma-night-main-card p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.night-prompt-card {
+  min-height: 74px;
+  align-content: center;
+}
+
+.night-prompt-card.warm {
+  border-color: #f7e9c7;
+  background: #fff6df;
+}
+
+.night-summary-flow .button {
+  min-height: 44px;
+  border-radius: 13px;
+}
+
+.muted-action {
+  border-color: #e9eef2;
+  background: #e9eef2;
+  color: #64748b;
+}
+
+.dedicated-form-card {
+  gap: 12px;
+}
+
+.dedicated-operational .figma-load-row b {
+  position: relative;
+  overflow: hidden;
+}
+
+.dedicated-operational .figma-load-row b i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #35c98d;
+}
+
+.figma-operational-screen {
+  gap: 5px;
+  padding-top: 42px;
+}
+
+.figma-operational-screen .proto-topbar h1 {
+  color: #222636;
+  font-size: 21px;
+  line-height: 23px;
+}
+
+.figma-operational-screen .proto-topbar p {
+  max-width: none;
+  color: #64748b;
+  font-size: 11.5px;
+  font-weight: 650;
+  line-height: 13px;
+}
+
+.operational-tabs,
+.operational-period-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.operational-tabs a,
+.operational-period-tabs button {
+  display: inline-grid;
+  min-height: 22px;
+  min-width: 56px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: #e8eef2;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 850;
+  padding: 0 12px;
+}
+
+.operational-tabs a.active,
+.operational-period-tabs button.active {
+  background: #35c98d;
+  color: #fff;
+}
+
+.operational-section-title {
+  margin-top: 2px;
+  color: #178153;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 14px;
+}
+
+.operational-figma-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.operational-figma-metrics article {
+  display: grid;
+  min-height: 52px;
+  align-content: center;
+  gap: 1px;
+  padding: 8px 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.operational-figma-metrics small {
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 12px;
+}
+
+.operational-figma-metrics strong {
+  color: #35c98d;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 18px;
+}
+
+.operational-figma-metrics article:nth-child(3) strong,
+.operational-figma-metrics article:nth-child(6) strong {
+  color: #bd7b2c;
+}
+
+.operational-figma-metrics span {
+  color: #91a0ae;
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 11px;
+}
+
+.operational-card,
+.operational-reading-card,
+.operational-action-card {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.operational-card h2,
+.operational-reading-card h2,
+.operational-action-card h2 {
+  color: #178153;
+  font-size: 15.5px;
+  font-weight: 850;
+  line-height: 17px;
+}
+
+.operational-progress-row {
+  display: grid;
+  gap: 3px;
+}
+
+.operational-progress-row span {
+  color: #222636;
+  font-size: 10.5px;
+  font-weight: 850;
+  line-height: 13px;
+}
+
+.operational-progress-row i {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--bar-color, #35c98d) 0 var(--bar), #e8eef2 var(--bar) 100%);
+}
+
+.operational-reading-card {
+  border-color: #d6e7f6;
+  background: #eaf5ff;
+}
+
+.operational-reading-card p,
+.operational-action-card p {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.operational-action-card {
+  background: #f5fffa;
+}
+
+.operational-action-card .row {
+  grid-template-columns: 1fr 1fr;
+}
+
+.operational-action-card .button {
+  min-height: 36px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.figma-adjust-screen {
+  gap: 7px;
+  padding-top: 38px;
+}
+
+.figma-adjust-screen .proto-topbar {
+  display: grid;
+  gap: 2px;
+}
+
+.figma-adjust-screen .proto-topbar h1 {
+  margin: 0;
+  color: #222636;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.figma-adjust-screen .proto-topbar p {
+  margin: 0;
+  max-width: 29ch;
+  color: #64748b;
+  font-size: 11.5px;
+  line-height: 13px;
+}
+
+.adjust-top-chips {
+  gap: 8px;
+}
+
+.adjust-top-chips .chip {
+  min-height: 25px;
+  border-color: transparent;
+  background: #ddf7ea;
+  font-size: 10.5px;
+}
+
+.figma-adjust-main,
+.figma-adjust-schedule-card,
+.adjust-quick-controls {
+  display: grid;
+  gap: 9px;
+  padding: 14px;
+  border: 1px solid #e2ece8;
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.figma-adjust-main h2 {
+  color: #222636;
+  font-size: 19px;
+  font-weight: 850;
+  line-height: 22px;
+}
+
+.figma-adjust-main p,
+.figma-adjust-schedule-card p {
+  color: #64748b;
+  font-size: 11.5px;
+  line-height: 14px;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 54px;
+  padding: 9px 11px;
+}
+
+.figma-adjust-main .row {
+  grid-template-columns: 1fr 92px;
+}
+
+.figma-adjust-main .button {
+  min-height: 36px;
+  border-radius: 11px;
+  font-size: 11.5px;
+}
+
+.figma-adjust-schedule-card h2,
+.adjust-quick-controls h2 {
+  color: #222636;
+  font-size: 16px;
+  font-weight: 850;
+  line-height: 18px;
+}
+
+.adjust-schedule-item {
+  display: grid;
+  grid-template-columns: 66px 1fr auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 50px;
+  padding: 8px 10px;
+  border: 1px solid #35a972;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.adjust-schedule-item.warm {
+  border-color: #f2d4c8;
+  background: #fff2ec;
+}
+
+.adjust-schedule-item > span {
+  display: grid;
+  min-height: 38px;
+  place-items: center;
+  border-radius: 13px;
+  background: #eef3f6;
+  color: #222636;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.adjust-schedule-item strong {
+  display: block;
+  color: #222636;
+  font-size: 11.5px;
+  font-weight: 850;
+  line-height: 13px;
+}
+
+.adjust-schedule-item small {
+  display: block;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.adjust-schedule-item b {
+  min-width: 58px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #ddf7ea;
+  color: #178153;
+  font-size: 10px;
+  text-align: center;
+}
+
+.adjust-quick-controls .grid-2 {
+  gap: 12px 22px;
+}
+
+.adjust-quick-controls button,
+.adjust-quick-controls a {
+  display: grid;
+  gap: 3px;
+  border: 0;
+  background: transparent;
+  color: #178153;
+  font-size: 11px;
+  text-align: left;
+}
+
+.adjust-quick-controls strong {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.adjust-quick-controls span {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.habit-edit-figma {
+  gap: 10px;
+  padding-top: 54px;
+}
+
+.habit-edit-figma form {
+  display: grid;
+  gap: 8px;
+}
+
+.habit-edit-alert,
+.habit-edit-main,
+.habit-edit-info {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.habit-edit-alert {
+  background: #fff3df;
+  color: #bd7b2c;
+}
+
+.habit-edit-alert strong,
+.habit-edit-info span {
+  color: #178153;
+  font-size: 10.5px;
+  font-weight: 850;
+  line-height: 12px;
+}
+
+.habit-edit-alert h2,
+.habit-edit-main h2,
+.habit-edit-info strong {
+  color: #222636;
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 17px;
+}
+
+.habit-edit-alert p,
+.habit-edit-main p,
+.habit-edit-main small {
+  color: #64748b;
+  font-size: 10.5px;
+  line-height: 12.5px;
+}
+
+.habit-edit-main {
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  min-height: 116px;
+  border: 1px solid #dce8e2;
+  border-radius: 24px;
+}
+
+.habit-edit-main .chip-row {
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.habit-edit-main .chip {
+  min-height: 24px;
+  padding: 0 9px;
+  font-size: 10px;
+}
+
+.habit-edit-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 13px;
+  background: #fff4d9;
+  font-size: 18px;
+}
+
+.habit-edit-radio {
+  width: 24px;
+  height: 24px;
+  border: 7px solid #edf2f5;
+  border-radius: 50%;
+  background: #6f8fb8;
+}
+
+.habit-edit-info {
+  min-height: 58px;
+  align-content: center;
+}
+
+.habit-edit-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.habit-edit-actions .button {
+  min-height: 44px;
+  border-radius: 999px;
+}
+
+.focus-break-figma {
+  gap: 14px;
+  padding-top: 22px;
+}
+
+.focus-break-figma .proto-topbar h1 {
+  color: #222636;
+  font-size: 23px;
+  line-height: 26px;
+}
+
+.focus-break-warning,
+.focus-break-suggestion,
+.focus-break-after {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
+}
+
+.focus-break-warning {
+  background: #fff3d8;
+  color: #bd7b2c;
+}
+
+.focus-break-warning h2,
+.focus-break-suggestion h2 {
+  color: #178153;
+  font-size: 20px;
+  font-weight: 850;
+  line-height: 23px;
+}
+
+.focus-break-warning h2 {
+  color: #bd6b23;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.focus-break-warning p,
+.focus-break-suggestion p,
+.focus-break-after p {
+  color: #223042;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.focus-break-suggestion,
+.focus-break-after {
+  border: 1px solid #dce8e2;
+  background: #fff;
+}
+
+.focus-break-suggestion article {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #eef9f4;
+}
+
+.focus-break-suggestion strong {
+  color: #222636;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.focus-break-suggestion small {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.focus-break-after {
+  background: #f1fbf6;
+}
+
+.focus-break-after h2 {
+  color: #222636;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.focus-break-figma .button {
+  min-height: 44px;
+  border-radius: 12px;
+}
+
+.dedicated-adjust .figma-adjust-hero,
+.dedicated-export .figma-export-summary,
+.dedicated-break .figma-break-hero {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #d8efe4;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(38, 59, 92, 0.07);
+}
+
+.dedicated-adjust-controls button.active {
+  border-color: #35c98d;
+  background: #e8f8ef;
+}
+
+.dedicated-check-line {
+  margin-top: 8px;
+}
+
+.dedicated-break .figma-break-hero {
+  justify-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #effbf5 0%, #fff 100%);
+}
+
+.dedicated-break .figma-break-hero .row {
+  width: 100%;
+}
+
+.habit-edit-chip {
+  border-color: #b7e9d1;
+  background: #35c98d;
+  color: #fff;
+  text-decoration: none;
+}
+
+.settings-list-figma .figma-line,
+.reminders-list-figma .figma-line {
+  grid-template-columns: 1fr;
+  gap: 7px;
+  padding: 10px;
+}
+
+.settings-list-figma .figma-line-main,
+.reminders-list-figma .figma-line-main {
+  position: relative;
+  min-height: 38px;
+  padding-right: 92px;
+}
+
+.settings-list-figma .figma-line-main .chip-row,
+.reminders-list-figma .figma-line-main .chip-row {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+
+.settings-list-figma .figma-line .button {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 10px;
+}
+
+.settings-list-figma .figma-line {
+  min-height: 104px;
+}
+
+.reminders-list-figma .figma-line {
+  min-height: 134px;
+}
+
+.reminders-list-figma .figma-reminder-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.reminders-list-figma .figma-reminder-actions button {
+  width: 100%;
+  min-height: 38px;
+}
+
+.dedicated-settings,
+.dedicated-reminders {
+  gap: 8px;
+  padding-top: 40px;
+}
+
+.dedicated-settings .proto-topbar h1,
+.dedicated-reminders .proto-topbar h1 {
+  color: #222636;
+  font-size: 20px;
+  font-weight: 820;
+  line-height: 22px;
+}
+
+.dedicated-settings .proto-topbar p,
+.dedicated-reminders .proto-topbar p {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.dedicated-settings .settings-summary-figma,
+.dedicated-reminders .dedicated-reminder-summary,
+.dedicated-reminders .figma-reminder-connected {
+  gap: 8px;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.dedicated-settings .settings-summary-figma {
+  min-height: 124px;
+}
+
+.dedicated-settings .settings-summary-figma .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.dedicated-settings .settings-summary-figma h2,
+.dedicated-reminders .dedicated-reminder-summary h2,
+.dedicated-reminders .figma-reminder-connected h2 {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.dedicated-settings .settings-summary-figma h3 {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.dedicated-settings .settings-summary-figma p,
+.dedicated-reminders .dedicated-reminder-summary p,
+.dedicated-reminders .figma-reminder-connected p {
+  font-size: 10.5px;
+  line-height: 13px;
+}
+
+.dedicated-settings .settings-summary-figma .chip,
+.dedicated-reminders .dedicated-reminder-summary .chip {
+  min-height: 25px;
+  padding: 0 11px;
+  font-size: 10px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line {
+  min-height: 0;
+  height: 80px;
+  gap: 4px;
+  padding: 6px 10px;
+  overflow: hidden;
+}
+
+.dedicated-settings .settings-list-figma .figma-line .button {
+  min-height: 34px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line-main {
+  min-height: 30px;
+  padding-right: 74px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line h3 {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line p {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.dedicated-settings .settings-list-figma .chip {
+  min-height: 25px;
+  padding: 0 11px;
+  font-size: 10px;
+}
+
+.dedicated-reminders .reminders-list-figma .figma-line {
+  min-height: 104px;
+  gap: 6px;
+  padding: 8px 10px;
+}
+
+.dedicated-reminders .reminders-list-figma .figma-reminder-actions button {
+  min-height: 34px;
+  font-size: 11px;
+}
+
+.dedicated-reminders .reminders-list-figma .figma-line h3 {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.dedicated-reminders .reminders-list-figma .figma-line p {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.dedicated-reminders .reminders-list-figma .chip {
+  min-height: 25px;
+  padding: 0 11px;
+  font-size: 10px;
+}
+
+/* Settings needs a little more vertical weight than reminders to match its Figma frame. */
+.dedicated-settings {
+  gap: 10px;
+  padding-top: 44px;
+}
+
+.dedicated-settings .proto-topbar h1 {
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.dedicated-settings .proto-topbar p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dedicated-settings .settings-summary-figma {
+  min-height: 0;
+  gap: 10px;
+  padding: 14px;
+}
+
+.dedicated-settings .settings-summary-figma .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.dedicated-settings .settings-summary-figma h2 {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.dedicated-settings .settings-summary-figma h3 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.dedicated-settings .settings-summary-figma p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dedicated-settings .settings-summary-figma .chip {
+  min-height: 28px;
+  padding: 0 13px;
+  font-size: 11px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line {
+  height: auto;
+  min-height: 86px;
+  gap: 5px;
+  padding: 8px 10px;
+  overflow: visible;
+}
+
+.dedicated-settings .settings-list-figma .figma-line .button {
+  min-height: 38px;
+  font-size: 13px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line h3 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line p {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.dedicated-settings .settings-list-figma .chip {
+  min-height: 28px;
+  padding: 0 13px;
+  font-size: 11px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.button.danger {
+  border-color: #f08486;
+  background: #f08486;
+  color: #fff;
+}
+
+body[data-screen="habit-new"] .status-bar,
+body[data-screen="habit-edit"] .status-bar,
+body[data-screen="micro-pauses"] .status-bar,
+body[data-screen="notes"] .status-bar,
+body[data-screen="export"] .status-bar,
+body[data-screen="focus-break"] .status-bar {
+  display: none;
+}
+
+body[data-screen="prototype-overview"] .app-shell {
+  background: #f7faf8;
+}
+
+.prototype-overview-figma {
+  min-height: 844px;
+  padding: 12px 11px;
+}
+
+.prototype-board {
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 10px 22px;
+  height: 284px;
+  padding: 31px 18px 20px;
+  border: 1px solid #e0e5e1;
+  background: #f7faf8;
+}
+
+.prototype-left h1 {
+  margin: 0 0 3px;
+  color: #1f2522;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.prototype-left small {
+  display: block;
+  margin-bottom: 12px;
+  color: #6b7a8d;
+  font-size: 4.8px;
+}
+
+.prototype-left h2 {
+  margin: 0 0 8px;
+  color: #1f2522;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.prototype-left p {
+  margin: 0 0 8px;
+  max-width: 116px;
+  color: #6b7a8d;
+  font-size: 5.6px;
+  line-height: 7px;
+}
+
+.prototype-pills {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 9px;
+}
+
+.prototype-pills span {
+  display: inline-grid;
+  min-height: 12px;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #eaf2f0;
+  color: #526378;
+  font-size: 4.8px;
+  font-weight: 750;
+}
+
+.prototype-left a {
+  display: inline-grid;
+  min-height: 12px;
+  min-width: 51px;
+  place-items: center;
+  border-radius: 999px;
+  background: #35c98d;
+  color: #fff;
+  font-size: 5px;
+  font-weight: 800;
+}
+
+.prototype-right h3 {
+  margin: 0 0 14px;
+  color: #1f2522;
+  font-size: 6px;
+  line-height: 8px;
+}
+
+.prototype-right ol {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: overview;
+}
+
+.prototype-right li {
+  min-height: 14px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f2522;
+  font-size: 4.8px;
+  line-height: 6px;
+  counter-increment: overview;
+}
+
+.prototype-right li::before {
+  content: counter(overview) ". ";
+}
+
+.prototype-flow {
+  grid-column: 1 / -1;
+  min-height: 14px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #d3f4ea;
+  color: #178153;
+  font-size: 4.6px;
+  font-weight: 800;
+}
+
+.figma-task-form-page {
+  padding-top: 66px;
+}
+
+.figma-task-form-page .task-form-title-only {
+  width: 322px;
+  margin: 0 auto 19px;
+}
+
+.figma-task-form-page .task-form-title-only h1 {
+  margin: 0;
+  color: #252837;
+  font-size: 23px;
+  font-weight: 850;
+  line-height: 28px;
+}
+
+.figma-task-form {
+  gap: 10px;
+}
+
+.figma-task-title-card,
+.figma-task-fields-card,
+.figma-subtasks-card,
+.figma-task-meta-card,
+.figma-task-submit-card {
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 12px 22px rgba(38, 59, 92, 0.045);
+}
+
+.figma-task-title-card {
+  height: 79px;
+  overflow: hidden;
+  padding: 9px 14px;
+}
+
+.figma-task-title-card .field {
+  gap: 2px;
+}
+
+.figma-task-title-card .field span,
+.figma-task-fields-card .figma-field-row > span,
+.figma-pill-input span,
+.figma-meta-row span {
+  color: #006d43;
+  font-size: 10.5px;
+  font-weight: 850;
+  line-height: 12px;
+}
+
+.figma-task-title-card .field input,
+.figma-task-title-card .field textarea {
+  min-height: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #252837;
+  font-size: 14px;
+  font-weight: 760;
+  line-height: 18px;
+  box-shadow: none;
+}
+
+.figma-task-title-card .field input {
+  height: 18px;
+}
+
+.figma-task-title-card .field textarea {
+  height: 18px;
+  min-height: 18px;
+  color: #4f6175;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  resize: none;
+  overflow: hidden;
+}
+
+.figma-task-fields-card,
+.figma-subtasks-card,
+.figma-task-meta-card {
+  gap: 7px;
+  padding: 10px 14px;
+}
+
+.figma-task-fields-card {
+  min-height: 130px;
+}
+
+.figma-task-fields-card h3,
+.figma-subtasks-card h3,
+.figma-task-meta-card h3 {
+  margin: 0;
+  color: #222636;
+  font-size: 13.5px;
+  font-weight: 850;
+  line-height: 17px;
+}
+
+.figma-subtasks-card {
+  min-height: 80px;
+}
+
+.figma-task-meta-card {
+  min-height: 111px;
+}
+
+.figma-field-row {
+  display: grid;
+  grid-template-columns: 58px repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+}
+
+.choice-chip {
+  display: inline-flex;
+  min-height: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: #e8edf3;
+  color: #68788a;
+  font-size: 9.5px;
+  font-weight: 760;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.choice-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice-chip:has(input:checked) {
+  background: #35c98d;
+  color: #fff;
+}
+
+.choice-chip.muted {
+  background: #e8edf3;
+  color: #68788a;
+}
+
+.choice-chip.mint {
+  background: #d3f4ea;
+  color: #178153;
+}
+
+.choice-chip.warm {
+  background: #ffe8b6;
+  color: #8a6a19;
+}
+
+.figma-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 10px;
+}
+
+.figma-pill-input {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+.figma-pill-input input {
+  width: 100%;
+  min-height: 22px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: #e8edf3;
+  color: #68788a;
+  font-size: 10px;
+  font-weight: 760;
+  text-align: center;
+  box-shadow: none;
+}
+
+.figma-pill-input.yellow input {
+  background: #fff5a8;
+  color: #6f671f;
+}
+
+.figma-pill-input.mint input {
+  background: #cceedd;
+  color: #3d8170;
+}
+
+.figma-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.figma-card-head .chip {
+  min-height: 22px;
+  min-width: 123px;
+  border: 0;
+  background: #d3f4ea;
+  color: #4a7b73;
+  font-size: 10.5px;
+  text-align: center;
+}
+
+.figma-subtask-list {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: subtask;
+}
+
+.figma-subtask-list li {
+  display: grid;
+  grid-template-columns: 13px 16px 1fr 12px;
+  gap: 8px;
+  align-items: center;
+  color: #222636;
+  font-size: 10.5px;
+  line-height: 13px;
+}
+
+.figma-subtask-list li::before {
+  counter-increment: subtask;
+  content: counter(subtask) ".";
+  color: #718399;
+  font-size: 10px;
+}
+
+.figma-subtask-list b {
+  color: #35c98d;
+  font-size: 11px;
+}
+
+.figma-subtask-list i {
+  color: #93a2b5;
+  font-style: normal;
+  text-align: right;
+}
+
+.figma-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.figma-meta-row > span {
+  width: 72px;
+  color: #53697e;
+  font-weight: 700;
+}
+
+.figma-task-submit-card {
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.figma-task-submit-card .button,
+.figma-task-form > .button {
+  min-height: 41px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.habit-new-figma {
+  gap: 10px;
+  padding-top: 54px;
+}
+
+.habit-new-figma .proto-topbar h1,
+.micro-pauses-figma .proto-topbar h1,
+.notes-figma .proto-topbar h1,
+.export-figma .proto-topbar h1 {
+  color: #252837;
+  font-size: 23px;
+  font-weight: 850;
+  line-height: 27px;
+}
+
+.habit-new-figma .proto-topbar p,
+.micro-pauses-figma .proto-topbar p,
+.notes-figma .proto-topbar p,
+.export-figma .proto-topbar p {
+  color: #65768b;
+  font-size: 12.5px;
+  line-height: 15px;
+}
+
+.habit-create-flow {
+  display: grid;
+  gap: 10px;
+}
+
+.habit-create-hero,
+.habit-create-info,
+.micro-auto-card,
+.micro-card,
+.micro-after-card,
+.note-card,
+.export-format-card,
+.export-simple-card {
+  border: 1px solid #dce8e2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.055);
+}
+
+.habit-create-hero {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 11px;
+  align-items: start;
+  padding: 14px;
+}
+
+.habit-create-hero h2,
+.habit-create-info strong,
+.micro-card h2,
+.note-card h2,
+.export-simple-card h2,
+.export-format-card h2 {
+  color: #252837;
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 18px;
+}
+
+.habit-create-hero p,
+.habit-create-hero small,
+.micro-auto-card p,
+.micro-card p,
+.micro-after-card p,
+.note-card p,
+.export-simple-card p,
+.export-format-card p {
+  color: #65768b;
+  font-size: 11.5px;
+  line-height: 14px;
+}
+
+.habit-create-info {
+  display: grid;
+  gap: 4px;
+  min-height: 61px;
+  align-content: center;
+  padding: 12px 14px;
+}
+
+.habit-create-info span {
+  color: #178153;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 13px;
+}
+
+.habit-create-flow .button {
+  min-height: 47px;
+  border-radius: 999px;
+}
+
+.habit-create-flow .muted-button {
+  background: #e8edf3;
+  color: #68788a;
+}
+
+.micro-pauses-figma,
+.notes-figma,
+.export-figma {
+  gap: 11px;
+  padding-top: 50px;
+}
+
+.micro-auto-card,
+.micro-after-card,
+.note-card,
+.export-format-card,
+.export-simple-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px 14px;
+}
+
+.micro-auto-card h2 {
+  color: #252837;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 19px;
+}
+
+.micro-list {
+  display: grid;
+  gap: 10px;
+}
+
+.micro-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 12px;
+  align-items: center;
+  min-height: 84px;
+  padding: 11px 13px;
+}
+
+.micro-card .chip {
+  justify-self: center;
+  min-width: 126px;
+  border: 0;
+  background: #e6f8ef;
+  color: #178153;
+}
+
+.micro-card button {
+  min-width: 88px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: #35c98d;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.micro-after-card .row,
+.export-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.micro-after-card .row {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.micro-after-card .button,
+.export-actions-row .button {
+  min-height: 44px;
+  border-radius: 13px;
+  font-size: 10px;
+  padding-inline: 5px;
+  white-space: normal;
+}
+
+.notes-figma .proto-topbar p {
+  max-width: 34ch;
+}
+
+.note-card.quick span {
+  color: #178153;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.note-card.quick h2 {
+  color: #526378;
+  font-size: 13px;
+  font-weight: 720;
+}
+
+.note-card.long {
+  background: #eaf5ff;
+  border-color: #d4e8fb;
+}
+
+.note-card.examples,
+.note-card.insight {
+  background: #f2fbf7;
+}
+
+.note-card .row {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.note-card.quick .row {
+  grid-template-columns: 1fr 112px;
+}
+
+.note-card .button {
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 8px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  white-space: normal;
+}
+
+.notes-figma .note-card {
+  gap: 7px;
+}
+
+.note-card h2,
+.note-card p {
+  margin: 0;
+}
+
+.note-example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.note-example-grid article {
+  display: grid;
+  gap: 3px;
+  min-height: 92px;
+  align-content: start;
+  padding: 11px;
+  border: 1px solid #dce8e2;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.note-example-grid article:last-child {
+  grid-column: 1 / -1;
+  min-height: 70px;
+}
+
+.note-example-grid small,
+.note-example-grid span {
+  color: #91a0ad;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.note-example-grid strong {
+  color: #688bb8;
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 19px;
+}
+
+.note-example-grid article:nth-child(2) strong {
+  color: #35c98d;
+}
+
+.note-example-grid article:nth-child(3) strong {
+  color: #e0a43a;
+}
+
+.note-create-form {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.note-create-form input,
+.note-create-form textarea {
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 12px;
+  background: #f7faf8;
+}
+
+.note-create-form textarea {
+  min-height: 72px;
+}
+
+.export-figma {
+  padding-top: 64px;
+}
+
+.export-format-card {
+  min-height: 108px;
+  padding: 12px 14px;
+  gap: 7px;
+  border-radius: 18px;
+  background: #f4fffa;
+}
+
+.export-format-card .chip.active,
+.export-simple-card .chip.active,
+.export-module-pills .chip.active {
+  border: 0;
+  background: #35c98d;
+  color: #fff;
+}
+
+.export-simple-card {
+  min-height: 72px;
+  padding: 12px 14px;
+  gap: 7px;
+  border-radius: 18px;
+}
+
+.export-actions-row {
+  margin-top: 2px;
+}
+
+.planning-actions.compact {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.planning-actions.compact .button,
+.planning-actions.compact + .button.small {
+  min-height: 24px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 10px;
+}
+
+body[data-screen="checkin"] .checkin-page {
+  padding-top: 73px;
+}
+
+body[data-screen="checkin"] .checkin-page .form {
+  gap: 13px;
+}
+
+body[data-screen="checkin"] .checkin-card {
+  padding: 11px 13px;
+  border-radius: 17px;
+}
+
+body[data-screen="checkin"] .mood-card {
+  min-height: 125px;
+}
+
+body[data-screen="checkin"] .mood-card .choice-grid {
+  gap: 7px;
+  margin-top: 12px;
+}
+
+body[data-screen="checkin"] .mood-card .choice-card {
+  min-height: 62px;
+  border-radius: 16px;
+}
+
+body[data-screen="checkin"] .energy-card {
+  min-height: 100px;
+}
+
+body[data-screen="checkin"] .energy-card input[type="range"] {
+  margin: 13px 0 5px;
+}
+
+body[data-screen="checkin"] .factor-card,
+body[data-screen="checkin"] .need-card {
+  min-height: 116px;
+}
+
+body[data-screen="checkin"] .factor-card .choice-grid,
+body[data-screen="checkin"] .need-card .choice-grid {
+  gap: 8px 11px;
+  margin-top: 12px;
+}
+
+body[data-screen="checkin"] .factor-card .choice-card,
+body[data-screen="checkin"] .need-card .choice-card {
+  min-height: 33px;
+}
+
+body[data-screen="checkin"] .need-card {
+  min-height: 135px;
+}
+
+.dedicated-settings,
+.dedicated-reminders {
+  gap: 6px;
+  padding-top: 40px;
+}
+
+.dedicated-settings .proto-topbar,
+.dedicated-reminders .proto-topbar {
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.dedicated-settings .proto-topbar h1,
+.dedicated-reminders .proto-topbar h1 {
+  font-size: 19px;
+  line-height: 21px;
+}
+
+.dedicated-settings .proto-topbar p,
+.dedicated-reminders .proto-topbar p {
+  font-size: 10.2px;
+  line-height: 11.5px;
+}
+
+.dedicated-settings .settings-summary-figma,
+.dedicated-reminders .dedicated-reminder-summary,
+.dedicated-reminders .figma-reminder-connected {
+  gap: 5px;
+  padding: 10px 12px;
+  border-radius: 15px;
+}
+
+.dedicated-settings .settings-summary-figma .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 13px;
+}
+
+.dedicated-settings .settings-summary-figma h2,
+.dedicated-reminders .dedicated-reminder-summary h2,
+.dedicated-reminders .figma-reminder-connected h2 {
+  font-size: 13.5px;
+  line-height: 16px;
+}
+
+.dedicated-settings .settings-summary-figma h3 {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.dedicated-settings .settings-summary-figma p,
+.dedicated-reminders .dedicated-reminder-summary p,
+.dedicated-reminders .figma-reminder-connected p {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line,
+.dedicated-reminders .reminders-list-figma .figma-line {
+  min-height: 82px;
+  gap: 3px;
+  padding: 6px 10px;
+  border-radius: 14px;
+}
+
+.dedicated-settings .settings-summary-figma {
+  height: 116px;
+  min-height: 0;
+}
+
+.dedicated-settings .settings-list-figma .figma-line {
+  height: 82px;
+  min-height: 0;
+}
+
+.dedicated-settings .settings-list-figma .figma-line h3,
+.dedicated-reminders .reminders-list-figma .figma-line h3 {
+  font-size: 13.5px;
+  line-height: 16px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line p,
+.dedicated-reminders .reminders-list-figma .figma-line p {
+  font-size: 9.5px;
+  line-height: 11.5px;
+}
+
+.dedicated-settings .settings-list-figma .figma-line .button,
+.dedicated-reminders .reminders-list-figma .figma-reminder-actions button {
+  min-height: 32px;
+  font-size: 11.5px;
+}
+
+.dedicated-reminders .reminders-list-figma .figma-reminder-actions button:nth-child(2) {
+  border-color: #d8efe4;
+  background: #fff;
+  color: #0b7048;
+}
+
+.dedicated-settings .settings-summary-figma .chip,
+.dedicated-settings .settings-list-figma .chip,
+.dedicated-reminders .dedicated-reminder-summary .chip,
+.dedicated-reminders .reminders-list-figma .chip {
+  min-height: 22px;
+  padding: 0 9px;
+  font-size: 9.5px;
+}
+
+.figma-adjust-main,
+.figma-adjust-schedule-card,
+.adjust-quick-controls {
+  gap: 7px;
+  padding: 11px 13px;
+  border-radius: 18px;
+}
+
+.figma-adjust-main h2 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.figma-adjust-main p,
+.figma-adjust-schedule-card p {
+  font-size: 10.5px;
+  line-height: 12.5px;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 44px;
+  padding: 8px;
+}
+
+.figma-compare-grid.compact strong {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.figma-adjust-main .button {
+  min-height: 34px;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 66px 1fr 58px;
+  min-height: 42px;
+  padding: 5px 10px;
+}
+
+.adjust-schedule-item > span {
+  min-height: 32px;
+}
+
+.adjust-schedule-item strong {
+  font-size: 10.5px;
+  line-height: 12px;
+}
+
+.adjust-schedule-item small {
+  font-size: 9.2px;
+  line-height: 10.5px;
+}
+
+.adjust-schedule-item b {
+  min-width: 54px;
+  padding: 5px 7px;
+  font-size: 9.2px;
+}
+
+.adjust-quick-controls {
+  gap: 5px;
+  padding: 9px 13px 10px;
+}
+
+.adjust-quick-controls h2 {
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.adjust-quick-controls .grid-2 {
+  gap: 7px 18px;
+}
+
+.adjust-quick-controls button,
+.adjust-quick-controls a {
+  gap: 1px;
+}
+
+.adjust-quick-controls strong {
+  font-size: 10.8px;
+  line-height: 12px;
+}
+
+.adjust-quick-controls span {
+  font-size: 9px;
+  line-height: 10px;
+}
+
+.micro-card button {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.micro-card .chip {
+  grid-column: 1;
+  justify-self: center;
+}
+
+.habit-create-hero {
+  margin-top: 18px;
+  min-height: 114px;
+  gap: 9px;
+  padding: 13px;
+}
+
+.habit-create-hero .chip-row {
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.habit-create-hero .chip {
+  min-height: 25px;
+  padding: 0 8px;
+  font-size: 9px;
+}
+
+.habit-create-hero h2 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.habit-create-hero p,
+.habit-create-hero small {
+  font-size: 10.5px;
+  line-height: 12.5px;
+}
+
+.figma-task-form-page .task-form-title-only {
+  width: 260px;
+}
+
+.choice-chip {
+  min-height: 19px;
+  padding: 0 7px;
+  font-size: 9px;
+}
+
+.figma-field-row {
+  gap: 6px;
+}
+
+.figma-meta-row {
+  gap: 5px;
+}
+
+.figma-meta-row > span {
+  width: 70px;
+}
+
+.figma-task-meta-card {
+  gap: 7px;
+}
+
+.figma-night-screen {
+  gap: 9px;
+  padding-top: 53px;
+}
+
+.figma-night-screen .proto-topbar h1 {
+  font-size: 23px;
+  line-height: 26px;
+}
+
+.figma-night-screen .proto-topbar p {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.night-summary-flow {
+  gap: 12px;
+}
+
+.figma-night-main-card,
+.night-prompt-card {
+  padding: 10px 14px;
+  border-radius: 18px;
+}
+
+.figma-night-main-card {
+  margin-top: 6px;
+  padding: 12px 14px;
+}
+
+.figma-night-main-card h2,
+.night-prompt-card h2 {
+  font-size: 15.8px;
+  line-height: 18px;
+}
+
+.figma-night-main-card p {
+  font-size: 11.8px;
+  line-height: 15px;
+}
+
+.figma-night-main-card > span,
+.night-prompt-card strong {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.night-prompt-card {
+  min-height: 70px;
+}
+
+.night-summary-flow .button,
+.night-summary-flow .muted-action {
+  min-height: 43px;
+  border-radius: 13px;
+}
+
+.figma-operational-screen {
+  gap: 4px;
+  padding-top: 40px;
+}
+
+.figma-operational-screen .proto-topbar {
+  gap: 2px;
+  margin-bottom: 3px;
+}
+
+.operational-tabs,
+.operational-period-tabs {
+  gap: 5px;
+}
+
+.operational-tabs a,
+.operational-period-tabs button {
+  min-height: 20px;
+  min-width: 55px;
+  font-size: 9px;
+}
+
+.operational-section-title {
+  margin-top: 0;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.operational-figma-metrics {
+  gap: 6px 8px;
+}
+
+.operational-figma-metrics article {
+  min-height: 48px;
+  padding: 6px 11px;
+  border-radius: 15px;
+}
+
+.operational-figma-metrics small {
+  font-size: 9px;
+  line-height: 10px;
+}
+
+.operational-figma-metrics strong {
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.operational-figma-metrics span {
+  font-size: 8.8px;
+  line-height: 10px;
+}
+
+.operational-card,
+.operational-reading-card,
+.operational-action-card {
+  gap: 4px;
+  padding: 9px 12px;
+  border-radius: 16px;
+}
+
+.operational-card h2,
+.operational-reading-card h2,
+.operational-action-card h2 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.operational-progress-row {
+  gap: 2px;
+}
+
+.operational-progress-row span {
+  font-size: 9.5px;
+  line-height: 11px;
+}
+
+.operational-progress-row i {
+  height: 5px;
+}
+
+.operational-reading-card p,
+.operational-action-card p {
+  font-size: 9.8px;
+  line-height: 12px;
+}
+
+.operational-action-card .button {
+  min-height: 31px;
+  font-size: 10px;
+}
+
+/* Final cascade lock for the highest-diff screens in the 390x844 comparison. */
+body[data-screen="checkin"] .ux-stepper {
+  display: none !important;
+}
+
+body[data-screen="checkin"] .page-header p {
+  max-width: none !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="checkin"] #skipCheckin {
+  display: none !important;
+}
+
+.figma-adjust-screen {
+  gap: 8px !important;
+  padding-top: 54px !important;
+}
+
+.figma-adjust-main {
+  min-height: 0 !important;
+  gap: 8px !important;
+  padding: 13px !important;
+}
+
+.figma-adjust-main .adjust-reason-panel {
+  display: none !important;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 44px !important;
+}
+
+.figma-adjust-main .row {
+  grid-template-columns: 1fr 98px;
+}
+
+.figma-adjust-main .button {
+  min-height: 42px !important;
+}
+
+.figma-adjust-schedule-card {
+  gap: 8px !important;
+  margin-top: 0 !important;
+  padding: 13px !important;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 66px 1fr 58px !important;
+  min-height: 42px !important;
+  padding: 5px 10px !important;
+}
+
+.adjust-schedule-item > span {
+  min-height: 32px !important;
+}
+
+.adjust-block-action {
+  min-height: 28px !important;
+  min-width: 56px !important;
+}
+
+.settings-figma-page {
+  padding-top: 51px !important;
+}
+
+.reminders-figma-page {
+  gap: 13px !important;
+  padding-top: 59px !important;
+}
+
+.reminder-summary-card {
+  min-height: 154px !important;
+  padding: 13px 14px !important;
+}
+
+.reminder-card-list {
+  gap: 14px !important;
+}
+
+.reminder-card {
+  min-height: 118px !important;
+  padding: 12px 14px !important;
+}
+
+.reminder-card-copy {
+  min-height: 39px !important;
+}
+
+.reminder-card h3 {
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+.reminder-card p {
+  font-size: 10.5px !important;
+  line-height: 12.5px !important;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 96px !important;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a {
+  min-height: 39px !important;
+  border-radius: 12px !important;
+  font-size: 11px !important;
+}
+
+.figma-night-screen {
+  padding-top: 55px !important;
+}
+
+/* Figma parity pass 7: align the remaining high-diff frames with the mobile references. */
+body[data-screen="checkin"] .ux-stepper {
+  display: none !important;
+}
+
+body[data-screen="checkin"] .checkin-page {
+  padding-top: 74px !important;
+}
+
+body[data-screen="checkin"] .checkin-page .form {
+  gap: 16px !important;
+}
+
+body[data-screen="checkin"] .page-header p {
+  max-width: none !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="checkin"] .checkin-actions {
+  gap: 0 !important;
+}
+
+body[data-screen="checkin"] #skipCheckin {
+  display: none !important;
+}
+
+.figma-adjust-screen {
+  gap: 8px !important;
+  padding-top: 45px !important;
+}
+
+.figma-adjust-main {
+  min-height: 228px !important;
+  gap: 10px !important;
+  padding: 14px !important;
+}
+
+.figma-adjust-main .adjust-reason-panel {
+  display: none !important;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 56px !important;
+}
+
+.figma-adjust-main .row {
+  grid-template-columns: 1fr 108px;
+}
+
+.figma-adjust-main .button {
+  min-height: 44px !important;
+  border-radius: 14px !important;
+}
+
+.figma-adjust-schedule-card {
+  gap: 9px !important;
+  margin-top: 10px !important;
+  padding: 14px !important;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 64px 1fr 64px !important;
+  min-height: 59px !important;
+  padding: 8px 10px !important;
+}
+
+.adjust-schedule-item > span {
+  min-height: 43px !important;
+}
+
+.adjust-block-action {
+  min-height: 29px !important;
+}
+
+.adjust-quick-controls {
+  gap: 11px !important;
+  padding: 14px !important;
+}
+
+.settings-figma-page {
+  padding-top: 51px !important;
+}
+
+.reminders-figma-page {
+  gap: 14px !important;
+  padding-top: 59px !important;
+}
+
+.reminder-summary-card {
+  min-height: 154px !important;
+  padding: 13px 14px !important;
+}
+
+.reminder-card-list {
+  gap: 14px !important;
+}
+
+.reminder-card {
+  min-height: 118px !important;
+  padding: 12px 14px !important;
+}
+
+.reminder-card h3 {
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+.reminder-card p {
+  font-size: 10.5px !important;
+  line-height: 12.5px !important;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a {
+  min-height: 39px !important;
+  border-radius: 12px !important;
+  font-size: 11px !important;
+}
+
+.focus-break-figma {
+  padding-top: 22px !important;
+}
+
+.focus-break-figma .proto-topbar h1 {
+  font-size: 23px !important;
+  line-height: 26px !important;
+}
+
+.focus-break-warning,
+.focus-break-suggestion,
+.focus-break-after {
+  border-radius: 20px !important;
+}
+
+.figma-night-screen {
+  padding-top: 55px !important;
+}
+
+.figma-operational-screen {
+  padding-top: 40px !important;
+}
+
+/* Visual parity pass 5: compact touch targets visually, keep large tap area via ::after. */
+body[data-screen="checkin"] .checkin-page {
+  padding-top: 72px;
+}
+
+body[data-screen="checkin"] .checkin-page .form {
+  gap: 13px;
+}
+
+body[data-screen="checkin"] .ux-stepper {
+  margin-top: 9px;
+}
+
+body[data-screen="checkin"] .checkin-step-actions {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+body[data-screen="checkin"] .checkin-step-actions .button {
+  min-height: 38px;
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+body[data-screen="checkin"] .checkin-actions {
+  gap: 9px;
+}
+
+body[data-screen="checkin"] .checkin-actions > .button {
+  min-height: 50px;
+  border-radius: 22px;
+}
+
+.figma-adjust-screen .adjust-reason-panel[hidden] {
+  display: none !important;
+}
+
+.figma-adjust-screen {
+  gap: 8px;
+  padding-top: 54px;
+}
+
+.figma-adjust-main,
+.figma-adjust-schedule-card,
+.adjust-quick-controls {
+  gap: 8px;
+  padding: 13px;
+  border-radius: 20px;
+}
+
+.figma-adjust-main .button {
+  min-height: 42px;
+  border-radius: 14px;
+}
+
+.adjust-block-action {
+  min-height: 28px !important;
+  min-width: 56px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 9.5px;
+}
+
+.reminders-figma-page {
+  gap: 8px !important;
+  padding-top: 50px !important;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  gap: 7px !important;
+  min-height: 0 !important;
+  padding: 11px 12px !important;
+}
+
+.reminder-card-list {
+  gap: 8px !important;
+}
+
+.reminder-card,
+.reminder-card:nth-child(1),
+.reminder-card:nth-child(2) {
+  gap: 6px !important;
+  min-height: 94px !important;
+  padding: 10px 12px !important;
+  border-radius: 18px !important;
+}
+
+.reminder-card-copy {
+  min-height: 31px !important;
+}
+
+.reminder-card h3 {
+  font-size: 12.6px !important;
+  line-height: 14px !important;
+}
+
+.reminder-card p {
+  font-size: 9.2px !important;
+  line-height: 10.5px !important;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 92px !important;
+  gap: 7px !important;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a,
+.setting-card button,
+.setting-card a,
+.operational-tabs a,
+.operational-period-tabs button {
+  min-height: 31px !important;
+  border-radius: 10px !important;
+  font-size: 10px !important;
+}
+
+.focus-break-figma .break-timer[hidden] {
+  display: none !important;
+}
+
+.focus-break-figma .focus-break-suggestion > .button.secondary.full {
+  display: none;
+}
+
+.focus-break-figma .focus-break-suggestion .row {
+  grid-template-columns: 1fr 0.8fr;
+}
+
+.focus-break-figma .focus-break-suggestion .button {
+  min-height: 44px;
+}
+
+.focus-session-status {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 0 13px;
+  border: 1px solid #c9e5d8;
+  border-radius: 999px;
+  background: #f1fbf6;
+  color: #136e47;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.focus-timer-cluster[data-focus-state="paused"] .focus-session-status {
+  border-color: #fae0d6;
+  background: #fff5e8;
+  color: #bd7b2c;
+}
+
+.focus-timer-cluster[data-focus-state="done"] .focus-session-status {
+  background: #ddf7ea;
+  color: #136e47;
+}
+
+/* Visual parity pass 6: the stepper updates from field choices, while the screen keeps the Figma full-form rhythm. */
+body[data-screen="checkin"] .checkin-step-actions {
+  display: none;
+}
+
+body[data-screen="checkin"] .checkin-actions > .button {
+  min-height: 56px;
+}
+
+.reminders-figma-page {
+  gap: 12px !important;
+  padding-top: 48px !important;
+}
+
+.reminder-summary-card {
+  min-height: 128px !important;
+  padding: 13px !important;
+}
+
+.reminder-card,
+.reminder-card:nth-child(1),
+.reminder-card:nth-child(2) {
+  min-height: 104px !important;
+  padding: 11px 13px !important;
+}
+
+.reminder-card-list {
+  gap: 12px !important;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a {
+  min-height: 34px !important;
+  border-radius: 12px !important;
+}
+
+/* Functional parity pass: real stepper, touch comfort and actionable states. */
+.checkin-step-actions {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 10px;
+}
+
+.checkin-step-actions .button,
+body[data-screen="checkin"] .checkin-actions .button {
+  min-height: 44px;
+}
+
+[data-checkin-step][hidden] {
+  display: none !important;
+}
+
+body[data-screen="checkin"] .checkin-page .ux-stepper {
+  display: grid;
+}
+
+body[data-screen="checkin"] .checkin-card.is-active {
+  animation: plenna-step-in 0.18s ease-out;
+}
+
+@keyframes plenna-step-in {
+  from {
+    opacity: 0.2;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.task-card-actions button {
+  min-height: 44px;
+  border: 1px solid #d8efe4;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.task-card-actions button:last-child {
+  border-color: #c9e5d8;
+  background: var(--primary-pale);
+}
+
+.adjust-reason-panel {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid #fae0d6;
+  border-radius: 16px;
+  background: #fff5e8;
+}
+
+.adjust-reason-panel strong {
+  color: #bd7b2c;
+  font-size: 12px;
+}
+
+.adjust-reason-panel p,
+.adjust-reason-panel small {
+  color: #6f5a42;
+  font-size: 10.5px;
+  line-height: 13px;
+}
+
+.adjust-schedule-item.active {
+  border-color: #35c98d;
+  background: #f7fcfa;
+}
+
+.adjust-block-action {
+  min-height: 44px;
+  min-width: 58px;
+  padding: 0 7px;
+  border: 0;
+  border-radius: 999px;
+  background: #ddf7ea;
+  color: #136e47;
+  font-size: 9.5px;
+  font-weight: 900;
+}
+
+.habit-section-overdue .task-section-heading strong {
+  color: #bd7b2c;
+}
+
+.habit-item.overdue {
+  border-color: #fae0d6;
+  background: #fffaf4;
+}
+
+.habit-item.overdue::before {
+  background: #bd7b2c;
+}
+
+.export-period-tabs .chip {
+  border: 0;
+  cursor: pointer;
+}
+
+.export-modules-list {
+  display: grid;
+  gap: 8px;
+}
+
+.export-modules-list .dedicated-check-line {
+  min-height: 58px;
+  padding: 10px 12px;
+  border: 1px solid #e0ebf2;
+  border-radius: 16px;
+  background: #fff;
+}
+
+[data-dedicated-export-preview] {
+  min-height: 88px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.period-tabs button,
+.goal-action {
+  min-height: 44px !important;
+}
+
+.figma-badges span.active {
+  border-color: #35c98d;
+  background: #ddf7ea;
+  color: #136e47;
+}
+
+/* Figma parity pass 4: reminders frame 31 uses taller cards and softer depth. */
+.reminders-figma-page {
+  gap: 14px;
+  padding-top: 69px;
+  background: #f4f7f4;
+}
+
+.reminders-figma-header {
+  margin-bottom: 0;
+}
+
+.reminders-figma-header h1 {
+  color: #1f2a24;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.reminders-figma-header p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.reminder-summary-card,
+.reminder-card,
+.reminder-connected-card {
+  border: 1px solid #e0ebf2;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 10px rgba(38, 59, 92, 0.08);
+}
+
+.reminder-summary-card {
+  min-height: 188px;
+  padding: 14px;
+}
+
+.reminder-card-list {
+  display: grid;
+  gap: 14px;
+}
+
+.reminder-card {
+  gap: 8px;
+  min-height: 142px;
+  padding: 14px;
+}
+
+.reminder-card:nth-child(1) {
+  min-height: 156px;
+}
+
+.reminder-card:nth-child(2) {
+  min-height: 159px;
+}
+
+.reminder-card-copy {
+  min-height: 56px;
+}
+
+.reminder-card h3 {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.reminder-card p {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 118px;
+  gap: 8px;
+}
+
+.reminder-card-actions button,
+.reminder-card-actions a,
+.reminder-action-row a {
+  min-height: 44px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+.reminder-connected-card {
+  min-height: 141px;
+  padding: 14px;
+}
+
+.figma-task-form > .button.secondary,
+.figma-task-submit-card .button.secondary {
+  border-color: #e8edf3;
+  background: #e8edf3;
+  color: #68788a;
+}
+
+body[data-screen="settings"] .status-bar,
+body[data-screen="reminders"] .status-bar {
+  display: none;
+}
+
+.settings-figma-page,
+.reminders-figma-page {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 43px 20px 74px;
+}
+
+.settings-figma-header,
+.reminders-figma-header {
+  display: grid;
+  gap: 2px;
+}
+
+.settings-figma-header h1,
+.reminders-figma-header h1 {
+  margin: 0;
+  color: #252837;
+  font-size: 21px;
+  font-weight: 850;
+  line-height: 23px;
+}
+
+.settings-figma-header p,
+.reminders-figma-header p {
+  margin: 0;
+  max-width: 33ch;
+  color: #6b7a8d;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 12px;
+}
+
+.settings-summary-card,
+.reminder-summary-card,
+.reminder-connected-card,
+.setting-card,
+.reminder-card {
+  border: 1px solid #dce8e2;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(38, 59, 92, 0.05);
+}
+
+.settings-summary-card {
+  display: grid;
+  gap: 9px;
+  min-height: 123px;
+  padding: 12px;
+}
+
+.settings-summary-card h2,
+.reminder-summary-card h2,
+.reminder-connected-card h2 {
+  margin: 0;
+  color: #252837;
+  font-size: 13.5px;
+  font-weight: 850;
+  line-height: 16px;
+}
+
+.settings-profile-row {
+  display: grid;
+  grid-template-columns: 46px 1fr 72px;
+  gap: 11px;
+  align-items: center;
+}
+
+.settings-profile-row .avatar {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 15px;
+  background: #d3f4ea;
+  color: #35c98d;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.settings-profile-row h3 {
+  margin: 0;
+  color: #252837;
+  font-size: 13.5px;
+  font-weight: 850;
+  line-height: 15px;
+}
+
+.settings-profile-row p,
+.reminder-summary-card p,
+.reminder-connected-card p,
+.setting-card p,
+.reminder-card p {
+  margin: 0;
+  color: #6b7a8d;
+  font-size: 9.5px;
+  font-weight: 650;
+  line-height: 11px;
+}
+
+.setting-card p {
+  padding-right: 86px;
+}
+
+.settings-profile-row button,
+.setting-card button,
+.setting-card a,
+.reminder-card-actions button,
+.reminder-action-row a,
+.reminder-create-form button {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: #35c98d;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.settings-profile-row button {
+  min-height: 32px;
+  border: 1px solid #d8efe4;
+  background: #fff;
+  color: #0b7048;
+}
+
+.settings-chip-row,
+.reminder-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.settings-chip-row .chip,
+.reminder-chip-row .chip,
+.setting-card .chip,
+.reminder-card .chip {
+  min-height: 22px;
+  padding: 0 10px;
+  border: 1px solid #cbe9dc;
+  background: #f4fffa;
+  color: #178153;
+  font-size: 9.5px;
+  font-weight: 850;
+}
+
+.settings-card-list,
+.reminder-card-list {
+  display: grid;
+  gap: 8px;
+}
+
+.setting-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 32px 34px;
+  gap: 4px;
+  height: 82px;
+  min-height: 0;
+  padding: 7px 10px;
+}
+
+.setting-card h3,
+.reminder-card h3 {
+  margin: 0;
+  padding-right: 92px;
+  color: #252837;
+  font-size: 12.8px;
+  font-weight: 850;
+  line-height: 14px;
+}
+
+.setting-card > .chip,
+.reminder-card > .chip {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+.setting-card button,
+.setting-card a {
+  width: 100%;
+  min-height: 34px;
+  align-self: end;
+}
+
+.settings-clear-button {
+  margin-top: 34px;
+  min-height: 40px;
+  border: 1px solid #d8efe4;
+  border-radius: 12px;
+  background: #fff;
+  color: #0b7048;
+  font-weight: 850;
+}
+
+.reminders-figma-page {
+  padding-top: 48px;
+}
+
+.reminders-figma-header p {
+  max-width: 38ch;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.reminder-card {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 101px;
+  padding: 12px;
+}
+
+.reminder-card-copy {
+  min-height: 38px;
+}
+
+.reminder-card-copy p {
+  padding-right: 90px;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  display: grid;
+  grid-template-columns: 1fr 96px;
+  gap: 8px;
+}
+
+.reminder-card-actions button:nth-child(2),
+.reminder-action-row a:nth-child(2) {
+  border: 1px solid #d8efe4;
+  background: #fff;
+  color: #0b7048;
+}
+
+.reminder-connected-card {
+  background: #f0fff8;
+}
+
+.reminder-connected-card .reminder-action-row {
+  margin-top: 2px;
+}
+
+.reminder-create-form {
+  display: grid;
+  gap: 8px;
+}
+
+.reminder-create-panel {
+  margin-top: 30px;
+  padding: 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.reminder-create-form input,
+.reminder-create-form select {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Final visual pass: keep dense Figma-style screens above the fixed nav. */
+.reminders-figma-page {
+  gap: 8px;
+  padding-top: 50px;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  gap: 7px;
+  padding: 11px 12px;
+}
+
+.reminder-card {
+  gap: 6px;
+  min-height: 94px;
+  padding: 10px 12px;
+}
+
+.reminder-card h3 {
+  font-size: 12.6px;
+  line-height: 14px;
+}
+
+.reminder-card p {
+  font-size: 9.2px;
+  line-height: 10.5px;
+}
+
+.reminder-card-copy {
+  min-height: 31px;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  gap: 7px;
+  grid-template-columns: 1fr 92px;
+}
+
+.reminder-card-actions button,
+.reminder-action-row a {
+  min-height: 31px;
+  font-size: 10px;
+}
+
+.reminder-connected-card {
+  min-height: 88px;
+}
+
+.note-card.examples {
+  gap: 6px;
+}
+
+.note-example-grid {
+  gap: 7px;
+}
+
+.note-example-grid article {
+  min-height: 82px;
+  padding: 9px 10px;
+}
+
+.note-example-grid article:last-child {
+  min-height: 56px;
+}
+
+.note-example-grid strong {
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.note-example-grid small,
+.note-example-grid span {
+  font-size: 9.6px;
+  line-height: 11px;
+}
+
+.note-card.insight {
+  gap: 6px;
+}
+
+.note-card.insight .button {
+  min-height: 38px;
+}
+
+.micro-after-card .row {
+  grid-template-columns: 1fr 0.92fr 1.24fr;
+  gap: 5px;
+}
+
+.micro-after-card .button {
+  min-height: 40px;
+  padding-inline: 3px;
+  font-size: 9.1px;
+  line-height: 10px;
+  white-space: nowrap;
+}
+
+/* Figma parity pass 2: restore the taller rhythm from the source frames. */
+.reminders-figma-page {
+  gap: 10px;
+  padding-top: 58px;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  gap: 10px;
+  padding: 13px 12px;
+}
+
+.reminder-summary-card {
+  min-height: 158px;
+}
+
+.reminder-card {
+  gap: 9px;
+  min-height: 126px;
+  padding: 13px 12px;
+}
+
+.reminder-card-copy {
+  min-height: 50px;
+}
+
+.reminder-card h3 {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.reminder-card p {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 100px;
+  gap: 8px;
+}
+
+.reminder-card-actions button,
+.reminder-action-row a {
+  min-height: 38px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.reminder-connected-card {
+  min-height: 116px;
+}
+
+.figma-adjust-screen {
+  gap: 9px;
+  padding-top: 49px;
+}
+
+.figma-adjust-main,
+.figma-adjust-schedule-card,
+.adjust-quick-controls {
+  gap: 9px;
+  padding: 14px;
+  border-radius: 18px;
+}
+
+.figma-adjust-main h2 {
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.figma-adjust-main p,
+.figma-adjust-schedule-card p {
+  font-size: 11.5px;
+  line-height: 14px;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 56px;
+  padding: 9px 10px;
+}
+
+.figma-compare-grid.compact strong {
+  font-size: 11.5px;
+  line-height: 13.5px;
+}
+
+.figma-adjust-main .button {
+  min-height: 38px;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 66px 1fr 58px;
+  min-height: 58px;
+  padding: 8px 10px;
+}
+
+.adjust-schedule-item > span {
+  min-height: 42px;
+}
+
+.adjust-schedule-item strong {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.adjust-schedule-item small {
+  font-size: 9.8px;
+  line-height: 12px;
+}
+
+.adjust-schedule-item b {
+  min-width: 56px;
+  padding: 6px 7px;
+  font-size: 9.5px;
+}
+
+.adjust-quick-controls {
+  gap: 8px;
+  padding: 13px 14px;
+}
+
+.adjust-quick-controls h2 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.adjust-quick-controls .grid-2 {
+  gap: 12px 24px;
+}
+
+.adjust-quick-controls strong {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.adjust-quick-controls span {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+/* Figma parity pass 3: planning must show the quick controls in-frame. */
+.figma-adjust-screen {
+  gap: 7px;
+  padding-top: 42px;
+}
+
+.figma-adjust-screen .proto-topbar h1 {
+  font-weight: 800;
+}
+
+.figma-adjust-screen .proto-topbar p {
+  font-weight: 500;
+}
+
+.figma-adjust-main,
+.figma-adjust-schedule-card,
+.adjust-quick-controls {
+  gap: 7px;
+  padding: 11px 13px;
+  border-radius: 18px;
+}
+
+.figma-adjust-main h2 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.figma-adjust-main p,
+.figma-adjust-schedule-card p {
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 12.5px;
+}
+
+.figma-compare-grid.compact span {
+  min-height: 44px;
+  padding: 8px;
+}
+
+.figma-compare-grid.compact strong {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.figma-adjust-main .button {
+  min-height: 34px;
+  font-weight: 700;
+}
+
+.adjust-schedule-item {
+  grid-template-columns: 66px 1fr 58px;
+  min-height: 42px;
+  padding: 5px 10px;
+}
+
+.adjust-schedule-item > span {
+  min-height: 32px;
+}
+
+.adjust-schedule-item strong {
+  font-size: 10.5px;
+  font-weight: 750;
+  line-height: 12px;
+}
+
+.adjust-schedule-item small {
+  font-size: 9.2px;
+  line-height: 10.5px;
+}
+
+.adjust-schedule-item b {
+  min-width: 54px;
+  padding: 5px 7px;
+  font-size: 9.2px;
+  font-weight: 700;
+}
+
+.adjust-quick-controls {
+  gap: 5px;
+  padding: 9px 13px 10px;
+}
+
+.adjust-quick-controls h2 {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 17px;
+}
+
+.adjust-quick-controls .grid-2 {
+  gap: 7px 18px;
+}
+
+.adjust-quick-controls button,
+.adjust-quick-controls a {
+  gap: 1px;
+}
+
+.adjust-quick-controls strong {
+  font-size: 10.8px;
+  line-height: 12px;
+}
+
+.adjust-quick-controls span {
+  font-size: 9px;
+  line-height: 10px;
+}
+
+.reminders-figma-header h1,
+.settings-figma-header h1 {
+  font-weight: 800;
+}
+
+.reminders-figma-header p,
+.settings-figma-header p,
+.reminder-summary-card p,
+.reminder-connected-card p,
+.setting-card p,
+.reminder-card p {
+  font-weight: 500;
+}
+
+.reminder-summary-card h2,
+.reminder-connected-card h2,
+.setting-card h3,
+.reminder-card h3 {
+  font-weight: 750;
+}
+
+.reminder-chip-row .chip,
+.settings-chip-row .chip,
+.setting-card .chip,
+.reminder-card .chip {
+  font-weight: 650;
+}
+
+.reminder-card-actions button,
+.reminder-action-row a,
+.setting-card button,
+.setting-card a {
+  font-weight: 700;
+}
+
+.figma-operational-screen {
+  gap: 8px;
+  padding-top: 52px;
+}
+
+.figma-operational-screen .proto-topbar {
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.operational-tabs,
+.operational-period-tabs {
+  gap: 7px;
+}
+
+.operational-tabs a,
+.operational-period-tabs button {
+  min-height: 24px;
+  min-width: 58px;
+  font-size: 10px;
+}
+
+.operational-section-title {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.operational-figma-metrics {
+  gap: 8px 10px;
+}
+
+.operational-figma-metrics article {
+  min-height: 65px;
+  padding: 9px 12px;
+  border-radius: 16px;
+}
+
+.operational-figma-metrics small {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.operational-figma-metrics strong {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.operational-figma-metrics span {
+  font-size: 9.5px;
+  line-height: 12px;
+}
+
+.operational-card,
+.operational-reading-card,
+.operational-action-card {
+  gap: 7px;
+  padding: 13px 14px;
+  border-radius: 18px;
+}
+
+.operational-card h2,
+.operational-reading-card h2,
+.operational-action-card h2 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.operational-progress-row {
+  gap: 4px;
+}
+
+.operational-progress-row span {
+  font-size: 10.5px;
+  line-height: 12px;
+}
+
+.operational-progress-row i {
+  height: 6px;
+}
+
+.operational-reading-card p,
+.operational-action-card p {
+  font-size: 10.5px;
+  line-height: 13px;
+}
+
+.operational-action-card .button {
+  min-height: 38px;
+  font-size: 11px;
+}
+
+/* Figma normalized pass: align with the 390x844 reference used by compare. */
+.reminders-figma-page {
+  gap: 8px;
+  padding-top: 50px;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  gap: 7px;
+  padding: 11px 12px;
+}
+
+.reminder-summary-card {
+  min-height: 0;
+}
+
+.reminder-card {
+  gap: 6px;
+  min-height: 94px;
+  padding: 10px 12px;
+}
+
+.reminder-card-copy {
+  min-height: 31px;
+}
+
+.reminder-card h3 {
+  font-size: 12.6px;
+  line-height: 14px;
+}
+
+.reminder-card p {
+  font-size: 9.2px;
+  line-height: 10.5px;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 92px;
+  gap: 7px;
+}
+
+.reminder-card-actions button,
+.reminder-action-row a {
+  min-height: 31px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+.reminder-connected-card {
+  min-height: 88px;
+}
+
+.figma-operational-screen {
+  gap: 4px;
+  padding-top: 40px;
+}
+
+.figma-operational-screen .proto-topbar {
+  gap: 2px;
+  margin-bottom: 3px;
+}
+
+.operational-tabs,
+.operational-period-tabs {
+  gap: 5px;
+}
+
+.operational-tabs a,
+.operational-period-tabs button {
+  min-height: 20px;
+  min-width: 55px;
+  font-size: 9px;
+}
+
+.operational-section-title {
+  margin-top: 0;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.operational-figma-metrics {
+  gap: 6px 8px;
+}
+
+.operational-figma-metrics article {
+  min-height: 48px;
+  padding: 6px 11px;
+  border-radius: 15px;
+}
+
+.operational-figma-metrics small {
+  font-size: 9px;
+  line-height: 10px;
+}
+
+.operational-figma-metrics strong {
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.operational-figma-metrics span {
+  font-size: 8.8px;
+  line-height: 10px;
+}
+
+.operational-card,
+.operational-reading-card,
+.operational-action-card {
+  gap: 4px;
+  padding: 9px 12px;
+  border-radius: 16px;
+}
+
+.operational-card h2,
+.operational-reading-card h2,
+.operational-action-card h2 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.operational-progress-row {
+  gap: 2px;
+}
+
+.operational-progress-row span {
+  font-size: 9.5px;
+  line-height: 11px;
+}
+
+.operational-progress-row i {
+  height: 5px;
+}
+
+.operational-reading-card p,
+.operational-action-card p {
+  font-size: 9.8px;
+  line-height: 12px;
+}
+
+.operational-action-card .button {
+  min-height: 31px;
+  font-size: 10px;
+}
