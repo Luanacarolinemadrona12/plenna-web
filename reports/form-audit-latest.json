@@ -1,10 +1,57 @@
 {
-  "issues": [
-    {
-      "file": "pages\\checkin.html",
-      "formId": "checkinForm",
-      "class": "form",
-      "issue": "formul?rio com envio sem required vis?vel"
-    }
-  ]
+  "checkedForms": 1,
+  "issues": [],
+  "checkin": {
+    "hasForm": true,
+    "noteText": "Obrigatório para salvar: escolha como você chega e qual apoio combina com hoje.",
+    "noteVisible": true,
+    "describedBy": "checkinRequiredNote",
+    "requiredCount": 11,
+    "required": [
+      {
+        "name": "humor",
+        "type": "radio"
+      },
+      {
+        "name": "humor",
+        "type": "radio"
+      },
+      {
+        "name": "humor",
+        "type": "radio"
+      },
+      {
+        "name": "humor",
+        "type": "radio"
+      },
+      {
+        "name": "humor",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      },
+      {
+        "name": "necessidade",
+        "type": "radio"
+      }
+    ]
+  }
 }

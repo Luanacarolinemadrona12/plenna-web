@@ -4,30 +4,31 @@
     <link rel="icon" href="data:,">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Diário rápido | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <title>Fechamento do dia | Plenna</title>
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260519-journal-night-cards" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="more" data-screen="journal-night">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page dedicated-page dedicated-night figma-night-screen">
         <header class="proto-topbar night-emotional-top">
-          <h1>Diário rápido</h1>
-          <p>Feche o dia em 2 minutos e leve o essencial para a próxima semana.</p>
+          <h1>Fechamento do dia</h1>
+          <p>Um ritual breve para reconhecer o dia e cuidar de amanhã.</p>
         </header>
 
         <form class="night-summary-flow night-card-form" data-night-form>
-          <input type="hidden" name="tituloEdit" value="Diário rápido">
+          <input type="hidden" name="tituloEdit" value="Fechamento do dia">
           <input type="hidden" name="tags" value="humor ok, aprendizado salvo, plano">
 
           <label class="figma-night-main-card night-quick-card">
             <span>15 de abril · quarta-feira</span>
-            <strong>Mais estável ao fim do dia</strong>
+            <strong>Você chegou até aqui</strong>
+            <p>Registre o essencial, sem precisar resolver tudo agora.</p>
             <textarea name="resumoEdit" required>Consegui fechar a apresentação, respeitei uma pausa e quero repetir isso amanhã.</textarea>
             <div class="chip-row" aria-label="Tags do registro">
               <span class="chip">humor ok</span>
@@ -45,20 +46,14 @@
             <textarea name="drenouEdit" required>Reuniões longas em sequência.</textarea>
           </label>
 
-          <label class="night-prompt-card night-quick-field warm">
-            <span>Aprendizado da semana</span>
-            <textarea name="aprendizadoEdit" required>Pausas curtas me ajudam a fechar melhor o dia.</textarea>
-          </label>
-
           <label class="night-prompt-card night-quick-field">
             <span>Plano de amanhã</span>
             <textarea name="planoEdit" required>Começar pelo relatório e proteger 1 pausa.</textarea>
           </label>
 
           <div class="night-submit-card">
-            <button class="button primary full" type="submit">Salvar registro</button>
-            <button class="button secondary full" type="submit" name="salvarAprendizado" value="true">Salvar aprendizado</button>
-            <a class="button muted-action full" href="journal.html">Cancelar</a>
+            <button class="button primary full" type="submit">Salvar meu fechamento</button>
+            <a class="button muted-action full" href="journal.html">Voltar ao diário</a>
           </div>
         </form>
       </main>

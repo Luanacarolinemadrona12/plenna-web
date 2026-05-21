@@ -431,11 +431,12 @@
   }
 
   function emptyState(title, body, actionLabel, href) {
+    var actionHref = href && href !== "#" ? href : "";
     return [
       '<div class="empty-state proto-empty ux-empty">',
       "<h3>" + escapeHtml(title) + "</h3>",
       "<p>" + escapeHtml(body) + "</p>",
-      actionLabel ? '<a class="button small primary" href="' + escapeHtml(href || "#") + '">' + escapeHtml(actionLabel) + "</a>" : "",
+      actionLabel && actionHref ? '<a class="button small primary" href="' + escapeHtml(actionHref) + '">' + escapeHtml(actionLabel) + "</a>" : "",
       "</div>"
     ].join("");
   }

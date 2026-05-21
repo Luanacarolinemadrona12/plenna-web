@@ -55,7 +55,7 @@
       title: "Título",
       taskTitle: "Título da tarefa",
       noteText: "Texto da nota",
-      reminderTitle: "Nome do lembrete",
+      reminderTitle: "Nome do apoio",
       reminderTime: "Horário",
       reminderWhen: "Horário",
       duration: "Duração",
@@ -219,12 +219,12 @@
       dashboard: ["Fazer check-in", "checkin.html"],
       "dashboard-history": ["Fazer check-in", "checkin.html"],
       "dashboard-operational": ["Criar tarefa", "task-new.html"],
-      export: ["Voltar ao Dashboard", "dashboard.html"],
+      export: ["Voltar ao resumo", "dashboard.html"],
       settings: ["Ver lembretes", "reminders.html"],
-      reminders: ["Criar lembrete", "reminders.html"],
+      reminders: ["Criar apoio", "reminders.html"],
       goals: ["Ver progresso", "dashboard.html"],
-      planning: ["Ajustar plano", "planning-adjust.html"],
-      "planning-adjust": ["Voltar ao planejamento", "planning.html"],
+      planning: ["Reorganizar com calma", "planning-adjust.html"],
+      "planning-adjust": ["Voltar ao plano", "planning.html"],
       more: ["Ver configurações", "settings.html"]
     };
     return map[screen] || map[page] || ["Voltar ao início", pagePath("home.html")];
@@ -232,6 +232,14 @@
 
   function hasRealAction(node) {
     return !!node.querySelector("a[href]:not([href='#']), button:not([disabled])");
+  }
+
+  function isElementVisible(node) {
+    if (!node || node.hidden || node.closest("[hidden], [aria-hidden='true']")) return false;
+    var style = window.getComputedStyle ? window.getComputedStyle(node) : null;
+    if (style && (style.display === "none" || style.visibility === "hidden" || Number(style.opacity) === 0)) return false;
+    var rect = node.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0;
   }
 
   function ensureEmptyNextSteps(root) {
@@ -254,16 +262,60 @@
 
   function isChecklistAction(control) {
     if (!control || control.disabled || control.hidden) return false;
+    if (!isElementVisible(control)) return false;
     if (control.closest(".bottom-nav, .task-view-tabs, .segmented, .toast, .page-back-link, .chip-row, .status-bar")) return false;
     if (control.closest("[hidden]")) return false;
     var text = (control.textContent || control.getAttribute("aria-label") || "").trim();
     return !!text;
   }
 
+  function actionText(control) {
+    return (control.getAttribute("aria-label") || control.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function primaryActionScore(control) {
+    var text = actionText(control);
+    if (!text) return -1;
+    if (/criar|adicionar|nova|novo|come[cç]ar|continuar|salvar|iniciar|fazer|organizar|exportar/i.test(text)) return 30;
+    if (/aceitar|ajustar|usar|rotina|check-in|lembrete|micro pausa|ver meu dia|ver painel|ver hist[oó]rico|ver configura[cç][oõ]es/i.test(text)) return 20;
+    if (/editar|abrir|ver/i.test(text)) return 10;
+    return -1;
+  }
+
+  function inferPrimaryAction(root) {
+    var main = document.querySelector("main");
+    if (!main) return null;
+    var screen = document.body.dataset.screen || "";
+    var preferredSelector = {
+      dashboard: ".dashboard-mode-tabs a[href*='dashboard-operational'], .dashboard-mode-tabs a",
+      "dashboard-history": ".dashboard-mode-tabs a[href*='dashboard-operational'], .dashboard-mode-tabs a",
+      reminders: ".reminder-create-shell > summary, .figma-reminder-form button[type='submit'], .reminder-create-form button[type='submit'], [data-open-reminder-form], .reminder-action-row a[href*='reminders']"
+    }[screen];
+    if (preferredSelector) {
+      var preferred = all(preferredSelector, main).filter(isChecklistAction);
+      if (preferred.length) return preferred[0];
+    }
+    var candidates = all("a[href], button, summary, [role='button']", root || main).filter(function (action) {
+      if (!isChecklistAction(action)) return false;
+      if (action.matches(".danger, .button.danger, [data-clear-local], [data-remove-reminder], [data-delete-task], [data-delete-habit]")) return false;
+      return primaryActionScore(action) >= 0;
+    }).sort(function (a, b) {
+      return primaryActionScore(b) - primaryActionScore(a);
+    });
+    return candidates[0] || null;
+  }
+
   function normalizePrimaryActions(root) {
     var main = document.querySelector("main");
     if (!main) return;
     var primaryActions = all(".button.primary, button.primary, a.button.primary, [data-primary-action]", root || main).filter(isChecklistAction);
+    if (!primaryActions.length) {
+      var inferred = inferPrimaryAction(root || main);
+      if (inferred) {
+        inferred.setAttribute("data-primary-action", "true");
+        primaryActions = [inferred];
+      }
+    }
     var first = null;
     primaryActions.forEach(function (action) {
       action.classList.remove("ux-main-action", "ux-secondary-primary");

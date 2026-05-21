@@ -5,32 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Início | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../js/mood-states.js?v=20260520-energy-rules" defer></script>
+    <script src="../js/mood-states.js?v=20260520-warm-pass" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/home.js?v=20260430-figma" defer></script>
+    <script src="../js/home.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="home" data-screen="home">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page home-page" id="homePage">
         <header class="home-hero">
-          <h1 id="homeGreeting">Humor neutro + energia média</h1>
+          <h1 id="homeGreeting">Vamos cuidar do essencial</h1>
           <p class="home-date" id="homeDate">Terça-feira, 15 de abril</p>
           <div class="chip-row" id="checkinChips"></div>
         </header>
 
         <section class="stack-lg home-stack">
+          <section class="home-care-note" id="homeCareNote" aria-live="polite"></section>
+
           <article class="card now-card" id="recommendationCard"></article>
 
           <section class="card home-priority-card">
             <div class="row between">
-              <h2>3 prioridades do dia</h2>
-              <a class="button small secondary" href="tasks.html">Ver todas</a>
+              <h2>Próximo passo leve</h2>
+              <a class="button small secondary" href="tasks.html">Ver rotina</a>
             </div>
             <div class="content-list" id="priorityList"></div>
           </section>
@@ -44,7 +46,7 @@
           <section class="home-week-card" aria-label="Sua semana">
             <div>
               <h2>Sua semana</h2>
-              <p>Veja tarefas distribuídas por dia.</p>
+              <p>Veja o ritmo dos próximos dias sem pressa.</p>
             </div>
             <a class="button secondary small" href="calendar-week.html">Ver semana</a>
           </section>
@@ -53,8 +55,8 @@
             <a class="shortcut" href="task-new.html">+ Tarefa</a>
             <a class="shortcut" href="focus.html">Iniciar foco</a>
             <a class="shortcut" href="micro-pauses.html">Respirar 3 min</a>
-            <a class="shortcut" href="journal-night.html">Diário rápido</a>
-            <a class="shortcut" href="planning.html">Planejar</a>
+            <a class="shortcut" href="journal-night.html">Fechar o dia</a>
+            <a class="shortcut" href="planning.html">Ajustar com calma</a>
           </section>
 
           <p class="home-final-note" id="homeFinalNote">Seu plano está equilibrado para hoje.</p>
@@ -64,4 +66,3 @@
     </div>
   </body>
 </html>
-

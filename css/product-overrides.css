@@ -7856,7 +7856,7 @@ body[data-screen="journal-night"] .night-submit-card {
   }
 }
 
-/* Nielsen, accessibility and IHC implementation pass */
+/* Product behavior and accessibility implementation pass */
 :root {
   --ux-focus-ring: 0 0 0 3px rgba(53, 201, 141, 0.32);
   --ux-touch-target: 44px;
@@ -8518,7 +8518,7 @@ body[data-screen="micro-pauses"] .micro-card button {
   width: 86px !important;
 }
 
-/* Final product UX/accessibility pass: apply silently, never as academic content. */
+/* Final product polish pass: apply silently in the interface. */
 :root {
   --plenna-focus: #0f7a4b;
   --plenna-focus-soft: rgba(15, 122, 75, 0.28);
@@ -8787,6 +8787,473 @@ body[data-screen="export"] .export-period-tabs .chip {
 .figma-subtask-list li {
   grid-template-columns: 44px minmax(0, 1fr) 18px !important;
   align-items: center !important;
+}
+/* Final late overrides: keep these after every visual parity block. */
+main a.active,
+main button.active,
+.dashboard-mode-tabs a,
+.history-period-tabs button,
+.operational-period-tabs button {
+  min-height: 44px !important;
+}
+
+main a.active,
+main button.active {
+  border-color: var(--plenna-action, #0f6b42) !important;
+  background: var(--plenna-action, #0f6b42) !important;
+  color: #ffffff !important;
+}
+
+body[data-screen="dashboard"] .dashboard-mode-tabs a,
+body[data-screen="dashboard-history"] .dashboard-mode-tabs a,
+body[data-screen="dashboard-operational"] .dashboard-mode-tabs a,
+body[data-screen="dashboard-history"] .history-period-tabs button,
+body[data-screen="dashboard-operational"] .operational-period-tabs button {
+  min-height: 44px !important;
+  padding: 0 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body[data-screen="dashboard"] .screen-page::after,
+body[data-screen="dashboard-history"] .screen-page::after {
+  content: "Confira o resumo e siga para a rotina quando quiser ajustar a semana.";
+  display: block;
+  color: #48586e;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+body[data-screen="calendar-month"] .task-month-grid,
+body[data-screen="calendar-month"] .month-grid,
+body[data-screen="calendar-month"] .figma-month-grid {
+  width: calc(100% + 18px) !important;
+  margin-left: -9px !important;
+  margin-right: -9px !important;
+  gap: 1px !important;
+}
+
+body[data-screen="calendar-month"] .task-month-grid button,
+body[data-screen="calendar-month"] .month-grid button,
+body[data-screen="calendar-month"] .figma-month-grid button {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+}
+
+body[data-screen="calendar-month"] .task-month-grid button span,
+body[data-screen="calendar-month"] .task-month-grid button strong,
+body[data-screen="calendar-month"] .task-month-grid button small,
+body[data-screen="calendar-week"] .calendar-strip .active,
+body[data-screen="calendar-week"] .calendar-strip .active strong,
+body[data-screen="calendar-week"] .calendar-strip .active small {
+  color: #ffffff !important;
+}
+
+body[data-screen="reminders"] .reminder-card-actions button,
+body[data-screen="reminders"] .reminder-card-actions a,
+body[data-screen="reminders"] .reminder-action-row a,
+body[data-screen="reminders"] .reminder-create-form button,
+body[data-screen="settings"] .setting-card button:not([data-clear-local]),
+body[data-screen="settings"] .setting-card > a,
+body[data-screen="settings"] .settings-profile-row button,
+body[data-screen="planning"] .button,
+body[data-screen="habits"] .button,
+body[data-screen="habits"] .habit-item a,
+body[data-screen="habits"] .habit-item button,
+body[data-screen="tasks"] .task-row-card,
+body[data-screen="tasks"] .task-row-card a,
+body[data-screen="tasks"] .task-row-card button {
+  min-height: 44px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-actions button,
+body[data-screen="reminders"] .reminder-card-actions a {
+  height: 44px !important;
+}
+
+body[data-screen="reminders"] .reminder-create-form button {
+  min-height: 48px !important;
+}
+
+body[data-screen="notes"] .note-example-grid strong,
+body[data-screen="notes"] .note-example-grid span,
+body[data-screen="notes"] .note-example-grid small,
+body[data-screen="more"] .more-hub-tile span,
+body[data-screen="more"] .more-hub-tile small,
+body[data-screen="focus-break"] .focus-break-alert-card strong,
+body[data-screen="focus"] .focus-session-option span,
+body[data-screen="focus"] .focus-session-option strong,
+body[data-screen="planning"] .planning-context strong,
+body[data-screen="planning"] .planning-insight strong {
+  color: #263149 !important;
+}
+
+.muted-action,
+a.button.muted-action,
+button.button.danger,
+.button.danger,
+#deleteTask {
+  color: #7b1c1c !important;
+}
+
+body[data-screen="task-new"] .figma-task-fields-card textarea,
+body[data-screen="task-edit"] .figma-task-fields-card textarea,
+body[data-screen="task-form"] .figma-task-fields-card textarea,
+body[data-screen="journal-night"] .night-quick-card,
+body[data-screen="journal-night"] .night-quick-field {
+  min-height: 44px !important;
+}
+
+body[data-screen="task-new"] .figma-task-fields-card select,
+body[data-screen="task-edit"] .figma-task-fields-card select,
+body[data-screen="task-form"] .figma-task-fields-card select {
+  min-height: 44px !important;
+}
+
+.subtask-mini-action {
+  background: #fff3f3 !important;
+  color: #7b1c1c !important;
+  font-size: 0 !important;
+}
+
+.subtask-mini-action::before {
+  content: "-" !important;
+  color: #7b1c1c !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.figma-subtask-list li {
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  min-height: 52px !important;
+}
+
+.figma-subtask-list li > i {
+  display: grid !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  place-items: center !important;
+}
+
+/* Product hardening pass: accessible contrast, touch targets and clearer CTAs. */
+:root {
+  --plenna-action: #0f6b42;
+  --plenna-action-hover: #0b5636;
+  --plenna-action-soft: #e7f7ef;
+  --plenna-action-border: #a8d9bf;
+  --plenna-danger: #8f2020;
+}
+
+.button.primary,
+button.primary,
+a.button.primary,
+main.ux-checklist .ux-main-action,
+[data-primary-action],
+body[data-screen="checkin"] #checkinSubmit,
+body[data-screen="reminders"] [data-edit-reminder],
+body[data-screen="reminders"] .reminder-card-actions button:first-child,
+body[data-screen="settings"] .setting-card button:not([data-clear-local]),
+body[data-screen="settings"] .setting-card > a,
+body[data-screen="settings"] .settings-profile-row button,
+body[data-screen="micro-pauses"] .micro-card button {
+  border-color: var(--plenna-action) !important;
+  background: var(--plenna-action) !important;
+  color: #ffffff !important;
+}
+
+.button.primary:hover,
+button.primary:hover,
+a.button.primary:hover,
+main.ux-checklist .ux-main-action:hover,
+[data-primary-action]:hover {
+  border-color: var(--plenna-action-hover) !important;
+  background: var(--plenna-action-hover) !important;
+  color: #ffffff !important;
+}
+
+.button.secondary,
+button.secondary,
+a.button.secondary,
+.ux-secondary-primary,
+body[data-screen="settings"] [data-toggle-setting][aria-pressed="true"],
+body[data-screen="settings"] .setting-card > .chip,
+body[data-screen="reminders"] .reminder-card-actions a,
+body[data-screen="reminders"] .reminder-state-chip,
+.chip,
+.status-chip,
+.task-chip,
+.choice-chip {
+  border-color: var(--plenna-action-border) !important;
+  background: #ffffff !important;
+  color: var(--plenna-action) !important;
+}
+
+.task-view-tabs a.active,
+.dashboard-mode-tabs a.active,
+.history-period-tabs button.active,
+.operational-period-tabs button.active,
+.period-tabs button.active,
+.task-tab.active,
+.segmented button.active,
+.figma-month-grid .active,
+.figma-month-grid .busy.active,
+.month-grid .active,
+.month-grid button.active,
+.calendar-strip .active,
+.week-load-pill.active,
+.chip[aria-pressed="true"],
+.choice-chip:has(input:checked) {
+  border-color: var(--plenna-action) !important;
+  background: var(--plenna-action) !important;
+  color: #ffffff !important;
+}
+
+.eyebrow,
+.recognition-label,
+.state-badge,
+.appointment-time,
+.danger-text {
+  color: var(--plenna-action) !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+select {
+  min-height: 44px !important;
+}
+
+textarea {
+  min-height: 72px !important;
+}
+
+.field input,
+.field select,
+.field textarea,
+.figma-pill-input input,
+.figma-pill-input select,
+.figma-pill-input textarea,
+.night-quick-field textarea,
+.night-edit-field textarea {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.month-grid,
+.figma-month-grid {
+  width: 100% !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  gap: 1px !important;
+}
+
+.month-grid button,
+.figma-month-grid button {
+  min-width: 0 !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
+}
+
+body[data-screen="calendar-month"] main.ux-checklist::after {
+  content: "Use os dias para conferir prazos ou adicione uma tarefa quando quiser planejar a semana.";
+  display: block;
+  margin: -2px 0 8px;
+  color: #48586e;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+body[data-screen="checkin"] .mood-card .choice-grid {
+  grid-template-columns: repeat(5, minmax(44px, 1fr)) !important;
+  gap: 4px !important;
+}
+
+body[data-screen="checkin"] .mood-card .choice-card,
+body[data-screen="checkin"] .factor-card .choice-card,
+body[data-screen="checkin"] .need-card .choice-card {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+body[data-screen="checkin"] #energyRange {
+  min-height: 44px !important;
+}
+
+body[data-screen="settings"] .setting-card button:not([data-clear-local]),
+body[data-screen="settings"] .setting-card > a,
+body[data-screen="settings"] .settings-profile-row button,
+body[data-screen="reminders"] .reminder-card-actions button,
+body[data-screen="reminders"] .reminder-card-actions a,
+body[data-screen="reminders"] .reminder-action-row a,
+body[data-screen="planning"] .planning-action-row .button,
+body[data-screen="planning"] .planning-block-menu summary,
+body[data-screen="habits"] .habit-item a,
+body[data-screen="habits"] .habit-item button,
+body[data-screen="journal-night"] .night-quick-card,
+body[data-screen="journal-night"] .night-quick-field {
+  min-height: 44px !important;
+}
+
+body[data-screen="settings"] .settings-profile-row .avatar {
+  background: var(--plenna-action) !important;
+  color: #ffffff !important;
+}
+
+.button.danger,
+button.danger,
+[data-clear-local],
+[data-delete-task],
+[data-delete-habit],
+body[data-screen="reminders"] .reminder-card-actions .reminder-danger-link {
+  border-color: #efb8b8 !important;
+  background: #fff3f3 !important;
+  color: var(--plenna-danger) !important;
+}
+
+.subtask-mini-action {
+  border-color: #efb8b8 !important;
+  background: #fff3f3 !important;
+  color: var(--plenna-danger) !important;
+  font-size: 0 !important;
+}
+
+.subtask-mini-action::before {
+  content: "-" !important;
+  color: var(--plenna-danger) !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.figma-subtask-list li {
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  min-height: 52px !important;
+}
+
+.figma-subtask-list li > i {
+  display: grid !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  place-items: center !important;
+  color: #5e6b80 !important;
+}
+
+.task-row-card .chip,
+.habit-item .chip,
+.home-priority-row .chip,
+.home-shortcuts .chip,
+button.chip,
+.chip[role="button"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body[data-screen="prototype-overview"] .prototype-left a {
+  border-color: var(--plenna-action) !important;
+  background: var(--plenna-action) !important;
+  color: #ffffff !important;
+}
+
+body[data-screen="index"] .onboarding-login,
+.onboarding-login {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--plenna-action) !important;
+  font-weight: 850 !important;
+}
+
+.onboarding-app {
+  background: #f7faf8 !important;
+}
+
+.onboarding-v2 {
+  display: grid !important;
+  gap: 18px !important;
+  min-height: 100vh !important;
+  padding: 34px 22px 30px !important;
+  align-content: center !important;
+  background:
+    linear-gradient(180deg, rgba(231, 247, 239, 0.94), rgba(247, 250, 248, 0.98)),
+    #f7faf8 !important;
+}
+
+.onboarding-hero {
+  display: grid !important;
+  gap: 12px !important;
+  justify-items: start !important;
+  text-align: left !important;
+}
+
+.onboarding-hero .leaf-mark {
+  width: 64px !important;
+  height: 64px !important;
+  border: 1px solid var(--plenna-action-border) !important;
+  border-radius: 22px !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(38, 59, 92, 0.08) !important;
+}
+
+.onboarding-hero h1 {
+  color: var(--plenna-action) !important;
+  font-size: 42px !important;
+  line-height: 46px !important;
+}
+
+.onboarding-hero p {
+  max-width: 330px !important;
+  color: #263149 !important;
+  font-size: 15px !important;
+  line-height: 21px !important;
+}
+
+.onboarding-cards {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.onboarding-feature {
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) !important;
+  min-height: 64px !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px !important;
+  border: 1px solid #d6e5dc !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(38, 59, 92, 0.055) !important;
+}
+
+.onboarding-feature span {
+  display: grid !important;
+  width: 44px !important;
+  height: 44px !important;
+  place-items: center !important;
+  border-radius: 14px !important;
+  background: var(--plenna-action-soft) !important;
+  color: var(--plenna-action) !important;
+}
+
+.onboarding-feature strong {
+  color: #1a1a2e !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+}
+
+.onboarding-actions {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.onboarding-start {
+  min-height: 52px !important;
+  border-radius: 18px !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
 }
 
 /* Specific touch-target overrides for the most compact product controls. */
@@ -9390,4 +9857,3 @@ body[data-screen="reminders"] .reminder-state-chip {
   grid-template-columns: 44px minmax(0, 1fr) 18px !important;
   align-items: center !important;
 }
-

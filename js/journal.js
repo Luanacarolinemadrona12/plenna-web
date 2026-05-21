@@ -38,7 +38,7 @@
         '<div class="empty-state proto-empty">',
         "<h3>" + Utils.escapeHtml(emptyTitle) + "</h3>",
         "<p>" + Utils.escapeHtml(emptyCopy) + "</p>",
-        query ? '<button class="button small secondary" type="button" data-entry-clear-search>Limpar busca</button>' : '<a class="button small primary" href="journal-night.html">Criar fechamento de hoje</a>',
+        query ? '<button class="button small secondary" type="button" data-entry-clear-search>Limpar busca</button>' : '<a class="button small secondary" href="journal-night.html">Criar fechamento de hoje</a>',
         "</div>"
       ].join("");
       return;

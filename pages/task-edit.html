@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar tarefa | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
@@ -19,6 +19,7 @@
       <main class="page task-form-page figma-task-form-page">
         <header class="task-form-title-only">
           <h1 id="formTitle">Editar tarefa</h1>
+          <p>Ajuste o que precisa mudar e salve apenas quando estiver confortável.</p>
         </header>
 
         <form class="form figma-task-form" id="taskForm" data-skip-example="true">
@@ -68,16 +69,16 @@ Ajustar gráficos</textarea>
           </section>
 
           <section class="card figma-task-meta-card">
-            <h3>Recorrência, lembretes e etiquetas</h3>
-            <div class="figma-meta-row"><span>Recorrência</span><label class="choice-chip mint"><input type="radio" name="recorrencia" value="mensal" checked>mensal</label><label class="choice-chip"><input type="radio" name="recorrencia" value="após conclusão">após conclusão</label><label class="choice-chip"><input type="radio" name="recorrencia" value="dias específicos">dias específicos</label></div>
+            <h3>Ritmo, lembretes e etiquetas</h3>
+            <div class="figma-meta-row"><span>Ritmo</span><label class="choice-chip mint"><input type="radio" name="recorrencia" value="mensal" checked>mensal</label><label class="choice-chip"><input type="radio" name="recorrencia" value="após conclusão">após conclusão</label><label class="choice-chip"><input type="radio" name="recorrencia" value="dias específicos">dias específicos</label></div>
             <div class="figma-meta-row"><span>Lembretes</span><label class="choice-chip warm"><input type="radio" name="lembrete" value="30 min antes" checked>30 min antes</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="no horário">no horário</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="múltiplos">múltiplos</label></div>
             <div class="figma-meta-row"><span>Tags</span><label class="choice-chip"><input type="checkbox" name="tags" value="#cliente" checked>#cliente</label><label class="choice-chip"><input type="checkbox" name="tags" value="#apresentação" checked>#apresentação</label></div>
           </section>
 
           <section class="card figma-task-submit-card">
             <button class="button primary full" type="submit">Salvar alterações</button>
-            <a class="button secondary full" href="tasks.html">Cancelar</a>
-            <button class="button danger full" type="button" id="deleteTask">Excluir</button>
+            <a class="button secondary full" href="tasks.html">Voltar sem salvar</a>
+            <button class="button danger full" type="button" id="deleteTask">Excluir tarefa</button>
           </section>
         </form>
       </main>
@@ -85,4 +86,3 @@ Ajustar gráficos</textarea>
     </div>
   </body>
 </html>
-

@@ -40,10 +40,10 @@
   function settingLabel(key) {
     var labels = {
       pausasInteligentes: "pausas inteligentes",
-      checkinDiario: "check-in diario",
+      checkinDiario: "check-in diário",
       modoDificil: "modo protetivo"
     };
-    return labels[key] || "preferencia";
+    return labels[key] || "preferência";
   }
 
   function downloadText(fileName, content) {
@@ -90,7 +90,7 @@
       node.textContent = "foco leve · " + (data.focoPadrao || 25) + " min";
     });
     qsa("[data-reminder-count]").forEach(function (node) {
-      node.textContent = reminders + " lembretes ativos";
+      node.textContent = reminders + " apoios ativos";
     });
     qsa("[data-setting-key]").forEach(function (node) {
       var key = node.dataset.settingKey;
@@ -101,9 +101,9 @@
     qsa("[data-toggle-setting]").forEach(function (button) {
       var key = button.dataset.toggleSetting;
       var active = data[key] !== false;
-      button.textContent = "Editar";
+      button.textContent = "Ajustar";
       button.setAttribute("aria-pressed", String(active));
-      button.setAttribute("aria-label", "Editar " + settingLabel(key) + ". Estado atual: " + (active ? "ativo" : "pausado"));
+      button.setAttribute("aria-label", "Ajustar " + settingLabel(key) + ". Estado atual: " + (active ? "ativo" : "pausado"));
       var card = button.closest(".setting-card");
       if (card) card.classList.toggle("just-updated", key === lastSettingKey);
     });
@@ -121,18 +121,18 @@
 
   function reminderDefaults() {
     return [
-      { id: "demo-checkin", title: "Check-in", body: "08:30 em dias úteis. Se passar do horário, o aviso volta mais leve à tarde.", time: "08:30", active: true, label: "Ver painel", badge: "ativo hoje" },
-      { id: "demo-break", title: "Pausas inteligentes", body: "Depois de foco longo. Em energia baixa, aparece antes.", time: "15:30", active: true, label: "Ver micro pausas", badge: "baseado no contexto" },
-      { id: "demo-habits", title: "Hábitos", body: "Hidratação perto das 15h, com tom leve quando a meta já foi feita.", time: "15:00", active: true, label: "Ver histórico", badge: "flexível" },
-      { id: "demo-silent", title: "Modo silencioso", body: "20:00 às 07:00. Reduz avisos e protege descanso.", time: "20:00", active: true, label: "Ver foco", badge: "ativo" }
+      { id: "demo-checkin", title: "Check-in", body: "08:30 em dias úteis. Se passar do horário, o aviso volta mais leve à tarde.", time: "08:30", active: true, label: "Ver meu dia", badge: "ativo hoje" },
+      { id: "demo-break", title: "Pausas inteligentes", body: "Depois de foco longo. Se a energia cair, aparece mais cedo.", time: "15:30", active: true, label: "Ver pausas", badge: "mais leve" },
+      { id: "demo-habits", title: "Hábitos", body: "Hidratação perto das 15h, com tom leve quando a meta já foi feita.", time: "15:00", active: true, label: "Ver cuidados", badge: "sem cobrança" },
+      { id: "demo-silent", title: "Modo silencioso", body: "20:00 às 07:00. Reduz avisos e protege descanso.", time: "20:00", active: true, label: "Ver foco", badge: "silencioso à noite" }
     ];
   }
 
   function reminderPanelLabel(item) {
-    if (item.title === "Pausas inteligentes") return "Ver micro pausas";
-    if (item.title === "Hábitos") return "Ver histórico";
+    if (item.title === "Pausas inteligentes") return "Ver pausas";
+    if (item.title === "Hábitos") return "Ver cuidados";
     if (item.title === "Modo silencioso") return "Ver foco";
-    return "Ver painel";
+    return "Ver meu dia";
   }
 
   function reminderRoute(item) {
@@ -145,19 +145,19 @@
   function renderReminders() {
     var list = Storage.all(Storage.KEYS.reminders);
     var activeCount = list.filter(function (item) { return item.active !== false; }).length;
-    qs("[data-reminder-total]").textContent = activeCount + " lembretes ativos";
+    qs("[data-reminder-total]").textContent = activeCount + " apoios ativos";
     if (!list.length) {
       qs("#reminderList").innerHTML = [
         '<article class="reminder-empty-state">',
-        "<h2>Nenhum lembrete criado ainda</h2>",
+        "<h2>Nenhum apoio criado ainda</h2>",
         "<p>Crie um aviso simples para apoiar sua rotina sem pressão.</p>",
-        '<button class="button primary" type="button" data-open-reminder-form>Criar lembrete</button>',
+        '<button class="button primary" type="button" data-open-reminder-form>Criar apoio</button>',
         "</article>"
       ].join("");
       return;
     }
     qs("#reminderList").innerHTML = list.slice(0, 4).map(function (item) {
-      var statusLabel = item.active === false ? "pausado" : "ativo";
+      var statusLabel = item.active === false ? "pausado" : (item.badge || "ativo hoje");
       var toggleLabel = item.active === false ? "Ativar" : "Pausar";
       var routeLabel = reminderPanelLabel(item);
       return [
@@ -166,9 +166,9 @@
         '<h3>' + h(item.title) + "</h3>",
         '<p><strong>' + h(item.time || "09:00") + '</strong> ' + h(item.body) + "</p>",
         "</div>",
-        '<button class="chip reminder-state-chip ' + (item.active === false ? "is-paused" : "is-active") + '" type="button" data-toggle-reminder="' + h(item.id) + '">' + h(statusLabel === "ativo" ? "ativo hoje" : statusLabel) + "</button>",
+        '<button class="chip reminder-state-chip ' + (item.active === false ? "is-paused" : "is-active") + '" type="button" data-toggle-reminder="' + h(item.id) + '">' + h(statusLabel) + "</button>",
         '<div class="reminder-card-actions">',
-        '<button type="button" data-edit-reminder="' + h(item.id) + '">Editar</button>',
+        '<button type="button" data-edit-reminder="' + h(item.id) + '">Ajustar apoio</button>',
         '<a href="' + h(reminderRoute(item)) + '">' + h(routeLabel) + "</a>",
         '<button class="reminder-danger-link" type="button" data-remove-reminder="' + h(item.id) + '">Remover</button>',
         '<span class="sr-only">' + h(toggleLabel) + " lembrete</span>",
@@ -514,7 +514,7 @@
       if (editSettings) {
         var current = settings();
         var profileValues = await Utils.editDialog({
-          title: "Editar perfil",
+          title: "Ajustar perfil",
           body: "Esse nome aparece nas telas de rotina e nos lembretes salvos neste aparelho.",
           fields: [
             { name: "nome", label: "Nome", value: current.nome || "Luana Caroline", required: true }
@@ -532,7 +532,7 @@
       if (editFocus) {
         var focusSettings = settings();
         var focusValues = await Utils.editDialog({
-          title: "Editar foco preferido",
+          title: "Ajustar foco preferido",
           body: "Escolha uma duração confortável para começar rápido sem configurar tudo de novo.",
           fields: [
             { name: "focoPadrao", label: "Duração em minutos", type: "number", min: 5, max: 120, value: focusSettings.focoPadrao || 25, required: true, help: "Use entre 5 e 120 minutos." }
@@ -542,7 +542,7 @@
         if (!focusValues) return;
         var nextFocus = Number(focusValues.focoPadrao || focusSettings.focoPadrao || 25);
         Storage.write(Storage.KEYS.settings, Object.assign({}, focusSettings, { focoPadrao: Math.max(5, Math.min(120, nextFocus)) }));
-        Utils.notify("Configuração alterada. Foco padrão atualizado.", { kind: "success" });
+        Utils.notify("Foco preferido atualizado.", { kind: "success" });
         initSettingsPage();
       }
 
@@ -553,17 +553,17 @@
         data[key] = !data[key];
         lastSettingKey = key;
         Storage.write(Storage.KEYS.settings, data);
-        Utils.notify(data[key] === false ? "Preferência pausada. O cartão foi atualizado." : "Preferência ativada. O cartão foi atualizado.", { kind: data[key] === false ? "warning" : "success" });
+        Utils.notify(data[key] === false ? "Ajuste pausado. O cartão foi atualizado." : "Ajuste ativado. O cartão foi atualizado.", { kind: data[key] === false ? "warning" : "success" });
         initSettingsPage();
       }
 
       var clearLocal = event.target.closest("[data-clear-local]");
       if (clearLocal) {
         var clearConfirmed = await Utils.confirmAction({
-          title: "Apagar tudo?",
+          title: "Apagar dados deste aparelho?",
           body: "Isso apaga check-ins, tarefas, hábitos, diário e sessões salvas neste navegador.",
           cancelLabel: "Manter dados",
-          confirmLabel: "Apagar tudo",
+          confirmLabel: "Apagar dados",
           danger: true
         });
         if (!clearConfirmed) return;
@@ -578,7 +578,7 @@
         var quickReminderItem = { id: Utils.uid("reminder"), title: parts[0], body: parts[1], time: parts[2], active: true, createdAt: new Date().toISOString() };
         Storage.add(Storage.KEYS.reminders, quickReminderItem);
         lastReminderId = quickReminderItem.id;
-        Utils.notify("Lembrete criado.", { kind: "success" });
+        Utils.notify("Apoio salvo na sua rotina.", { kind: "success" });
         renderReminders();
       }
 
@@ -597,10 +597,10 @@
         var reminder = Storage.find(Storage.KEYS.reminders, editReminder.dataset.editReminder);
         if (!reminder) return;
         var reminderValues = await Utils.editDialog({
-          title: "Editar lembrete",
-          body: "Os lembretes ficam salvos neste aparelho e podem ser pausados quando quiser.",
+          title: "Ajustar apoio",
+          body: "Esse apoio fica salvo neste aparelho e pode ser pausado quando quiser.",
           fields: [
-            { name: "title", label: "Título do lembrete", value: reminder.title || "", required: true },
+            { name: "title", label: "Nome do apoio", value: reminder.title || "", required: true },
             { name: "body", label: "Mensagem", value: reminder.body || "", required: true },
             { name: "time", label: "Horário", type: "time", value: reminder.time || "09:00" }
           ],
@@ -609,7 +609,7 @@
         if (!reminderValues) return;
         Storage.update(Storage.KEYS.reminders, reminder.id, { title: reminderValues.title, body: reminderValues.body, time: reminderValues.time || reminder.time || "09:00" });
         lastReminderId = reminder.id;
-        Utils.notify("Lembrete editado.", { kind: "success" });
+        Utils.notify("Lembrete ajustado.", { kind: "success" });
         renderReminders();
       }
 
@@ -618,7 +618,7 @@
         var item = Storage.find(Storage.KEYS.reminders, toggleReminder.dataset.toggleReminder);
         if (item) Storage.update(Storage.KEYS.reminders, item.id, { active: item.active === false });
         if (item) lastReminderId = item.id;
-        if (item) Utils.notify(item.active === false ? "Lembrete ativado." : "Lembrete pausado.", { kind: item.active === false ? "success" : "warning" });
+        if (item) Utils.notify(item.active === false ? "Apoio ativado." : "Apoio pausado.", { kind: item.active === false ? "success" : "warning" });
         renderReminders();
       }
 
@@ -789,14 +789,14 @@
       if (removeReminder) {
         var removeReminderConfirmed = await Utils.confirmAction({
           title: "Remover lembrete?",
-          body: "Esse lembrete deixa de aparecer, mas você pode criar outro quando quiser.",
+          body: "Esse apoio deixa de aparecer, mas você pode criar outro quando quiser.",
           cancelLabel: "Cancelar",
           confirmLabel: "Remover",
           danger: true
         });
         if (!removeReminderConfirmed) return;
         Storage.remove(Storage.KEYS.reminders, removeReminder.dataset.removeReminder);
-        Utils.notify("Lembrete removido.", { kind: "warning" });
+        Utils.notify("Apoio removido.", { kind: "warning" });
         renderReminders();
       }
     });
@@ -813,7 +813,7 @@
         reminderForm.reset();
         var createShell = reminderForm.closest("[data-reminder-create-shell]");
         if (createShell) createShell.open = false;
-        Utils.notify("Lembrete criado.", { kind: "success" });
+        Utils.notify("Apoio salvo na sua rotina.", { kind: "success" });
         renderReminders();
       }
 
@@ -841,8 +841,8 @@
           data: new Date().toISOString(),
           tags: String(night.get("tags") || "").split(",").map(function (tag) { return tag.trim(); }).filter(Boolean)
         });
-        Storage.write("journalReturnMessage", { message: "Diário rápido salvo. Diário atualizado.", kind: "success", at: new Date().toISOString() });
-        Utils.notify("Diário rápido salvo. Diário atualizado.", { kind: "success" });
+        Storage.write("journalReturnMessage", { message: "Fechamento salvo. Diário atualizado.", kind: "success", at: new Date().toISOString() });
+        Utils.notify("Fechamento salvo. Diário atualizado.", { kind: "success" });
         window.setTimeout(function () { window.location.href = "journal.html?status=night-saved"; }, 300);
       }
 

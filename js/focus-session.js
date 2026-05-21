@@ -12,7 +12,15 @@
     var remaining = Math.max(totalSeconds - elapsed, 0);
     var minutes = Math.floor(remaining / 60);
     var seconds = remaining % 60;
-    Utils.setText("#sessionTimer", String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0"));
+    var label = String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+    var timer = Utils.qs("#sessionTimer");
+    var timerText = Utils.qs("#sessionTimerText");
+    if (timerText) Utils.setText("#sessionTimerText", label);
+    else Utils.setText("#sessionTimer", label);
+    if (timer) {
+      timer.dataset.timerText = label;
+      timer.setAttribute("aria-label", "Tempo restante: " + label);
+    }
     if (remaining <= 0) finish(true);
   }
 

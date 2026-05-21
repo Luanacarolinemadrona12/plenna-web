@@ -144,6 +144,16 @@
     });
   }
 
+  function ensureComfortableTaskFields() {
+    var form = Utils.qs("#taskForm");
+    if (!form) return;
+    Utils.qsa('textarea[name="descricao"]', form).forEach(function (field) {
+      field.style.setProperty("min-height", "72px", "important");
+      field.style.setProperty("height", "72px", "important");
+      field.style.setProperty("max-height", "none", "important");
+    });
+  }
+
   function ensurePriorityDefault() {
     var form = Utils.qs("#taskForm");
     if (!form) return;
@@ -246,7 +256,14 @@
   function ensureSubtaskEditor() {
     var form = Utils.qs("#taskForm");
     var card = Utils.qs(".figma-subtasks-card");
-    if (!form || !card || Utils.qs("#newSubtaskInput", card)) return;
+    if (!form || !card) return;
+    var storedSubtasks = subtaskTextarea(form);
+    if (storedSubtasks) {
+      storedSubtasks.hidden = true;
+      storedSubtasks.tabIndex = -1;
+      storedSubtasks.setAttribute("aria-hidden", "true");
+    }
+    if (Utils.qs("#newSubtaskInput", card)) return;
     card.insertAdjacentHTML("beforeend", [
       '<div class="subtask-add-row">',
       '<label class="visually-hidden" for="newSubtaskInput">Nova subtarefa</label>',
@@ -258,11 +275,24 @@
       var remove = event.target.closest("[data-subtask-remove]");
       if (remove) {
         var items = readSubtasks(form);
-        items.splice(Number(remove.dataset.subtaskRemove), 1);
+        var removedIndex = Number(remove.dataset.subtaskRemove);
+        var removedItem = items[removedIndex];
+        items.splice(removedIndex, 1);
         writeSubtasks(form, items);
         renderSubtasks();
         renderPreview();
-        Utils.notify("Subtarefa removida.", { kind: "warning" });
+        Utils.notify("Subtarefa removida.", {
+          kind: "warning",
+          actionLabel: "Desfazer",
+          onAction: function () {
+            var nextItems = readSubtasks(form);
+            nextItems.splice(Math.min(removedIndex, nextItems.length), 0, removedItem);
+            writeSubtasks(form, nextItems);
+            renderSubtasks();
+            renderPreview();
+            Utils.notify("Subtarefa restaurada.", { kind: "success" });
+          }
+        });
         return;
       }
       if (!event.target.closest("#addSubtaskButton")) return;
@@ -397,6 +427,7 @@
 
     ensurePreview();
     ensurePreventionHints();
+    ensureComfortableTaskFields();
     ensurePriorityDefault();
     ensureRecognitionCards();
 

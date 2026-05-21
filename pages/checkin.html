@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Check-in | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js?v=20260520-energy-rules" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../js/data.js" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/checkin.js?v=20260520-checkin-energy" defer></script>
+    <script src="../js/checkin.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="home" data-screen="checkin">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page checkin-page">
         <header class="page-header figma-topbar">
-          <h1>Check-in diário</h1>
-          <p>Seu estado ajusta tela inicial, foco e planejamento.</p>
+          <h1>Como você está agora?</h1>
+          <p>Responda uma pergunta por vez. O Plenna adapta seu dia com cuidado.</p>
           <div class="ux-stepper" aria-label="Progresso do check-in">
             <span class="active"></span>
             <span></span>
@@ -29,15 +29,16 @@
           </div>
         </header>
 
-        <form class="form" id="checkinForm">
+        <form class="form" id="checkinForm" aria-describedby="checkinRequiredNote">
+          <p class="form-required-note" id="checkinRequiredNote">Obrigatório para salvar: escolha como você chega e qual apoio combina com hoje.</p>
           <section class="card checkin-card mood-card" data-checkin-step="1">
-            <h2>Como você está se sentindo?</h2>
-            <p>Ajuda a ajustar suas recomendações.</p>
+            <h2>Como você chega agora?</h2>
+            <p>Escolha o que mais parece com este momento.</p>
             <div class="choice-grid" id="humorChoices"></div>
           </section>
 
           <section class="card checkin-card energy-card" data-checkin-step="2">
-            <h2>Nível de energia</h2>
+            <h2>Quanta energia você tem?</h2>
             <input id="energyRange" type="range" min="1" max="10" value="7" aria-label="Nível de energia">
             <input id="energyValue" name="energia" type="hidden" value="media">
             <p id="energyLabel">7 / 10 · energia média-alta</p>
@@ -45,28 +46,28 @@
           </section>
 
           <section class="card checkin-card factor-card" data-checkin-step="3">
-            <h2>O que influenciou seu humor?</h2>
-            <p>Marque apenas o que fez diferença hoje.</p>
+            <h2>O que pesou ou ajudou?</h2>
+            <p>Marque só o que fez diferença.</p>
             <div class="choice-grid two" id="factorChoices"></div>
           </section>
 
           <section class="card checkin-card need-card" data-checkin-step="4">
-            <h2>O que você precisa hoje?</h2>
-            <p>Escolha uma necessidade para guiar as próximas ações.</p>
+            <h2>O que te ajudaria hoje?</h2>
+            <p>Escolha um apoio para guiar o próximo passo.</p>
             <div class="choice-grid" id="needChoices"></div>
           </section>
 
           <div class="checkin-actions">
             <div class="checkin-step-actions">
               <button class="button secondary" type="button" id="checkinBack">Voltar</button>
-              <button class="button primary" type="button" id="checkinNext">Continuar</button>
+              <button class="button primary" type="button" id="checkinNext">Continuar com calma</button>
             </div>
             <button class="button primary full" type="submit" id="checkinSubmit" hidden>Salvar check-in</button>
             <div class="checkin-secondary-actions">
               <button class="button secondary" type="button" id="skipCheckin">Pular por hoje</button>
-              <a class="button secondary" href="home.html">Cancelar</a>
+              <a class="button secondary" href="home.html">Voltar ao dia</a>
             </div>
-            <p class="checkin-skip-note">A Home e o Foco não serão ajustados pelo seu estado de hoje.</p>
+            <p class="checkin-skip-note">Se pular, tudo bem: você ainda pode usar o Plenna sem adaptar o dia.</p>
           </div>
         </form>
       </main>
@@ -74,4 +75,3 @@
     </div>
   </body>
 </html>
-

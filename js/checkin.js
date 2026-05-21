@@ -9,11 +9,11 @@
   var editingTodayCheckin = null;
 
   var moodLabel = {
-    sensivel: "Péssimo",
-    ruim: "Ruim",
+    sensivel: "Muito sensível",
+    ruim: "Cansada",
     neutro: "Neutro",
     bom: "Bem",
-    otimo: "Ótimo"
+    otimo: "Ótima"
   };
   var moodEmoji = {
     sensivel: "😢",
@@ -80,7 +80,7 @@
 
     if (editingTodayCheckin) Storage.replace(Storage.KEYS.checkins, checkin);
     else Storage.add(Storage.KEYS.checkins, checkin);
-    Utils.notify(editingTodayCheckin ? "Check-in atualizado. Seu plano foi ajustado." : "Check-in salvo. Seu plano foi atualizado.", { kind: "success" });
+    Utils.notify(editingTodayCheckin ? "Check-in atualizado. Vamos adaptar seu dia com mais cuidado." : "Check-in salvo. Vamos adaptar seu dia com mais cuidado.", { kind: "success" });
     window.setTimeout(function () {
       window.location.href = "checkin-success.html";
     }, 350);
@@ -89,7 +89,7 @@
   async function skipCheckin() {
     var confirmed = await Utils.confirmAction({
       title: "Pular check-in por hoje?",
-      body: "A Home e o Foco não serão ajustados pelo seu estado de hoje. Você ainda pode usar o app, mas as recomendações ficam menos personalizadas.",
+      body: "Tudo bem pular agora. A Home e o Foco seguem disponíveis, só ficam menos adaptados ao seu momento.",
       cancelLabel: "Voltar",
       confirmLabel: "Pular por hoje",
       danger: false
@@ -103,10 +103,10 @@
   }
 
   function stepLabel(step) {
-    if (step === 1) return "1 de 4 · humor";
+    if (step === 1) return "1 de 4 · como você chega";
     if (step === 2) return "2 de 4 · energia";
-    if (step === 3) return "3 de 4 · fatores";
-    return "4 de 4 · necessidade";
+    if (step === 3) return "3 de 4 · contexto";
+    return "4 de 4 · apoio";
   }
 
   function updateProgress(step) {
@@ -135,16 +135,17 @@
     var summary = Utils.qs("#checkinSummary");
     if (summary) summary.hidden = currentStep !== totalSteps;
     updateProgress(currentStep);
+    updateGentleFeedback();
     updateCheckinSummary();
   }
 
   function validateStep(step) {
     if (step === 1 && !Utils.qs("input[name='humor']:checked")) {
-      Utils.showError("Escolha como você está se sentindo para continuar.");
+      Utils.showError("Escolha como você chega agora para continuar.");
       return false;
     }
     if (step === 4 && !Utils.qs("input[name='necessidade']:checked")) {
-      Utils.showError("Escolha uma necessidade para salvar o check-in.");
+      Utils.showError("Escolha um apoio para salvar o check-in.");
       return false;
     }
     return true;
@@ -212,14 +213,32 @@
       '<section class="card recognition-card checkin-summary-card" id="checkinSummary" aria-live="polite" hidden>',
       '<span class="recognition-label">Resumo antes de salvar</span>',
       '<div class="recognition-grid">',
-      '<span><small>Humor escolhido</small><strong id="checkinSummaryMood">Bem</strong></span>',
+      '<span><small>Como você chega</small><strong id="checkinSummaryMood">Bem</strong></span>',
       '<span><small>Energia</small><strong id="checkinSummaryEnergy">7/10</strong></span>',
-      '<span><small>Necessidade</small><strong id="checkinSummaryNeed">Organização</strong></span>',
+      '<span><small>Apoio de hoje</small><strong id="checkinSummaryNeed">Organização</strong></span>',
       "</div>",
-      '<p>Seu plano, a Home e o Foco usam essas escolhas de hoje.</p>',
+      '<p>A Home, o Foco e o Planejamento usam isso para aliviar o próximo passo.</p>',
       "</section>"
     ].join("");
     if (actions) actions.insertAdjacentHTML("beforebegin", html);
+  }
+
+  function ensureStepFeedback() {
+    var actions = Utils.qs(".checkin-actions");
+    if (!actions || Utils.qs("#checkinGentleFeedback")) return;
+    actions.insertAdjacentHTML("beforebegin", '<p class="checkin-gentle-feedback" id="checkinGentleFeedback" aria-live="polite">Vamos uma pergunta por vez.</p>');
+  }
+
+  function updateGentleFeedback() {
+    var node = Utils.qs("#checkinGentleFeedback");
+    if (!node) return;
+    var messages = {
+      1: "Vamos uma pergunta por vez.",
+      2: "Entendi. Agora vamos olhar para a sua energia.",
+      3: "Tudo bem ir no seu ritmo. Marque só o que fez diferença.",
+      4: "Último passo: escolha o apoio que mais combina com hoje."
+    };
+    node.textContent = messages[currentStep] || "Vamos adaptar seu dia com calma.";
   }
 
   function selectedChoiceText(input) {
@@ -233,9 +252,9 @@
     var mood = Utils.qs("input[name='humor']:checked");
     var energy = Number(Utils.qs("#energyRange").value || 7);
     var need = Utils.qs("input[name='necessidade']:checked");
-    Utils.setText("#checkinSummaryMood", mood ? moodLabel[mood.value] || mood.value : "Escolha o humor");
+    Utils.setText("#checkinSummaryMood", mood ? moodLabel[mood.value] || mood.value : "Escolha como você chega");
     Utils.setText("#checkinSummaryEnergy", energy + "/10");
-    Utils.setText("#checkinSummaryNeed", need ? selectedChoiceText(need) : "Escolha uma necessidade");
+    Utils.setText("#checkinSummaryNeed", need ? selectedChoiceText(need) : "Escolha um apoio");
   }
 
   function todayCheckin() {
@@ -265,6 +284,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderOptions();
     ensureCheckinSummary();
+    ensureStepFeedback();
     restoreTodayCheckin();
     updateEnergy();
     Utils.qs("#energyRange").addEventListener("input", function (event) {

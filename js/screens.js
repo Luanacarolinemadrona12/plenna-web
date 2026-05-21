@@ -62,12 +62,14 @@
     }).join("") + "</nav>";
   }
 
-  function emptyState(title, body, action, href) {
+  function emptyState(title, body, action, href, variant) {
+    var actionHref = href && href !== "#" ? href : "";
+    var actionClass = variant === "secondary" ? "button small secondary" : "button small primary";
     return [
       '<section class="empty-state proto-empty ux-empty">',
       "<h3>" + h(title) + "</h3>",
       "<p>" + h(body) + "</p>",
-      action ? '<a class="button small primary" href="' + (href || "#") + '">' + h(action) + "</a>" : "",
+      action && actionHref ? '<a class="' + actionClass + '" href="' + h(actionHref) + '">' + h(action) + "</a>" : "",
       "</section>"
     ].join("");
   }
@@ -130,7 +132,7 @@
       "<h2>" + h(title) + "</h2>",
       "<p>" + h(body) + "</p>",
       '<div class="planning-metrics"><span><strong>Antes</strong><small>Foco 09h + tarefa pesada hoje</small></span><span><strong>Depois</strong><small>Foco 10h + pausa protegida</small></span></div>',
-      '<div class="row"><button class="button primary" type="button" data-save-adjust>Salvar</button><a class="button secondary" href="planning.html">Cancelar</a></div>',
+      '<div class="row"><button class="button primary" type="button" data-save-adjust>Salvar</button><a class="button secondary" href="planning.html">Voltar ao plano</a></div>',
       "</section>",
       '<section class="planning-block-card minimal-adjust-schedule"><h2>Novo cronograma</h2><p>Os blocos indicam o que foi movido, protegido ou reduzido.</p>',
       scheduleBlock("09:00", "Rotina leve de início", "Responder 2 pendências pequenas antes do foco.", "reduzido"),
@@ -233,7 +235,7 @@
   function focusSession() {
     return [
       topbar("Foco em sessão", "Mantenha uma coisa por vez."),
-      '<section class="focus-timer-cluster session-active"><div class="timer" id="sessionTimer">25:00</div><p id="sessionMode">Foco leve</p><strong class="focus-session-status" id="sessionStatus">Preparando foco</strong><div class="focus-controls"><a class="focus-control secondary" href="focus.html">' + icon("reset", "control-icon") + '<span class="focus-control-label">Voltar</span></a><button class="focus-control primary" id="sessionStart" type="button">' + icon("play", "control-icon") + '<span class="focus-control-label">Iniciar</span></button><button class="focus-control primary" id="sessionPause" type="button" hidden>' + icon("pause", "control-icon") + '<span class="focus-control-label">Pausar</span></button><button class="focus-control secondary" id="sessionFinish" type="button">' + icon("check", "control-icon") + '<span class="focus-control-label">Concluir</span></button><button class="focus-control secondary" id="sessionSkip" type="button">' + icon("skip", "control-icon") + '<span class="focus-control-label">Encerrar</span></button></div></section>',
+      '<section class="focus-timer-cluster session-active"><div class="timer" id="sessionTimer" aria-live="polite" aria-label="Tempo restante: 25:00" data-timer-text="25:00"><strong id="sessionTimerText">25:00</strong></div><p id="sessionMode">Foco leve</p><strong class="focus-session-status" id="sessionStatus">Preparando foco</strong><div class="focus-controls"><a class="focus-control secondary" href="focus.html">' + icon("reset", "control-icon") + '<span class="focus-control-label">Voltar</span></a><button class="focus-control primary" id="sessionStart" type="button">' + icon("play", "control-icon") + '<span class="focus-control-label">Iniciar</span></button><button class="focus-control primary" id="sessionPause" type="button" hidden>' + icon("pause", "control-icon") + '<span class="focus-control-label">Pausar</span></button><button class="focus-control secondary" id="sessionFinish" type="button">' + icon("check", "control-icon") + '<span class="focus-control-label">Concluir</span></button><button class="focus-control secondary" id="sessionSkip" type="button">' + icon("skip", "control-icon") + '<span class="focus-control-label">Encerrar</span></button></div></section>',
       '<section class="focus-task-card card"><h2>Tarefa em foco</h2><h3 id="sessionTaskTitle">Preparar apresentação Q2</h3><p id="sessionTaskMeta">Alta prioridade · esforço médio · foco protegido</p></section>'
     ].join("");
   }
@@ -257,7 +259,7 @@
     return [
       topbar("Notas conectadas", "Ideias podem virar tarefa, hábito ou aprendizado."),
       '<form class="card form proto-form" data-local-form="note"><label class="field"><span>Título da nota</span><input name="titulo" required placeholder="Ex.: Ideia rápida"></label><label class="field"><span>Conteúdo</span><textarea name="conteudo" required></textarea></label><button class="button primary full" type="submit">Adicionar nota</button><a class="button secondary full" href="more.html">Cancelar</a></form>',
-      data.length ? '<section class="content-list">' + data.map(function (entry) { return '<article class="journal-entry" data-entry-id="' + h(entry.id) + '"><strong>Nota</strong><h3>' + icon("note", "journal-title-icon") + h(entry.titulo) + '</h3><p>' + h(entry.conteudo) + '</p><div class="journal-actions"><button type="button" data-note-task="' + h(entry.id) + '">Virar tarefa</button><button type="button" data-note-habit="' + h(entry.id) + '">Virar hábito</button></div></article>'; }).join("") + "</section>" : emptyState("Seu diário ainda está vazio", "Crie uma nota rápida para conectar ideias, tarefas e hábitos quando algo aparecer.", "Adicionar nota", "#")
+      data.length ? '<section class="content-list">' + data.map(function (entry) { return '<article class="journal-entry" data-entry-id="' + h(entry.id) + '"><strong>Nota</strong><h3>' + icon("note", "journal-title-icon") + h(entry.titulo) + '</h3><p>' + h(entry.conteudo) + '</p><div class="journal-actions"><button type="button" data-note-task="' + h(entry.id) + '">Virar tarefa</button><button type="button" data-note-habit="' + h(entry.id) + '">Virar hábito</button></div></article>'; }).join("") + "</section>" : emptyState("Seu diário ainda está vazio", "Use o formulário acima para conectar ideias, tarefas e hábitos quando algo aparecer.", "", "")
     ].join("");
   }
 
@@ -406,7 +408,7 @@
       figmaCard("Insight", "Notas ficam mais úteis quando recebem um próximo passo claro.", '<form class="figma-inline-form" data-local-form="note"><label class="field"><span>Título da nota</span><input name="titulo" required placeholder="Título da nota"></label><label class="field"><span>Texto da nota</span><textarea name="conteudo" required placeholder="Escreva uma nota rápida"></textarea></label><button class="button primary full" type="submit">Adicionar nota</button><a class="button secondary full" href="more.html">Cancelar</a></form>', "figma-note-card insight"),
       data.length ? '<section class="figma-note-history">' + data.map(function (entry) {
         return figmaLine(entry.titulo, entry.conteudo, (entry.tags || []).slice(0, 2).map(function (tag) { return chip(tag); }).join(""), '<button class="figma-mini-action" type="button" data-note-task="' + h(entry.id) + '">Virar tarefa</button>');
-      }).join("") + "</section>" : emptyState("Seu diário ainda está vazio", "Crie uma nota rápida para conectar ideias, tarefas e hábitos quando algo aparecer.", "Adicionar nota", "#")
+      }).join("") + "</section>" : emptyState("Seu diário ainda está vazio", "Use o formulário acima para conectar ideias, tarefas e hábitos quando algo aparecer.", "", "")
     ].join(""), "notes-template");
   }
 
@@ -560,7 +562,7 @@
       '<section class="figma-reminder-list">' + (list.length ? list.map(function (item) {
         return figmaLine(item.title, item.body + " · " + (item.time || "09:00"), chip(item.active === false ? "pausado" : "ativo"), '<div class="figma-reminder-actions"><button type="button" data-toggle-reminder="' + h(item.id) + '">' + h(item.active === false ? "Ativar" : "Pausar") + '</button><button type="button" data-edit-reminder="' + h(item.id) + '">Editar</button><button type="button" data-remove-reminder="' + h(item.id) + '">Remover</button></div>');
       }).join("") : emptyState("Nenhum lembrete criado ainda", "Crie um lembrete simples para receber aviso antes de uma pausa, tarefa ou check-in.", "Adicionar abaixo", "#")) + "</section>",
-      '<form class="figma-inline-form figma-reminder-form" data-local-form="reminder"><h2>Novo lembrete</h2><input name="title" required placeholder="Título"><input name="body" required placeholder="Mensagem"><div class="grid-2"><input name="time" type="time" value="09:00"><select name="active"><option value="true">Ativo</option><option value="false">Pausado</option></select></div><button class="button primary full" type="submit">Adicionar lembrete</button><a class="button secondary full" href="more.html">Cancelar</a></form>'
+      '<form class="figma-inline-form figma-reminder-form" data-local-form="reminder"><h2>Novo apoio</h2><input name="title" required placeholder="Nome do apoio"><input name="body" required placeholder="Mensagem acolhedora"><div class="grid-2"><input name="time" type="time" value="09:00"><select name="active"><option value="true">Ativo</option><option value="false">Pausado</option></select></div><button class="button primary full" type="submit">Adicionar apoio</button><a class="button secondary full" href="more.html">Fechar criação</a></form>'
     ].join(""), "reminders-template");
   }
 
@@ -592,12 +594,12 @@
         ["Abrir diário", "journal.html"]
       ];
       var action = actions[index % actions.length];
-      return emptyState(state[0], state[1], action[0], action[1]);
+      return emptyState(state[0], state[1], action[0], action[1], index === 0 ? "primary" : "secondary");
     }).join("") + "</section>";
   }
 
   function onboarding() {
-    return '<section class="card hero-card"><div class="cover-title"><span class="leaf-mark"><img class="plenna-leaf" src="' + h(window.PlennaIcons ? window.PlennaIcons.leafImage() : "../assets/images/plenna-leaf.png") + '" alt=""></span><h1>Plenna</h1><p>Seu dia, com intenção e equilíbrio.</p></div><div class="content-list"><article class="list-item icon-list-item">' + icon("check", "inline-list-icon") + 'Gestão de tarefas e hábitos</article><article class="list-item icon-list-item">' + icon("focus", "inline-list-icon") + 'Modo foco com Pomodoro</article><article class="list-item icon-list-item">' + icon("heart", "inline-list-icon") + 'Check-in emocional diário</article></div><a class="button primary full" href="checkin.html">Começar</a><a class="button secondary full" href="home.html">Já tenho conta</a></section>';
+    return '<section class="card hero-card"><div class="cover-title"><span class="leaf-mark"><img class="plenna-leaf" src="' + h(window.PlennaIcons ? window.PlennaIcons.leafImage() : "../assets/images/plenna-leaf.png") + '" alt=""></span><h1>Plenna</h1><p>Um lugar calmo para escolher o essencial e seguir no seu ritmo.</p></div><div class="content-list"><article class="list-item icon-list-item">' + icon("check", "inline-list-icon") + 'Escolha o que cabe no dia</article><article class="list-item icon-list-item">' + icon("focus", "inline-list-icon") + 'Proteja pausas entre blocos</article><article class="list-item icon-list-item">' + icon("heart", "inline-list-icon") + 'Adapte a rotina ao seu momento</article></div><a class="button primary full" href="checkin.html">Começar check-in</a><a class="button secondary full" href="home.html">Entrar no meu dia</a></section>';
   }
 
   function prototypeLinks() {
@@ -641,8 +643,9 @@
       ["Humor baixo por vários dias", "Plano protetivo, diário antes do foco e pausa guiada.", "home.html?demo=protetivo", "focus.html?demo=protetivo", "protetivo"]
     ];
     return figmaShell("Ajustes do dia", "Veja como o check-in pode mudar Home, Planejamento e Foco.", [
-      '<section class="checkin-state-grid">' + states.map(function (state) {
-        return '<article class="figma-card checkin-state-card"><span class="eyebrow">' + h(state[4]) + "</span><h2>" + h(state[0]) + "</h2><p>" + h(state[1]) + '</p><div class="row"><a class="button primary" href="' + h(state[2]) + '">Ver Home</a><a class="button secondary" href="' + h(state[3]) + '">Ver Foco</a></div></article>';
+      '<section class="checkin-state-grid">' + states.map(function (state, index) {
+        var homeClass = index === 0 ? "button primary" : "button secondary";
+        return '<article class="figma-card checkin-state-card"><span class="eyebrow">' + h(state[4]) + "</span><h2>" + h(state[0]) + "</h2><p>" + h(state[1]) + '</p><div class="row"><a class="' + homeClass + '" href="' + h(state[2]) + '">Ver Home</a><a class="button secondary" href="' + h(state[3]) + '">Ver Foco</a></div></article>';
       }).join("") + "</section>",
       figmaCard("Escolha um contexto", "Use estes cenários quando quiser revisar como o Plenna adapta as sugestões do dia.", '<div class="chip-row">' + chip("energia alta") + chip("energia baixa") + chip("modo protetivo") + "</div>", "state-test-card")
     ].join(""), "checkin-states-template");
@@ -671,7 +674,7 @@
     var before = "Foco 09h + tarefa pesada hoje";
     var after = adjustment.cargaReduzida ? "Foco 10h + tarefa pesada amanhã" : adjustment.horarioTrocado ? "Foco 10h + rotina leve antes" : "Foco leve + pausa protegida";
     return figmaShell("Ajustar planejamento", "Edite carga, horário e pausas sem perder o contexto do check-in.", [
-      '<section class="figma-adjust-hero"><span class="eyebrow">AJUSTE DO DIA</span><h2>' + h(hasAdjust ? "Seu dia ficou mais realista." : "Escolha como o Plenna deve aliviar seu dia.") + '</h2><p>' + h(hasAdjust ? "As mudanças ficam salvas no navegador e alteram a sugestão do planejamento." : "Use ações pequenas para reduzir carga sem perder o que importa.") + '</p><div class="figma-compare-grid"><span><small>Antes</small><strong>' + h(before) + '</strong></span><span><small>Depois</small><strong>' + h(after) + '</strong></span></div><div class="row"><button class="button primary" type="button" data-save-adjust>Salvar</button><a class="button secondary" href="planning.html">Cancelar</a></div></section>',
+      '<section class="figma-adjust-hero"><span class="eyebrow">AJUSTE DO DIA</span><h2>' + h(hasAdjust ? "Seu dia ficou mais realista." : "Escolha como o Plenna deve aliviar seu dia.") + '</h2><p>' + h(hasAdjust ? "As mudanças ficam salvas no navegador e alteram a sugestão do planejamento." : "Use ações pequenas para reduzir carga sem perder o que importa.") + '</p><div class="figma-compare-grid"><span><small>Antes</small><strong>' + h(before) + '</strong></span><span><small>Depois</small><strong>' + h(after) + '</strong></span></div><div class="row"><button class="button primary" type="button" data-save-adjust>Salvar</button><a class="button secondary" href="planning.html">Voltar ao plano</a></div></section>',
       '<section class="figma-adjust-controls">' +
         '<button type="button" data-adjust-kind="horario"><strong>Trocar horário</strong><span>Move foco para depois da rotina.</span></button>' +
         '<button type="button" data-adjust-kind="carga"><strong>Reduzir carga</strong><span>Adia a tarefa mais pesada.</span></button>' +
@@ -867,7 +870,7 @@
         var actions = list.length ? '<div class="figma-reminder-actions"><button type="button" data-edit-reminder="' + h(id) + '">Editar</button><button type="button" data-toggle-reminder="' + h(id) + '">' + h(item.active === false ? "Ativar" : panelLabel) + '</button><button type="button" data-remove-reminder="' + h(id) + '">Remover</button></div>' : '<div class="figma-reminder-actions"><button type="button" data-quick-reminder="' + quick + '">Editar</button><button type="button" data-quick-reminder="' + quick + '">' + h(panelLabel) + "</button></div>";
         return figmaLine(item.title, item.body, chip(badge), actions);
       }).join("") + "</section>",
-      figmaCard("Lembretes conectados à sua rotina", "Os lembretes mudam com energia, hábitos pendentes, foco do dia e modo difícil. Eles sugerem, não pressionam.", '<div class="row"><a class="button primary" href="settings.html">Ver configurações</a><a class="button secondary" href="micro-pauses.html">Ver micro pausas</a></div><form class="figma-inline-form figma-reminder-form compact-reminder-form" data-local-form="reminder"><label class="field compact-field"><span>Nome do lembrete</span><input name="title" required placeholder="Novo lembrete"></label><label class="field compact-field"><span>Mensagem</span><input name="body" required placeholder="Mensagem acolhedora"></label><div class="grid-2"><label class="field compact-field"><span>Horário</span><input name="time" type="time" value="09:00"></label><label class="field compact-field"><span>Status</span><select name="active"><option value="true">Ativo</option><option value="false">Pausado</option></select></label></div><button class="button primary full" type="submit">Adicionar lembrete</button><a class="button secondary full" href="more.html">Cancelar</a></form>', "figma-reminder-connected")
+      figmaCard("Lembretes conectados à sua rotina", "Os apoios mudam com energia, hábitos pendentes, foco do dia e modo difícil. Eles sugerem, não pressionam.", '<div class="row"><a class="button primary" href="settings.html">Ver configurações</a><a class="button secondary" href="micro-pauses.html">Ver micro pausas</a></div><form class="figma-inline-form figma-reminder-form compact-reminder-form" data-local-form="reminder"><label class="field compact-field"><span>Nome do apoio</span><input name="title" required placeholder="Novo apoio"></label><label class="field compact-field"><span>Mensagem</span><input name="body" required placeholder="Mensagem acolhedora"></label><div class="grid-2"><label class="field compact-field"><span>Horário</span><input name="time" type="time" value="09:00"></label><label class="field compact-field"><span>Status</span><select name="active"><option value="true">Ativo</option><option value="false">Pausado</option></select></label></div><button class="button primary full" type="submit">Adicionar apoio</button><a class="button secondary full" href="more.html">Fechar criação</a></form>', "figma-reminder-connected")
     ].join(""), "reminders-template polished-template");
   }
 
@@ -1417,12 +1420,14 @@
       if (selectDay) {
         Storage.write("selectedCalendarDay", Number(selectDay.dataset.selectDay));
         root.innerHTML = screens[document.body.dataset.screen]();
+        Utils.notify("Dia selecionado no calendário.", { kind: "success" });
       }
 
       var selectWeekDay = event.target.closest("[data-select-week-day]");
       if (selectWeekDay) {
         Storage.write("selectedWeekDay", selectWeekDay.dataset.selectWeekDay);
         root.innerHTML = screens[document.body.dataset.screen]();
+        Utils.notify("Dia da semana selecionado.", { kind: "success" });
       }
 
       var dashboardPeriod = event.target.closest("[data-dashboard-period]");

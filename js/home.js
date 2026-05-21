@@ -15,7 +15,7 @@
   function renderHeader(data, checkin) {
     var settings = window.PlennaStorage.read(window.PlennaStorage.KEYS.settings, { nome: "Luana" });
     var firstName = String(settings.nome || "Luana").trim().split(/\s+/)[0] || "Luana";
-    Utils.setText("#homeGreeting", "Olá, " + firstName);
+    Utils.setText("#homeGreeting", checkin ? (data.careTitle || "Vamos cuidar do essencial") : ("Olá, " + firstName));
     Utils.setText("#homeDate", data.date);
     Utils.qs("#checkinChips").innerHTML = [
       '<span class="chip solid">' + Utils.escapeHtml(data.moodChip) + "</span>",
@@ -24,13 +24,25 @@
     ].join("");
   }
 
+  function renderCareNote(data, checkin) {
+    var note = Utils.qs("#homeCareNote");
+    if (!note) return;
+    var copy = data.careCopy || (checkin ? "Vamos cuidar do essencial sem apertar o ritmo." : "Um check-in rápido ajuda o Plenna a ajustar seu dia com mais cuidado.");
+    note.innerHTML = [
+      '<span class="eyebrow">Seu dia</span>',
+      '<strong>' + Utils.escapeHtml(data.careLead || "Vamos com calma.") + "</strong>",
+      "<p>" + Utils.escapeHtml(copy) + "</p>"
+    ].join("");
+  }
+
   function renderRecommendation(data) {
     Utils.qs("#recommendationCard").innerHTML = [
       '<span class="eyebrow">' + Utils.escapeHtml(data.actionTag) + "</span>",
       "<h2>" + Utils.escapeHtml(data.actionTitle) + "</h2>",
+      data.actionCopy ? "<p>" + Utils.escapeHtml(data.actionCopy) + "</p>" : "",
       '<div class="row">',
       '<a class="button primary" href="' + Utils.escapeHtml(data.primaryHref || "planning.html") + '">' + Utils.escapeHtml(data.primaryLabel || "Planejar meu dia") + "</a>",
-      '<button class="button secondary" type="button" data-home-action="start-focus">' + Utils.escapeHtml(data.secondaryLabel || "Iniciar foco") + "</button>",
+      data.secondaryHref ? '<a class="button secondary" href="' + Utils.escapeHtml(data.secondaryHref) + '">' + Utils.escapeHtml(data.secondaryLabel || "Iniciar foco") + "</a>" : '<button class="button secondary" type="button" data-home-action="start-focus">' + Utils.escapeHtml(data.secondaryLabel || "Iniciar foco") + "</button>",
       "</div>"
     ].join("");
   }
@@ -77,7 +89,7 @@
 
   function renderAppointment(data) {
     Utils.qs("#appointmentCard").innerHTML = [
-      "<h2>Próximo compromisso</h2>",
+      "<h2>Um ponto de cuidado</h2>",
       '<div class="appointment-row">',
       '<span class="appointment-time">' + Utils.escapeHtml(data.appointment.time) + "</span>",
       '<span class="appointment-title">' + Utils.escapeHtml(data.appointment.title) + "</span>",
@@ -146,8 +158,8 @@
     if (!shortcuts) return;
     shortcuts.innerHTML = [
       '<button class="shortcut home-action-shortcut" type="button" data-home-action="breathe">Respirar 3 min</button>',
-      '<a class="shortcut home-action-shortcut" href="journal-night.html">Diário rápido</a>',
-      '<a class="shortcut home-action-shortcut always-visible" href="planning.html">Planejar semana</a>'
+      '<a class="shortcut home-action-shortcut" href="journal-night.html">Fechar o dia</a>',
+      '<a class="shortcut home-action-shortcut always-visible" href="planning.html">Reorganizar com calma</a>'
     ].join("");
   }
 
@@ -250,6 +262,7 @@
     var data = Mood.home(checkin);
     setStateClass(Utils.qs("#homePage"), data);
     renderHeader(data, checkin);
+    renderCareNote(data, checkin);
     renderRecommendation(data);
     renderPriorities(data);
     renderAppointment(data);

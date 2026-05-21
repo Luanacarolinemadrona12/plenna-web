@@ -74,7 +74,7 @@
           '<label class="preset-card active">',
           "<span>" + Utils.escapeHtml(preset[0]) + "</span>",
           "<strong>" + Utils.escapeHtml(activeDuration) + "</strong>",
-          '<input class="sr-only" id="durationInput" type="number" min="1" max="120" value="' + Utils.escapeHtml(preset[2]) + '">',
+          '<input id="durationInput" type="hidden" value="' + Utils.escapeHtml(preset[2]) + '">',
           "</label>"
         ].join("");
       }

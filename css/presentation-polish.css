@@ -1,0 +1,1658 @@
+/*
+  Presentation polish layer.
+  This file is intentionally loaded last: it modernizes the finished product
+  without changing the stable HTML and JavaScript flows.
+*/
+
+:root {
+  --plenna-bg-app: #edf5f1;
+  --plenna-bg-page: #f8fbf9;
+  --plenna-bg-soft: #eef8f3;
+  --plenna-surface: #ffffff;
+  --plenna-surface-warm: #fff9ec;
+  --plenna-surface-sky: #eef8ff;
+  --plenna-surface-rose: #fff2ef;
+  --plenna-ink: #13231c;
+  --plenna-ink-2: #25362d;
+  --plenna-muted: #4d5f56;
+  --plenna-soft: #697a72;
+  --plenna-brand: #0d7750;
+  --plenna-brand-strong: #09623f;
+  --plenna-brand-bright: #24a874;
+  --plenna-brand-soft: #e2f7ed;
+  --plenna-brand-pale: #f2fbf6;
+  --plenna-sky: #dff1ff;
+  --plenna-sky-ink: #245273;
+  --plenna-warm: #fff3d7;
+  --plenna-warm-ink: #765019;
+  --plenna-rose: #ffe5df;
+  --plenna-rose-ink: #8b2d24;
+  --plenna-line: #dcece4;
+  --plenna-line-strong: #c7dfd4;
+  --plenna-shadow-card: 0 16px 36px rgba(27, 59, 45, 0.085);
+  --plenna-shadow-soft: 0 8px 20px rgba(27, 59, 45, 0.055);
+  --plenna-shadow-action: 0 12px 22px rgba(13, 119, 80, 0.2);
+  --plenna-radius-xl: 26px;
+  --plenna-radius-lg: 20px;
+  --plenna-radius-md: 16px;
+}
+
+html {
+  background: #dfe9e5 !important;
+}
+
+body {
+  background:
+    linear-gradient(140deg, #e3eee9 0%, #f6f1e5 48%, #dfeef6 100%) !important;
+  color: var(--plenna-ink) !important;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding: 24px 0 !important;
+  }
+}
+
+.app-shell {
+  border: 1px solid rgba(214, 230, 222, 0.9);
+  background:
+    linear-gradient(180deg, #fbfdfc 0%, var(--plenna-bg-app) 100%) !important;
+  box-shadow:
+    0 28px 64px rgba(21, 42, 33, 0.18),
+    0 2px 8px rgba(21, 42, 33, 0.06) !important;
+}
+
+@media (min-width: 720px) {
+  .app-shell {
+    border-radius: 34px !important;
+  }
+}
+
+.page,
+.screen-page {
+  padding: 62px 22px 102px !important;
+  background:
+    linear-gradient(180deg, #fbfdfc 0%, #f4faf6 42%, #fbfcfa 100%) !important;
+}
+
+.page-center {
+  padding: 36px 22px !important;
+}
+
+@media (max-width: 390px) {
+  .page,
+  .screen-page {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+}
+
+.status-bar {
+  height: 46px !important;
+  padding: 0 64px 0 18px !important;
+  color: rgba(19, 35, 28, 0.82) !important;
+}
+
+h1,
+h2,
+h3,
+.proto-topbar h1,
+.figma-screen .proto-topbar h1 {
+  color: var(--plenna-ink) !important;
+  letter-spacing: 0 !important;
+}
+
+h1,
+.proto-topbar h1,
+.page-header h1,
+.home-hero h1 {
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  line-height: 30px !important;
+}
+
+h2,
+.figma-card h2,
+.card h2 {
+  font-size: 18px !important;
+  font-weight: 850 !important;
+  line-height: 22px !important;
+}
+
+h3 {
+  color: var(--plenna-ink-2) !important;
+  font-weight: 800 !important;
+}
+
+p,
+.page-header p,
+.proto-topbar p,
+.figma-card p,
+.figma-line p {
+  color: var(--plenna-muted) !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+small {
+  color: var(--plenna-soft) !important;
+}
+
+.page-header,
+.proto-topbar {
+  gap: 8px !important;
+  margin-bottom: 16px !important;
+}
+
+.page-header p,
+.proto-topbar p {
+  max-width: 36ch !important;
+}
+
+.stack,
+.stack-lg,
+.content-list {
+  gap: 14px !important;
+}
+
+.stack-lg {
+  gap: 16px !important;
+}
+
+.grid-2,
+.dashboard-grid {
+  gap: 12px !important;
+}
+
+.grid-3,
+#homeMetrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+main :is(
+  .card,
+  .figma-card,
+  .figma-profile-card,
+  .figma-success-card,
+  .figma-month-template,
+  .list-item,
+  .note-card,
+  .journal-banner,
+  .journal-entry,
+  .journal-list-wrap,
+  .planning-main-card,
+  .planning-block-card,
+  .planning-alert,
+  .planning-context,
+  .planning-insight,
+  .filter-card,
+  .focus-presets,
+  .focus-task-card,
+  .focus-context-card,
+  .micro-auto-card,
+  .micro-card,
+  .micro-after-card,
+  .reminder-summary-card,
+  .reminder-connected-card,
+  .reminder-card,
+  .settings-summary-card,
+  .settings-group-card,
+  .figma-action-card,
+  .more-organization-card,
+  .figma-more-profile,
+  .home-week-card,
+  .home-care-note,
+  .home-message-card,
+  .home-metric-card,
+  .night-prompt-card,
+  .figma-night-main-card,
+  .night-submit-card,
+  .focus-break-alert-card,
+  .focus-break-choice-card,
+  .focus-break-after,
+  .operational-card,
+  .operational-reading-card,
+  .operational-action-card,
+  .operational-empty-state,
+  .habit-support-minimal,
+  .habit-insight,
+  .habit-item,
+  .empty-state,
+  .proto-empty,
+  .ux-empty-polished
+) {
+  border-color: var(--plenna-line) !important;
+  border-radius: var(--plenna-radius-lg) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(251, 254, 252, 0.98) 100%) !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+main :is(.settings-group-card, .focus-presets, .focus-task-card, .journal-list-wrap) {
+  padding: 16px !important;
+}
+
+main :is(.setting-card, .planning-block, .week-task-card, .month-task-card) {
+  border-color: #e3eee8 !important;
+  background: #fbfdfc !important;
+  box-shadow: none !important;
+}
+
+.button,
+a.button,
+button.button,
+.figma-mini-action,
+main :is(
+  .reminder-card-actions button,
+  .reminder-card-actions a,
+  .reminder-action-row a,
+  .setting-card button,
+  .setting-card a,
+  .settings-profile-row button,
+  .journal-actions button,
+  .note-card button,
+  .micro-card button,
+  .filter-card button,
+  .task-card-actions button,
+  .habit-item button,
+  .adjust-quick-controls button,
+  .adjust-quick-controls a
+) {
+  min-height: 44px !important;
+  border-radius: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease !important;
+}
+
+.button.primary,
+button.primary,
+a.button.primary,
+main.ux-checklist .ux-main-action,
+[data-primary-action],
+body[data-screen="checkin"] #checkinSubmit {
+  border-color: var(--plenna-brand) !important;
+  background:
+    linear-gradient(180deg, var(--plenna-brand-bright) 0%, var(--plenna-brand) 100%) !important;
+  color: #ffffff !important;
+  box-shadow: var(--plenna-shadow-action) !important;
+}
+
+.button.primary:hover,
+button.primary:hover,
+a.button.primary:hover,
+[data-primary-action]:hover {
+  border-color: var(--plenna-brand-strong) !important;
+  background:
+    linear-gradient(180deg, var(--plenna-brand) 0%, var(--plenna-brand-strong) 100%) !important;
+}
+
+.button.secondary,
+button.secondary,
+a.button.secondary,
+.ux-secondary-primary,
+.figma-mini-action {
+  border-color: var(--plenna-line-strong) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--plenna-brand-strong) !important;
+  box-shadow: 0 8px 18px rgba(27, 59, 45, 0.045) !important;
+}
+
+.button.danger,
+button.button.danger,
+#deleteTask,
+.settings-clear-button {
+  border-color: #efb9b0 !important;
+  background: #fff7f5 !important;
+  color: var(--plenna-rose-ink) !important;
+  box-shadow: none !important;
+}
+
+button:disabled,
+.button:disabled,
+[aria-disabled="true"] {
+  border-color: #dce5e0 !important;
+  background: #edf2ef !important;
+  color: #75837c !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+@media (hover: hover) {
+  .button:hover,
+  a.button:hover,
+  button.button:hover,
+  .figma-mini-action:hover,
+  main :is(
+    .reminder-card-actions button,
+    .reminder-card-actions a,
+    .reminder-action-row a,
+    .setting-card button,
+    .setting-card a,
+    .settings-profile-row button,
+    .journal-actions button,
+    .note-card button,
+    .micro-card button,
+    .filter-card button,
+    .task-card-actions button,
+    .habit-item button,
+    .adjust-quick-controls button,
+    .adjust-quick-controls a
+  ):hover {
+    transform: translateY(-1px);
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid rgba(36, 168, 116, 0.34) !important;
+  outline-offset: 3px !important;
+}
+
+.chip,
+.status-chip,
+.task-chip,
+.choice-chip,
+.task-badge,
+.habit-edit-chip,
+.meta span {
+  min-height: 30px !important;
+  border-color: var(--plenna-line-strong) !important;
+  background: #f8fffb !important;
+  color: var(--plenna-brand-strong) !important;
+  font-weight: 750 !important;
+  box-shadow: none !important;
+}
+
+.chip.blue,
+.chip.neutral,
+.meta span:nth-child(2n) {
+  border-color: #cfe5f5 !important;
+  background: var(--plenna-surface-sky) !important;
+  color: var(--plenna-sky-ink) !important;
+}
+
+.chip.warning,
+.meta span:nth-child(3n) {
+  border-color: #f0d9aa !important;
+  background: var(--plenna-warm) !important;
+  color: var(--plenna-warm-ink) !important;
+}
+
+main a.active,
+main button.active,
+.task-view-tabs a.active,
+.dashboard-mode-tabs a.active,
+.dashboard-mode-tabs a[aria-current="page"],
+.history-period-tabs button.active,
+.operational-period-tabs button.active,
+.period-tabs button.active,
+.task-tab.active,
+.segmented button.active,
+.figma-tabs .active,
+.figma-tabs button.active,
+.chip[aria-pressed="true"] {
+  border-color: var(--plenna-brand) !important;
+  background: var(--plenna-brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(13, 119, 80, 0.16) !important;
+}
+
+.field {
+  gap: 7px !important;
+}
+
+.field label,
+.field > span,
+.field-label,
+.generated-field-label {
+  color: var(--plenna-ink-2) !important;
+  font-size: 11px !important;
+  font-weight: 850 !important;
+}
+
+.field input,
+.field select,
+.field textarea,
+.figma-pill-input input,
+.figma-pill-input select,
+.figma-pill-input textarea,
+.night-quick-field textarea,
+.night-edit-field textarea,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+select,
+textarea {
+  border-color: var(--plenna-line) !important;
+  border-radius: 16px !important;
+  background: #fbfdfc !important;
+  color: var(--plenna-ink) !important;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+select:focus,
+textarea:focus {
+  border-color: var(--plenna-brand-bright) !important;
+  box-shadow: 0 0 0 4px rgba(36, 168, 116, 0.16) !important;
+}
+
+.choice-grid {
+  gap: 10px !important;
+}
+
+.choice-card {
+  min-height: 70px !important;
+  padding: 14px !important;
+  border-color: var(--plenna-line) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  color: var(--plenna-ink) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.choice-card span {
+  color: var(--plenna-soft) !important;
+}
+
+input:checked + .choice-card,
+label.is-selected .choice-card {
+  border-color: var(--plenna-brand) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-brand-soft) 100%) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(13, 119, 80, 0.26),
+    0 12px 24px rgba(13, 119, 80, 0.12) !important;
+}
+
+.task-view-tabs,
+.dashboard-mode-tabs,
+.operational-period-tabs,
+.history-period-tabs,
+.period-tabs,
+.segmented,
+.figma-tabs {
+  gap: 6px !important;
+  padding: 6px !important;
+  border: 1px solid #e2eee8 !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.task-view-tabs a,
+.dashboard-mode-tabs a,
+.operational-period-tabs button,
+.history-period-tabs button,
+.period-tabs button,
+.segmented button,
+.figma-tabs a,
+.figma-tabs button,
+.task-tab {
+  min-height: 40px !important;
+  border-radius: 13px !important;
+  color: var(--plenna-muted) !important;
+  font-weight: 800 !important;
+}
+
+.bottom-nav {
+  height: 72px !important;
+  padding: 8px 10px 10px !important;
+  gap: 4px !important;
+  border-top: 1px solid rgba(199, 223, 212, 0.85) !important;
+  border-radius: 22px 22px 0 0 !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  box-shadow: 0 -18px 34px rgba(27, 59, 45, 0.11) !important;
+}
+
+.bottom-nav a {
+  min-width: 0 !important;
+  min-height: 52px !important;
+  border-radius: 16px !important;
+  color: #64786f !important;
+  font-size: 10px !important;
+  font-weight: 750 !important;
+}
+
+.bottom-nav a[aria-current="page"],
+.bottom-nav a.active {
+  background: var(--plenna-brand-soft) !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.nav-glyph {
+  display: grid !important;
+  width: 24px !important;
+  height: 24px !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  font-size: 17px !important;
+  line-height: 1 !important;
+}
+
+.bottom-nav a[aria-current="page"] .nav-glyph {
+  background: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(13, 119, 80, 0.12) !important;
+}
+
+.toast,
+.screen-status,
+.app-loading-card,
+.app-error-banner {
+  border-radius: 18px !important;
+  box-shadow: 0 18px 38px rgba(21, 42, 33, 0.16) !important;
+}
+
+.screen-status:not(.error):not(.warning),
+.toast.success {
+  border-color: #a8d9bf !important;
+  background: var(--plenna-brand-strong) !important;
+  color: #ffffff !important;
+}
+
+.screen-status.warning,
+.toast.warning {
+  border-color: #efcf93 !important;
+  background: #8a5a16 !important;
+  color: #ffffff !important;
+}
+
+.screen-status.error,
+.toast.error {
+  border-color: #f3b4ac !important;
+  background: #9b3027 !important;
+  color: #ffffff !important;
+}
+
+.confirm-overlay {
+  background: rgba(19, 35, 28, 0.32) !important;
+  backdrop-filter: blur(5px);
+}
+
+.confirm-dialog {
+  border-color: var(--plenna-line) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 28px 58px rgba(19, 35, 28, 0.24) !important;
+}
+
+.home-page {
+  padding-top: 58px !important;
+}
+
+.home-hero {
+  gap: 9px !important;
+  margin: 0 0 16px !important;
+  padding: 19px !important;
+  border: 1px solid #cae6da !important;
+  border-radius: 28px !important;
+  background:
+    linear-gradient(135deg, #e8f8f0 0%, #f8fcff 54%, #fff6df 100%) !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+body[data-screen="home"] .home-hero h1 {
+  height: auto !important;
+  max-width: 100% !important;
+  font-size: 23px !important;
+  line-height: 29px !important;
+}
+
+.home-date {
+  height: auto !important;
+  margin-top: 0 !important;
+  color: var(--plenna-muted) !important;
+  font-weight: 700 !important;
+}
+
+.home-care-note {
+  padding: 15px 16px !important;
+  border-color: #cfe5f5 !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.now-card {
+  min-height: 0 !important;
+  padding: 18px !important;
+  border-color: #cae6da !important;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f1fbf6 62%, #fff9ec 100%) !important;
+}
+
+.now-card .row {
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+.now-card .button,
+.home-priority-card .button,
+.home-week-card .button {
+  width: 100% !important;
+}
+
+.home-priority-card {
+  padding: 16px !important;
+}
+
+.home-priority-row {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  min-height: 44px !important;
+}
+
+.home-message-card {
+  margin-top: 0 !important;
+  background: var(--plenna-warm) !important;
+}
+
+.home-metric-card {
+  min-height: 94px !important;
+  padding: 13px !important;
+  border-color: #e5efe9 !important;
+}
+
+.home-metric-card strong {
+  color: var(--plenna-ink) !important;
+  font-size: 18px !important;
+}
+
+.home-week-card {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  padding: 17px !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.shortcut-grid,
+.home-shortcuts {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.shortcut,
+.home-action-shortcut {
+  display: grid !important;
+  min-height: 58px !important;
+  place-items: center !important;
+  padding: 10px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+  font-size: 12px !important;
+  font-weight: 850 !important;
+  text-align: center !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.home-shortcuts .shortcut:last-child:nth-child(odd) {
+  grid-column: 1 / -1 !important;
+}
+
+.home-final-note {
+  min-height: 48px !important;
+  padding: 12px 14px !important;
+  border-color: #c7dfd4 !important;
+  border-radius: 18px !important;
+  background: #f2fbf6 !important;
+  color: var(--plenna-brand-strong) !important;
+  line-height: 17px !important;
+}
+
+.checkin-page {
+  background:
+    linear-gradient(180deg, #fbfdfc 0%, #f4fbf8 58%, #fff9ef 100%) !important;
+}
+
+body[data-screen="checkin"] .figma-topbar,
+body[data-screen="checkin"] .checkin-card {
+  border-radius: 24px !important;
+}
+
+body[data-screen="checkin"] .figma-topbar {
+  padding: 18px !important;
+  border: 1px solid #cfe5f5 !important;
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+.ux-stepper span {
+  height: 7px !important;
+  border-radius: 999px !important;
+  background: #d9e9e1 !important;
+}
+
+.ux-stepper span.active {
+  background: var(--plenna-brand) !important;
+}
+
+body[data-screen="checkin"] .checkin-card {
+  padding: 18px !important;
+}
+
+body[data-screen="checkin"] .checkin-card[aria-current="step"] {
+  border-color: #b8decb !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbf7 100%) !important;
+}
+
+body[data-screen="checkin"] .energy-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fff8e7 100%) !important;
+}
+
+input[type="range"] {
+  accent-color: var(--plenna-brand);
+}
+
+body[data-screen="checkin"] .checkin-actions {
+  width: 100% !important;
+  gap: 12px !important;
+}
+
+body[data-screen="checkin"] .checkin-step-actions {
+  grid-template-columns: 0.9fr 1.1fr !important;
+}
+
+body[data-screen="checkin"] .checkin-skip-note {
+  padding: 0 4px !important;
+  color: var(--plenna-soft) !important;
+  text-align: center !important;
+}
+
+.tasks-page .page-header,
+.habits-page .page-header,
+.journal-page .page-header,
+.focus-page .page-header,
+.planning-page .page-header,
+.reminders-figma-header,
+.settings-figma-header,
+.micro-pause-top,
+.night-emotional-top,
+.dedicated-page > .proto-topbar:first-child {
+  padding: 17px !important;
+  border: 1px solid #dcece4 !important;
+  border-radius: 24px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f3fbf7 100%) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.quick-add {
+  min-height: 52px !important;
+  padding: 7px 8px 7px 15px !important;
+  border-color: var(--plenna-line) !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.task-tabs {
+  gap: 8px !important;
+  border: 1px solid #e2eee8 !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.filter-card {
+  padding: 14px !important;
+}
+
+.filter-card button,
+.task-card-actions button,
+.journal-actions button {
+  border: 1px solid var(--plenna-line-strong) !important;
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.task-row-card {
+  padding: 15px !important;
+}
+
+.check-control {
+  width: 28px !important;
+  height: 28px !important;
+  background: var(--plenna-brand-soft) !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.focus-page {
+  background:
+    linear-gradient(180deg, #f7fbf8 0%, #edf7f2 62%, #f8fbf9 100%) !important;
+}
+
+.focus-timer-cluster {
+  width: min(100%, 350px) !important;
+  margin: 0 auto !important;
+  border: 1px solid #d9ece2 !important;
+  border-radius: 32px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbf7 100%) !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+body[data-screen="focus"] .focus-timer-cluster .timer {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.timer strong {
+  color: var(--plenna-ink) !important;
+}
+
+.timer span {
+  color: var(--plenna-muted) !important;
+  font-weight: 800 !important;
+}
+
+body[data-screen="focus"] .focus-controls {
+  left: 50% !important;
+  width: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+body[data-screen="focus-session"] .focus-timer-cluster .timer {
+  left: auto !important;
+  transform: none !important;
+}
+
+body[data-screen="focus-session"] .focus-controls {
+  left: auto !important;
+  transform: none !important;
+}
+
+.focus-control {
+  border-radius: 999px !important;
+  box-shadow: 0 12px 24px rgba(27, 59, 45, 0.12) !important;
+}
+
+.focus-control.primary {
+  background: var(--plenna-brand) !important;
+}
+
+.preset-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.preset-card {
+  border: 1px solid var(--plenna-line) !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.preset-card.active {
+  border-color: var(--plenna-brand) !important;
+  background: var(--plenna-brand-soft) !important;
+}
+
+.focus-task-summary,
+.focus-context-line,
+.context-help {
+  padding: 12px 14px !important;
+  border: 1px solid #dcece4 !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+.context-help {
+  color: var(--plenna-muted) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.planning-alert {
+  padding: 15px !important;
+  border-color: #efcf93 !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-warm) 100%) !important;
+}
+
+.planning-main-card {
+  padding: 18px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f2fbf6 65%, #fff7e3 100%) !important;
+}
+
+.planning-metrics {
+  gap: 8px !important;
+}
+
+.planning-metrics span {
+  border: 1px solid #dcece4 !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+}
+
+.planning-block-card {
+  padding: 16px !important;
+}
+
+.reminders-figma-page,
+.settings-figma-page,
+.micro-pauses-figma,
+.figma-night-screen {
+  gap: 14px !important;
+}
+
+.reminder-summary-card,
+.reminder-connected-card {
+  padding: 17px !important;
+}
+
+.reminder-summary-card {
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.reminder-card-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.reminder-card {
+  grid-template-columns: 1fr !important;
+  min-height: 0 !important;
+  gap: 12px !important;
+  padding: 15px !important;
+}
+
+.reminder-card-copy {
+  gap: 5px !important;
+}
+
+.reminder-card h3 {
+  font-size: 15px !important;
+  line-height: 19px !important;
+}
+
+.reminder-card p {
+  font-size: 12px !important;
+  line-height: 17px !important;
+}
+
+.reminder-card-actions,
+.reminder-action-row {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 9px !important;
+}
+
+.reminder-create-shell {
+  padding: 15px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 22px !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+.reminder-create-shell summary {
+  min-height: 44px !important;
+  display: grid !important;
+  align-items: center !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.settings-summary-card {
+  padding: 17px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f2fbf6 100%) !important;
+}
+
+.settings-profile-row {
+  gap: 12px !important;
+}
+
+.avatar {
+  background: linear-gradient(180deg, var(--plenna-brand-soft) 0%, #ffffff 100%) !important;
+  color: var(--plenna-brand-strong) !important;
+  box-shadow: inset 0 0 0 1px #c7dfd4;
+}
+
+.settings-groups {
+  gap: 13px !important;
+}
+
+.settings-group-card {
+  gap: 13px !important;
+  padding: 15px !important;
+}
+
+.settings-group-heading {
+  gap: 5px !important;
+}
+
+.setting-card {
+  gap: 10px !important;
+  padding: 13px !important;
+  border-radius: 18px !important;
+}
+
+body[data-screen="settings"] [aria-labelledby="settingsDataTitle"] {
+  border-color: #ead8ba !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fff9ec 100%) !important;
+}
+
+.micro-auto-card,
+.micro-after-card,
+.focus-break-choice-card,
+.focus-break-after {
+  padding: 18px !important;
+}
+
+.micro-auto-card,
+.focus-break-alert-card {
+  border-color: #cfe5f5 !important;
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.micro-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.micro-card {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  min-height: 0 !important;
+  gap: 12px !important;
+  padding: 15px !important;
+}
+
+.micro-card.active {
+  border-color: var(--plenna-brand) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-brand-soft) 100%) !important;
+}
+
+.micro-duration {
+  color: var(--plenna-brand-strong) !important;
+  font-weight: 900 !important;
+}
+
+.figma-pause-timer,
+.break-timer {
+  border-radius: 28px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f2fbf6 100%) !important;
+  color: var(--plenna-ink) !important;
+  box-shadow: inset 0 0 0 1px #c7dfd4, var(--plenna-shadow-soft) !important;
+}
+
+.micro-control-row,
+.micro-return-row,
+.focus-break-primary-row,
+.focus-break-after .row,
+.planning-main-card .row,
+.operational-action-card .row,
+.note-card .row,
+.journal-banner .row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+.micro-return-row {
+  grid-template-columns: 1fr !important;
+}
+
+.figma-night-screen {
+  background:
+    linear-gradient(180deg, #fbfdfc 0%, #fff8eb 100%) !important;
+}
+
+.night-emotional-top {
+  border-color: #ead8ba !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fff5df 100%) !important;
+}
+
+.night-summary-flow {
+  gap: 14px !important;
+}
+
+.figma-night-main-card,
+.night-prompt-card,
+.night-submit-card {
+  padding: 17px !important;
+}
+
+.figma-night-main-card {
+  border-color: #ead8ba !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8eb 100%) !important;
+}
+
+.night-prompt-card textarea,
+.figma-night-main-card textarea {
+  min-height: 92px !important;
+}
+
+.journal-banner {
+  padding: 18px !important;
+  border-color: #cfe5f5 !important;
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.journal-create summary,
+.habit-create summary {
+  display: grid !important;
+  min-height: 48px !important;
+  align-items: center !important;
+  padding: 0 15px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.note-card.quick,
+.note-card.insight {
+  background: linear-gradient(135deg, #ffffff 0%, #f1fbf6 100%) !important;
+}
+
+.note-card.long,
+.note-card.examples {
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.note-example-grid {
+  gap: 10px !important;
+}
+
+.note-example-grid article {
+  border-color: var(--plenna-line) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.habit-today {
+  padding-top: 7px !important;
+}
+
+.habit-progress {
+  height: 10px !important;
+  border-radius: 999px !important;
+  background: #e0ece6 !important;
+}
+
+.habit-progress span {
+  border-radius: inherit !important;
+  background: linear-gradient(90deg, var(--plenna-brand-bright), var(--plenna-brand)) !important;
+}
+
+.habit-support-minimal,
+.habit-insight {
+  padding: 16px !important;
+}
+
+.habit-support-minimal {
+  grid-template-columns: 1fr !important;
+}
+
+.habit-support-minimal a {
+  display: inline-grid !important;
+  min-height: 44px !important;
+  place-items: center !important;
+  border: 1px solid var(--plenna-line-strong) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+  font-weight: 800 !important;
+}
+
+.more-hub-grid {
+  gap: 12px !important;
+}
+
+.figma-more-profile {
+  padding: 17px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f2fbf6 100%) !important;
+}
+
+.more-hub-tile {
+  min-height: 112px !important;
+  padding: 15px !important;
+  border-color: var(--plenna-line) !important;
+  border-radius: 22px !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+.more-hub-tile span {
+  display: grid !important;
+  width: 38px !important;
+  height: 38px !important;
+  place-items: center !important;
+  border-radius: 14px !important;
+  background: var(--plenna-brand-soft) !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.more-organization-links {
+  gap: 8px !important;
+}
+
+.more-organization-links a {
+  border-color: var(--plenna-line-strong) !important;
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+.dedicated-action-list {
+  gap: 12px !important;
+}
+
+.figma-action-card.more-row-link {
+  padding: 15px !important;
+}
+
+.figma-operational-screen {
+  gap: 12px !important;
+  padding-top: 52px !important;
+}
+
+.operational-tabs a,
+.operational-period-tabs button {
+  min-height: 40px !important;
+  min-width: 0 !important;
+  font-size: 11px !important;
+}
+
+.operational-figma-metrics {
+  gap: 10px !important;
+}
+
+.operational-figma-metrics article {
+  min-height: 92px !important;
+  padding: 13px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+.operational-figma-metrics strong {
+  color: var(--plenna-ink) !important;
+  font-size: 21px !important;
+}
+
+.operational-card,
+.operational-reading-card,
+.operational-action-card {
+  padding: 15px !important;
+}
+
+.operational-reading-card {
+  border-color: #cfe5f5 !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
+}
+
+.operational-action-card {
+  background: linear-gradient(135deg, #ffffff 0%, var(--plenna-brand-soft) 100%) !important;
+}
+
+.onboarding-app,
+.onboarding-v2,
+.onboarding-screen {
+  background: linear-gradient(180deg, #fbfdfc 0%, #eef8f3 100%) !important;
+}
+
+.onboarding-v2 {
+  padding: 0 22px 30px !important;
+}
+
+.onboarding-hero {
+  min-height: 410px !important;
+  margin: 0 -22px !important;
+  padding: 74px 22px 40px !important;
+  background:
+    linear-gradient(145deg, #0f774f 0%, #159867 54%, #82c7ad 100%) !important;
+}
+
+.leaf-mark {
+  width: 118px !important;
+  height: 132px !important;
+  border-radius: 36px !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.leaf-mark img {
+  width: 104px !important;
+  height: 116px !important;
+}
+
+.onboarding-hero h1 {
+  font-size: 48px !important;
+  line-height: 52px !important;
+}
+
+.onboarding-hero p {
+  width: min(100%, 330px) !important;
+  color: #f8fffb !important;
+  font-size: 15px !important;
+  line-height: 21px !important;
+}
+
+.onboarding-cards {
+  gap: 12px !important;
+  margin-top: -30px !important;
+}
+
+.onboarding-feature {
+  min-height: 72px !important;
+  padding: 15px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 22px !important;
+  box-shadow: var(--plenna-shadow-card) !important;
+}
+
+.onboarding-feature strong {
+  color: var(--plenna-ink) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+.onboarding-actions {
+  gap: 12px !important;
+  margin-top: 24px !important;
+}
+
+.onboarding-start {
+  min-height: 58px !important;
+}
+
+.onboarding-login {
+  display: inline-grid !important;
+  min-height: 44px !important;
+  place-items: center !important;
+  color: var(--plenna-brand-strong) !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 370px) {
+  .grid-3,
+  #homeMetrics,
+  .preset-row,
+  .operational-figma-metrics {
+    grid-template-columns: 1fr !important;
+  }
+
+  .choice-grid.two,
+  .shortcut-grid,
+  .home-shortcuts,
+  .reminder-card-actions,
+  .reminder-action-row,
+  .micro-control-row,
+  .focus-break-primary-row,
+  .planning-main-card .row,
+  .operational-action-card .row,
+  .note-card .row,
+  .journal-banner .row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bottom-nav {
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+  }
+
+  .bottom-nav a {
+    font-size: 9px !important;
+  }
+}
+
+/* Audit-friendly colors for gradient and compact text states. */
+.button.primary,
+button.primary,
+a.button.primary,
+.ux-main-action,
+.figma-mini-action.ux-main-action,
+button.chip.ux-main-action,
+main.ux-checklist .ux-main-action,
+[data-primary-action],
+body[data-screen="checkin"] #checkinSubmit {
+  background-color: var(--plenna-brand-strong) !important;
+  background-image: linear-gradient(180deg, var(--plenna-brand) 0%, var(--plenna-brand-strong) 100%) !important;
+  color: #ffffff !important;
+}
+
+.button.primary *,
+button.primary *,
+a.button.primary *,
+.ux-main-action *,
+.figma-mini-action.ux-main-action *,
+button.chip.ux-main-action * {
+  color: #ffffff !important;
+}
+
+main a.active,
+main button.active,
+.task-view-tabs a.active,
+.dashboard-mode-tabs a.active,
+.dashboard-mode-tabs a[aria-current="page"],
+.history-period-tabs button.active,
+.operational-period-tabs button.active,
+.period-tabs button.active,
+.task-tab.active,
+.segmented button.active,
+.figma-tabs .active,
+.figma-tabs button.active,
+.chip[aria-pressed="true"] {
+  background-color: var(--plenna-brand-strong) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.focus-control.primary {
+  background-color: var(--plenna-brand-strong) !important;
+  background-image: linear-gradient(180deg, var(--plenna-brand) 0%, var(--plenna-brand-strong) 100%) !important;
+  color: #ffffff !important;
+}
+
+.focus-control.secondary {
+  border: 1px solid var(--plenna-line-strong) !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #24362e !important;
+}
+
+.focus-control:disabled {
+  background-color: #edf3ef !important;
+  color: #40524a !important;
+  opacity: 1 !important;
+}
+
+.figma-progress-head span,
+.more-hub-tile span,
+.more-hub-tile strong,
+.more-hub-tile small,
+.note-card > span {
+  color: #263a31 !important;
+}
+
+.figma-progress-head span,
+.more-hub-tile small,
+.note-card > span {
+  font-weight: 850 !important;
+}
+
+body[data-screen="habits"] button.button.primary.full,
+body[data-screen="journal"] button.button.primary.full,
+body[data-screen="journal"] .journal-banner .button.primary.small {
+  background: var(--plenna-brand-strong) !important;
+  color: #ffffff !important;
+}
+
+body[data-screen="more"] .more-hub-tile,
+body[data-screen="more"] .more-hub-tile.ux-main-action,
+body[data-screen="more"] .more-hub-tile[data-primary-action] {
+  background: #ffffff !important;
+  color: #263a31 !important;
+}
+
+body[data-screen="more"] .more-hub-tile span,
+body[data-screen="more"] .more-hub-tile strong,
+body[data-screen="more"] .more-hub-tile small,
+body[data-screen="more"] .more-hub-tile.ux-main-action span,
+body[data-screen="more"] .more-hub-tile.ux-main-action strong,
+body[data-screen="more"] .more-hub-tile.ux-main-action small,
+body[data-screen="more"] .more-hub-tile[data-primary-action] span,
+body[data-screen="more"] .more-hub-tile[data-primary-action] strong,
+body[data-screen="more"] .more-hub-tile[data-primary-action] small {
+  color: #263a31 !important;
+}
+
+.form-required-note {
+  display: block !important;
+  margin: -2px 0 2px !important;
+  padding: 10px 12px !important;
+  border: 1px solid var(--plenna-line) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  color: var(--plenna-muted) !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  line-height: 16px !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+body[data-screen="focus-session"] #sessionTimerText {
+  display: block !important;
+  color: var(--plenna-ink) !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  line-height: 36px !important;
+}
+
+main.ux-checklist .ux-secondary-primary,
+.button.primary.ux-secondary-primary,
+button.primary.ux-secondary-primary,
+a.button.primary.ux-secondary-primary,
+.figma-mini-action.ux-secondary-primary,
+button.chip.ux-secondary-primary {
+  border-color: var(--plenna-line-strong) !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  color: var(--plenna-brand-strong) !important;
+  box-shadow: 0 8px 18px rgba(27, 59, 45, 0.045) !important;
+}
+
+main.ux-checklist .ux-secondary-primary *,
+.button.primary.ux-secondary-primary *,
+button.primary.ux-secondary-primary *,
+a.button.primary.ux-secondary-primary *,
+.figma-mini-action.ux-secondary-primary *,
+button.chip.ux-secondary-primary * {
+  color: var(--plenna-brand-strong) !important;
+}
+
+/* Onboarding visual alignment: keep Plenna strong while matching the reference rhythm. */
+body[data-page="index"] .onboarding-v2 {
+  padding: 0 30px 30px !important;
+  align-content: start !important;
+  background: #f5f8f7 !important;
+}
+
+body[data-page="index"] .onboarding-hero {
+  min-height: 360px !important;
+  margin: 0 -30px !important;
+  padding: 86px 30px 38px !important;
+  align-content: start !important;
+  justify-items: center !important;
+  gap: 10px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #35c98d 0%, #0b7545 100%) !important;
+}
+
+body[data-page="index"] .onboarding-hero .leaf-mark {
+  width: 132px !important;
+  height: 112px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body[data-page="index"] .onboarding-hero .leaf-mark img {
+  width: 148px !important;
+  height: 148px !important;
+  object-fit: contain !important;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08)) !important;
+}
+
+body[data-page="index"] .onboarding-hero h1 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 46px !important;
+  line-height: 50px !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+}
+
+body[data-page="index"] .onboarding-hero p {
+  width: min(100%, 330px) !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  text-shadow: none !important;
+}
+
+body[data-page="index"] .onboarding-cards {
+  gap: 10px !important;
+  margin-top: 50px !important;
+}
+
+body[data-page="index"] .onboarding-feature {
+  min-height: 58px !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  padding: 12px 13px !important;
+  border: 1px solid #e5ece8 !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(31, 55, 43, 0.07) !important;
+}
+
+body[data-page="index"] .onboarding-feature span {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 17px !important;
+  background: #d6f5eb !important;
+  color: #35c98d !important;
+}
+
+body[data-page="index"] .onboarding-feature strong {
+  color: #202537 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+}
+
+body[data-page="index"] .onboarding-actions {
+  gap: 14px !important;
+  margin-top: 30px !important;
+}
+
+body[data-page="index"] .onboarding-start {
+  min-height: 56px !important;
+  border-radius: 28px !important;
+  background: #087346 !important;
+  border-color: #087346 !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(8, 115, 70, 0.24) !important;
+}
+
+body[data-page="index"] .onboarding-login {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #526170 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sua rotina | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260518-routine" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="more" data-screen="dashboard-operational">
     <div class="app-shell">
@@ -21,7 +21,7 @@
           <p>Um resumo simples do que está aberto, feito e pedindo cuidado.</p>
         </header>
 
-        <nav class="dashboard-mode-tabs" aria-label="Áreas do painel">
+        <nav class="dashboard-mode-tabs" aria-label="Áreas do cuidado">
           <a href="dashboard.html">Emocional</a>
           <a href="dashboard-history.html">Histórico</a>
           <a class="active" href="dashboard-operational.html" aria-current="page">Rotina</a>
@@ -38,7 +38,7 @@
         <section class="operational-figma-metrics">
           <article><small>Tarefas abertas</small><strong data-operational="open">0</strong><span>em aberto</span></article>
           <article><small>Concluídas</small><strong data-operational="done">0</strong><span data-operational-label="done">na semana</span></article>
-          <article><small>Foco total</small><strong data-operational="focusProject">0h00</strong><span>registrado</span></article>
+          <article><small>Foco cuidado</small><strong data-operational="focusProject">0h00</strong><span>registrado</span></article>
           <article><small>Hábitos feitos</small><strong data-operational="habits">0</strong><span>marcados</span></article>
         </section>
 
@@ -59,11 +59,11 @@
         </section>
 
         <section class="operational-card">
-          <h2>Prioridade, atraso e distribuição</h2>
+          <h2>Carga e prioridade</h2>
           <div class="operational-progress-row"><span>Alta prioridade · <b data-operational="highLabel">0 tarefas</b></span><i style="--bar:45%;--bar-color:#ce6759"></i></div>
           <div class="operational-progress-row"><span>Média prioridade · <b data-operational="mediumLabel">0 tarefas</b></span><i style="--bar:78%;--bar-color:#6f8fb8"></i></div>
           <div class="operational-progress-row"><span>Baixa prioridade · <b data-operational="lowLabel">0 tarefas</b></span><i style="--bar:60%;--bar-color:#35c98d"></i></div>
-          <div class="operational-progress-row"><span>Atrasadas · <b data-operational="delayedLabel">0 tarefas</b></span><i style="--bar:38%;--bar-color:#e2aa42"></i></div>
+          <div class="operational-progress-row"><span>Pedindo cuidado · <b data-operational="delayedLabel">0 tarefas</b></span><i style="--bar:38%;--bar-color:#e2aa42"></i></div>
         </section>
 
         <section class="operational-reading-card">
@@ -85,4 +85,3 @@
     </div>
   </body>
 </html>
-

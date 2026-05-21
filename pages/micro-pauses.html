@@ -5,25 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Micro pausas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js" defer></script>
-    <script src="../js/focus-break.js?v=20260519-micro-pauses" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260520-warm-pass" defer></script>
+    <script src="../js/focus-break.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="focus" data-screen="micro-pauses">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page micro-pauses-figma">
         <header class="proto-topbar micro-pause-top">
-          <h1>Micro pausas</h1>
-          <p>Pausas curtas para voltar com mais calma.</p>
+          <h1>Pausas pequenas</h1>
+          <p>Escolha um respiro e volte no seu ritmo.</p>
         </header>
 
         <section class="micro-auto-card" data-low-energy-note>
-          <h2>Recomendadas para hoje</h2>
+          <h2>Pausa sugerida para hoje</h2>
           <p>Use depois de foco intenso ou quando o check-in pedir menos carga.</p>
           <div class="chip-row">
             <span class="chip">baseado no check-in</span>
@@ -35,20 +35,20 @@
           <article class="micro-card">
             <div>
               <span class="micro-duration" data-duration-label="breath">3 min</span>
-              <h2>Respiração guiada</h2>
+              <h2>Respirar por 3 min</h2>
               <p data-benefit-label="breath">voltar ao foco com calma</p>
             </div>
             <span class="chip" data-recommended-chip>mais indicada agora</span>
-            <button type="button" data-micro-pause="Respiração" data-duration="180">Começar</button>
+            <button type="button" data-micro-pause="Respiração" data-duration="180">Escolher pausa</button>
           </article>
           <article class="micro-card">
             <div>
               <span class="micro-duration">5 min</span>
-              <h2>Alongamento rápido</h2>
+              <h2>Alongar o corpo</h2>
               <p>ombros, pescoço e coluna</p>
             </div>
             <span class="chip">soltar o corpo</span>
-            <button type="button" data-micro-pause="Alongamento rápido" data-duration="300">Começar</button>
+            <button type="button" data-micro-pause="Alongamento rápido" data-duration="300">Escolher pausa</button>
           </article>
           <article class="micro-card">
             <div>
@@ -57,37 +57,37 @@
               <p>chegar melhor ao próximo bloco</p>
             </div>
             <span class="chip">reduzir pressão</span>
-            <button type="button" data-micro-pause="Pausa consciente" data-duration="180">Começar</button>
+            <button type="button" data-micro-pause="Pausa consciente" data-duration="180">Escolher pausa</button>
           </article>
           <article class="micro-card">
             <div>
               <span class="micro-duration">1 min</span>
-              <h2>Lembrete de água</h2>
+              <h2>Beber água</h2>
               <p>hidratação sem cobrança</p>
             </div>
             <span class="chip">energia leve</span>
-            <button type="button" data-micro-pause="Lembrete de água" data-duration="60">Começar</button>
+            <button type="button" data-micro-pause="Lembrete de água" data-duration="60">Escolher pausa</button>
           </article>
         </section>
 
         <section class="micro-after-card" data-break-panel>
-          <h2 data-break-title>Depois da pausa</h2>
-          <p data-break-copy>Depois, escolha se volta ao foco, faz algo leve ou reorganiza o dia.</p>
+          <h2 data-break-title>Volte no seu ritmo</h2>
+          <p data-break-copy>Depois da pausa, escolha o próximo passo sem pressa.</p>
           <div class="chip-row micro-selected-chips">
             <span class="chip">respiração</span>
             <span class="chip">sem tela</span>
             <span class="chip">água</span>
           </div>
-          <strong class="break-status" id="breakStatus" aria-live="polite">Pausa pronta para começar</strong>
+          <strong class="break-status" id="breakStatus" aria-live="polite">Escolha uma pausa para começar</strong>
           <div class="figma-pause-timer break-timer" id="breakTimer" data-break-duration="180" aria-live="polite">3:00</div>
           <div class="row micro-control-row">
-            <button class="button primary" type="button" id="breakStart">Iniciar pausa</button>
-            <button class="button secondary" type="button" id="breakChooseAnother">Escolher outra pausa</button>
+            <button class="button primary" type="button" id="breakStart">Iniciar com calma</button>
+            <button class="button secondary" type="button" id="breakChooseAnother">Escolher outra</button>
           </div>
           <div class="row micro-return-row" data-break-complete>
-            <a class="button primary" href="focus.html">Voltar ao foco</a>
-            <a class="button secondary" href="tasks.html">Tarefa leve</a>
-            <a class="button secondary" href="planning.html">Reorganizar meu dia</a>
+            <a class="button primary" href="focus.html">Voltar com calma</a>
+            <a class="button secondary" href="tasks.html">Fazer algo leve</a>
+            <a class="button secondary" href="planning.html">Ajustar o dia</a>
           </div>
         </section>
       </main>

@@ -61,15 +61,19 @@
       className: "state-high",
       home: {
         title: "Humor bom + energia alta",
+        careTitle: "Você já começou bem",
+        careLead: "Aproveite o ritmo sem esquecer a pausa.",
+        careCopy: "Use esse fôlego para uma prioridade importante e preserve um respiro depois.",
         date: "Terça-feira, 15 de abril",
         moodChip: "😄 Animada",
         energyChip: "Energia 9/10",
-        actionTag: "Avançar agora",
-        actionTitle: "Bom momento para avançar na prioridade mais importante.",
+        actionTag: "Próximo passo",
+        actionTitle: "Escolha uma prioridade importante e proteja uma pausa depois.",
+        actionCopy: "Depois, deixe uma pausa curta protegida.",
         badge: "sugerido automaticamente",
         primaryLabel: "Começar foco",
         primaryHref: "focus.html?demo=alta",
-        secondaryLabel: "Ver plano",
+        secondaryLabel: "Ver minha rotina",
         secondaryHref: "planning.html?demo=alta",
         priorities: [
           ["Finalizar apresentação Q2", "Trabalho"],
@@ -86,9 +90,9 @@
           body: "Humor e energia altos: avance com intenção e mantenha uma pausa curta."
         },
         metrics: [
-          ["habits", "Hábitos", "5/6"],
-          ["focus", "Foco hoje", "90 min"],
-          ["streak", "Sequência", "13 dias"]
+          ["habits", "Cuidados", "5/6"],
+          ["focus", "Foco cuidado", "90 min"],
+          ["streak", "Constância", "13 dias"]
         ]
       },
       focus: {
@@ -99,7 +103,7 @@
         ring: "assets/images/focus-ring-high.svg",
         presets: [
           ["Foco profundo", "45 min", 45],
-          ["Pomodoro", "25 min", 25],
+          ["Foco curto", "25 min", 25],
           ["Sons ambientes", "Chuva · café · lo-fi", 25]
         ],
         taskSectionTitle: "Tarefa recomendada",
@@ -116,15 +120,19 @@
       className: "state-neutral",
       home: {
         title: "Humor neutro + energia média",
+        careTitle: "Vamos cuidar do essencial",
+        careLead: "Seu dia pode seguir com calma.",
+        careCopy: "Escolha uma prioridade, uma pausa e um fechamento simples para hoje.",
         date: "Terça-feira, 15 de abril",
         moodChip: "🙂 Bem-disposta",
         energyChip: "Energia 7/10",
-        actionTag: "O que fazer agora",
-        actionTitle: "Organize 3 prioridades e foque no essencial.",
+        actionTag: "Próximo passo leve",
+        actionTitle: "Organize 3 prioridades e respire no meio.",
+        actionCopy: "O essencial já basta para manter clareza hoje.",
         badge: "baseado no check-in",
-        primaryLabel: "Organizar meu dia",
+        primaryLabel: "Ajustar meu dia",
         primaryHref: "planning.html?demo=media",
-        secondaryLabel: "Iniciar foco",
+        secondaryLabel: "Começar foco leve",
         secondaryHref: "focus.html?demo=media",
         priorities: [
           ["Revisar relatório mensal", "Trabalho"],
@@ -141,9 +149,9 @@
           body: "Energia média: 2 tarefas médias, 1 leve e pausa antes da tarde."
         },
         metrics: [
-          ["focus", "Foco hoje", "45 min"],
-          ["streak", "Sequência", "12 dias"],
-          ["habits", "Hábitos", "3/4"]
+          ["focus", "Foco cuidado", "45 min"],
+          ["streak", "Constância", "12 dias"],
+          ["habits", "Cuidados", "3/4"]
         ],
         banner: "Plano atualizado pelo check-in."
       },
@@ -173,16 +181,20 @@
       className: "state-low",
       home: {
         title: "Humor ruim + energia baixa",
+        careTitle: "Hoje pede leveza",
+        careLead: "Diminua a carga antes de começar.",
+        careCopy: "O Plenna pode proteger pausas e deixar só o essencial visível.",
         date: "Terça-feira, 15 de abril",
         moodChip: "😕 Cansada",
         energyChip: "Energia 3/10",
-        actionTag: "Reduzir carga",
-        actionTitle: "Seu dia parece carregado. Faça o essencial e proteja energia.",
+        actionTag: "Cuidar da energia",
+        actionTitle: "Faça o mínimo importante e guarde energia.",
+        actionCopy: "Você pode adiar o que pesa e voltar no seu ritmo.",
         badge: "proteção de energia",
-        primaryLabel: "Reduzir carga",
+        primaryLabel: "Aliviar meu dia",
         primaryHref: "planning-adjust.html?demo=baixa",
-        secondaryLabel: "Pausa + foco",
-        secondaryHref: "focus.html?demo=baixa",
+        secondaryLabel: "Pausa sugerida",
+        secondaryHref: "micro-pauses.html?quick=breath",
         priorities: [
           ["Enviar e-mail essencial", "Essenc."],
           ["Alongamento de 5 min", "Cuidado"],
@@ -198,9 +210,9 @@
           body: "Seu dia parece carregado. Quer reduzir a carga antes de começar?"
         },
         metrics: [
-          ["habits", "Hábitos", "2/6"],
-          ["focus", "Foco hoje", "15 min"],
-          ["streak", "Sequência", "12 dias"]
+          ["habits", "Cuidados", "2/6"],
+          ["focus", "Foco cuidado", "15 min"],
+          ["streak", "Constância", "12 dias"]
         ]
       },
       focus: {
@@ -228,16 +240,20 @@
       className: "state-protect",
       home: {
         title: "Humor baixo por vários dias",
+        careTitle: "Vamos com muito cuidado",
+        careLead: "O plano de hoje pode ser menor.",
+        careCopy: "Pausa, diário breve e uma tarefa mínima já contam como cuidado.",
         date: "Terça-feira, 15 de abril",
         moodChip: "😢 Baixo há 3 dias",
         energyChip: "Energia 4/10",
-        actionTag: "Plano protetivo",
-        actionTitle: "Hoje o foco é reduzir pressão, registrar sinais e cuidar de você.",
+        actionTag: "Sem pressa",
+        actionTitle: "Reduza pressão e escolha um começo possível.",
+        actionCopy: "O foco pode ficar para depois da pausa.",
         badge: "ajustado por você",
-        primaryLabel: "Plano protetivo",
+        primaryLabel: "Ajustar com calma",
         primaryHref: "planning-adjust.html?demo=protetivo",
         secondaryLabel: "Pausa guiada",
-        secondaryHref: "focus.html?demo=protetivo",
+        secondaryHref: "micro-pauses.html?quick=breath",
         priorities: [
           ["Tarefa mínima essencial", "Mínima"],
           ["Registrar diário breve", "Diário"],
@@ -253,9 +269,9 @@
           body: "Humor baixo recorrente: diário e pausa aparecem antes do foco."
         },
         metrics: [
-          ["habits", "Hábitos", "1/6"],
-          ["focus", "Foco hoje", "0 min"],
-          ["streak", "Sequência", "3 dias"]
+          ["habits", "Cuidados", "1/6"],
+          ["focus", "Foco cuidado", "0 min"],
+          ["streak", "Constância", "3 dias"]
         ]
       },
       focus: {
@@ -332,18 +348,30 @@
     result.moodChip = moodChip(checkin, result.moodChip);
     if (level === "baixa" && result.stateKey !== "protect") {
       result.title = isLowMood(checkin) ? "Humor baixo + energia baixa" : "Energia baixa";
-      result.actionTag = "Reduzir carga";
-      result.actionTitle = "Sua energia está em " + score + "/10. Faça o essencial e proteja pausas.";
+      result.careTitle = isLowMood(checkin) ? "Hoje pede cuidado" : "Hoje pede leveza";
+      result.careLead = "Diminua a carga antes de começar.";
+      result.careCopy = "Sua energia está em " + score + "/10. Vamos deixar o dia mais leve e proteger pausas.";
+      result.actionTag = "Cuidar da energia";
+      result.actionTitle = "Faça o essencial e guarde energia.";
+      result.actionCopy = "Adie o que pesa e escolha um começo possível.";
       result.message.body = "Energia baixa: prefira tarefas leves, adie o que puder e deixe recuperação no plano.";
     } else if (level === "alta") {
       result.title = "Energia alta";
-      result.actionTag = "Avançar agora";
-      result.actionTitle = "Sua energia está em " + score + "/10. Bom momento para uma prioridade importante.";
+      result.careTitle = "Você já começou bem";
+      result.careLead = "Aproveite o ritmo sem esquecer a pausa.";
+      result.careCopy = "Sua energia está em " + score + "/10. Use esse fôlego com intenção e preserve um respiro depois.";
+      result.actionTag = "Próximo passo";
+      result.actionTitle = "Escolha uma prioridade importante e proteja uma pausa depois.";
+      result.actionCopy = "Depois, deixe uma pausa curta protegida.";
       result.message.body = "Energia alta: use um bloco de foco para o que mais importa e mantenha uma pausa curta.";
     } else if (level === "media") {
       result.title = "Energia média";
-      result.actionTag = "O que fazer agora";
-      result.actionTitle = "Sua energia está em " + score + "/10. Organize 3 prioridades possíveis.";
+      result.careTitle = "Vamos cuidar do essencial";
+      result.careLead = "Seu dia pode seguir com calma.";
+      result.careCopy = "Sua energia está em " + score + "/10. Escolha uma prioridade, uma pausa e um fechamento simples.";
+      result.actionTag = "Próximo passo leve";
+      result.actionTitle = "Organize 3 prioridades e respire no meio.";
+      result.actionCopy = "O essencial já basta para manter clareza hoje.";
       result.message.body = "Energia média: combine uma tarefa importante, uma leve e uma pausa visível.";
     }
     return result;

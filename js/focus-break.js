@@ -6,7 +6,7 @@
   var remaining = 120;
   var durationSeconds = 120;
   var timer = null;
-  var selectedName = "Pausa inteligente";
+  var selectedName = "Pausa sugerida";
   var completed = false;
 
   function format(seconds) {
@@ -61,7 +61,7 @@
       button.disabled = true;
       return;
     }
-    button.textContent = "Iniciar pausa";
+    button.textContent = "Iniciar com calma";
     button.disabled = false;
   }
 
@@ -90,7 +90,7 @@
     var donePanel = completePanel();
     if (donePanel) donePanel.hidden = true;
     setPrimaryState("");
-    setBreakStatus("Pausa pronta para começar", "");
+    setBreakStatus("Escolha uma pausa para começar", "");
   }
 
   function updateSelectedCopy(name) {
@@ -115,7 +115,7 @@
       item.closest(".micro-card").classList.toggle("active", item === button);
     });
     if (options.autoStart) start();
-    else Utils.notify(selectedName + " selecionada.", { kind: "success" });
+    else Utils.notify(selectedName + " pronta para você.", { kind: "success" });
   }
 
   function start() {
@@ -131,7 +131,7 @@
     if (panel) panel.hidden = true;
     setBreakStatus("Pausa em andamento", "running");
     setPrimaryState("running");
-    Utils.notify(selectedName + " iniciada.", { kind: "success" });
+    Utils.notify(selectedName + " iniciada. Volte no seu ritmo.", { kind: "success" });
     timer = window.setInterval(function () {
       remaining -= 1;
       render();
@@ -165,7 +165,7 @@
       data: new Date().toISOString()
     });
     Storage.write("microPauseDraft", null);
-    Utils.notify("Pausa registrada.", { kind: "success" });
+    Utils.notify("Pausa registrada. Volte no seu ritmo.", { kind: "success" });
     if (redirect === true) {
       window.setTimeout(function () { window.location.href = "focus.html"; }, 350);
     }
@@ -181,7 +181,7 @@
     if (breath) breath.dataset.duration = "120";
     Utils.setText('[data-duration-label="breath"]', "2 min");
     Utils.setText('[data-benefit-label="breath"]', "Pausa curta e protetiva para energia baixa.");
-    Utils.setText("[data-recommended-chip]", "sugerida pelo check-in");
+    Utils.setText("[data-recommended-chip]", "mais leve para hoje");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -196,7 +196,7 @@
       updateSelectedCopy(selectedName);
       setBreakStatus(selectedName + " preparada", "");
     } else {
-      setBreakStatus("Pausa pronta para começar", "");
+      setBreakStatus("Escolha uma pausa para começar", "");
     }
     setPrimaryState("");
     var startButton = Utils.qs("#breakStart");

@@ -5,49 +5,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lembretes | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260520-button-audit">
+    <link rel="stylesheet" href="../style.css?v=20260521-onboarding-polish">
     <script src="../js/storage.js" defer></script>
     <script src="../js/utils.js" defer></script>
     <script src="../js/icons.js?v=20260429-icons" defer></script>
     <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260518-reminders" defer></script>
+    <script src="../js/dedicated-pages.js?v=20260520-warm-pass" defer></script>
   </head>
   <body data-page="more" data-screen="reminders">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page reminders-figma-page">
         <header class="proto-topbar reminders-figma-header">
-          <h1>Lembretes personalizados</h1>
-          <p>Veja os avisos de hoje e ajuste o que precisar.</p>
+          <h1>Lembretes da rotina</h1>
+          <p>Apoios pequenos para lembrar do que cuida de você.</p>
         </header>
 
         <section class="reminder-summary-card">
           <h2>Resumo de hoje</h2>
-          <p>Equilíbrio ativo: check-in cedo, pausa depois do foco e hidratação à tarde.</p>
+          <p>Check-in cedo, pausa depois do foco e hidratação à tarde, tudo no seu ritmo.</p>
           <div class="reminder-chip-row">
-            <span class="chip" data-reminder-total>4 lembretes ativos</span>
-            <span class="chip">modo silencioso 20h</span>
-            <span class="chip">ajustado pelo check-in</span>
+            <span class="chip" data-reminder-total>4 apoios ativos</span>
+            <span class="chip">silencioso à noite</span>
+            <span class="chip">mais leve quando precisa</span>
           </div>
         </section>
 
         <section class="reminder-card-list" id="reminderList"></section>
 
         <section class="reminder-connected-card">
-          <h2>Lembretes conectados à rotina</h2>
-          <p>Os avisos acompanham energia, hábitos e foco do dia sem pressionar.</p>
+          <h2>Apoios conectados ao seu ritmo</h2>
+          <p>Os avisos acompanham energia, hábitos e foco com mais gentileza.</p>
           <div class="reminder-action-row">
-            <a href="settings.html">Ver configurações</a>
-            <a href="micro-pauses.html">Ver micro pausas</a>
+            <a href="settings.html">Ajustar ritmo</a>
+            <a href="micro-pauses.html">Ver pausas</a>
           </div>
         </section>
 
         <details class="reminder-create-shell" data-reminder-create-shell>
-          <summary>Criar lembrete</summary>
+          <summary>Criar um apoio leve</summary>
           <form class="reminder-create-form reminder-create-panel" data-dedicated-reminder-form>
             <label class="field compact-field">
-              <span>Nome do lembrete</span>
-              <input name="title" required placeholder="Novo lembrete">
+              <span>Nome do apoio</span>
+              <input name="title" required placeholder="Novo apoio">
             </label>
             <label class="field compact-field">
               <span>Mensagem</span>
@@ -66,8 +66,8 @@
                 </select>
               </label>
             </div>
-            <button class="button primary full" type="submit">Adicionar lembrete</button>
-            <a class="button secondary full" href="more.html">Cancelar</a>
+            <button class="button primary full" type="submit">Salvar apoio</button>
+            <a class="button secondary full" href="more.html">Fechar criação</a>
           </form>
         </details>
       </main>
