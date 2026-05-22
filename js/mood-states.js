@@ -39,7 +39,7 @@
   }
 
   function stripEnergyPrefix(value) {
-    return String(value || "").replace(/^Energia\s+\d+\/10\s*(?:·|Â·|-)\s*/i, "");
+    return String(value || "").replace(/^Energia\s+\d+\/10\s*(?:·|-)\s*/i, "");
   }
 
   function stateKey(checkin) {

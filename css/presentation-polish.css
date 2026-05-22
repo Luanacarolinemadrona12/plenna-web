@@ -890,6 +890,23 @@ body[data-screen="focus-session"] .focus-controls {
   box-shadow: var(--plenna-shadow-soft) !important;
 }
 
+.focus-sound-preset {
+  min-width: 0 !important;
+}
+
+.focus-sound-preset select {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  font-size: 12px !important;
+}
+
+body[data-screen="focus"] .focus-sound-preset select {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
 .preset-card.active {
   border-color: var(--plenna-brand) !important;
   background: var(--plenna-brand-soft) !important;
@@ -1655,4 +1672,513 @@ body[data-page="index"] .onboarding-login {
   font-weight: 500 !important;
   text-decoration: none !important;
   box-shadow: none !important;
+}
+
+/* Final page review polish: calmer hierarchy and bottom nav clearance. */
+body[data-screen="home"] .home-page,
+body[data-screen="planning-adjust"] .dedicated-adjust,
+body[data-screen="reminders"] .reminders-figma-page,
+body[data-screen="settings"] .settings-figma-page,
+body[data-screen="journal-night"] .figma-night-screen,
+body[data-screen="dashboard-operational"] .dedicated-operational,
+body[data-screen="export"] .export-figma,
+body[data-screen="export-success"] .page,
+body[data-screen="export-ready"] .page,
+body[data-screen="task-new"] .figma-task-form-page,
+body[data-screen="task-form"] .figma-task-form-page,
+body[data-screen="task-edit"] .figma-task-form-page {
+  padding-bottom: 138px !important;
+}
+
+body[data-screen="home"] .home-page {
+  padding-top: 44px !important;
+}
+
+body[data-screen="home"] .home-hero {
+  margin-bottom: 8px !important;
+  padding: 14px 16px !important;
+  border-radius: 24px !important;
+}
+
+body[data-screen="home"] .home-hero h1 {
+  font-size: 23px !important;
+  line-height: 29px !important;
+}
+
+body[data-screen="home"] .home-stack {
+  gap: 12px !important;
+}
+
+body[data-screen="home"] .home-care-note {
+  padding: 12px 14px !important;
+  border-radius: 18px !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="home"] #recommendationCard {
+  padding: 18px !important;
+  border: 1.5px solid rgba(8, 115, 70, 0.22) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 42px rgba(8, 115, 70, 0.13) !important;
+}
+
+body[data-screen="home"] #recommendationCard .button.primary,
+body[data-screen="home"] #recommendationCard [data-primary-action] {
+  min-height: 48px !important;
+}
+
+body[data-screen="home"] .home-priority-card,
+body[data-screen="home"] .appointment-card,
+body[data-screen="home"] .home-message-card,
+body[data-screen="home"] .home-week-card {
+  padding: 14px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 24px rgba(31, 55, 43, 0.07) !important;
+}
+
+body[data-screen="home"] .home-priority-card > .row.between {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+body[data-screen="home"] .home-priority-card h2 {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 21px !important;
+}
+
+body[data-screen="home"] #priorityList {
+  gap: 8px !important;
+}
+
+body[data-screen="home"] .home-priority-row {
+  display: grid !important;
+  min-height: 46px !important;
+  grid-template-columns: 32px minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 8px 0 !important;
+}
+
+body[data-screen="home"] .home-check-dot {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+}
+
+body[data-screen="home"] .home-priority-row p,
+body[data-screen="home"] .home-priority-row small {
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="home"] #homeMetrics {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] #homeMetrics .card,
+body[data-screen="home"] .home-metric-card {
+  min-height: 62px !important;
+  padding: 10px 8px !important;
+  border-radius: 18px !important;
+}
+
+body[data-screen="home"] #homeMetrics strong,
+body[data-screen="home"] .home-metric-card strong {
+  font-size: 17px !important;
+  line-height: 22px !important;
+}
+
+body[data-screen="home"] #homeMetrics b,
+body[data-screen="home"] .home-metric-card b,
+body[data-screen="home"] #homeMetrics span,
+body[data-screen="home"] .home-metric-card span {
+  font-size: 11.5px !important;
+  line-height: 15px !important;
+}
+
+body[data-screen="home"] .home-shortcuts {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] .home-shortcuts .shortcut {
+  min-height: 46px !important;
+  padding: 9px 8px !important;
+  border-radius: 16px !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  text-align: center !important;
+}
+
+body[data-screen="planning-adjust"] .figma-adjust-screen {
+  gap: 12px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-top-chips,
+body[data-screen="planning-adjust"] .planning-support-actions {
+  gap: 8px !important;
+}
+
+body[data-screen="planning-adjust"] .figma-adjust-main,
+body[data-screen="planning-adjust"] .figma-adjust-schedule-card,
+body[data-screen="planning-adjust"] .planning-minimal-support {
+  padding: 14px !important;
+  border-radius: 22px !important;
+}
+
+body[data-screen="planning-adjust"] .figma-adjust-main h1 {
+  margin-bottom: 10px !important;
+  font-size: 22px !important;
+  line-height: 28px !important;
+}
+
+body[data-screen="planning-adjust"] .figma-compare-grid.compact {
+  gap: 8px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-compare-card {
+  min-height: 86px !important;
+  padding: 11px !important;
+  border-radius: 18px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-compare-card strong {
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-compare-card em,
+body[data-screen="planning-adjust"] .adjust-reason-panel {
+  font-size: 12px !important;
+  line-height: 17px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-reason-panel,
+body[data-screen="planning-adjust"] .save-summary-card {
+  margin: 10px 0 !important;
+  padding: 10px 12px !important;
+  border-radius: 16px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-main-save-row {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-main-save-row .button.primary {
+  min-height: 50px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-main-save-row .button.secondary,
+body[data-screen="planning-adjust"] .planning-control-tile {
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+body[data-screen="planning-adjust"] .planning-period-group {
+  gap: 8px !important;
+  margin-top: 10px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-period-heading {
+  margin-bottom: 4px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-schedule-item {
+  grid-template-columns: 52px minmax(0, 1fr) auto !important;
+  gap: 9px !important;
+  padding: 10px !important;
+  border-radius: 16px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-schedule-item strong {
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-schedule-item small {
+  font-size: 11.5px !important;
+  line-height: 16px !important;
+}
+
+body[data-screen="planning-adjust"] .adjust-block-action {
+  padding: 5px 8px !important;
+  font-size: 11px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-adjust-actions {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-adjust-action {
+  min-height: 72px !important;
+  padding: 11px !important;
+  border-radius: 16px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-adjust-action strong {
+  font-size: 13px !important;
+}
+
+body[data-screen="planning-adjust"] .planning-adjust-action span {
+  font-size: 11.5px !important;
+  line-height: 16px !important;
+}
+
+body[data-screen="reminders"] .reminders-figma-page,
+body[data-screen="settings"] .settings-figma-page {
+  gap: 12px !important;
+}
+
+body[data-screen="reminders"] .reminder-summary-card,
+body[data-screen="settings"] .settings-summary-card,
+body[data-screen="settings"] .settings-group-card {
+  padding: 14px !important;
+  border-radius: 22px !important;
+}
+
+body[data-screen="reminders"] .reminder-chip-row,
+body[data-screen="settings"] .settings-chip-row {
+  gap: 7px !important;
+}
+
+body[data-screen="reminders"] .reminder-chip-row .chip,
+body[data-screen="settings"] .settings-chip-row .chip {
+  padding: 7px 10px !important;
+  font-size: 11.5px !important;
+  line-height: 15px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-list,
+body[data-screen="settings"] .settings-card-list {
+  gap: 10px !important;
+}
+
+body[data-screen="reminders"] .reminder-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  align-items: start !important;
+  padding: 13px !important;
+  border-radius: 18px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-copy strong,
+body[data-screen="settings"] .setting-card strong {
+  font-size: 14px !important;
+  line-height: 19px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-copy p,
+body[data-screen="settings"] .setting-card p {
+  font-size: 12px !important;
+  line-height: 17px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-actions {
+  grid-column: 1 / -1 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+}
+
+body[data-screen="reminders"] .reminder-card-actions button,
+body[data-screen="reminders"] .reminder-card-actions a {
+  min-height: 42px !important;
+  padding: 7px 8px !important;
+  border-radius: 14px !important;
+  font-size: 11.5px !important;
+  line-height: 15px !important;
+}
+
+body[data-screen="reminders"] .reminder-connected-card,
+body[data-screen="reminders"] .reminder-create-shell {
+  padding: 14px !important;
+  border-radius: 20px !important;
+}
+
+body[data-screen="reminders"] .reminder-create-form {
+  gap: 10px !important;
+}
+
+body[data-screen="settings"] .settings-groups {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+body[data-screen="settings"] .setting-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  align-items: center !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+}
+
+body[data-screen="settings"] .settings-clear-button {
+  margin-top: 10px !important;
+  min-height: 48px !important;
+  border-color: #b84d43 !important;
+}
+
+body[data-screen="settings"] .settings-return-link {
+  margin-top: 8px !important;
+  background: #ffffff !important;
+}
+
+body[data-screen="journal-night"] .figma-night-screen {
+  gap: 12px !important;
+}
+
+body[data-screen="journal-night"] .night-summary-flow {
+  gap: 11px !important;
+}
+
+body[data-screen="journal-night"] .figma-night-main-card,
+body[data-screen="journal-night"] .night-prompt-card,
+body[data-screen="journal-night"] .night-submit-card {
+  padding: 14px !important;
+  border-radius: 22px !important;
+}
+
+body[data-screen="journal-night"] .night-prompt-card textarea,
+body[data-screen="journal-night"] .figma-night-main-card textarea {
+  min-height: 78px !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+  background: #fffdfa !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+}
+
+body[data-screen="journal-night"] .night-submit-card {
+  display: grid !important;
+  gap: 8px !important;
+}
+
+body[data-screen="journal-night"] .night-submit-card .button.primary {
+  min-height: 52px !important;
+}
+
+body[data-screen="journal-night"] .night-submit-card .muted-action {
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+body[data-screen="dashboard-operational"] .figma-operational-screen {
+  gap: 12px !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-section-title {
+  margin: 4px 0 0 !important;
+  font-size: 17px !important;
+  line-height: 22px !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-figma-metrics {
+  gap: 8px !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-figma-metrics .card,
+body[data-screen="dashboard-operational"] .operational-card,
+body[data-screen="dashboard-operational"] .operational-reading-card,
+body[data-screen="dashboard-operational"] .operational-action-card {
+  padding: 14px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 24px rgba(31, 55, 43, 0.07) !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-progress-row {
+  gap: 8px !important;
+  padding: 9px 0 !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-progress-row span {
+  font-size: 12.5px !important;
+  line-height: 17px !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-action-card .button.primary {
+  min-height: 48px !important;
+}
+
+body[data-screen="dashboard-operational"] .operational-action-card .button.secondary,
+body[data-screen="focus-break"] .focus-break-primary-row .button.secondary,
+body[data-screen="focus-break"] .focus-break-after .button.secondary {
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+body[data-screen="focus-break"] .focus-break-choice-card {
+  padding: 18px 16px !important;
+  text-align: center !important;
+}
+
+body[data-screen="focus-break"] .break-option-list {
+  gap: 8px !important;
+}
+
+body[data-screen="focus-break"] .focus-break-primary-row {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+body[data-screen="tasks"] .quick-add,
+body[data-screen="task-new"] .figma-task-form,
+body[data-screen="task-form"] .figma-task-form,
+body[data-screen="task-edit"] .figma-task-form {
+  gap: 10px !important;
+}
+
+body[data-screen="task-new"] .figma-task-form > .button.primary,
+body[data-screen="task-form"] .figma-task-form > .button.primary,
+body[data-screen="task-edit"] .figma-task-form > .button.primary {
+  min-height: 52px !important;
+}
+
+body[data-screen="task-new"] .figma-task-form > .button.secondary,
+body[data-screen="task-form"] .figma-task-form > .button.secondary,
+body[data-screen="task-edit"] .figma-task-form > .button.secondary {
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+body[data-screen="task-edit"] .figma-task-form > .button.danger,
+body[data-screen="task-edit"] .figma-task-form [data-delete-task] {
+  margin-top: 8px !important;
+  border-color: #b84d43 !important;
+}
+
+body[data-screen="export"] .export-actions-row {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+body[data-screen="export"] .export-actions-row .button.secondary {
+  background: #ffffff !important;
+  color: var(--plenna-brand-strong) !important;
+}
+
+@media (min-width: 700px) {
+  body[data-screen="home"] .home-shortcuts {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  body[data-screen="planning-adjust"] .planning-main-save-row,
+  body[data-screen="export"] .export-actions-row,
+  body[data-screen="focus-break"] .focus-break-primary-row {
+    grid-template-columns: 1fr auto !important;
+  }
 }

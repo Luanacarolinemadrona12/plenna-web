@@ -1462,12 +1462,6 @@ body[data-screen="task-edit"] .figma-subtask-list .subtask-mini-action {
   font-weight: 900 !important;
   line-height: 1 !important;
 }
-
-body[data-screen="task-new"] .figma-subtask-list .subtask-mini-action::before,
-body[data-screen="task-edit"] .figma-subtask-list .subtask-mini-action::before {
-  content: none !important;
-}
-
 body[data-screen="task-new"] .figma-subtask-list li > b,
 body[data-screen="task-edit"] .figma-subtask-list li > b {
   display: grid !important;

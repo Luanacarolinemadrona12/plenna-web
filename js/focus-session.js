@@ -6,6 +6,7 @@
   var timerId = null;
   var elapsed = 0;
   var draft = null;
+  var draftRestored = false;
   var totalSeconds = 25 * 60;
 
   function render() {
@@ -22,6 +23,13 @@
       timer.setAttribute("aria-label", "Tempo restante: " + label);
     }
     if (remaining <= 0) finish(true);
+  }
+
+  function elapsedFromDraft(draft) {
+    if (!draft || !draft.iniciadoEm) return 0;
+    var started = new Date(draft.iniciadoEm).getTime();
+    if (Number.isNaN(started)) return 0;
+    return Math.max(0, Math.floor((Date.now() - started) / 1000));
   }
 
   function setStatus(message, state) {
@@ -57,7 +65,8 @@
     Utils.setText("#sessionContextType", draft.tipo || "Foco leve");
   }
 
-  function start() {
+  function start(options) {
+    options = options || {};
     if (timerId) return;
     timerId = window.setInterval(function () {
       elapsed += 1;
@@ -66,7 +75,9 @@
     Utils.qs("#sessionStart").hidden = true;
     Utils.qs("#sessionPause").hidden = false;
     setStatus("Foco em andamento", "running");
-    Utils.notify("Foco em andamento.", { kind: "success" });
+    if (options.notify !== false) {
+      Utils.notify("Foco em andamento.", { kind: "success" });
+    }
   }
 
   function pause() {
@@ -182,15 +193,22 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    draft = Storage.read("focusDraft", null) || {
+    var savedDraft = Storage.read("focusDraft", null);
+    draftRestored = savedDraft !== null;
+    draft = savedDraft || {
       taskId: null,
       minutos: Number(Utils.getQueryParam("min") || 25),
       tipo: "Foco leve",
       iniciadoEm: new Date().toISOString()
     };
     totalSeconds = Math.max(1, Number(draft.minutos) || 25) * 60;
+    elapsed = draftRestored ? Math.min(elapsedFromDraft(draft), totalSeconds) : 0;
     Utils.setText("#sessionMode", draft.tipo || "Foco leve");
-    setStatus("Preparando foco", "ready");
+    if (draftRestored && elapsed > 0 && elapsed < totalSeconds) {
+      setStatus("Foco em andamento", "running");
+    } else {
+      setStatus("Preparando foco", "ready");
+    }
     ensureSessionContext();
     updateTaskCopy();
     renderTaskSwitcher();
@@ -199,5 +217,10 @@
     Utils.qs("#sessionPause").addEventListener("click", pause);
     Utils.qs("#sessionFinish").addEventListener("click", complete);
     Utils.qs("#sessionSkip").addEventListener("click", abandon);
+    if (draftRestored && elapsed > 0 && elapsed < totalSeconds) {
+      Utils.qs("#sessionStart").hidden = true;
+      Utils.qs("#sessionPause").hidden = false;
+      start({ notify: false });
+    }
   });
 })();

@@ -626,6 +626,7 @@
       if (operationalPeriod) {
         Storage.write("dashboardOperationalPeriod", operationalPeriod.dataset.operationalPeriod);
         initDashboardOperational();
+        Utils.notify("Período da rotina atualizado.", { kind: "success" });
       }
 
       var adjust = event.target.closest("[data-adjust-kind]");
@@ -902,6 +903,7 @@
         event.stopImmediatePropagation();
         Storage.write("exportPeriod", periodButton.dataset.exportPeriod);
         initExport();
+        Utils.notify("Período do relatório atualizado.", { kind: "success" });
         return;
       }
       var exportButton = event.target.closest("[data-dedicated-export]");

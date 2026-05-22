@@ -256,6 +256,33 @@
     return false;
   }
 
+  function dialogFocusables(overlay) {
+    return qsa("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])", overlay)
+      .filter(function (item) { return !item.disabled && item.offsetParent !== null; });
+  }
+
+  function keepFocusInDialog(event, overlay) {
+    if (event.key !== "Tab") return;
+    var focusables = dialogFocusables(overlay);
+    if (!focusables.length) return;
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  function dialogKeydownHandler(overlay, close, escapeResult) {
+    return function (event) {
+      if (event.key === "Escape") close(escapeResult);
+      keepFocusInDialog(event, overlay);
+    };
+  }
+
   function confirmAction(options) {
     options = options || {};
     return new Promise(function (resolve) {
@@ -288,26 +315,7 @@
         resolve(result);
       }
 
-      function focusableControls() {
-        return qsa("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])", overlay)
-          .filter(function (item) { return !item.disabled && item.offsetParent !== null; });
-      }
-
-      function onKeydown(event) {
-        if (event.key === "Escape") close(false);
-        if (event.key !== "Tab") return;
-        var focusables = focusableControls();
-        if (!focusables.length) return;
-        var first = focusables[0];
-        var last = focusables[focusables.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
+      var onKeydown = dialogKeydownHandler(overlay, close, false);
 
       overlay.addEventListener("click", function (event) {
         if (event.target === overlay || event.target.closest("[data-confirm-cancel]")) close(false);
@@ -376,26 +384,7 @@
         resolve(result);
       }
 
-      function focusableControls() {
-        return qsa("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])", overlay)
-          .filter(function (item) { return !item.disabled && item.offsetParent !== null; });
-      }
-
-      function onKeydown(event) {
-        if (event.key === "Escape") close(null);
-        if (event.key !== "Tab") return;
-        var focusables = focusableControls();
-        if (!focusables.length) return;
-        var first = focusables[0];
-        var last = focusables[focusables.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
+      var onKeydown = dialogKeydownHandler(overlay, close, null);
 
       overlay.addEventListener("click", function (event) {
         if (event.target === overlay || event.target.closest("[data-edit-cancel]")) close(null);

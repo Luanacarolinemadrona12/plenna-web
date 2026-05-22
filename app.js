@@ -18,19 +18,21 @@
 
   function ensureMainTarget() {
     var main = document.querySelector("main");
-    if (!main) return;
+    if (!main) return null;
     if (!main.id) main.id = "conteudo";
     if (!main.hasAttribute("tabindex")) main.setAttribute("tabindex", "-1");
+    return main.id;
   }
 
   function ensureSkipLink() {
     if (document.querySelector(".skip-link")) return;
+    var targetId = ensureMainTarget() || "conteudo";
     var link = document.createElement("a");
     link.className = "skip-link";
-    link.href = "#conteudo";
+    link.href = "#" + targetId;
     link.textContent = "Pular para conteúdo";
     link.addEventListener("click", function () {
-      var main = document.getElementById("conteudo");
+      var main = document.getElementById(targetId);
       if (main && typeof main.focus === "function") {
         main.focus({ preventScroll: false });
       }

@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-05-21T22:12:54.387Z",
+  "checked": 7,
+  "failed": 0,
+  "exceptions": [],
+  "tests": [
+    {
+      "name": "checkin guided flow saved",
+      "status": "passed"
+    },
+    {
+      "name": "tasks search create postpone redistribute",
+      "status": "passed"
+    },
+    {
+      "name": "focus select sound start pause",
+      "status": "passed"
+    },
+    {
+      "name": "notes convert and save",
+      "status": "passed"
+    },
+    {
+      "name": "reminders create toggle",
+      "status": "passed"
+    },
+    {
+      "name": "export generate",
+      "status": "passed"
+    },
+    {
+      "name": "task-new save",
+      "status": "passed"
+    }
+  ]
+}

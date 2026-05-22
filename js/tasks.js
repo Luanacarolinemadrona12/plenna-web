@@ -155,6 +155,7 @@
       userChangedFilter = true;
       Storage.write("taskFilter", activeFilter);
       renderTasks();
+      Utils.notify("Filtro aplicado: " + filter.textContent.replace(/\s+/g, " ").trim() + ".", { kind: "success" });
       return;
     }
     var action = event.target.closest("[data-action]");

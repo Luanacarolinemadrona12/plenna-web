@@ -6105,12 +6105,6 @@ body[data-screen="checkin"] #skipCheckin {
 .figma-night-screen {
   padding-top: 55px !important;
 }
-
-/* Figma parity pass 7: align the remaining high-diff frames with the mobile references. */
-body[data-screen="checkin"] .ux-stepper {
-  display: none !important;
-}
-
 body[data-screen="checkin"] .checkin-page {
   padding-top: 74px !important;
 }
@@ -6118,21 +6112,9 @@ body[data-screen="checkin"] .checkin-page {
 body[data-screen="checkin"] .checkin-page .form {
   gap: 16px !important;
 }
-
-body[data-screen="checkin"] .page-header p {
-  max-width: none !important;
-  font-size: 14px !important;
-  line-height: 18px !important;
-}
-
 body[data-screen="checkin"] .checkin-actions {
   gap: 0 !important;
 }
-
-body[data-screen="checkin"] #skipCheckin {
-  display: none !important;
-}
-
 .figma-adjust-screen {
   gap: 8px !important;
   padding-top: 45px !important;
@@ -6143,11 +6125,6 @@ body[data-screen="checkin"] #skipCheckin {
   gap: 10px !important;
   padding: 14px !important;
 }
-
-.figma-adjust-main .adjust-reason-panel {
-  display: none !important;
-}
-
 .figma-compare-grid.compact span {
   min-height: 56px !important;
 }
@@ -6185,49 +6162,10 @@ body[data-screen="checkin"] #skipCheckin {
   gap: 11px !important;
   padding: 14px !important;
 }
-
-.settings-figma-page {
-  padding-top: 51px !important;
-}
-
 .reminders-figma-page {
   gap: 14px !important;
   padding-top: 59px !important;
-}
-
-.reminder-summary-card {
-  min-height: 154px !important;
-  padding: 13px 14px !important;
-}
-
-.reminder-card-list {
-  gap: 14px !important;
-}
-
-.reminder-card {
-  min-height: 118px !important;
-  padding: 12px 14px !important;
-}
-
-.reminder-card h3 {
-  font-size: 14px !important;
-  line-height: 16px !important;
-}
-
-.reminder-card p {
-  font-size: 10.5px !important;
-  line-height: 12.5px !important;
-}
-
-.reminder-card-actions button,
-.reminder-card-actions a,
-.reminder-action-row a {
-  min-height: 39px !important;
-  border-radius: 12px !important;
-  font-size: 11px !important;
-}
-
-.focus-break-figma {
+}.focus-break-figma {
   padding-top: 22px !important;
 }
 
@@ -6241,11 +6179,6 @@ body[data-screen="checkin"] #skipCheckin {
 .focus-break-after {
   border-radius: 20px !important;
 }
-
-.figma-night-screen {
-  padding-top: 55px !important;
-}
-
 .figma-operational-screen {
   padding-top: 40px !important;
 }
@@ -6254,11 +6187,6 @@ body[data-screen="checkin"] #skipCheckin {
 body[data-screen="checkin"] .checkin-page {
   padding-top: 72px;
 }
-
-body[data-screen="checkin"] .checkin-page .form {
-  gap: 13px;
-}
-
 body[data-screen="checkin"] .ux-stepper {
   margin-top: 9px;
 }
@@ -7195,12 +7123,6 @@ body[data-screen="reminders"] .status-bar {
 .adjust-quick-controls .grid-2 {
   gap: 12px 24px;
 }
-
-.adjust-quick-controls strong {
-  font-size: 12px;
-  line-height: 14px;
-}
-
 .adjust-quick-controls span {
   font-size: 10px;
   line-height: 12px;
@@ -7219,15 +7141,6 @@ body[data-screen="reminders"] .status-bar {
 .figma-adjust-screen .proto-topbar p {
   font-weight: 500;
 }
-
-.figma-adjust-main,
-.figma-adjust-schedule-card,
-.adjust-quick-controls {
-  gap: 7px;
-  padding: 11px 13px;
-  border-radius: 18px;
-}
-
 .figma-adjust-main h2 {
   font-size: 18px;
   font-weight: 800;
@@ -7239,82 +7152,25 @@ body[data-screen="reminders"] .status-bar {
   font-size: 10.5px;
   font-weight: 500;
   line-height: 12.5px;
-}
-
-.figma-compare-grid.compact span {
-  min-height: 44px;
-  padding: 8px;
-}
-
-.figma-compare-grid.compact strong {
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.figma-adjust-main .button {
+}.figma-adjust-main .button {
   min-height: 34px;
   font-weight: 700;
-}
-
-.adjust-schedule-item {
-  grid-template-columns: 66px 1fr 58px;
-  min-height: 42px;
-  padding: 5px 10px;
-}
-
-.adjust-schedule-item > span {
-  min-height: 32px;
-}
-
-.adjust-schedule-item strong {
+}.adjust-schedule-item strong {
   font-size: 10.5px;
   font-weight: 750;
   line-height: 12px;
 }
-
-.adjust-schedule-item small {
-  font-size: 9.2px;
-  line-height: 10.5px;
-}
-
 .adjust-schedule-item b {
   min-width: 54px;
   padding: 5px 7px;
   font-size: 9.2px;
   font-weight: 700;
 }
-
-.adjust-quick-controls {
-  gap: 5px;
-  padding: 9px 13px 10px;
-}
-
 .adjust-quick-controls h2 {
   font-size: 15px;
   font-weight: 800;
   line-height: 17px;
-}
-
-.adjust-quick-controls .grid-2 {
-  gap: 7px 18px;
-}
-
-.adjust-quick-controls button,
-.adjust-quick-controls a {
-  gap: 1px;
-}
-
-.adjust-quick-controls strong {
-  font-size: 10.8px;
-  line-height: 12px;
-}
-
-.adjust-quick-controls span {
-  font-size: 9px;
-  line-height: 10px;
-}
-
-.reminders-figma-header h1,
+}.reminders-figma-header h1,
 .settings-figma-header h1 {
   font-weight: 800;
 }
@@ -7439,45 +7295,9 @@ body[data-screen="reminders"] .status-bar {
 .operational-action-card .button {
   min-height: 38px;
   font-size: 11px;
-}
-
-/* Figma normalized pass: align with the 390x844 reference used by compare. */
-.reminders-figma-page {
-  gap: 8px;
-  padding-top: 50px;
-}
-
-.reminder-summary-card,
-.reminder-connected-card {
-  gap: 7px;
-  padding: 11px 12px;
-}
-
-.reminder-summary-card {
+}.reminder-summary-card {
   min-height: 0;
-}
-
-.reminder-card {
-  gap: 6px;
-  min-height: 94px;
-  padding: 10px 12px;
-}
-
-.reminder-card-copy {
-  min-height: 31px;
-}
-
-.reminder-card h3 {
-  font-size: 12.6px;
-  line-height: 14px;
-}
-
-.reminder-card p {
-  font-size: 9.2px;
-  line-height: 10.5px;
-}
-
-.reminder-card-actions,
+}.reminder-card-actions,
 .reminder-action-row {
   grid-template-columns: 1fr 92px;
   gap: 7px;
@@ -7487,101 +7307,5 @@ body[data-screen="reminders"] .status-bar {
 .reminder-action-row a {
   min-height: 31px;
   border-radius: 10px;
-  font-size: 10px;
-}
-
-.reminder-connected-card {
-  min-height: 88px;
-}
-
-.figma-operational-screen {
-  gap: 4px;
-  padding-top: 40px;
-}
-
-.figma-operational-screen .proto-topbar {
-  gap: 2px;
-  margin-bottom: 3px;
-}
-
-.operational-tabs,
-.operational-period-tabs {
-  gap: 5px;
-}
-
-.operational-tabs a,
-.operational-period-tabs button {
-  min-height: 20px;
-  min-width: 55px;
-  font-size: 9px;
-}
-
-.operational-section-title {
-  margin-top: 0;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.operational-figma-metrics {
-  gap: 6px 8px;
-}
-
-.operational-figma-metrics article {
-  min-height: 48px;
-  padding: 6px 11px;
-  border-radius: 15px;
-}
-
-.operational-figma-metrics small {
-  font-size: 9px;
-  line-height: 10px;
-}
-
-.operational-figma-metrics strong {
-  font-size: 15px;
-  line-height: 16px;
-}
-
-.operational-figma-metrics span {
-  font-size: 8.8px;
-  line-height: 10px;
-}
-
-.operational-card,
-.operational-reading-card,
-.operational-action-card {
-  gap: 4px;
-  padding: 9px 12px;
-  border-radius: 16px;
-}
-
-.operational-card h2,
-.operational-reading-card h2,
-.operational-action-card h2 {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.operational-progress-row {
-  gap: 2px;
-}
-
-.operational-progress-row span {
-  font-size: 9.5px;
-  line-height: 11px;
-}
-
-.operational-progress-row i {
-  height: 5px;
-}
-
-.operational-reading-card p,
-.operational-action-card p {
-  font-size: 9.8px;
-  line-height: 12px;
-}
-
-.operational-action-card .button {
-  min-height: 31px;
   font-size: 10px;
 }

@@ -438,7 +438,8 @@ body[data-screen="focus-session"] .focus-session-status {
 body[data-screen="focus-session"] .focus-timer-cluster {
   position: relative !important;
   display: grid !important;
-  width: 100% !important;
+  width: min(100%, 350px) !important;
+  margin: 0 auto !important;
   height: auto !important;
   min-height: 420px !important;
   justify-items: center !important;
@@ -447,7 +448,7 @@ body[data-screen="focus-session"] .focus-timer-cluster {
 }
 
 body[data-screen="focus-session"] .focus-timer-cluster .timer {
-  position: static !important;
+  position: relative !important;
   display: grid !important;
   width: 210px !important;
   height: 210px !important;
@@ -458,13 +459,33 @@ body[data-screen="focus-session"] .focus-timer-cluster .timer {
   font-size: 32px !important;
   font-weight: 900 !important;
 }
+body[data-screen="focus-session"] .focus-timer-cluster .timer strong {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+
+body[data-screen="focus-session"] .focus-timer-cluster > p,
+body[data-screen="focus-session"] .focus-session-status {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
 
 body[data-screen="focus-session"] .focus-controls {
   position: static !important;
-  width: 100% !important;
+  width: min(100%, 350px) !important;
   height: auto !important;
   justify-content: center !important;
-  margin-top: 0 !important;
+  margin: 0 auto !important;
+  gap: 14px !important;
+}
+
+body[data-screen="focus-session"] .focus-task-card,
+body[data-screen="focus-session"] #sessionContextSummary {
+  width: min(100%, 350px) !important;
+  margin: 0 auto !important;
 }
 
 body[data-screen="focus-session"] .focus-session-status {
@@ -604,7 +625,13 @@ body[data-screen="focus-session"] .focus-controls {
 }
 
 .home-shortcuts {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  align-items: stretch !important;
+}
+
+.home-shortcuts .home-action-shortcut.always-visible {
+  grid-column: 1 / -1 !important;
 }
 
 .home-action-shortcut,
@@ -868,12 +895,6 @@ body[data-screen="settings"] .setting-card > div {
   grid-column: 1 !important;
   min-width: 0 !important;
 }
-
-body[data-screen="settings"] .setting-card h3,
-body[data-screen="settings"] .setting-card p {
-  padding-right: 0 !important;
-}
-
 body[data-screen="settings"] .setting-card > .chip {
   position: static !important;
   grid-column: 1 !important;
@@ -3974,12 +3995,6 @@ body[data-screen="reminders"] .reminder-summary-card p {
   font-size: 9px !important;
   line-height: 10px !important;
 }
-
-body[data-screen="reminders"] .reminder-card {
-  padding: 9px 12px !important;
-  gap: 6px 9px !important;
-}
-
 body[data-screen="reminders"] .reminder-card > .chip,
 body[data-screen="reminders"] .reminder-toggle-chip {
   min-height: 32px !important;
@@ -4857,11 +4872,6 @@ body[data-screen="dashboard-history"] .history-chart-card {
 body[data-screen="dashboard-history"] .history-reading-card {
   min-height: 72px !important;
 }
-
-body[data-screen="dashboard-history"] .history-influence-card {
-  min-height: 126px !important;
-}
-
 body[data-screen="dashboard-history"] .history-bars {
   position: relative !important;
   min-height: 70px !important;
@@ -6509,11 +6519,6 @@ body[data-screen="checkin"] .energy-scale {
 body[data-screen="checkin"] .choice-grid {
   gap: 8px !important;
 }
-
-body[data-screen="checkin"] .mood-card .choice-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-}
-
 body[data-screen="checkin"] .factor-card .choice-grid,
 body[data-screen="checkin"] .need-card .choice-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -7098,11 +7103,6 @@ body[data-screen="micro-pauses"] .micro-control-row .button.secondary {
   min-height: 40px !important;
   background: #ffffff !important;
 }
-
-body[data-screen="micro-pauses"].pause-running .micro-after-card .micro-return-row {
-  display: none !important;
-}
-
 body[data-screen="micro-pauses"].pause-complete .micro-after-card .micro-control-row {
   display: none !important;
 }
@@ -7505,12 +7505,6 @@ body[data-screen="reminders"] .reminder-card {
   padding: 16px 12px !important;
   border-radius: 18px !important;
 }
-
-body[data-screen="reminders"] .reminder-card-copy {
-  grid-column: 1 !important;
-  grid-row: 1 !important;
-}
-
 body[data-screen="reminders"] .reminder-card-copy p strong {
   color: #526378 !important;
   font-weight: 900 !important;
@@ -8029,11 +8023,6 @@ body[data-screen="checkin"] .ux-stepper span {
   border-radius: 999px !important;
   background: #dcece4 !important;
 }
-
-body[data-screen="checkin"] .ux-stepper span.active {
-  background: #35c98d !important;
-}
-
 body[data-screen="checkin"] [data-checkin-step][aria-current="step"] {
   border-color: #cdeedd !important;
   box-shadow: 0 16px 34px rgba(19, 110, 71, 0.11) !important;
@@ -8211,12 +8200,6 @@ body[data-screen="micro-pauses"] .micro-card {
   min-height: 76px !important;
   padding: 13px !important;
 }
-
-body[data-screen="micro-pauses"] .micro-card.active {
-  border-color: #35c98d !important;
-  background: #f0fff7 !important;
-}
-
 body[data-screen="micro-pauses"] .micro-after-card {
   display: grid !important;
   gap: 12px !important;
@@ -8321,11 +8304,6 @@ body[data-screen="task-new"] .task-form-actions {
 body[data-screen="dashboard-operational"] .proto-topbar h1::after {
   content: "" !important;
 }
-
-body[data-screen="dashboard-operational"] .context-help {
-  display: none !important;
-}
-
 body[data-screen="dashboard-operational"] .operational-figma-metrics {
   gap: 9px !important;
 }
@@ -8370,11 +8348,6 @@ body[data-screen="checkin"] .checkin-step-actions,
 body[data-screen="checkin"] .checkin-summary-card {
   display: none !important;
 }
-
-body[data-screen="checkin"] [data-checkin-step] {
-  display: grid !important;
-}
-
 body[data-screen="checkin"] .choice-card::after,
 body[data-screen="checkin"] input:checked + .choice-card::after {
   content: none !important;
@@ -8416,11 +8389,6 @@ body[data-screen="checkin"] .checkin-secondary-actions .button {
 body[data-screen="checkin"] .checkin-skip-note {
   display: none !important;
 }
-
-body[data-screen="checkin"] .form {
-  gap: 10px !important;
-}
-
 body[data-screen="checkin"] .checkin-card {
   padding: 13px !important;
   border-radius: 18px !important;
@@ -9124,12 +9092,6 @@ body[data-screen="reminders"] .reminder-card-actions .reminder-danger-link {
   font-weight: 900 !important;
   line-height: 1 !important;
 }
-
-.figma-subtask-list li {
-  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
-  min-height: 52px !important;
-}
-
 .figma-subtask-list li > i {
   display: grid !important;
   width: 44px !important;
@@ -9691,16 +9653,19 @@ body[data-screen="settings"] .setting-card {
 
 body[data-screen="settings"] .setting-card > div {
   grid-column: 1 !important;
+}
+
+body[data-screen="home"] .home-shortcuts {
+  grid-template-columns: 108px 120px minmax(0, 1fr) !important;
+  gap: 8px !important;
+  justify-items: stretch !important;
+}
+
+body[data-screen="home"] .home-shortcuts .home-action-shortcut.always-visible {
+  grid-column: 1 / -1 !important;
+}
   grid-row: 1 / span 2 !important;
 }
-
-body[data-screen="settings"] .setting-card > .chip {
-  grid-column: 2 !important;
-  grid-row: 1 !important;
-  align-self: start !important;
-  justify-self: end !important;
-}
-
 body[data-screen="settings"] .setting-card button:not([data-clear-local]),
 body[data-screen="settings"] .setting-card > a {
   grid-column: 2 !important;
@@ -9752,61 +9717,7 @@ button.chip,
 .chip[role="button"],
 summary {
   min-height: 44px !important;
-}
-
-body[data-screen="settings"] .settings-clear-button {
-  position: static !important;
-  display: flex !important;
-  width: 100% !important;
-  height: auto !important;
-  min-height: 48px !important;
-  max-width: none !important;
-  padding: 0 16px !important;
-  margin: 10px 0 0 !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
-  border: 1px solid #efb8b8 !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-body[data-screen="planning"] .planning-block-menu {
-  position: static !important;
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  min-height: 0 !important;
-  padding: 0 !important;
-  margin: 8px 0 0 !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
-  border: 0 !important;
-}
-
-body[data-screen="planning"] .planning-block-menu summary {
-  min-height: 40px !important;
-  padding: 0 14px !important;
-  font-size: 12px !important;
-}
-
-body[data-screen="planning"] .planning-menu-actions {
-  grid-template-columns: repeat(3, minmax(72px, 1fr)) !important;
-  gap: 8px !important;
-}
-
-body[data-screen="planning"] .planning-menu-actions .button {
-  width: 100% !important;
-  min-width: 72px !important;
-  min-height: 44px !important;
-  padding: 0 10px !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
-  white-space: normal !important;
-}
-
-body[data-screen="calendar-week"] .week-load-pill,
+}body[data-screen="calendar-week"] .week-load-pill,
 body[data-screen="dashboard-history"] .history-period-tabs button,
 body[data-screen="dashboard-operational"] .operational-period-tabs button,
 .period-tabs button,
@@ -9843,17 +9754,4 @@ body[data-screen="reminders"] .reminder-state-chip {
 
 .home-priority-row {
   grid-template-columns: 44px minmax(0, 1fr) auto !important;
-}
-
-.task-row-card .item-top {
-  grid-template-columns: 44px minmax(0, 1fr) minmax(78px, 92px) !important;
-}
-
-.habit-item .item-top {
-  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
-}
-
-.figma-subtask-list li {
-  grid-template-columns: 44px minmax(0, 1fr) 18px !important;
-  align-items: center !important;
 }

@@ -1,5 +1,5 @@
 ﻿{
-    "generatedAt":  "2026-05-21T08:50:22",
+    "generatedAt":  "2026-05-21T19:23:20",
     "viewport":  "390x844",
     "baseUrl":  "http://127.0.0.1:61053",
     "totalScreens":  34,
@@ -24,7 +24,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\checkin.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  34.58,
+                        "mismatchPct":  46.11,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\checkin-diff.png"
                     },
                     {
@@ -44,7 +44,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\home.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  34.87,
+                        "mismatchPct":  35.99,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\home-diff.png"
                     },
                     {
@@ -64,7 +64,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\planning-adjust.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  42.58,
+                        "mismatchPct":  43.53,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\planning-adjust-diff.png"
                     },
                     {
@@ -84,7 +84,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\task-new.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  30.39,
+                        "mismatchPct":  30.25,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\task-new-diff.png"
                     },
                     {
@@ -94,7 +94,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\task-edit.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  32.26,
+                        "mismatchPct":  31.84,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\task-edit-diff.png"
                     },
                     {
@@ -174,7 +174,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\focus.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  27.91,
+                        "mismatchPct":  27.93,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\focus-diff.png"
                     },
                     {
@@ -194,7 +194,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\focus-break.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  35.85,
+                        "mismatchPct":  35.9,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\focus-break-diff.png"
                     },
                     {
@@ -214,7 +214,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\journal-night.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  37.79,
+                        "mismatchPct":  40.15,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\journal-night-diff.png"
                     },
                     {
@@ -254,7 +254,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\dashboard-operational.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  44.05,
+                        "mismatchPct":  45.6,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\dashboard-operational-diff.png"
                     },
                     {
@@ -264,7 +264,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\export.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  32.27,
+                        "mismatchPct":  32.26,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\export-diff.png"
                     },
                     {
@@ -304,7 +304,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\settings.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  42.55,
+                        "mismatchPct":  42.66,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\settings-diff.png"
                     },
                     {
@@ -314,7 +314,7 @@
                         "figma":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\figma\\reminders.png",
                         "hasFigmaReference":  true,
                         "status":  "comparado",
-                        "mismatchPct":  46.05,
+                        "mismatchPct":  44.46,
                         "diff":  "C:\\Users\\Luana\\Desktop\\plenna-web\\artifacts\\visual-compare\\all-screens\\diff\\reminders-diff.png"
                     },
                     {

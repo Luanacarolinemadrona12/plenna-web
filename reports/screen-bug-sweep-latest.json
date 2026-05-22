@@ -1,0 +1,2118 @@
+{
+  "generatedAt": "2026-05-21T22:02:56.237Z",
+  "baseUrl": "http://127.0.0.1:55159",
+  "total": 111,
+  "issueTotal": 0,
+  "issues": [],
+  "results": [
+    {
+      "name": "index",
+      "path": "index.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-month",
+      "path": "pages/calendar-month.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-week",
+      "path": "pages/calendar-week.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-states",
+      "path": "pages/checkin-states.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-success",
+      "path": "pages/checkin-success.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin",
+      "path": "pages/checkin.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-history",
+      "path": "pages/dashboard-history.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-operational",
+      "path": "pages/dashboard-operational.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard",
+      "path": "pages/dashboard.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "empty-states",
+      "path": "pages/empty-states.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-ready",
+      "path": "pages/export-ready.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-success",
+      "path": "pages/export-success.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export",
+      "path": "pages/export.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-break",
+      "path": "pages/focus-break.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-session",
+      "path": "pages/focus-session.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus",
+      "path": "pages/focus.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "goals",
+      "path": "pages/goals.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-edit",
+      "path": "pages/habit-edit.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-new",
+      "path": "pages/habit-new.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-templates",
+      "path": "pages/habit-templates.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habits",
+      "path": "pages/habits.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "home",
+      "path": "pages/home.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal-night",
+      "path": "pages/journal-night.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal",
+      "path": "pages/journal.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "micro-pauses",
+      "path": "pages/micro-pauses.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "more",
+      "path": "pages/more.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "notes",
+      "path": "pages/notes.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "onboarding",
+      "path": "pages/onboarding.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning-adjust",
+      "path": "pages/planning-adjust.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning",
+      "path": "pages/planning.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "prototype-overview",
+      "path": "pages/prototype-overview.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "reminders",
+      "path": "pages/reminders.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "settings",
+      "path": "pages/settings.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-edit",
+      "path": "pages/task-edit.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-form",
+      "path": "pages/task-form.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-new",
+      "path": "pages/task-new.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "tasks",
+      "path": "pages/tasks.html",
+      "viewport": {
+        "label": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "index",
+      "path": "index.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-month",
+      "path": "pages/calendar-month.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-week",
+      "path": "pages/calendar-week.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-states",
+      "path": "pages/checkin-states.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-success",
+      "path": "pages/checkin-success.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin",
+      "path": "pages/checkin.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-history",
+      "path": "pages/dashboard-history.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-operational",
+      "path": "pages/dashboard-operational.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard",
+      "path": "pages/dashboard.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "empty-states",
+      "path": "pages/empty-states.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-ready",
+      "path": "pages/export-ready.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-success",
+      "path": "pages/export-success.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export",
+      "path": "pages/export.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-break",
+      "path": "pages/focus-break.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-session",
+      "path": "pages/focus-session.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus",
+      "path": "pages/focus.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "goals",
+      "path": "pages/goals.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-edit",
+      "path": "pages/habit-edit.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-new",
+      "path": "pages/habit-new.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-templates",
+      "path": "pages/habit-templates.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habits",
+      "path": "pages/habits.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "home",
+      "path": "pages/home.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal-night",
+      "path": "pages/journal-night.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal",
+      "path": "pages/journal.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "micro-pauses",
+      "path": "pages/micro-pauses.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "more",
+      "path": "pages/more.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "notes",
+      "path": "pages/notes.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "onboarding",
+      "path": "pages/onboarding.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning-adjust",
+      "path": "pages/planning-adjust.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning",
+      "path": "pages/planning.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "prototype-overview",
+      "path": "pages/prototype-overview.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "reminders",
+      "path": "pages/reminders.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "settings",
+      "path": "pages/settings.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-edit",
+      "path": "pages/task-edit.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-form",
+      "path": "pages/task-form.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-new",
+      "path": "pages/task-new.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "tasks",
+      "path": "pages/tasks.html",
+      "viewport": {
+        "label": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "index",
+      "path": "index.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-month",
+      "path": "pages/calendar-month.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "calendar-week",
+      "path": "pages/calendar-week.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-states",
+      "path": "pages/checkin-states.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin-success",
+      "path": "pages/checkin-success.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "checkin",
+      "path": "pages/checkin.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-history",
+      "path": "pages/dashboard-history.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard-operational",
+      "path": "pages/dashboard-operational.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "dashboard",
+      "path": "pages/dashboard.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "empty-states",
+      "path": "pages/empty-states.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-ready",
+      "path": "pages/export-ready.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export-success",
+      "path": "pages/export-success.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "export",
+      "path": "pages/export.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-break",
+      "path": "pages/focus-break.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus-session",
+      "path": "pages/focus-session.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "focus",
+      "path": "pages/focus.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "goals",
+      "path": "pages/goals.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-edit",
+      "path": "pages/habit-edit.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-new",
+      "path": "pages/habit-new.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habit-templates",
+      "path": "pages/habit-templates.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "habits",
+      "path": "pages/habits.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "home",
+      "path": "pages/home.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal-night",
+      "path": "pages/journal-night.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "journal",
+      "path": "pages/journal.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "micro-pauses",
+      "path": "pages/micro-pauses.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "more",
+      "path": "pages/more.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "notes",
+      "path": "pages/notes.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "onboarding",
+      "path": "pages/onboarding.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning-adjust",
+      "path": "pages/planning-adjust.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "planning",
+      "path": "pages/planning.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "prototype-overview",
+      "path": "pages/prototype-overview.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "reminders",
+      "path": "pages/reminders.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "settings",
+      "path": "pages/settings.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-edit",
+      "path": "pages/task-edit.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-form",
+      "path": "pages/task-form.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "task-new",
+      "path": "pages/task-new.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "tasks",
+      "path": "pages/tasks.html",
+      "viewport": {
+        "label": "desktop",
+        "width": 1366,
+        "height": 768
+      },
+      "events": [],
+      "top": {
+        "overflow": 0,
+        "wide": [],
+        "mojibake": false
+      },
+      "bottom": {
+        "covered": []
+      },
+      "issueCount": 0
+    }
+  ]
+}

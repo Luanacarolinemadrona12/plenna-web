@@ -122,15 +122,15 @@
     var ready = requiredChoicesReady();
     Utils.qsa("[data-checkin-step]").forEach(function (section) {
       var sectionStep = Number(section.dataset.checkinStep);
-      section.hidden = false;
+      section.hidden = sectionStep !== currentStep;
       section.classList.toggle("is-active", sectionStep === currentStep);
       section.classList.toggle("is-complete", sectionStep < currentStep);
       if (sectionStep === currentStep) section.setAttribute("aria-current", "step");
       else section.removeAttribute("aria-current");
     });
     Utils.qs("#checkinBack").hidden = currentStep === 1;
-    Utils.qs("#checkinNext").hidden = currentStep === totalSteps || ready;
-    Utils.qs("#checkinSubmit").hidden = currentStep !== totalSteps && !ready;
+    Utils.qs("#checkinNext").hidden = currentStep === totalSteps;
+    Utils.qs("#checkinSubmit").hidden = currentStep !== totalSteps;
     Utils.qs("#checkinSubmit").disabled = !ready;
     var summary = Utils.qs("#checkinSummary");
     if (summary) summary.hidden = currentStep !== totalSteps;
@@ -296,6 +296,6 @@
     Utils.qs("#checkinNext").addEventListener("click", nextStep);
     Utils.qs("#checkinBack").addEventListener("click", previousStep);
     Utils.qs("#skipCheckin").addEventListener("click", skipCheckin);
-    setStep(requiredChoicesReady() ? totalSteps : 1);
+    setStep(1);
   });
 })();
