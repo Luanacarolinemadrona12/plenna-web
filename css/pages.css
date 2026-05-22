@@ -164,19 +164,6 @@
   gap: 12px;
 }
 
-.home-final-note {
-  display: flex;
-  min-height: 30px;
-  align-items: center;
-  padding: 0 13px;
-  border: 1px solid #cbefdf;
-  border-radius: 15px;
-  background: #eaf8f1;
-  color: #05724d;
-  font-size: 11px;
-  font-weight: 600;
-}
-
 .appointment-card {
   min-height: 74px;
   border-color: var(--border);
@@ -2249,16 +2236,6 @@
   font-weight: 650;
 }
 
-.home-final-note {
-  min-height: 30px;
-  margin-top: 10px;
-  border-color: #cbefdf;
-  border-radius: 15px;
-  color: #05724d;
-  font-size: 11px;
-  font-weight: 650;
-}
-
 /* Figma parity: 06 Tarefas - Lista */
 .tasks-page {
   padding: 58px 20px 78px;
@@ -2728,15 +2705,7 @@ body[data-page="home"][data-mood-state="protect"] .bottom-nav {
   line-height: 18px;
 }
 
-.home-final-note {
-  display: block;
-  min-height: 64px;
-  padding: 7px 13px;
-  border: 1px solid #c9e5d8;
-  background: #eaf8f1;
-}
 
-.home-final-note[hidden],
 .home-shortcuts[hidden] {
   display: none;
 }

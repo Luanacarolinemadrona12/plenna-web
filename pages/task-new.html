@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="../plenna-leaf.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nova tarefa | Plenna</title>
@@ -45,11 +45,16 @@
             <div class="figma-field-grid">
               <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" value="--:--"></label>
               <label class="figma-pill-input"><span>Prazo</span><input name="prazo" type="date" aria-label="Prazo da tarefa"></label>
-              <label class="figma-pill-input yellow"><span>Esforço</span><select name="esforco"><option value="nenhum">Nenhum</option><option value="baixo">Baixo</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></label>
-              <label class="figma-pill-input mint"><span>Impacto emocional</span><select name="impactoEmocional"><option value="neutro">Neutro</option><option value="leve">Leve</option><option value="positivo">Positivo</option><option value="motivadora" selected>Motivadora</option><option value="pesado">Pesado</option></select></label>
-              <label class="figma-pill-input"><span>Projeto</span><select name="projeto"><option>Trabalho</option><option>Pessoal</option><option>Saúde</option><option>Nenhum</option></select></label>
-              <label class="figma-pill-input"><span>Categoria</span><select name="categoria"><option>Cliente ABC</option><option>Rotina</option><option>Casa</option><option>Nenhuma</option></select></label>
             </div>
+            <details class="task-advanced-toggle">
+              <summary>Mais detalhes</summary>
+              <div class="figma-field-grid">
+                <label class="figma-pill-input yellow"><span>Esforço</span><select name="esforco"><option value="nenhum">Nenhum</option><option value="baixo">Baixo</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></label>
+                <label class="figma-pill-input mint"><span>Impacto emocional</span><select name="impactoEmocional"><option value="neutro">Neutro</option><option value="leve">Leve</option><option value="positivo">Positivo</option><option value="motivadora" selected>Motivadora</option><option value="pesado">Pesado</option></select></label>
+                <label class="figma-pill-input"><span>Projeto</span><select name="projeto"><option>Trabalho</option><option>Pessoal</option><option>Saúde</option><option>Nenhum</option></select></label>
+                <label class="figma-pill-input"><span>Categoria</span><select name="categoria"><option>Cliente ABC</option><option>Rotina</option><option>Casa</option><option>Nenhuma</option></select></label>
+              </div>
+            </details>
           </section>
 
           <section class="card figma-subtasks-card">

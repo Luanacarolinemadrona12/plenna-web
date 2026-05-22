@@ -3,6 +3,66 @@
   Loaded after the visual-compare overrides so product UX and accessibility win.
 */
 
+/* Focus ring global — garante navegação por teclado visível em toda a aplicação */
+*:focus-visible {
+  outline: 2px solid #0f6b42 !important;
+  outline-offset: 2px !important;
+  border-radius: 4px;
+}
+
+/* Badge de esforço: amarelo saturado substituído por âmbar suave */
+.figma-pill-input.yellow select,
+.figma-pill-input.yellow input {
+  background: #f5efd6 !important;
+  color: #5c4a1a !important;
+  border-color: #d4c08a !important;
+}
+
+/* Botão de hábito não concluído: borda tracejada indica que é clicável */
+body[data-screen="habits"] .habit-day:not(.done) {
+  border: 2px dashed var(--plenna-action-border) !important;
+  background: transparent !important;
+  color: var(--plenna-action) !important;
+  box-shadow: none !important;
+}
+
+/* Campos avançados de tarefa colapsáveis */
+.task-advanced-toggle {
+  margin-top: 4px !important;
+}
+.task-advanced-toggle > summary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-height: 36px !important;
+  padding: 0 10px !important;
+  border: 1px solid var(--plenna-action-border) !important;
+  border-radius: 12px !important;
+  background: var(--plenna-action-soft) !important;
+  color: var(--plenna-action) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+}
+.task-advanced-toggle > summary::-webkit-details-marker { display: none !important; }
+.task-advanced-toggle > summary::after {
+  content: "›" !important;
+  font-size: 14px !important;
+  transition: transform 0.18s ease !important;
+}
+.task-advanced-toggle[open] > summary::after {
+  transform: rotate(90deg) !important;
+}
+.task-advanced-toggle .figma-field-grid {
+  margin-top: 8px !important;
+}
+
+/* Bottom nav — aumentar legibilidade dos labels de 10px para 11px */
+.bottom-nav a {
+  font-size: 11px !important;
+}
+
 :root {
   --plenna-action: #0f6b42;
   --plenna-action-hover: #0b5636;
@@ -332,6 +392,38 @@ button.chip,
   gap: 10px !important;
 }
 
+/* === Baixa prioridade: polimento de hierarquia visual === */
+
+/* Sombra base para cards de conteúdo */
+.card {
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+.task-form-page .card,
+.habit-form-page .card {
+  box-shadow: none !important;
+}
+
+/* Dashboard: links secundários (Configurações/Lembretes/Metas) mais sutis que as abas de modo */
+body[data-screen="dashboard"] .figma-shortcuts a,
+body[data-screen="dashboard-history"] .figma-shortcuts a,
+body[data-screen="dashboard-operational"] .figma-shortcuts a {
+  min-height: 36px !important;
+  border: 1px solid var(--plenna-line) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  color: var(--plenna-muted) !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+/* Badge "Recomendada" — peso reduzido (prioridade já aparece no texto da tarefa) */
+.task-badge:not(.warning):not(.blue) {
+  background: transparent !important;
+  border-color: var(--plenna-line) !important;
+  color: var(--plenna-muted) !important;
+  font-size: 10px !important;
+}
+
 .onboarding-start {
   min-height: 52px !important;
   border-radius: 18px !important;
@@ -418,8 +510,13 @@ body[data-screen="focus"] .preset-card {
   min-height: 56px !important;
 }
 
+body[data-screen="focus"] .preset-row .focus-sound-preset {
+  flex: 2 !important;
+}
+
 body[data-screen="focus"] .focus-sound-preset select {
-  min-width: 150px !important;
+  width: 100% !important;
+  min-width: 0 !important;
   min-height: 44px !important;
   color: var(--plenna-readable) !important;
 }

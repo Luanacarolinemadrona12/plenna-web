@@ -35,8 +35,8 @@
       Utils.qs("#habitList").innerHTML = [
         '<div class="empty-state proto-empty">',
         "<h3>Sua rotina de hábitos ainda está vazia</h3>",
-        "<p>Use um template simples para começar com uma meta pequena e fácil de cumprir hoje.</p>",
-        '<a class="button small primary" href="habit-templates.html">Escolher template</a>',
+        "<p>Use um modelo simples para começar com uma meta pequena e fácil de cumprir hoje.</p>",
+        '<a class="button small primary" href="habit-templates.html">Escolher modelo</a>',
         "</div>"
       ].join("");
       return;
@@ -108,7 +108,7 @@
       '<small>' + Utils.escapeHtml(habit.metaMinima || "Meta mínima") + " · " + Utils.escapeHtml(habit.frequencia || "Diário") + "</small>",
       "<p>Impacto no bem-estar: " + Utils.escapeHtml(impactForHabit(habit)) + "</p>",
       "</div>",
-      '<button class="habit-day' + (done ? " done" : "") + '" type="button" data-action="toggle" aria-label="Marcar hábito">' + (done ? checkIcon : "") + "</button>",
+      '<button class="habit-day' + (done ? " done" : "") + '" type="button" data-action="toggle" aria-label="' + Utils.escapeHtml(done ? "Desmarcar " + habit.nome : "Marcar " + habit.nome + " como concluído") + '">' + (done ? checkIcon : "") + "</button>",
       "</div>",
       String(habit.id) === String(lastHabitId) && lastHabitMessage ? '<span class="inline-status">' + Utils.escapeHtml(lastHabitMessage) + "</span>" : "",
       '<div class="habit-meta-line"><span>sequência ' + streak + ' dias</span><span>' + (done ? "feito hoje" : state === "overdue" ? "retomar hoje" : "pode mover para 09h") + '</span><a href="habit-edit.html?id=' + Utils.escapeHtml(habit.id) + '">Editar</a></div>',

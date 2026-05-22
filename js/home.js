@@ -126,18 +126,9 @@
 
   function renderExtras(data) {
     var shortcuts = Utils.qs("#homeShortcuts");
-    var note = Utils.qs("#homeFinalNote");
     if (shortcuts) {
       shortcuts.hidden = false;
       renderShortcuts(data);
-    }
-    if (!note) return;
-    if (data.banner) {
-      note.hidden = false;
-      note.textContent = data.banner;
-    } else {
-      note.hidden = true;
-      note.textContent = "";
     }
   }
 

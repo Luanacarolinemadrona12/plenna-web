@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\" -Recurse -File)",
+      "Bash(Select-Object FullName, Extension)",
+      "Bash(Sort-Object Extension, FullName)",
+      "Bash(ConvertTo-Json)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\" -Filter \"*.html\")",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(mkdir -p /c/Users/Luana/Desktop/plenna-web/.claude && echo \"created\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sed -i 's|href=\"data:,\"|href=\"../plenna-leaf.png\"|g' /c/Users/Luana/Desktop/plenna-web/pages/*.html)",
+      "Bash(sed -i 's|href=\"data:,\"|href=\"plenna-leaf.png\"|g' /c/Users/Luana/Desktop/plenna-web/index.html)"
+    ]
+  }
+}

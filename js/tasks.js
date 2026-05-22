@@ -109,7 +109,7 @@
         '<div class="item-top">',
         '<button class="check-control" type="button" data-action="toggle" aria-label="Alternar conclusão">' + (task.concluida && Icons ? Icons.svg("check", "check-mark") : "") + "</button>",
         '<a class="task-row-main" href="task-edit.html?id=' + encodeURIComponent(task.id) + '">',
-        '<span class="task-title">' + Utils.escapeHtml(task.titulo) + "</span>",
+        '<span class="task-title" title="' + Utils.escapeHtml(task.titulo) + '">' + Utils.escapeHtml(task.titulo) + "</span>",
         '<small><span class="' + (task.prioridade === "alta" ? "danger-text" : "success-text") + '">' + Utils.escapeHtml(label(task.prioridade)) + "</span> · " + Utils.escapeHtml(task.tempoEstimado || "sem tempo") + " · " + Utils.escapeHtml(dueLabel(task)) + "</small>",
         "</a>",
         '<a class="chip task-badge ' + badgeClass + '" href="task-edit.html?id=' + encodeURIComponent(task.id) + '">' + badge + "</a>",

@@ -124,7 +124,7 @@
         careLead: "Seu dia pode seguir com calma.",
         careCopy: "Escolha uma prioridade, uma pausa e um fechamento simples para hoje.",
         date: "Terça-feira, 15 de abril",
-        moodChip: "🙂 Bem-disposta",
+        moodChip: "🙂 Bem-disposta (o)",
         energyChip: "Energia 7/10",
         actionTag: "Próximo passo leve",
         actionTitle: "Organize 3 prioridades e respire no meio.",

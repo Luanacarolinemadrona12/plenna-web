@@ -217,7 +217,7 @@
       ["Pausa sem tela", "Trabalho", "3 min"]
     ];
     return [
-      topbar("Templates de autocuidado", "Comece por um hábito pequeno e gentil."),
+      topbar("Modelos de autocuidado", "Comece por um hábito pequeno e gentil."),
       '<section class="content-list">' + items.map(function (item) {
         return '<article class="habit-item" style="--habit-color:#35c98d"><div class="item-top"><span class="habit-icon">' + icon("heart", "habit-icon-svg") + '</span><div><div class="task-title">' + h(item[0]) + '</div><small>' + h(item[2]) + ' · ajuste por energia</small><p>Impacto no bem-estar: manter constância com leveza.</p></div><button class="chip" type="button" data-template-habit="' + h(item.join("|")) + '">Usar</button></div></article>';
       }).join("") + "</section>"
@@ -569,7 +569,7 @@
   function emptyStates() {
     var states = [
       ["Sua lista está vazia", "Crie uma tarefa pequena para começar o dia com clareza."],
-      ["Sua rotina de hábitos ainda está vazia", "Use um template simples para começar com uma meta pequena e fácil de cumprir."],
+      ["Sua rotina de hábitos ainda está vazia", "Use um modelo simples para começar com uma meta pequena e fácil de cumprir."],
       ["Ainda não há histórico emocional", "Faça alguns check-ins para enxergar padrões de humor e energia."],
       ["Seu diário ainda está vazio", "Registre um fechamento rápido para transformar o dia em clareza para amanhã."],
       ["Ainda não há insights suficientes", "Use check-in, tarefas ou foco para liberar leituras mais úteis."],
@@ -716,14 +716,14 @@
     return figmaShell(mode === "edit" ? "Editar hábito" : "Novo hábito", "Defina um mínimo possível e flexível.", [
       '<form class="figma-profile-card habit-editor-card" data-local-form="habit" data-habit-id="' + h(existing ? existing.id : "") + '">',
       '<div class="row"><span class="habit-editor-icon">' + icon("heart", "habit-icon-svg") + '</span><div><h2>' + h(nameValue || "Hábito flexível") + '</h2><p>Impacto no bem-estar, meta mínima e frequência.</p></div></div>',
-      mode === "edit" ? '<section class="recognition-card habit-recognition-card"><span class="recognition-label">Editando</span><h2>Editando: ' + h(nameValue || "Respiracao") + '</h2><p>' + h(goalValue) + ' · ' + h(frequency) + ' · ' + h(category) + '</p></section>' : '<section class="recognition-card habit-recognition-card"><span class="recognition-label">Novo habito</span><h2>Resumo em construcao</h2><p>Escolha nome, meta minima e frequencia antes de adicionar.</p></section>',
+      mode === "edit" ? '<section class="recognition-card habit-recognition-card"><span class="recognition-label">Editando</span><h2>Editando: ' + h(nameValue || "Respiração") + '</h2><p>' + h(goalValue) + ' · ' + h(frequency) + ' · ' + h(category) + '</p></section>' : '<section class="recognition-card habit-recognition-card"><span class="recognition-label">Novo hábito</span><h2>Resumo em construção</h2><p>Escolha nome, meta mínima e frequência antes de adicionar.</p></section>',
       '<label class="field"><span>Nome</span><input name="nome" required value="' + h(nameValue) + '" placeholder="Ex.: Respiração consciente"></label>',
       '<div class="grid-2"><label class="field"><span>Categoria</span><select name="categoria">' + categoryOptions + '</select></label><label class="field"><span>Frequência</span><select name="frequencia">' + frequencyOptions + '</select></label></div>',
       '<label class="field"><span>Meta mínima</span><input name="metaMinima" value="' + h(goalValue) + '" placeholder="Ex.: 2 min"></label>',
       '<section class="figma-mini-panel"><strong>Quando a energia estiver baixa</strong><p>O Plenna mostra a meta mínima e evita cobrança de sequência.</p><div class="chip-row">' + chip("flexível") + chip("sem culpa") + chip("bem-estar") + "</div></section>",
-      '<section class="recognition-card save-summary-card"><span class="recognition-label">Resumo antes de salvar</span><div class="recognition-grid"><span><small>Habito</small><strong>' + h(nameValue || "Novo habito") + '</strong></span><span><small>Meta minima</small><strong>' + h(goalValue) + '</strong></span><span><small>Frequencia</small><strong>' + h(frequency) + '</strong></span><span><small>Contexto</small><strong>' + h(category) + '</strong></span></div></section>',
+      '<section class="recognition-card save-summary-card"><span class="recognition-label">Resumo antes de salvar</span><div class="recognition-grid"><span><small>Hábito</small><strong>' + h(nameValue || "Novo hábito") + '</strong></span><span><small>Meta mínima</small><strong>' + h(goalValue) + '</strong></span><span><small>Frequência</small><strong>' + h(frequency) + '</strong></span><span><small>Contexto</small><strong>' + h(category) + '</strong></span></div></section>',
       '<button class="button primary full" type="submit">' + (mode === "edit" ? "Salvar" : "Criar Hábito") + "</button>",
-      mode === "edit" && existing ? '<a class="button secondary full" href="habits.html">Cancelar</a>' : '<a class="button secondary full" href="habit-templates.html">Ver templates</a>',
+      mode === "edit" && existing ? '<a class="button secondary full" href="habits.html">Cancelar</a>' : '<a class="button secondary full" href="habit-templates.html">Ver modelos</a>',
       mode === "edit" && existing ? '<button class="button danger full" type="button" data-delete-habit="' + h(existing.id) + '">Excluir hábito</button>' : '<a class="button secondary full" href="habits.html">Cancelar</a>',
       "</form>"
     ].join(""), "habit-form-template polished-template");
@@ -1546,7 +1546,7 @@
         templateHabit.textContent = existingHabit ? "Já existe" : "Usado";
         templateHabit.disabled = true;
         markQuickResult(templateHabit, existingHabit ? "Hábito já estava na sua rotina." : "Hábito criado agora.");
-        Utils.notify(existingHabit ? "Esse hábito já está na sua rotina." : "Hábito criado a partir do template.", { kind: existingHabit ? "warning" : "success" });
+        Utils.notify(existingHabit ? "Esse hábito já está na sua rotina." : "Hábito criado a partir do modelo.", { kind: existingHabit ? "warning" : "success" });
       }
 
       var quickReminder = event.target.closest("[data-quick-reminder]");

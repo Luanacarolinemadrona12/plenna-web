@@ -49,8 +49,18 @@ body {
 }
 
 @media (min-width: 720px) {
+  html {
+    background:
+      radial-gradient(ellipse 80% 60% at 15% 5%, #bfd9ca 0%, #d4e5dd 42%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 88% 92%, #c2d9ea 0%, transparent 55%),
+      #d8e6e1 !important;
+  }
   body {
     padding: 24px 0 !important;
+    background:
+      radial-gradient(ellipse 55% 45% at 78% 82%, rgba(200, 226, 245, 0.38) 0%, transparent 55%),
+      radial-gradient(ellipse 45% 35% at 10% 15%, rgba(180, 225, 200, 0.32) 0%, transparent 50%),
+      linear-gradient(140deg, #e3eee9 0%, #f6f1e5 48%, #dfeef6 100%) !important;
   }
 }
 
@@ -523,7 +533,7 @@ label.is-selected .choice-card {
   min-height: 52px !important;
   border-radius: 16px !important;
   color: #64786f !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
   font-weight: 750 !important;
 }
 
@@ -702,15 +712,6 @@ body[data-screen="home"] .home-hero h1 {
   grid-column: 1 / -1 !important;
 }
 
-.home-final-note {
-  min-height: 48px !important;
-  padding: 12px 14px !important;
-  border-color: #c7dfd4 !important;
-  border-radius: 18px !important;
-  background: #f2fbf6 !important;
-  color: var(--plenna-brand-strong) !important;
-  line-height: 17px !important;
-}
 
 .checkin-page {
   background:
@@ -762,7 +763,15 @@ body[data-screen="checkin"] .checkin-actions {
 }
 
 body[data-screen="checkin"] .checkin-step-actions {
+  display: grid !important;
   grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 10px !important;
+}
+
+body[data-screen="checkin"] .checkin-step-actions .button,
+body[data-screen="checkin"] .checkin-actions .button {
+  width: 100% !important;
+  max-width: none !important;
 }
 
 body[data-screen="checkin"] .checkin-skip-note {
@@ -1415,7 +1424,7 @@ body[data-screen="settings"] [aria-labelledby="settingsDataTitle"] {
   }
 
   .bottom-nav a {
-    font-size: 9px !important;
+    font-size: 10px !important;
   }
 }
 
@@ -1806,6 +1815,7 @@ body[data-screen="home"] .home-metric-card span {
 body[data-screen="home"] .home-shortcuts {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 8px !important;
+  grid-auto-rows: minmax(46px, auto) !important;
 }
 
 body[data-screen="home"] .home-shortcuts .shortcut {
@@ -1815,6 +1825,16 @@ body[data-screen="home"] .home-shortcuts .shortcut {
   font-size: 12px !important;
   line-height: 16px !important;
   text-align: center !important;
+}
+
+body[data-screen="home"] .home-shortcuts .home-action-shortcut {
+  width: 100% !important;
+  justify-self: stretch !important;
+}
+
+body[data-screen="home"] .home-shortcuts .home-action-shortcut,
+body[data-screen="home"] .home-shortcuts .home-action-shortcut a {
+  align-self: stretch !important;
 }
 
 body[data-screen="planning-adjust"] .figma-adjust-screen {

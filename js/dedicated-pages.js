@@ -458,9 +458,9 @@
         '<section class="card recognition-card save-summary-card" id="habitSaveSummary" aria-live="polite">',
         '<span class="recognition-label">Resumo antes de salvar</span>',
         '<div class="recognition-grid">',
-        '<span><small>Habito</small><strong id="habitSummaryName">Leitura</strong></span>',
-        '<span><small>Meta minima</small><strong id="habitSummaryGoal">10 min</strong></span>',
-        '<span><small>Frequencia</small><strong id="habitSummaryFrequency">Diario</strong></span>',
+        '<span><small>Hábito</small><strong id="habitSummaryName">Leitura</strong></span>',
+        '<span><small>Meta mínima</small><strong id="habitSummaryGoal">10 min</strong></span>',
+        '<span><small>Frequência</small><strong id="habitSummaryFrequency">Diário</strong></span>',
         '<span><small>Contexto</small><strong id="habitSummaryCategory">Mente</strong></span>',
         "</div>",
         "</section>"
@@ -471,9 +471,9 @@
   }
 
   function updateHabitEditRecognition(form) {
-    var name = habitField(form, "nome", "Habito flexivel");
-    var goal = habitField(form, "metaMinima", "Meta minima flexivel");
-    var frequency = habitField(form, "frequencia", "Diario");
+    var name = habitField(form, "nome", "Hábito flexível");
+    var goal = habitField(form, "metaMinima", "Meta mínima flexível");
+    var frequency = habitField(form, "frequencia", "Diário");
     var category = habitField(form, "categoria", "Mente");
     Utils.setText("#habitEditContextTitle", "Editando: " + name);
     Utils.setText("#habitEditContextMeta", goal + " · " + frequency + " · " + category);

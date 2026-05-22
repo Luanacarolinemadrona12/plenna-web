@@ -83,10 +83,10 @@
           '<label class="preset-card focus-sound-preset">',
           '<span>Som ambiente</span>',
           '<select id="focusSoundSelect" aria-label="Selecionar som ambiente">',
-          '<option value="chuva">Chuva · café</option>',
+          '<option value="chuva">Chuva</option>',
           '<option value="silencio">Silêncio</option>',
-          '<option value="floresta">Floresta leve</option>',
-          '<option value="ondas">Ondas baixas</option>',
+          '<option value="floresta">Floresta</option>',
+          '<option value="ondas">Ondas</option>',
           "</select>",
           "</label>"
         ].join("");

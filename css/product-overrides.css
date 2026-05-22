@@ -443,6 +443,7 @@ body[data-screen="focus-session"] .focus-timer-cluster {
   height: auto !important;
   min-height: 420px !important;
   justify-items: center !important;
+  align-items: center !important;
   gap: 12px !important;
   padding-top: 12px !important;
 }
@@ -452,6 +453,7 @@ body[data-screen="focus-session"] .focus-timer-cluster .timer {
   display: grid !important;
   width: 210px !important;
   height: 210px !important;
+  margin: 0 auto !important;
   place-items: center !important;
   border: 18px solid #3bc994 !important;
   border-radius: 50% !important;
@@ -4207,20 +4209,6 @@ body[data-screen="home"] button.home-action-shortcut {
   line-height: 12px !important;
   text-align: center !important;
   text-decoration: none !important;
-}
-
-body[data-screen="home"] .home-final-note {
-  display: flex !important;
-  min-height: 29px !important;
-  align-items: center !important;
-  margin-top: 2px !important;
-  padding: 0 14px !important;
-  border: 1px solid #bfe9d6 !important;
-  border-radius: 999px !important;
-  background: #e9fff4 !important;
-  color: #007a56 !important;
-  font-size: 10.5px !important;
-  font-weight: 750 !important;
 }
 
 /* Pixel-perfect pass: new task frame mirrors edit task surface. */
