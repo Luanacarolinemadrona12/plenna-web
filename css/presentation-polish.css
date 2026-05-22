@@ -29,12 +29,12 @@
   --plenna-rose-ink: #8b2d24;
   --plenna-line: #dcece4;
   --plenna-line-strong: #c7dfd4;
-  --plenna-shadow-card: 0 16px 36px rgba(27, 59, 45, 0.085);
-  --plenna-shadow-soft: 0 8px 20px rgba(27, 59, 45, 0.055);
-  --plenna-shadow-action: 0 12px 22px rgba(13, 119, 80, 0.2);
-  --plenna-radius-xl: 26px;
-  --plenna-radius-lg: 20px;
-  --plenna-radius-md: 16px;
+  --plenna-shadow-card: 0 2px 10px rgba(27, 59, 45, 0.08), 0 0 0 1px rgba(27, 59, 45, 0.04);
+  --plenna-shadow-soft: 0 1px 5px rgba(27, 59, 45, 0.06);
+  --plenna-shadow-action: 0 4px 16px rgba(13, 119, 80, 0.22);
+  --plenna-radius-xl: 22px;
+  --plenna-radius-lg: 18px;
+  --plenna-radius-md: 14px;
 }
 
 html {
@@ -81,7 +81,7 @@ body {
 
 .page,
 .screen-page {
-  padding: 62px 22px 102px !important;
+  padding: 54px 18px 80px !important;
   background:
     linear-gradient(180deg, #fbfdfc 0%, #f4faf6 42%, #fbfcfa 100%) !important;
 }
@@ -117,22 +117,23 @@ h1,
 .proto-topbar h1,
 .page-header h1,
 .home-hero h1 {
-  font-size: 25px !important;
-  font-weight: 900 !important;
-  line-height: 30px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 26px !important;
 }
 
 h2,
 .figma-card h2,
 .card h2 {
-  font-size: 18px !important;
-  font-weight: 850 !important;
-  line-height: 22px !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  line-height: 20px !important;
 }
 
 h3 {
   color: var(--plenna-ink-2) !important;
-  font-weight: 800 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
 }
 
 p,
@@ -141,8 +142,8 @@ p,
 .figma-card p,
 .figma-line p {
   color: var(--plenna-muted) !important;
-  font-size: 13px !important;
-  line-height: 18px !important;
+  font-size: 12.5px !important;
+  line-height: 17px !important;
 }
 
 small {
@@ -163,11 +164,11 @@ small {
 .stack,
 .stack-lg,
 .content-list {
-  gap: 14px !important;
+  gap: 10px !important;
 }
 
 .stack-lg {
-  gap: 16px !important;
+  gap: 12px !important;
 }
 
 .grid-2,
@@ -272,15 +273,15 @@ main :is(
   .adjust-quick-controls a
 ) {
   min-height: 44px !important;
-  border-radius: 16px !important;
-  font-weight: 800 !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
   letter-spacing: 0 !important;
   transition:
-    transform 160ms ease,
-    box-shadow 160ms ease,
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease !important;
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    border-color 140ms ease,
+    background-color 140ms ease,
+    color 140ms ease !important;
 }
 
 .button.primary,
@@ -379,11 +380,12 @@ summary:focus-visible,
 .task-badge,
 .habit-edit-chip,
 .meta span {
-  min-height: 30px !important;
+  min-height: 26px !important;
   border-color: var(--plenna-line-strong) !important;
   background: #f8fffb !important;
   color: var(--plenna-brand-strong) !important;
-  font-weight: 750 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
   box-shadow: none !important;
 }
 
@@ -519,22 +521,22 @@ label.is-selected .choice-card {
 }
 
 .bottom-nav {
-  height: 72px !important;
-  padding: 8px 10px 10px !important;
+  height: 58px !important;
+  padding: 4px 8px 6px !important;
   gap: 4px !important;
   border-top: 1px solid rgba(199, 223, 212, 0.85) !important;
-  border-radius: 22px 22px 0 0 !important;
+  border-radius: 18px 18px 0 0 !important;
   background: rgba(255, 255, 255, 0.96) !important;
-  box-shadow: 0 -18px 34px rgba(27, 59, 45, 0.11) !important;
+  box-shadow: 0 -6px 18px rgba(27, 59, 45, 0.09) !important;
 }
 
 .bottom-nav a {
   min-width: 0 !important;
-  min-height: 52px !important;
-  border-radius: 16px !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
   color: #64786f !important;
-  font-size: 11px !important;
-  font-weight: 750 !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
 }
 
 .bottom-nav a[aria-current="page"],
@@ -545,11 +547,11 @@ label.is-selected .choice-card {
 
 .nav-glyph {
   display: grid !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 20px !important;
+  height: 20px !important;
   place-items: center !important;
   border-radius: 999px !important;
-  font-size: 17px !important;
+  font-size: 15px !important;
   line-height: 1 !important;
 }
 
@@ -599,25 +601,25 @@ label.is-selected .choice-card {
 }
 
 .home-page {
-  padding-top: 58px !important;
+  padding-top: 50px !important;
 }
 
 .home-hero {
-  gap: 9px !important;
-  margin: 0 0 16px !important;
-  padding: 19px !important;
+  gap: 6px !important;
+  margin: 0 0 12px !important;
+  padding: 14px 16px !important;
   border: 1px solid #cae6da !important;
-  border-radius: 28px !important;
+  border-radius: 20px !important;
   background:
     linear-gradient(135deg, #e8f8f0 0%, #f8fcff 54%, #fff6df 100%) !important;
-  box-shadow: var(--plenna-shadow-card) !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
 }
 
 body[data-screen="home"] .home-hero h1 {
   height: auto !important;
   max-width: 100% !important;
-  font-size: 23px !important;
-  line-height: 29px !important;
+  font-size: 20px !important;
+  line-height: 26px !important;
 }
 
 .home-date {
@@ -667,21 +669,23 @@ body[data-screen="home"] .home-hero h1 {
 }
 
 .home-metric-card {
-  min-height: 94px !important;
-  padding: 13px !important;
+  min-height: 76px !important;
+  padding: 10px 11px !important;
   border-color: #e5efe9 !important;
 }
 
 .home-metric-card strong {
   color: var(--plenna-ink) !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
 }
 
 .home-week-card {
   display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-  padding: 17px !important;
+  grid-template-columns: 1fr auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 13px 15px !important;
   background: linear-gradient(180deg, #ffffff 0%, var(--plenna-surface-sky) 100%) !important;
 }
 
@@ -695,17 +699,17 @@ body[data-screen="home"] .home-hero h1 {
 .shortcut,
 .home-action-shortcut {
   display: grid !important;
-  min-height: 58px !important;
+  min-height: 44px !important;
   place-items: center !important;
-  padding: 10px !important;
+  padding: 8px !important;
   border: 1px solid var(--plenna-line) !important;
-  border-radius: 18px !important;
+  border-radius: 14px !important;
   background: #ffffff !important;
   color: var(--plenna-brand-strong) !important;
   font-size: 12px !important;
-  font-weight: 850 !important;
+  font-weight: 700 !important;
   text-align: center !important;
-  box-shadow: var(--plenna-shadow-soft) !important;
+  box-shadow: none !important;
 }
 
 .home-shortcuts .shortcut:last-child:nth-child(odd) {
@@ -1696,22 +1700,22 @@ body[data-screen="export-ready"] .page,
 body[data-screen="task-new"] .figma-task-form-page,
 body[data-screen="task-form"] .figma-task-form-page,
 body[data-screen="task-edit"] .figma-task-form-page {
-  padding-bottom: 138px !important;
+  padding-bottom: 100px !important;
 }
 
 body[data-screen="home"] .home-page {
-  padding-top: 44px !important;
+  padding-top: 42px !important;
 }
 
 body[data-screen="home"] .home-hero {
-  margin-bottom: 8px !important;
-  padding: 14px 16px !important;
-  border-radius: 24px !important;
+  margin-bottom: 10px !important;
+  padding: 13px 15px !important;
+  border-radius: 20px !important;
 }
 
 body[data-screen="home"] .home-hero h1 {
-  font-size: 23px !important;
-  line-height: 29px !important;
+  font-size: 19px !important;
+  line-height: 24px !important;
 }
 
 body[data-screen="home"] .home-stack {
@@ -1726,24 +1730,24 @@ body[data-screen="home"] .home-care-note {
 }
 
 body[data-screen="home"] #recommendationCard {
-  padding: 18px !important;
-  border: 1.5px solid rgba(8, 115, 70, 0.22) !important;
-  border-radius: 24px !important;
-  box-shadow: 0 18px 42px rgba(8, 115, 70, 0.13) !important;
+  padding: 15px 16px !important;
+  border: 1px solid rgba(8, 115, 70, 0.18) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 10px rgba(8, 115, 70, 0.09) !important;
 }
 
 body[data-screen="home"] #recommendationCard .button.primary,
 body[data-screen="home"] #recommendationCard [data-primary-action] {
-  min-height: 48px !important;
+  min-height: 44px !important;
 }
 
 body[data-screen="home"] .home-priority-card,
 body[data-screen="home"] .appointment-card,
 body[data-screen="home"] .home-message-card,
 body[data-screen="home"] .home-week-card {
-  padding: 14px !important;
-  border-radius: 20px !important;
-  box-shadow: 0 10px 24px rgba(31, 55, 43, 0.07) !important;
+  padding: 13px 14px !important;
+  border-radius: 18px !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
 }
 
 body[data-screen="home"] .home-priority-card > .row.between {
@@ -1755,8 +1759,8 @@ body[data-screen="home"] .home-priority-card > .row.between {
 
 body[data-screen="home"] .home-priority-card h2 {
   margin: 0 !important;
-  font-size: 16px !important;
-  line-height: 21px !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
 }
 
 body[data-screen="home"] #priorityList {
@@ -2201,4 +2205,196 @@ body[data-screen="export"] .export-actions-row .button.secondary {
   body[data-screen="focus-break"] .focus-break-primary-row {
     grid-template-columns: 1fr auto !important;
   }
+}
+
+/* ══════════════════════════════════════════════════════
+   Refinamento de produto — feedback de usuários (2026-05)
+   Objetivo: menos peso visual, mais clareza, navegação limpa
+   ══════════════════════════════════════════════════════ */
+
+/* Tab/segmented controls: altura menor, mais refinados */
+.task-view-tabs a,
+.dashboard-mode-tabs a,
+.operational-period-tabs button,
+.history-period-tabs button,
+.period-tabs button,
+.segmented button,
+.figma-tabs a,
+.figma-tabs button,
+.task-tab {
+  min-height: 36px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+
+.task-view-tabs,
+.dashboard-mode-tabs,
+.operational-period-tabs,
+.history-period-tabs,
+.period-tabs,
+.segmented,
+.figma-tabs {
+  padding: 4px !important;
+  gap: 4px !important;
+  border-radius: 14px !important;
+}
+
+/* Botão small: proporcional, leve */
+.button.small,
+a.button.small,
+button.button.small {
+  min-height: 34px !important;
+  padding: 0 13px !important;
+  border-radius: 10px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+/* Botão full-width: não exagerado */
+.button.full,
+a.button.full {
+  min-height: 48px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 14px !important;
+}
+
+/* Botões de ação em cards de tarefa — mais discretos */
+body[data-screen="tasks"] .task-card-actions button,
+body[data-screen="home"] .task-card-actions button {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+  border-color: var(--plenna-line) !important;
+  box-shadow: none !important;
+}
+
+/* Focus: linha de contexto duplicada removida */
+.focus-context-line {
+  display: none !important;
+}
+
+/* Habit item: mais compacto */
+.habit-item {
+  padding: 12px 14px !important;
+}
+
+.habit-meta-line {
+  font-size: 10.5px !important;
+}
+
+/* Home stack: menos espaço entre seções */
+body[data-screen="home"] .home-stack {
+  gap: 10px !important;
+}
+
+/* Home care note: mais discreta */
+body[data-screen="home"] .home-care-note {
+  padding: 10px 13px !important;
+  border-radius: 14px !important;
+  font-size: 12.5px !important;
+  line-height: 17px !important;
+}
+
+/* Recommendation card: botões lado a lado */
+body[data-screen="home"] #recommendationCard .row {
+  display: flex !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] #recommendationCard .button {
+  flex: 1 !important;
+  min-height: 42px !important;
+}
+
+/* Priority rows: mais compactas */
+body[data-screen="home"] .home-priority-row {
+  min-height: 42px !important;
+  padding: 6px 0 !important;
+}
+
+body[data-screen="home"] .home-priority-row p,
+body[data-screen="home"] .home-priority-row small {
+  font-size: 12.5px !important;
+  line-height: 17px !important;
+}
+
+/* Week card: inline, não empilhado */
+body[data-screen="home"] .home-week-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 11px 14px !important;
+}
+
+body[data-screen="home"] .home-week-card h2 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+body[data-screen="home"] .home-week-card p {
+  font-size: 11.5px !important;
+  line-height: 15px !important;
+  margin: 0 !important;
+}
+
+body[data-screen="home"] .home-week-card .button {
+  white-space: nowrap !important;
+  min-height: 34px !important;
+  padding: 0 13px !important;
+  font-size: 12px !important;
+}
+
+/* Metrics: mais compactos */
+body[data-screen="home"] #homeMetrics .card,
+body[data-screen="home"] .home-metric-card {
+  min-height: 60px !important;
+  padding: 8px 9px !important;
+  border-radius: 14px !important;
+}
+
+body[data-screen="home"] #homeMetrics strong,
+body[data-screen="home"] .home-metric-card strong {
+  font-size: 15px !important;
+  line-height: 19px !important;
+}
+
+/* Shortcuts na home: 3 colunas, compactos */
+body[data-screen="home"] .home-shortcuts {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+}
+
+body[data-screen="home"] .home-shortcuts .shortcut,
+body[data-screen="home"] .home-shortcuts .home-action-shortcut {
+  min-height: 42px !important;
+  padding: 7px 6px !important;
+  border-radius: 13px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  line-height: 15px !important;
+  box-shadow: none !important;
+}
+
+/* Focus presets: mais compacto */
+.focus-presets {
+  padding: 14px !important;
+}
+
+/* Checkin topbar: mais compacto */
+body[data-screen="checkin"] .figma-topbar {
+  padding: 13px 15px !important;
+  box-shadow: var(--plenna-shadow-soft) !important;
+}
+
+/* Planning adjust: heading alinhado com sistema */
+body[data-screen="planning-adjust"] .figma-adjust-main h1 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+  margin-bottom: 8px !important;
 }

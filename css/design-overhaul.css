@@ -1,0 +1,900 @@
+/*
+  Plenna — Design Overhaul 2026
+  Camada final: identidade moderna, limpa e profissional.
+  Carregada por último — define o produto visual definitivo.
+*/
+
+/* ═══════════════════════════════════════
+   Tokens de design
+   ═══════════════════════════════════════ */
+:root {
+  /* Marca */
+  --po-brand:        #0B7048;
+  --po-brand-hover:  #096040;
+  --po-brand-soft:   #EAF4EE;
+  --po-brand-medium: #1A9C6B;
+  --po-brand-muted:  rgba(11, 112, 72, 0.12);
+
+  /* Texto */
+  --po-ink:   #111B17;
+  --po-ink-2: #2C3C35;
+  --po-muted: #5C7168;
+  --po-soft:  #8BA49B;
+
+  /* Superfícies */
+  --po-bg:       #F4F6F5;
+  --po-surface:  #FFFFFF;
+  --po-surface-2:#EFF2F0;
+
+  /* Bordas e sombras */
+  --po-border:      rgba(0, 0, 0, 0.08);
+  --po-border-soft: rgba(0, 0, 0, 0.05);
+  --po-shadow:      0 1px 3px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04);
+  --po-shadow-lg:   0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.05);
+  --po-shadow-btn:  0 1px 4px rgba(11,112,72,0.24), 0 2px 8px rgba(11,112,72,0.16);
+
+  /* Raios */
+  --po-r-xs: 6px;
+  --po-r-sm: 8px;
+  --po-r:    12px;
+  --po-r-md: 14px;
+  --po-r-lg: 18px;
+  --po-r-xl: 24px;
+}
+
+/* ═══════════════════════════════════════
+   Fundo e estrutura geral
+   ═══════════════════════════════════════ */
+html {
+  background: #CDD9D3 !important;
+}
+
+body {
+  background: var(--po-bg) !important;
+  color: var(--po-ink) !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.page,
+.screen-page {
+  background: var(--po-bg) !important;
+  padding: 52px 18px 80px !important;
+}
+
+@media (max-width: 390px) {
+  .page,
+  .screen-page {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+}
+
+/* App shell */
+.app-shell {
+  background: var(--po-bg) !important;
+  border: 0 !important;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.09),
+    0 24px 56px rgba(0, 0, 0, 0.18) !important;
+}
+
+@media (min-width: 720px) {
+  html {
+    background: radial-gradient(ellipse 80% 60% at 18% 10%, #B8D5C5 0%, #CDD9D3 40%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 85% 92%, #BACFDF 0%, transparent 55%),
+                #C8D6D0 !important;
+  }
+
+  body {
+    padding: 28px 0 !important;
+  }
+
+  .app-shell {
+    border-radius: 32px !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   Tipografia
+   ═══════════════════════════════════════ */
+h1,
+.proto-topbar h1,
+.page-header h1,
+.home-hero h1 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 26px !important;
+  color: var(--po-ink) !important;
+  letter-spacing: -0.01em !important;
+}
+
+h2,
+.card h2,
+.figma-card h2 {
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  line-height: 20px !important;
+  color: var(--po-ink) !important;
+}
+
+h3 {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--po-ink-2) !important;
+}
+
+p,
+.page-header p,
+.proto-topbar p,
+.figma-card p,
+.figma-line p {
+  font-size: 13px !important;
+  line-height: 18px !important;
+  color: var(--po-muted) !important;
+}
+
+small {
+  font-size: 11.5px !important;
+  color: var(--po-soft) !important;
+}
+
+.eyebrow,
+.recognition-label {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+  color: var(--po-brand) !important;
+}
+
+/* ═══════════════════════════════════════
+   Cards — base limpa e moderna
+   ═══════════════════════════════════════ */
+main :is(
+  .card,
+  .figma-card,
+  .list-item,
+  .note-card,
+  .journal-entry,
+  .planning-main-card,
+  .planning-block-card,
+  .planning-alert,
+  .planning-context,
+  .planning-insight,
+  .settings-group-card,
+  .reminder-summary-card,
+  .reminder-card,
+  .habit-item,
+  .habit-support-minimal,
+  .habit-insight,
+  .home-care-note,
+  .home-priority-card,
+  .home-week-card,
+  .home-metric-card,
+  .home-message-card,
+  .now-card,
+  .appointment-card,
+  .focus-presets,
+  .focus-task-card,
+  .focus-context-card,
+  .micro-card,
+  .operational-card,
+  .operational-reading-card,
+  .operational-action-card,
+  .empty-state,
+  .proto-empty
+) {
+  border: 1px solid var(--po-border) !important;
+  border-radius: var(--po-r-md) !important;
+  background: var(--po-surface) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+/* Sub-cards (itens dentro de cards) */
+main :is(.setting-card, .planning-block, .week-task-card) {
+  border-color: var(--po-border-soft) !important;
+  background: var(--po-surface-2) !important;
+  box-shadow: none !important;
+}
+
+/* ═══════════════════════════════════════
+   Botões — sistema completo e moderno
+   ═══════════════════════════════════════ */
+
+/* Base */
+.button,
+a.button,
+button.button,
+.figma-mini-action {
+  min-height: 44px !important;
+  border-radius: var(--po-r) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  transition:
+    background 130ms ease,
+    box-shadow 130ms ease,
+    transform 130ms ease,
+    border-color 130ms ease !important;
+}
+
+/* Primário */
+.button.primary,
+a.button.primary,
+button.button.primary,
+[data-primary-action],
+body[data-screen="checkin"] #checkinSubmit,
+body[data-screen="reminders"] [data-edit-reminder],
+body[data-screen="reminders"] .reminder-card-actions button:first-child,
+body[data-screen="settings"] .setting-card button:not([data-clear-local]),
+body[data-screen="settings"] .setting-card > a,
+body[data-screen="settings"] .settings-profile-row button {
+  background: var(--po-brand) !important;
+  background-image: none !important;
+  border-color: var(--po-brand) !important;
+  color: #ffffff !important;
+  box-shadow: var(--po-shadow-btn) !important;
+}
+
+.button.primary:hover,
+a.button.primary:hover,
+button.button.primary:hover,
+[data-primary-action]:hover {
+  background: var(--po-brand-hover) !important;
+  border-color: var(--po-brand-hover) !important;
+  box-shadow: 0 2px 8px rgba(11,112,72,0.3), 0 4px 16px rgba(11,112,72,0.18) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Secundário */
+.button.secondary,
+a.button.secondary,
+button.button.secondary,
+.figma-mini-action,
+.ux-secondary-primary {
+  background: var(--po-surface) !important;
+  background-image: none !important;
+  border-color: var(--po-border) !important;
+  color: var(--po-brand) !important;
+  box-shadow: none !important;
+}
+
+.button.secondary:hover,
+a.button.secondary:hover {
+  background: var(--po-surface-2) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Danger/Alerta */
+.button.danger,
+button.button.danger,
+.settings-clear-button {
+  background: #FEF2F2 !important;
+  border-color: #FECACA !important;
+  color: #B91C1C !important;
+  box-shadow: none !important;
+}
+
+/* Desabilitado */
+button:disabled,
+.button:disabled,
+[aria-disabled="true"] {
+  background: var(--po-surface-2) !important;
+  border-color: var(--po-border-soft) !important;
+  color: var(--po-soft) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+}
+
+/* Small */
+.button.small,
+a.button.small,
+button.button.small {
+  min-height: 32px !important;
+  padding: 0 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: var(--po-r-sm) !important;
+}
+
+/* Full-width */
+.button.full,
+a.button.full {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  border-radius: var(--po-r-md) !important;
+}
+
+/* Botões de ação secundários dentro de cards */
+.task-card-actions button,
+.adjust-quick-controls button,
+.adjust-quick-controls a {
+  min-height: 36px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: var(--po-r-sm) !important;
+  border-color: var(--po-border) !important;
+  background: var(--po-surface) !important;
+  color: var(--po-muted) !important;
+  box-shadow: none !important;
+}
+
+/* Focus ring acessível */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--po-brand) !important;
+  outline-offset: 2px !important;
+  border-radius: var(--po-r-xs) !important;
+}
+
+/* ═══════════════════════════════════════
+   Chips e badges
+   ═══════════════════════════════════════ */
+.chip,
+.status-chip,
+.task-chip,
+.choice-chip,
+.task-badge,
+.habit-edit-chip,
+.meta span {
+  min-height: 24px !important;
+  padding: 0 9px !important;
+  border: 1px solid var(--po-border) !important;
+  border-radius: var(--po-r-xs) !important;
+  background: var(--po-surface-2) !important;
+  color: var(--po-muted) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+/* Chip ativo */
+main a.active,
+main button.active,
+.task-view-tabs a.active,
+.dashboard-mode-tabs a.active,
+.dashboard-mode-tabs a[aria-current="page"],
+.history-period-tabs button.active,
+.operational-period-tabs button.active,
+.period-tabs button.active,
+.task-tab.active,
+.segmented button.active,
+.figma-tabs .active,
+.chip[aria-pressed="true"] {
+  background: var(--po-brand) !important;
+  border-color: var(--po-brand) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Chip de aviso */
+.chip.warning,
+.task-badge.warning {
+  background: #FFF8F0 !important;
+  border-color: #FDD89A !important;
+  color: #92460C !important;
+}
+
+/* Chip de info (azul) */
+.chip.blue,
+.task-badge.blue {
+  background: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1D4ED8 !important;
+}
+
+/* Badge "Recomendada" — peso reduzido */
+.task-badge:not(.warning):not(.blue) {
+  background: transparent !important;
+  border-color: var(--po-border) !important;
+  color: var(--po-soft) !important;
+  font-size: 10.5px !important;
+}
+
+/* ═══════════════════════════════════════
+   Tabs e controles segmentados
+   ═══════════════════════════════════════ */
+.task-view-tabs,
+.dashboard-mode-tabs,
+.operational-period-tabs,
+.history-period-tabs,
+.period-tabs,
+.segmented,
+.figma-tabs {
+  background: var(--po-surface) !important;
+  border: 1px solid var(--po-border) !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+  gap: 3px !important;
+  box-shadow: none !important;
+}
+
+.task-view-tabs a,
+.dashboard-mode-tabs a,
+.operational-period-tabs button,
+.history-period-tabs button,
+.period-tabs button,
+.segmented button,
+.figma-tabs a,
+.figma-tabs button,
+.task-tab {
+  min-height: 34px !important;
+  border-radius: var(--po-r-sm) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--po-muted) !important;
+}
+
+/* ═══════════════════════════════════════
+   Campos de formulário
+   ═══════════════════════════════════════ */
+.field label,
+.field > span,
+.field-label {
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  color: var(--po-ink-2) !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+select,
+textarea {
+  background: var(--po-surface) !important;
+  border: 1px solid var(--po-border) !important;
+  border-radius: 10px !important;
+  color: var(--po-ink) !important;
+  font-size: 14px !important;
+  min-height: 44px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--po-brand) !important;
+  box-shadow: 0 0 0 3px rgba(11, 112, 72, 0.12) !important;
+  outline: none !important;
+}
+
+.choice-card {
+  border: 1px solid var(--po-border) !important;
+  border-radius: var(--po-r) !important;
+  background: var(--po-surface) !important;
+  box-shadow: none !important;
+}
+
+input:checked + .choice-card,
+label.is-selected .choice-card {
+  border-color: var(--po-brand) !important;
+  background: var(--po-brand-soft) !important;
+  box-shadow: 0 0 0 1px var(--po-brand) !important;
+}
+
+/* ═══════════════════════════════════════
+   Barra de navegação inferior
+   ═══════════════════════════════════════ */
+.bottom-nav {
+  height: 56px !important;
+  padding: 4px 6px 6px !important;
+  background: var(--po-surface) !important;
+  border-top: 1px solid var(--po-border) !important;
+  border-radius: 16px 16px 0 0 !important;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.07) !important;
+  gap: 2px !important;
+}
+
+.bottom-nav a {
+  min-height: 42px !important;
+  min-width: 0 !important;
+  border-radius: 10px !important;
+  color: var(--po-soft) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+}
+
+.bottom-nav a[aria-current="page"],
+.bottom-nav a.active {
+  background: var(--po-brand-soft) !important;
+  color: var(--po-brand) !important;
+}
+
+.nav-glyph {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 15px !important;
+  border-radius: 999px !important;
+}
+
+.bottom-nav a[aria-current="page"] .nav-glyph,
+.bottom-nav a.active .nav-glyph {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ═══════════════════════════════════════
+   Home page
+   ═══════════════════════════════════════ */
+.home-page {
+  padding-top: 48px !important;
+}
+
+.home-hero {
+  gap: 6px !important;
+  margin: 0 0 12px !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(11, 112, 72, 0.12) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #EAF4EE 0%, #F5FBFF 54%, #FEF9EE 100%) !important;
+  box-shadow: none !important;
+}
+
+body[data-screen="home"] .home-hero h1 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 23px !important;
+  color: var(--po-ink) !important;
+}
+
+.home-date {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--po-muted) !important;
+}
+
+body[data-screen="home"] .home-stack {
+  gap: 10px !important;
+}
+
+/* Care note */
+body[data-screen="home"] .home-care-note {
+  padding: 12px 14px !important;
+  border-radius: var(--po-r) !important;
+  background: #F0F7FF !important;
+  border-color: #BFDBFE !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+/* Recommendation card */
+body[data-screen="home"] #recommendationCard {
+  padding: 16px !important;
+  border: 1px solid rgba(11, 112, 72, 0.14) !important;
+  border-radius: var(--po-r-md) !important;
+  background: linear-gradient(135deg, #F5FBFF 0%, #FFFFFF 55%, #F2FBF6 100%) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+body[data-screen="home"] #recommendationCard h2 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 21px !important;
+  color: var(--po-ink) !important;
+}
+
+/* Botões do card de recomendação: lado a lado */
+body[data-screen="home"] #recommendationCard .row {
+  display: flex !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] #recommendationCard .button {
+  flex: 1 !important;
+  min-height: 42px !important;
+  font-size: 13px !important;
+}
+
+/* Priority card */
+body[data-screen="home"] .home-priority-card,
+body[data-screen="home"] .appointment-card,
+body[data-screen="home"] .home-message-card,
+body[data-screen="home"] .home-week-card {
+  padding: 13px 14px !important;
+  border-radius: var(--po-r-md) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+body[data-screen="home"] .home-priority-card h2 {
+  font-size: 13px !important;
+  font-weight: 650 !important;
+}
+
+body[data-screen="home"] .home-priority-card > .row.between {
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] #priorityList {
+  gap: 4px !important;
+}
+
+body[data-screen="home"] .home-priority-row {
+  min-height: 40px !important;
+  padding: 4px 0 !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] .home-priority-row p,
+body[data-screen="home"] .home-priority-row small {
+  font-size: 13px !important;
+  line-height: 17px !important;
+}
+
+/* Week card: inline */
+body[data-screen="home"] .home-week-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 12px 14px !important;
+  background: var(--po-surface) !important;
+}
+
+body[data-screen="home"] .home-week-card h2 {
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  margin: 0 !important;
+}
+
+body[data-screen="home"] .home-week-card p {
+  font-size: 11.5px !important;
+  line-height: 15px !important;
+  margin: 0 !important;
+}
+
+body[data-screen="home"] .home-week-card .button {
+  white-space: nowrap !important;
+  min-height: 32px !important;
+  padding: 0 12px !important;
+  font-size: 12px !important;
+}
+
+/* Message card */
+body[data-screen="home"] .home-message-card {
+  background: #FFF8F0 !important;
+  border-color: #FDD89A !important;
+}
+
+/* Metrics */
+body[data-screen="home"] #homeMetrics,
+body[data-screen="home"] .home-metrics {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body[data-screen="home"] #homeMetrics .card,
+body[data-screen="home"] .home-metric-card {
+  min-height: 58px !important;
+  padding: 10px 10px !important;
+  border-radius: var(--po-r) !important;
+  background: var(--po-surface) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+body[data-screen="home"] #homeMetrics strong,
+body[data-screen="home"] .home-metric-card strong {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 19px !important;
+  color: var(--po-ink) !important;
+}
+
+/* Shortcuts */
+body[data-screen="home"] .home-shortcuts {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+}
+
+body[data-screen="home"] .home-shortcuts .shortcut,
+body[data-screen="home"] .home-shortcuts .home-action-shortcut {
+  min-height: 40px !important;
+  padding: 6px 6px !important;
+  border: 1px solid var(--po-border) !important;
+  border-radius: 10px !important;
+  background: var(--po-surface) !important;
+  color: var(--po-brand) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  line-height: 14px !important;
+  text-align: center !important;
+}
+
+/* ═══════════════════════════════════════
+   Tela de tarefas
+   ═══════════════════════════════════════ */
+body[data-screen="tasks"] .task-row-card {
+  border-radius: var(--po-r-md) !important;
+  border-color: var(--po-border) !important;
+  background: var(--po-surface) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+body[data-screen="tasks"] .task-card-actions {
+  gap: 6px !important;
+}
+
+body[data-screen="tasks"] .task-card-actions button {
+  min-height: 36px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: var(--po-r-sm) !important;
+  background: var(--po-surface-2) !important;
+  border-color: var(--po-border) !important;
+  color: var(--po-muted) !important;
+  box-shadow: none !important;
+}
+
+body[data-screen="tasks"] .task-title {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: var(--po-ink) !important;
+}
+
+/* ═══════════════════════════════════════
+   Tela de foco
+   ═══════════════════════════════════════ */
+.focus-context-line {
+  display: none !important;
+}
+
+body[data-screen="focus"] .focus-presets {
+  padding: 14px 15px !important;
+  gap: 10px !important;
+}
+
+body[data-screen="focus"] .focus-task-card {
+  padding: 14px 15px !important;
+  gap: 8px !important;
+}
+
+/* ═══════════════════════════════════════
+   Tela de hábitos
+   ═══════════════════════════════════════ */
+body[data-screen="habits"] .habit-item {
+  padding: 12px 14px !important;
+}
+
+body[data-screen="habits"] .habit-day.done {
+  background: var(--po-brand) !important;
+  border-color: var(--po-brand) !important;
+  color: #ffffff !important;
+}
+
+body[data-screen="habits"] .habit-day:not(.done) {
+  border: 1.5px dashed rgba(11, 112, 72, 0.3) !important;
+  background: transparent !important;
+  color: var(--po-brand) !important;
+}
+
+body[data-screen="habits"] .habit-meta-line {
+  font-size: 10.5px !important;
+  color: var(--po-soft) !important;
+}
+
+body[data-screen="habits"] .habit-section-overdue .habit-item {
+  border-color: #FECACA !important;
+}
+
+/* ═══════════════════════════════════════
+   Tela de check-in
+   ═══════════════════════════════════════ */
+body[data-screen="checkin"] .figma-topbar {
+  padding: 14px 16px !important;
+  border-radius: var(--po-r-md) !important;
+  background: var(--po-surface) !important;
+  border-color: var(--po-border) !important;
+  box-shadow: none !important;
+}
+
+body[data-screen="checkin"] .checkin-card {
+  border-radius: var(--po-r-md) !important;
+  border-color: var(--po-border) !important;
+  background: var(--po-surface) !important;
+}
+
+body[data-screen="checkin"] .checkin-card[aria-current="step"] {
+  border-color: rgba(11, 112, 72, 0.2) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #F2FBF6 100%) !important;
+  box-shadow: 0 0 0 1px rgba(11, 112, 72, 0.12) !important;
+}
+
+/* ═══════════════════════════════════════
+   Dashboard
+   ═══════════════════════════════════════ */
+body[data-screen="dashboard"] .figma-shortcuts a,
+body[data-screen="dashboard-history"] .figma-shortcuts a,
+body[data-screen="dashboard-operational"] .figma-shortcuts a {
+  min-height: 34px !important;
+  border: 1px solid var(--po-border) !important;
+  background: var(--po-surface) !important;
+  color: var(--po-muted) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  border-radius: var(--po-r-sm) !important;
+}
+
+/* ═══════════════════════════════════════
+   Notificações/toast
+   ═══════════════════════════════════════ */
+.toast,
+.screen-status,
+.app-loading-card {
+  border-radius: var(--po-r) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.screen-status:not(.error):not(.warning),
+.toast.success {
+  background: var(--po-brand) !important;
+  border-color: var(--po-brand) !important;
+  color: #ffffff !important;
+}
+
+/* ═══════════════════════════════════════
+   Formulários de tarefa/hábito (form pages)
+   ═══════════════════════════════════════ */
+body[data-screen="task-new"] .figma-task-form-page,
+body[data-screen="task-edit"] .figma-task-form-page {
+  padding-bottom: 100px !important;
+}
+
+.task-form-page .card,
+.habit-form-page .card {
+  border: 1px solid var(--po-border) !important;
+  background: var(--po-surface) !important;
+  box-shadow: none !important;
+  border-radius: var(--po-r-md) !important;
+}
+
+/* ═══════════════════════════════════════
+   Ajustar com calma / planejamento
+   ═══════════════════════════════════════ */
+body[data-screen="planning-adjust"] .figma-adjust-main h1 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+/* ═══════════════════════════════════════
+   Configurações
+   ═══════════════════════════════════════ */
+body[data-screen="settings"] .settings-summary-card {
+  border-color: var(--po-border) !important;
+  background: var(--po-surface) !important;
+  box-shadow: var(--po-shadow) !important;
+}
+
+/* ═══════════════════════════════════════
+   Microinterações
+   ═══════════════════════════════════════ */
+@media (hover: hover) {
+  .button:hover,
+  a.button:hover,
+  button.button:hover {
+    transform: translateY(-1px) !important;
+  }
+
+  .card:is(a):hover,
+  a.list-item:hover {
+    background: var(--po-surface-2) !important;
+  }
+}
+
+/* Reduzir motion para quem preferir */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  a.button,
+  button.button,
+  .card {
+    transition: none !important;
+    transform: none !important;
+  }
+}
