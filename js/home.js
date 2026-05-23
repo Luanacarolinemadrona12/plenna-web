@@ -81,7 +81,7 @@
         '<article class="priority-row home-priority-row' + (item.done ? " done" : "") + '" data-home-priority-row' + (item.id ? ' data-task-id="' + Utils.escapeHtml(item.id) + '"' : "") + ">",
         '<button class="home-check-dot" type="button" data-home-complete-task aria-label="Marcar tarefa como feita">' + (item.done ? "✓" : "") + "</button>",
         '<p><strong>' + (index + 1) + ".</strong> " + Utils.escapeHtml(item.title) + "</p>",
-        '<a class="chip home-priority-chip" href="tasks.html">' + Utils.escapeHtml(item.category) + "</a>",
+        '<a class="chip home-priority-chip" data-cat="' + Utils.escapeHtml((item.category || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "-")) + '" href="tasks.html">' + Utils.escapeHtml(item.category) + "</a>",
         "</article>"
       ].join("");
     }).join("");

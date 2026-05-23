@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plenna — Balanced</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: #dde8e2; font-family: -apple-system, 'Inter', sans-serif; padding: 32px 20px 60px; min-height: 100vh; }
+h1,h2,h3,h4,p,strong { margin: 0; }
+
+.page-title { text-align: center; margin-bottom: 36px; }
+.page-title h1 { font-size: 26px; font-weight: 900; color: #0f2a1c; letter-spacing: -0.5px; }
+.page-title p { font-size: 13px; color: #5f8a72; margin-top: 6px; }
+
+.screens { display: grid; grid-template-columns: repeat(3, 320px); gap: 32px; justify-content: center; align-items: start; }
+
+.phone {
+  width: 320px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 28px 56px rgba(0,30,15,0.18), 0 4px 8px rgba(0,0,0,0.06);
+  border: 5px solid #fff;
+}
+.status { height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; font-size: 11px; font-weight: 700; }
+.screen-label { text-align: center; margin-top: 12px; font-size: 12px; font-weight: 800; color: #2d5c42; background: rgba(255,255,255,0.8); display: inline-block; padding: 4px 14px; border-radius: 20px; margin-left: 50%; transform: translateX(-50%); }
+
+/* ====== HOME ====== */
+.h-hero {
+  background: #00b86a;
+  padding: 18px 20px 26px;
+}
+.h-greeting { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: -0.3px; }
+.h-date { color: rgba(255,255,255,0.72); font-size: 11px; margin-top: 2px; font-weight: 500; }
+.h-checkin {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 10px 13px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-checkin span { color: #fff; font-size: 11px; font-weight: 600; }
+.h-checkin-btn { background: #fff; color: #008a4f; padding: 5px 13px; border-radius: 20px; font-size: 10px; font-weight: 800; }
+
+.h-body { background: #f6faf8; padding: 14px; display: grid; gap: 10px; }
+
+.h-card { background: #fff; border-radius: 14px; padding: 13px 14px; display: flex; align-items: center; gap: 11px; border: 1px solid #e8f2ec; }
+.h-card-icon { font-size: 20px; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ic-green { background: #e6f9ef; }
+.ic-blue  { background: #e6f0ff; }
+.ic-orange{ background: #fff3e6; }
+.h-card-text strong { font-size: 12px; font-weight: 800; color: #0f2a1c; display: block; }
+.h-card-text span { font-size: 10px; color: #6a9080; display: block; margin-top: 1px; }
+.h-card-badge { margin-left: auto; padding: 3px 9px; border-radius: 20px; font-size: 9px; font-weight: 800; flex-shrink: 0; }
+.badge-g { background: #e0f5ea; color: #00814a; }
+.badge-b { background: #deeeff; color: #1a5cb5; }
+.badge-o { background: #fff0db; color: #9a5500; }
+
+.h-quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.hq { background: #fff; border-radius: 12px; padding: 10px 6px; text-align: center; border: 1px solid #e8f2ec; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.hq span { font-size: 18px; line-height: 1; }
+.hq strong { font-size: 9px; font-weight: 800; color: #1a2e23; }
+
+.sec-head { display: flex; align-items: center; justify-content: space-between; }
+.sec-head strong { font-size: 11px; font-weight: 800; color: #0f2a1c; letter-spacing: 0.2px; }
+.sec-head a { font-size: 10px; color: #00914e; font-weight: 700; }
+
+.h-bnav { background: #fff; height: 52px; display: flex; border-top: 1px solid #eaf2ee; }
+.h-bnav a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 9px; font-weight: 700; color: #9ab5a8; }
+.h-bnav a.active { color: #008a4f; }
+.h-bnav a span { font-size: 16px; line-height: 1; }
+
+/* ====== CHECK-IN ====== */
+.ci-hero {
+  background: #7c5cff;
+  padding: 18px 20px 26px;
+}
+.ci-step { color: rgba(255,255,255,0.65); font-size: 10px; font-weight: 700; margin-bottom: 7px; letter-spacing: 0.3px; text-transform: uppercase; }
+.ci-hero h2 { color: #fff; font-size: 18px; font-weight: 900; line-height: 1.25; }
+.ci-hero p { color: rgba(255,255,255,0.72); font-size: 11px; margin-top: 3px; }
+.ci-dots { display: flex; gap: 5px; margin-top: 14px; }
+.ci-dot { flex: 1; height: 3px; border-radius: 3px; }
+.cd-done { background: #fff; }
+.cd-now  { background: rgba(255,255,255,0.5); }
+.cd-next { background: rgba(255,255,255,0.2); }
+
+.ci-body { background: #f6faf8; padding: 14px; display: grid; gap: 9px; }
+.ci-label { font-size: 11px; font-weight: 800; color: #0f2a1c; }
+
+.mood-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.mood-opt { background: #fff; border-radius: 12px; padding: 11px 8px; text-align: center; border: 1.5px solid #e8f0ec; cursor: pointer; }
+.mood-opt.sel { border-color: #00b86a; background: #f0fdf6; }
+.mood-opt .mo-e { font-size: 20px; line-height: 1; }
+.mood-opt strong { font-size: 10px; font-weight: 800; color: #0f2a1c; display: block; margin-top: 5px; }
+
+.ci-actions { display: flex; gap: 8px; margin-top: 2px; }
+.ci-back { flex: 1; background: #edf4f0; color: #0f2a1c; padding: 11px; border-radius: 11px; font-size: 12px; font-weight: 700; text-align: center; border: none; cursor: pointer; }
+.ci-next { flex: 2; background: #00b86a; color: #fff; padding: 11px; border-radius: 11px; font-size: 12px; font-weight: 800; text-align: center; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,184,106,0.25); }
+
+/* ====== HÁBITOS ====== */
+.hab-hero {
+  background: #f97316;
+  padding: 18px 20px 26px;
+}
+.hab-hero h2 { color: #fff; font-size: 18px; font-weight: 900; }
+.hab-hero p { color: rgba(255,255,255,0.72); font-size: 11px; margin-top: 2px; }
+.hab-prog-wrap { margin-top: 12px; }
+.hab-prog-bar { background: rgba(255,255,255,0.25); border-radius: 6px; height: 6px; overflow: hidden; }
+.hab-prog-fill { height: 100%; border-radius: 6px; background: #fff; width: 75%; }
+.hab-prog-text { color: rgba(255,255,255,0.8); font-size: 10px; font-weight: 700; margin-top: 5px; }
+
+.hab-body { background: #f6faf8; padding: 14px; display: grid; gap: 8px; }
+.hab-item { background: #fff; border-radius: 12px; padding: 11px 13px; display: flex; align-items: center; gap: 10px; border: 1px solid #eaf2ee; }
+.hab-icon { font-size: 18px; flex-shrink: 0; }
+.hab-info { flex: 1; }
+.hab-info strong { font-size: 12px; font-weight: 800; color: #0f2a1c; display: block; }
+.hab-info span { font-size: 10px; color: #6a9080; }
+.hab-chk { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+.hc-on  { background: #00b86a; color: #fff; }
+.hc-off { background: #edf4f0; border: 1.5px solid #cde8da; color: transparent; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>Plenna — Equilibrado</h1>
+  <p>Expressivo com moderação — cores vivas onde importa, espaço em branco onde descansa</p>
+</div>
+
+<div class="screens">
+
+  <!-- HOME -->
+  <div>
+    <div class="phone">
+      <div style="background:#00b86a"><div class="status" style="color:#fff"><span>9:41</span><span style="letter-spacing:2px">···</span></div></div>
+      <div class="h-hero">
+        <div class="h-greeting">Olá, Luana 🌿</div>
+        <div class="h-date">Quinta-feira, 22 de maio</div>
+        <div class="h-checkin">
+          <span>✨ Check-in de hoje</span>
+          <span class="h-checkin-btn">Fazer agora</span>
+        </div>
+      </div>
+      <div class="h-body">
+        <div class="sec-head"><strong>Seu dia</strong><a>ver tudo</a></div>
+        <div class="h-card">
+          <div class="h-card-icon ic-green">✅</div>
+          <div class="h-card-text"><strong>Tarefas</strong><span>3 pendentes · 1 feita</span></div>
+          <span class="h-card-badge badge-g">Alta prioridade</span>
+        </div>
+        <div class="h-card">
+          <div class="h-card-icon ic-blue">⏱️</div>
+          <div class="h-card-text"><strong>Sessão de foco</strong><span>25 min · energia média</span></div>
+          <span class="h-card-badge badge-b">Pronto</span>
+        </div>
+        <div class="h-card">
+          <div class="h-card-icon ic-orange">🌱</div>
+          <div class="h-card-text"><strong>Hábitos</strong><span>3 de 4 concluídos</span></div>
+          <span class="h-card-badge badge-o">75%</span>
+        </div>
+
+        <div class="sec-head" style="margin-top:2px"><strong>Ações rápidas</strong></div>
+        <div class="h-quick">
+          <div class="hq"><span>➕</span><strong>Tarefa</strong></div>
+          <div class="hq"><span>🎯</span><strong>Foco</strong></div>
+          <div class="hq"><span>📓</span><strong>Diário</strong></div>
+          <div class="hq"><span>🌬️</span><strong>Respirar</strong></div>
+        </div>
+      </div>
+      <div class="h-bnav">
+        <a class="active"><span>🏠</span>Início</a>
+        <a><span>✅</span>Tarefas</a>
+        <a><span>🎯</span>Foco</a>
+        <a><span>🌱</span>Hábitos</a>
+        <a><span>···</span>Mais</a>
+      </div>
+    </div>
+    <div class="screen-label">🏠 Home</div>
+  </div>
+
+  <!-- CHECK-IN -->
+  <div>
+    <div class="phone">
+      <div style="background:#7c5cff"><div class="status" style="color:#fff"><span>9:41</span><span style="letter-spacing:2px">···</span></div></div>
+      <div class="ci-hero">
+        <div class="ci-step">Passo 1 de 4 · Humor</div>
+        <h2>Como você está agora? 💭</h2>
+        <p>Escolha o que mais combina com este momento.</p>
+        <div class="ci-dots">
+          <div class="ci-dot cd-done"></div>
+          <div class="ci-dot cd-now"></div>
+          <div class="ci-dot cd-next"></div>
+          <div class="ci-dot cd-next"></div>
+        </div>
+      </div>
+      <div class="ci-body">
+        <div class="ci-label">Como você chega?</div>
+        <div class="mood-grid">
+          <div class="mood-opt sel"><div class="mo-e">😄</div><strong>Bem</strong></div>
+          <div class="mood-opt"><div class="mo-e">😌</div><strong>Tranquila</strong></div>
+          <div class="mood-opt"><div class="mo-e">😔</div><strong>Pesada</strong></div>
+          <div class="mood-opt"><div class="mo-e">😤</div><strong>Tensa</strong></div>
+          <div class="mood-opt"><div class="mo-e">😪</div><strong>Cansada</strong></div>
+          <div class="mood-opt"><div class="mo-e">🌊</div><strong>Sobrecarregada</strong></div>
+        </div>
+        <div class="ci-actions">
+          <button class="ci-back">← Voltar</button>
+          <button class="ci-next">Continuar →</button>
+        </div>
+      </div>
+      <div class="h-bnav">
+        <a><span>🏠</span>Início</a>
+        <a><span>✅</span>Tarefas</a>
+        <a><span>🎯</span>Foco</a>
+        <a><span>🌱</span>Hábitos</a>
+        <a><span>···</span>Mais</a>
+      </div>
+    </div>
+    <div class="screen-label">💭 Check-in</div>
+  </div>
+
+  <!-- HÁBITOS -->
+  <div>
+    <div class="phone">
+      <div style="background:#f97316"><div class="status" style="color:#fff"><span>9:41</span><span style="letter-spacing:2px">···</span></div></div>
+      <div class="hab-hero">
+        <h2>Cuidados pequenos 🌱</h2>
+        <p>Marque o mínimo feito hoje.</p>
+        <div class="hab-prog-wrap">
+          <div class="hab-prog-bar"><div class="hab-prog-fill"></div></div>
+          <div class="hab-prog-text">3 de 4 · ótimo ritmo 🎉</div>
+        </div>
+      </div>
+      <div class="hab-body">
+        <div class="sec-head"><strong>Hoje</strong><a style="color:#f97316">+ Novo</a></div>
+        <div class="hab-item">
+          <div class="hab-icon">💧</div>
+          <div class="hab-info"><strong>Beber água</strong><span>2L por dia</span></div>
+          <div class="hab-chk hc-on">✓</div>
+        </div>
+        <div class="hab-item">
+          <div class="hab-icon">🚶</div>
+          <div class="hab-info"><strong>Caminhar</strong><span>20 min</span></div>
+          <div class="hab-chk hc-on">✓</div>
+        </div>
+        <div class="hab-item">
+          <div class="hab-icon">📚</div>
+          <div class="hab-info"><strong>Leitura</strong><span>15 minutos</span></div>
+          <div class="hab-chk hc-on">✓</div>
+        </div>
+        <div class="hab-item">
+          <div class="hab-icon">🧘</div>
+          <div class="hab-info"><strong>Meditação</strong><span>5 minutos</span></div>
+          <div class="hab-chk hc-off"></div>
+        </div>
+        <div class="hab-item">
+          <div class="hab-icon">😴</div>
+          <div class="hab-info"><strong>Dormir cedo</strong><span>Antes das 23h</span></div>
+          <div class="hab-chk hc-off"></div>
+        </div>
+      </div>
+      <div class="h-bnav">
+        <a><span>🏠</span>Início</a>
+        <a><span>✅</span>Tarefas</a>
+        <a><span>🎯</span>Foco</a>
+        <a class="active" style="color:#f97316"><span>🌱</span>Hábitos</a>
+        <a><span>···</span>Mais</a>
+      </div>
+    </div>
+    <div class="screen-label">🌱 Hábitos</div>
+  </div>
+
+</div>
+
+<div style="max-width:1020px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+  <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #d8eae0">
+    <strong style="font-size:13px;font-weight:900;color:#0f2a1c">✦ O que mudou em relação à versão anterior</strong>
+    <ul style="color:#4a6a58;font-size:12px;line-height:1.8;margin:10px 0 0;padding-left:16px">
+      <li>Cards simples em branco — sem gradiente interno</li>
+      <li>Emojis como ícone funcional, não decorativo em excesso</li>
+      <li>Hero colorido por seção, corpo sempre branco e limpo</li>
+      <li>Tipografia menor e mais contida</li>
+      <li>Badges pequenos em vez de chips grandes</li>
+    </ul>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #d8eae0">
+    <strong style="font-size:13px;font-weight:900;color:#0f2a1c">🎨 Cores por seção</strong>
+    <div style="display:grid;gap:7px;margin-top:10px">
+      <div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#00b86a;flex-shrink:0"></div><span style="font-size:12px;color:#0f2a1c;font-weight:700">Home &amp; identidade</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#7c5cff;flex-shrink:0"></div><span style="font-size:12px;color:#0f2a1c;font-weight:700">Check-in</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#f97316;flex-shrink:0"></div><span style="font-size:12px;color:#0f2a1c;font-weight:700">Hábitos</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#3b82f6;flex-shrink:0"></div><span style="font-size:12px;color:#0f2a1c;font-weight:700">Tarefas</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

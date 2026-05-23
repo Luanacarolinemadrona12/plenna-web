@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap");
 @import url("./css/base.css");
 @import url("./css/layout.css");
 @import url("./css/components.css");
 @import url("./css/pages.css");
-@import url("./css/product-overrides.css");
-@import url("./css/final-product-pass.css?v=20260521-cleanup");
-@import url("./css/presentation-polish.css?v=20260521-cleanup");
-@import url("./css/design-overhaul.css?v=20260522");
+@import url("./css/plenna-redesign.css");

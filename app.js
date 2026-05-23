@@ -442,17 +442,25 @@
     return "home.html";
   }
 
+  var NAV_ICONS = {
+    home: '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    tasks: '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
+    habits: '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>',
+    focus: '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>',
+    more: '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>'
+  };
+
   function renderNav() {
     var mount = document.querySelector("[data-bottom-nav]");
     if (!mount) return;
 
     mount.innerHTML = [
       '<nav class="bottom-nav" aria-label="Navegação principal">',
-      '<a href="' + pagePath("home.html") + '" data-page="home"><span class="nav-glyph" aria-hidden="true">⌂</span><span>Início</span></a>',
-      '<a href="' + pagePath("tasks.html") + '" data-page="tasks"><span class="nav-glyph" aria-hidden="true">✓</span><span>Tarefas</span></a>',
-      '<a href="' + pagePath("habits.html") + '" data-page="habits"><span class="nav-glyph" aria-hidden="true">◎</span><span>Hábitos</span></a>',
-      '<a href="' + pagePath("focus.html") + '" data-page="focus"><span class="nav-glyph" aria-hidden="true">◷</span><span>Foco</span></a>',
-      '<a href="' + pagePath("more.html") + '" data-page="more"><span class="nav-glyph" aria-hidden="true">☰</span><span>Mais</span></a>',
+      '<a href="' + pagePath("home.html")   + '" data-page="home">'   + NAV_ICONS.home   + '<span>Início</span></a>',
+      '<a href="' + pagePath("tasks.html")  + '" data-page="tasks">'  + NAV_ICONS.tasks  + '<span>Tarefas</span></a>',
+      '<a href="' + pagePath("focus.html")  + '" data-page="focus">'  + NAV_ICONS.focus  + '<span>Foco</span></a>',
+      '<a href="' + pagePath("habits.html") + '" data-page="habits">' + NAV_ICONS.habits + '<span>Hábitos</span></a>',
+      '<a href="' + pagePath("more.html")   + '" data-page="more">'   + NAV_ICONS.more   + '<span>Mais</span></a>',
       "</nav>"
     ].join("");
   }
