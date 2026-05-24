@@ -83,7 +83,7 @@
       descricao: "Revisar narrativa, métricas e próximos passos.",
       prioridade: "alta",
       esforco: "medio",
-      tempoEstimado: "--:--",
+      tempoEstimado: "",
       impactoEmocional: "motivadora",
       prazo: Utils.todayISO(),
       categoria: "Cliente ABC",
@@ -366,7 +366,10 @@
       tags: selectedTags(formData),
       subtarefas: String(formData.get("subtarefas") || "").split("\n").map(function (item) {
         return item.trim();
-      }).filter(Boolean)
+      }).filter(Boolean),
+      figmaBadge: null,
+      figmaDue: null,
+      atualizadoEm: new Date().toISOString()
     });
 
     Storage.replace(Storage.KEYS.tasks, nextTask);
@@ -462,6 +465,23 @@
       updateRecognitionCards();
     });
     Utils.qs("#taskForm").addEventListener("submit", saveTask);
+
+    // Confirmação antes de descartar formulário com dados não salvos
+    var cancelLink = Utils.qs("[data-cancel-form]");
+    if (cancelLink) {
+      cancelLink.addEventListener("click", async function (event) {
+        event.preventDefault();
+        var href = cancelLink.getAttribute("href") || "tasks.html";
+        var confirmed = await Utils.confirmAction({
+          title: "Descartar alterações?",
+          body: "As informações preenchidas não foram salvas e serão perdidas.",
+          cancelLabel: "Continuar editando",
+          confirmLabel: "Descartar",
+          danger: true
+        });
+        if (confirmed) window.location.href = href;
+      });
+    }
 
     var deleteButton = Utils.qs("#deleteTask");
     if (deleteButton) {

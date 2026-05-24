@@ -67,8 +67,17 @@
       ["concluidas", "Concl.", counts.concluidas]
     ];
     Utils.qs("#taskTabs").innerHTML = tabs.map(function (tab) {
-      return '<button class="task-tab ' + (activeFilter === tab[0] ? "active" : "") + '" type="button" data-filter="' + tab[0] + '">' + tab[1] + ' <strong>' + tab[2] + "</strong></button>";
+      var isActive = activeFilter === tab[0];
+      return '<button class="task-tab ' + (isActive ? "active" : "") + '" type="button" data-filter="' + tab[0] + '" aria-pressed="' + (isActive ? "true" : "false") + '">' + tab[1] + ' <strong>' + tab[2] + "</strong></button>";
     }).join("");
+  }
+
+  function renderSavedFilters() {
+    Utils.qsa("#savedTaskFilters [data-filter]").forEach(function (btn) {
+      var isActive = btn.dataset.filter === activeFilter;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
   }
 
   function emptyForFilter() {
@@ -88,6 +97,7 @@
     var visible = filterTasks(all);
       var Icons = window.PlennaIcons;
     renderTabs(all);
+    renderSavedFilters();
 
     if (!visible.length) {
       var empty = emptyForFilter();

@@ -5,40 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lembretes | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260521-full-review" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
   </head>
   <body data-page="more" data-screen="reminders">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page reminders-figma-page">
         <header class="proto-topbar reminders-figma-header">
-          <h1>Lembretes da rotina</h1>
-          <p>Apoios pequenos para lembrar do que cuida de você.</p>
+          <h1>Lembretes</h1>
         </header>
 
         <section class="reminder-summary-card">
           <h2>Resumo de hoje</h2>
-          <p>Check-in cedo, pausa depois do foco e hidratação à tarde, tudo no seu ritmo.</p>
           <div class="reminder-chip-row">
             <span class="chip" data-reminder-total>4 apoios ativos</span>
-            <span class="chip">silencioso à noite</span>
-            <span class="chip">mais leve quando precisa</span>
+            <span class="chip" data-reminder-quiet-chip hidden>silencioso à noite</span>
+            <span class="chip" data-reminder-light-chip hidden>mais leve quando precisa</span>
           </div>
         </section>
 
-        <section class="reminder-card-list" id="reminderList"></section>
+        <section class="reminder-card-list" id="reminderList">
+          <p class="card-loading-hint" aria-hidden="true">Carregando lembretes…</p>
+        </section>
 
         <section class="reminder-connected-card">
-          <h2>Apoios conectados ao seu ritmo</h2>
-          <p>Os avisos acompanham energia, hábitos e foco com mais gentileza.</p>
           <div class="reminder-action-row">
-            <a href="settings.html">Ajustar ritmo</a>
-            <a href="micro-pauses.html">Ver pausas</a>
+            <a class="button secondary small" href="settings.html">Ajustar ritmo</a>
+            <a class="button secondary small" href="micro-pauses.html">Ver pausas</a>
           </div>
         </section>
 
@@ -67,7 +65,7 @@
               </label>
             </div>
             <button class="button primary full" type="submit">Salvar apoio</button>
-            <a class="button secondary full" href="more.html">Fechar criação</a>
+            <button class="button secondary full" type="button" data-close-details>Fechar criação</button>
           </form>
         </details>
       </main>

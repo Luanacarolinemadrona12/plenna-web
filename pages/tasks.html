@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tarefas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/tasks.js?v=20260521-full-review" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/tasks.js" defer></script>
   </head>
   <body data-page="tasks" data-screen="tasks">
     <div class="app-shell">
@@ -20,7 +20,6 @@
         <header class="page-header">
           <div>
             <h1>Tarefas</h1>
-            <p>Organize por energia, esforço, prazo e contexto.</p>
           </div>
         </header>
 
@@ -37,23 +36,30 @@
             <a class="button primary small" href="task-new.html">+ Nova</a>
           </div>
 
-          <div class="task-tabs" id="taskTabs"></div>
+          <div class="task-tabs" id="taskTabs" role="group" aria-label="Filtrar tarefas por status">
+            <button class="task-tab active" type="button" data-filter="caixa" aria-pressed="true">Caixa <strong>0</strong></button>
+            <button class="task-tab" type="button" data-filter="hoje" aria-pressed="false">Hoje <strong>0</strong></button>
+            <button class="task-tab" type="button" data-filter="proximas" aria-pressed="false">Próx. <strong>0</strong></button>
+            <button class="task-tab" type="button" data-filter="concluidas" aria-pressed="false">Concl. <strong>0</strong></button>
+          </div>
 
           <div class="filter-card">
-            <strong>Filtros salvos</strong>
+            <h2>Filtros salvos</h2>
             <div id="savedTaskFilters">
-              <button type="button" data-filter="alta">Prioridade</button>
-              <button type="button" data-filter="com-prazo">Prazo</button>
-              <button type="button" data-filter="projeto">Projetos</button>
+              <button type="button" data-filter="alta" aria-pressed="false">Prioridade</button>
+              <button type="button" data-filter="com-prazo" aria-pressed="false">Prazo</button>
+              <button type="button" data-filter="projeto" aria-pressed="false">Projetos</button>
             </div>
           </div>
 
           <div class="row between task-section-heading">
-            <strong>Hoje · Recomendadas pelo check-in</strong>
+            <h2>Hoje</h2>
             <a href="planning.html">Redistribuir</a>
           </div>
 
-          <div class="content-list" id="taskList"></div>
+          <div class="content-list" id="taskList">
+            <p class="card-loading-hint" aria-hidden="true">Carregando tarefas…</p>
+          </div>
         </section>
       </main>
       <div data-bottom-nav></div>

@@ -1070,7 +1070,6 @@
       var cls = (day.load === "média" ? "media" : day.load) + (day.iso === selectedISO ? " active" : "");
         return '<button class="' + h(cls) + '" type="button" data-select-week-day="' + h(day.iso) + '" aria-pressed="' + h(day.iso === selectedISO ? "true" : "false") + '"><span>' + h(day.label) + '</span><strong>' + h(day.day) + '</strong><small>' + h(day.count ? day.count + " tarefa" + (day.count > 1 ? "s" : "") : "livre") + "</small></button>";
       }).join("") + "</section>",
-      '<section class="week-load-card figma-card"><div><h2>Carga da semana</h2><p>Tarefas distribuídas por dia, sem cara de agenda corporativa.</p></div><div class="week-load-row">' + weekLoadRows + "</div></section>",
       selectedTasks.length ? figmaCard((selectedLabel ? selectedLabel.label : "Dia") + " " + selectedISO.slice(8, 10), "Carga " + selectedLoad + " para este dia.", dayTasksHtml, "figma-day-card week-day-card") : emptyCalendar
     ].join(""), "agenda-week-template");
   };

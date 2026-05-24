@@ -1,0 +1,492 @@
+/* ═══════════════════════════════════════════════════════════════
+   PLENNA — MODO ESCURO
+   Ativa por: preferência do SO  OU  <html data-theme="dark">
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Escopo: aplica quando SO está em dark E usuário não forçou light ─── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --green-900: #c8f2dc;
+    --green-700: #4cbb8a;
+    --green-500: #3aaa7a;
+    --green-400: #2d9a6a;
+    --green-200: #234d38;
+    --green-100: #1a3328;
+    --green-50:  #141f18;
+
+    --text:         #e2f0e8;
+    --text-strong:  #eef8f2;
+    --text-heading: #eef8f2;
+    --text-muted:   #7ab895;
+    --text-soft:    #537a64;
+
+    --bg:            #0f1a12;
+    --bg-muted:      #141f18;
+    --bg-nav:        #111e15;
+    --surface:       #1a2a1e;
+    --surface-soft:  #1e3024;
+    --surface-muted: #222e26;
+
+    --border:      #273c2c;
+    --border-soft: #1e3024;
+    --line:        #222e26;
+
+    --shadow-soft: 0 2px 8px rgba(0,0,0,.45);
+    --shadow-card: 0 2px 12px rgba(0,0,0,.40);
+    --shadow-lift: 0 8px 24px rgba(0,0,0,.55);
+
+    --danger:      #f87171;
+    --danger-soft: #3d1414;
+    --warning:     #fbbf24;
+    --warning-soft:#3a2c00;
+    --blue:        #60a5fa;
+    --blue-soft:   #1a2d4a;
+
+    --primary:       var(--green-500);
+    --primary-alt:   var(--green-500);
+    --primary-dark:  var(--green-700);
+    --primary-deep:  var(--green-900);
+    --primary-soft:  var(--green-100);
+    --primary-pale:  var(--green-50);
+  }
+}
+
+/* ─── Escopo: toggle manual pelo usuário ─── */
+[data-theme="dark"] {
+  --green-900: #c8f2dc;
+  --green-700: #4cbb8a;
+  --green-500: #3aaa7a;
+  --green-400: #2d9a6a;
+  --green-200: #234d38;
+  --green-100: #1a3328;
+  --green-50:  #141f18;
+
+  --text:         #e2f0e8;
+  --text-strong:  #eef8f2;
+  --text-heading: #eef8f2;
+  --text-muted:   #7ab895;
+  --text-soft:    #537a64;
+
+  --bg:            #0f1a12;
+  --bg-muted:      #141f18;
+  --bg-nav:        #111e15;
+  --surface:       #1a2a1e;
+  --surface-soft:  #1e3024;
+  --surface-muted: #222e26;
+
+  --border:      #273c2c;
+  --border-soft: #1e3024;
+  --line:        #222e26;
+
+  --shadow-soft: 0 2px 8px rgba(0,0,0,.45);
+  --shadow-card: 0 2px 12px rgba(0,0,0,.40);
+  --shadow-lift: 0 8px 24px rgba(0,0,0,.55);
+
+  --danger:      #f87171;
+  --danger-soft: #3d1414;
+  --warning:     #fbbf24;
+  --warning-soft:#3a2c00;
+  --blue:        #60a5fa;
+  --blue-soft:   #1a2d4a;
+
+  --primary:       var(--green-500);
+  --primary-alt:   var(--green-500);
+  --primary-dark:  var(--green-700);
+  --primary-deep:  var(--green-900);
+  --primary-soft:  var(--green-100);
+  --primary-pale:  var(--green-50);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   OVERRIDES GLOBAIS — elementos com cores fixas
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --dark-active: 1; }
+}
+[data-theme="dark"] { --dark-active: 1; }
+
+/* Aplica a ambos os escopos com seletor combinado */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) { background: #070f0a; }
+
+  html:not([data-theme="light"]) body,
+  html:not([data-theme="light"]) .app-shell {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* ── Status bar ── */
+  html:not([data-theme="light"]) .status-bar {
+    color: #e2f0e8;
+  }
+
+  /* ── Nav inferior ── */
+  html:not([data-theme="light"]) .bottom-nav {
+    background: var(--bg-nav) !important;
+    border-top: 1px solid var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) .bottom-nav a {
+    color: var(--text-muted) !important;
+  }
+
+  html:not([data-theme="light"]) .bottom-nav a.active,
+  html:not([data-theme="light"]) .bottom-nav a[aria-current] {
+    color: var(--green-700) !important;
+  }
+
+  /* ── Page back link ── */
+  html:not([data-theme="light"]) .page-back-link {
+    color: var(--green-700) !important;
+  }
+
+  /* ── Cards genéricos ── */
+  html:not([data-theme="light"]) .card {
+    background: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  /* ── Inputs / textareas / selects ── */
+  html:not([data-theme="light"]) input,
+  html:not([data-theme="light"]) textarea,
+  html:not([data-theme="light"]) select {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) input::placeholder,
+  html:not([data-theme="light"]) textarea::placeholder {
+    color: var(--text-soft) !important;
+  }
+
+  /* ─── CONFIGURAÇÕES — overrides de cores fixas ─── */
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-figma-page {
+    background: var(--bg) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-summary-card {
+    background: linear-gradient(145deg, #1a3028 0%, #162219 100%) !important;
+    border-color: #2a4c36 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-summary-card h2 {
+    color: var(--green-700) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-profile-row h3 {
+    color: var(--text-heading) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-profile-row p {
+    color: var(--text-muted) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-chip-row .chip {
+    background: #1a3a28 !important;
+    color: #4ade80 !important;
+    border-color: #2d6040 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-card-list {
+    gap: 14px !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-group-card {
+    background: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-group-heading {
+    background: var(--surface-soft) !important;
+    border-bottom-color: var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-group-heading h2 {
+    color: var(--text-muted) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-group-heading p {
+    color: var(--text-soft) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .setting-card {
+    background: var(--surface) !important;
+    border-bottom-color: var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .setting-card h3 {
+    color: var(--text-heading) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .setting-card p {
+    color: var(--text-muted) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .setting-card > .chip {
+    background: #1a3a28 !important;
+    color: #4ade80 !important;
+    border-color: #2d6040 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-return-link {
+    background: var(--surface-soft) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="settings"] .settings-clear-button {
+    background: var(--danger-soft) !important;
+    border-color: #5a2020 !important;
+    color: var(--danger) !important;
+  }
+
+  /* ─── LEMBRETES — overrides de cores fixas ─── */
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminders-figma-page {
+    background: var(--bg) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-summary-card {
+    background: linear-gradient(135deg, #1a3028 0%, #162219 100%) !important;
+    border-color: #2a4c36 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-summary-card h2 {
+    color: var(--green-700) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-chip-row .chip {
+    background: #1a3a28 !important;
+    color: #4ade80 !important;
+    border-color: #2d6040 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-card {
+    background: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-card h3 {
+    color: var(--text-heading) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-card p {
+    color: var(--text-muted) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-card p strong {
+    color: var(--green-700) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-state-chip.is-active {
+    background: #1a3a28 !important;
+    color: #4ade80 !important;
+    border-color: #2d6040 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-state-chip.is-paused {
+    background: #1e2c38 !important;
+    color: #94a3b8 !important;
+    border-color: #334155 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-connected-card {
+    background: #162219 !important;
+    border-color: #2a4c36 !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-card-actions .reminder-danger-link {
+    border-color: #5a2020 !important;
+    color: var(--danger) !important;
+  }
+
+  html:not([data-theme="light"]) body[data-screen="reminders"] .reminder-create-shell > summary {
+    background: var(--green-500) !important;
+  }
+}
+
+/* ─── Mesmos overrides via classe manual ─── */
+[data-theme="dark"] body,
+[data-theme="dark"] .app-shell {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] html { background: #070f0a; }
+
+[data-theme="dark"] .status-bar { color: #e2f0e8; }
+
+[data-theme="dark"] .bottom-nav {
+  background: var(--bg-nav) !important;
+  border-top: 1px solid var(--border) !important;
+}
+[data-theme="dark"] .bottom-nav a { color: var(--text-muted) !important; }
+[data-theme="dark"] .bottom-nav a.active,
+[data-theme="dark"] .bottom-nav a[aria-current] { color: var(--green-700) !important; }
+
+[data-theme="dark"] .page-back-link { color: var(--green-700) !important; }
+
+[data-theme="dark"] .card {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: var(--text-soft) !important; }
+
+/* Configurações */
+[data-theme="dark"] body[data-screen="settings"] .settings-summary-card {
+  background: linear-gradient(145deg, #1a3028 0%, #162219 100%) !important;
+  border-color: #2a4c36 !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-summary-card h2 { color: var(--green-700) !important; }
+[data-theme="dark"] body[data-screen="settings"] .settings-profile-row h3 { color: var(--text-heading) !important; }
+[data-theme="dark"] body[data-screen="settings"] .settings-profile-row p  { color: var(--text-muted) !important; }
+[data-theme="dark"] body[data-screen="settings"] .settings-chip-row .chip {
+  background: #1a3a28 !important; color: #4ade80 !important; border-color: #2d6040 !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-group-card {
+  background: var(--surface) !important; border-color: var(--border) !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-group-heading {
+  background: var(--surface-soft) !important; border-bottom-color: var(--border) !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-group-heading h2 { color: var(--text-muted) !important; }
+[data-theme="dark"] body[data-screen="settings"] .settings-group-heading p  { color: var(--text-soft) !important; }
+[data-theme="dark"] body[data-screen="settings"] .setting-card {
+  background: var(--surface) !important; border-bottom-color: var(--border) !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .setting-card h3 { color: var(--text-heading) !important; }
+[data-theme="dark"] body[data-screen="settings"] .setting-card p  { color: var(--text-muted) !important; }
+[data-theme="dark"] body[data-screen="settings"] .setting-card > .chip {
+  background: #1a3a28 !important; color: #4ade80 !important; border-color: #2d6040 !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-return-link {
+  background: var(--surface-soft) !important; border-color: var(--border) !important; color: var(--text) !important;
+}
+[data-theme="dark"] body[data-screen="settings"] .settings-clear-button {
+  background: var(--danger-soft) !important; border-color: #5a2020 !important; color: var(--danger) !important;
+}
+
+/* Lembretes */
+[data-theme="dark"] body[data-screen="reminders"] .reminder-summary-card {
+  background: linear-gradient(135deg, #1a3028 0%, #162219 100%) !important;
+  border-color: #2a4c36 !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-summary-card h2 { color: var(--green-700) !important; }
+[data-theme="dark"] body[data-screen="reminders"] .reminder-chip-row .chip {
+  background: #1a3a28 !important; color: #4ade80 !important; border-color: #2d6040 !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-card {
+  background: var(--surface) !important; border-color: var(--border) !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-card h3 { color: var(--text-heading) !important; }
+[data-theme="dark"] body[data-screen="reminders"] .reminder-card p  { color: var(--text-muted) !important; }
+[data-theme="dark"] body[data-screen="reminders"] .reminder-card p strong { color: var(--green-700) !important; }
+[data-theme="dark"] body[data-screen="reminders"] .reminder-state-chip.is-active {
+  background: #1a3a28 !important; color: #4ade80 !important; border-color: #2d6040 !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-state-chip.is-paused {
+  background: #1e2c38 !important; color: #94a3b8 !important; border-color: #334155 !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-connected-card {
+  background: #162219 !important; border-color: #2a4c36 !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-card-actions .reminder-danger-link {
+  border-color: #5a2020 !important; color: var(--danger) !important;
+}
+[data-theme="dark"] body[data-screen="reminders"] .reminder-create-shell > summary {
+  background: var(--green-500) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TOGGLE — botão de alternância de tema
+   ═══════════════════════════════════════════════════════════════ */
+
+.theme-toggle-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.theme-toggle-card:last-child { border-bottom: none; }
+
+.theme-toggle-label {
+  flex: 1;
+}
+
+.theme-toggle-label strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 17px;
+}
+
+.theme-toggle-label span {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Switch pill */
+.theme-switch {
+  position: relative;
+  width: 44px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.theme-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  border: 1.5px solid var(--border);
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.theme-switch input:checked + .theme-switch-track {
+  background: var(--green-500);
+  border-color: var(--green-500);
+}
+
+.theme-switch-track::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.theme-switch input:checked + .theme-switch-track::after {
+  transform: translateX(18px);
+}

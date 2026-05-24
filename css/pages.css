@@ -119,8 +119,37 @@
   font-size: 14px;
 }
 
+/* Nav inferior oculta no onboarding — sem distração no primeiro acesso */
+body[data-screen="onboarding"] .bottom-nav { display: none; }
+body[data-screen="onboarding"] .page { padding-bottom: 32px; }
+
 .home-page {
   padding-top: 58px;
+}
+
+/* ─── Estados pré-JS (carregamento) ─────────────── */
+
+/* Texto de placeholder exibido antes do JS popular cards e listas dinâmicas.
+   O JS substitui o innerHTML do container, removendo este elemento
+   automaticamente quando o conteúdo real é injetado.
+   .home-card-loading mantido por retrocompatibilidade; prefira .card-loading-hint. */
+.home-card-loading,
+.card-loading-hint {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  padding: 6px 0;
+  margin: 0;
+}
+
+/* Linha de contexto sob o heading da seção "Sua semana",
+   visível antes e depois do JS carregar (é conteúdo permanente). */
+.home-week-hint {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .home-hero {
@@ -160,7 +189,7 @@
 
 .now-card .row {
   display: grid;
-  grid-template-columns: 150px 132px;
+  grid-template-columns: 1fr auto;
   gap: 12px;
 }
 
@@ -264,10 +293,13 @@
 }
 
 .filter-card strong,
-.task-section-heading strong {
+.filter-card h2,
+.task-section-heading strong,
+.task-section-heading h2 {
   color: var(--primary-dark);
   font-size: 11px;
   font-weight: 800;
+  margin: 0; /* reset margem padrão do <h2> no browser */
 }
 
 .filter-card > div {
@@ -294,6 +326,11 @@
   color: #b96a26;
   font-size: 11px;
   font-weight: 800;
+  /* Área de toque mínima 44px — Apple HIG / WCAG 2.5.5 */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 4px;
 }
 
 .task-card {
@@ -2276,7 +2313,7 @@
 
 .tasks-page .quick-add input {
   color: #45546b;
-  font-size: 12px;
+  font-size: max(16px, 1em); /* evita zoom automático no iOS Safari */
 }
 
 .tasks-page .quick-add .button {
@@ -2345,16 +2382,23 @@
   margin-top: 4px;
 }
 
-.tasks-page .task-section-heading strong {
+.tasks-page .task-section-heading strong,
+.tasks-page .task-section-heading h2 {
   color: #0d6b45;
   font-size: 12px;
   font-weight: 800;
+  margin: 0;
 }
 
 .tasks-page .task-section-heading a {
   color: #b96a26;
   font-size: 11px;
   font-weight: 800;
+  /* Área de toque mínima 44px — Apple HIG / WCAG 2.5.5 */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 4px;
 }
 
 .tasks-page #taskList {
@@ -3775,6 +3819,16 @@ body[data-screen="settings"] .settings-list-figma .figma-line .button {
   box-shadow: 0 8px 16px rgba(38, 59, 92, 0.06);
   color: #222636;
   text-decoration: none;
+  transition: background 150ms ease, box-shadow 150ms ease, transform 120ms ease;
+}
+.more-hub-tile:hover {
+  background: var(--plenna-brand-soft, #edf8f2);
+  border-color: var(--plenna-brand-medium, #8cc9aa);
+  box-shadow: 0 12px 24px rgba(38, 59, 92, 0.1);
+}
+.more-hub-tile:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 8px rgba(38, 59, 92, 0.05);
 }
 
 .more-hub-tile span {
@@ -5479,6 +5533,21 @@ body[data-screen="prototype-overview"] .app-shell {
   margin-top: 2px;
 }
 
+.export-status-msg {
+  grid-column: 1 / -1;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  min-height: 1.4em; /* reserva espaço para evitar layout shift */
+}
+
+.card-empty-hint {
+  color: var(--text-soft);
+  font-size: 13px;
+  text-align: center;
+  padding: 12px 0;
+}
+
 .planning-actions.compact {
   display: flex;
   gap: 6px;
@@ -6307,11 +6376,6 @@ body[data-screen="checkin"] .checkin-actions > .button {
 .focus-timer-cluster[data-focus-state="done"] .focus-session-status {
   background: #ddf7ea;
   color: #136e47;
-}
-
-/* Visual parity pass 6: the stepper updates from field choices, while the screen keeps the Figma full-form rhythm. */
-body[data-screen="checkin"] .checkin-step-actions {
-  display: none;
 }
 
 body[data-screen="checkin"] .checkin-actions > .button {
@@ -7272,9 +7336,744 @@ body[data-screen="reminders"] .status-bar {
   gap: 7px;
 }
 
+/* ─── Fix global: [hidden] sempre oculta, mesmo com display em outras regras ─── */
+[hidden] { display: none !important; }
+
+/* ─── Bug fixes: alinhamento de telas ─── */
+
+/* 1. Hábitos: alinhamento interno do summary */
+body .habit-create summary {
+  justify-content: flex-start;
+}
+
+/* 2. Configurações: grupos de configuração sem layout */
+.settings-group-card {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #dce8e2;
+  border-radius: 15px;
+  background: #f8fefb;
+}
+
+.settings-group-heading {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8f5ef;
+  margin-bottom: 2px;
+}
+
+.settings-group-heading h2 {
+  margin: 0;
+  color: #4a6572;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-group-heading p {
+  margin: 0;
+  color: #8ca0aa;
+  font-size: 9.5px;
+  font-weight: 500;
+  line-height: 11.5px;
+}
+
+/* 3. Lembretes: cards de resumo e conectado sem display:grid */
+.reminder-summary-card,
+.reminder-connected-card {
+  display: grid;
+}
+
 .reminder-card-actions button,
 .reminder-action-row a {
   min-height: 31px;
   border-radius: 10px;
   font-size: 10px;
+}
+
+/* ─── Semana: tela de visualização semanal ─── */
+
+/* Strip de dias — texto de contagem de tarefas */
+.figma-week-strip small {
+  display: block;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 11px;
+  opacity: 0.75;
+}
+
+/* Dia com carga alta no strip (não sobrescreve o dia selecionado) */
+.figma-week-strip .cheia:not(.active) {
+  background: #fdf5e8;
+  color: #a36022;
+}
+
+/* Linha de pills de carga semanal */
+.week-load-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+/* Pill individual de cada dia na seção "Carga da semana" */
+.week-load-pill {
+  display: grid;
+  grid-template-rows: auto 4px auto;
+  gap: 4px;
+  align-items: center;
+  justify-items: center;
+  padding: 8px 2px;
+  border: 0;
+  border-radius: 12px;
+  background: #f0f4f0;
+  color: #526378;
+  cursor: pointer;
+  text-align: center;
+  min-height: 62px;
+}
+
+.week-load-pill span {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 750;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.week-load-pill b {
+  display: block;
+  width: 80%;
+  height: 4px;
+  border-radius: 999px;
+  background: #d8e8e0;
+}
+
+.week-load-pill em {
+  display: block;
+  font-style: normal;
+  font-size: 8.5px;
+  font-weight: 600;
+  line-height: 10px;
+  color: #8ca0aa;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Estado selecionado */
+.week-load-pill.selected {
+  background: #35c98d;
+  color: #fff;
+}
+
+.week-load-pill.selected b {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.week-load-pill.selected em {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Estado de carga alta */
+.week-load-pill.strong {
+  background: #fdf5e8;
+  color: #a36022;
+}
+
+.week-load-pill.strong b {
+  background: #e8a040;
+}
+
+.week-load-pill.strong em {
+  color: #a36022;
+}
+
+/* Card do dia selecionado */
+.week-day-card {
+  gap: 8px;
+}
+
+/* Tarefas do dia selecionado */
+.week-task-card {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.week-task-card:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.week-task-card:first-child {
+  padding-top: 0;
+}
+
+.week-task-card time {
+  display: block;
+  padding-top: 2px;
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 13px;
+  color: #8ca0aa;
+  white-space: nowrap;
+}
+
+.week-task-card h3 {
+  margin: 0 0 2px;
+  color: #222636;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+.week-task-card p {
+  margin: 0 0 5px;
+  color: #526378;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LEMBRETES — redesign agradável (v2)
+   ════════════════════════════════════════════════════════════════ */
+
+/* Container */
+body[data-screen="reminders"] .reminders-figma-page {
+  display: grid !important;
+  align-content: start !important;
+  gap: 18px !important;
+  padding: 46px 20px 80px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* Header */
+body[data-screen="reminders"] .reminders-figma-header h1 {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #0f1f14;
+}
+
+/* Card de resumo */
+body[data-screen="reminders"] .reminder-summary-card {
+  display: grid !important;
+  gap: 8px !important;
+  min-height: 0 !important;
+  padding: 12px 13px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #f0fdf4 0%, #f5fff8 100%) !important;
+  border: 1px solid #c6f0d5 !important;
+  box-shadow: 0 1px 3px rgba(0, 60, 30, 0.04) !important;
+}
+
+body[data-screen="reminders"] .reminder-summary-card h2 {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #166534;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+body[data-screen="reminders"] .reminder-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+body[data-screen="reminders"] .reminder-chip-row .chip {
+  font-size: 9.5px !important;
+  padding: 1px 7px !important;
+  min-height: 16px !important;
+  background: #dcfce7 !important;
+  color: #166534 !important;
+  border: 1px solid #bbf7d0 !important;
+  border-radius: 8px !important;
+}
+
+/* Lista de cards */
+body[data-screen="reminders"] .reminder-card-list {
+  display: grid !important;
+  gap: 14px !important;
+}
+
+/* Card individual — layout limpo, igual à tela de configurações */
+body[data-screen="reminders"] .reminder-card,
+body[data-screen="reminders"] .reminder-card:nth-child(1),
+body[data-screen="reminders"] .reminder-card:nth-child(2) {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  border: 1px solid #ddeae0 !important;
+  box-shadow: 0 1px 3px rgba(0, 40, 20, 0.05) !important;
+  overflow: visible !important;
+  cursor: pointer !important;
+}
+
+body[data-screen="reminders"] .reminder-card-copy {
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+body[data-screen="reminders"] .reminder-card h3 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 17px !important;
+  color: #0f1f14 !important;
+  margin-bottom: 2px !important;
+}
+
+body[data-screen="reminders"] .reminder-card p {
+  font-size: 11.5px !important;
+  font-weight: 400 !important;
+  line-height: 14px !important;
+  color: #5a7465 !important;
+  margin-top: 0 !important;
+}
+
+body[data-screen="reminders"] .reminder-card p strong {
+  color: #16a34a !important;
+  font-weight: 600 !important;
+}
+
+/* Chip de estado — visível à direita, clicável para toggle */
+body[data-screen="reminders"] .reminder-state-chip {
+  position: relative !important;
+  flex-shrink: 0 !important;
+  align-self: center !important;
+  margin: 0 !important;
+  min-height: 22px !important;
+  height: auto !important;
+  padding: 3px 10px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  z-index: 3 !important;
+}
+
+body[data-screen="reminders"] .reminder-state-chip.is-active {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #86efac !important;
+}
+
+body[data-screen="reminders"] .reminder-state-chip.is-paused {
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Barra de ações — escondida visualmente, botões mantidos funcionais */
+body[data-screen="reminders"] .reminder-card-actions {
+  position: static !important;
+  display: contents !important;
+}
+
+/* Editar (overlay invisível cobre o card inteiro — ação principal) */
+body[data-screen="reminders"] .reminder-card-actions > [data-edit-reminder] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 14px !important;
+  background: transparent !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+  z-index: 2 !important;
+}
+
+/* Link de navegação — oculto */
+body[data-screen="reminders"] .reminder-card-actions > a {
+  display: none !important;
+}
+
+/* Remover — pequeno botão danger visível no canto, acima do overlay */
+body[data-screen="reminders"] .reminder-card-actions .reminder-danger-link {
+  position: absolute !important;
+  bottom: 10px !important;
+  right: 14px !important;
+  flex: none !important;
+  min-width: 0 !important;
+  min-height: 18px !important;
+  padding: 2px 8px !important;
+  border: 1px solid #fecaca !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: #dc2626 !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  z-index: 4 !important;
+  opacity: 0 !important;
+  transition: opacity 0.15s !important;
+  pointer-events: none !important;
+}
+
+/* Remover aparece ao passar o mouse/foco no card */
+body[data-screen="reminders"] .reminder-card:hover .reminder-danger-link,
+body[data-screen="reminders"] .reminder-card:focus-within .reminder-danger-link {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Card conectado (Ajustar ritmo / Ver pausas) */
+body[data-screen="reminders"] .reminder-connected-card {
+  display: grid !important;
+  gap: 8px !important;
+  min-height: 0 !important;
+  padding: 12px 13px !important;
+  border-radius: 10px !important;
+  background: #f0fdf4 !important;
+  border: 1px solid #bbf7d0 !important;
+  box-shadow: none !important;
+}
+
+body[data-screen="reminders"] .reminder-action-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 5px !important;
+}
+
+body[data-screen="reminders"] .reminder-action-row a {
+  min-height: 24px !important;
+  border-radius: 8px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  display: grid !important;
+  place-items: center !important;
+  text-decoration: none !important;
+}
+
+body[data-screen="reminders"] .reminder-action-row a:nth-child(2) {
+  background: transparent !important;
+  border: 1.5px solid #6ee7b7 !important;
+  color: #059669 !important;
+}
+
+/* Formulário "Criar apoio" */
+body[data-screen="reminders"] .reminder-create-shell > summary {
+  display: grid !important;
+  place-items: center !important;
+  min-height: 34px !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  background: #16a34a !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  box-shadow: 0 1px 5px rgba(22, 163, 74, 0.18) !important;
+}
+
+body[data-screen="reminders"] .reminder-create-panel {
+  margin-top: 6px !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CONFIGURAÇÕES — redesign agradável (v2)
+   ════════════════════════════════════════════════════════════════ */
+
+/* Container */
+body[data-screen="settings"] .settings-figma-page {
+  display: grid !important;
+  align-content: start !important;
+  gap: 18px !important;
+  padding: 46px 20px 80px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* Header */
+body[data-screen="settings"] .settings-figma-header {
+  gap: 2px !important;
+}
+
+body[data-screen="settings"] .settings-figma-header h1 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.3px !important;
+  color: #0f1f14 !important;
+}
+
+body[data-screen="settings"] .settings-figma-header p {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 14px !important;
+  color: #4d6655 !important;
+  max-width: none !important;
+}
+
+/* Card de perfil */
+body[data-screen="settings"] .settings-summary-card {
+  display: grid !important;
+  gap: 8px !important;
+  padding: 13px 14px !important;
+  min-height: 0 !important;
+  border-radius: 11px !important;
+  background: linear-gradient(145deg, #f0fdf4 0%, #fafff7 100%) !important;
+  border: 1px solid #c6f0d5 !important;
+  box-shadow: 0 1px 4px rgba(0, 60, 30, 0.05) !important;
+}
+
+body[data-screen="settings"] .settings-summary-card h2 {
+  font-size: 9.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.7px !important;
+  color: #166534 !important;
+}
+
+/* Linha avatar + nome + botão */
+body[data-screen="settings"] .settings-profile-row {
+  display: grid !important;
+  grid-template-columns: 36px 1fr auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+body[data-screen="settings"] .settings-profile-row .avatar {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 9px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  background: #16a34a !important;
+  color: #fff !important;
+}
+
+body[data-screen="settings"] .settings-profile-row > div {
+  min-width: 0 !important;
+}
+
+body[data-screen="settings"] .settings-profile-row h3 {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  line-height: 14px !important;
+  color: #0f1f14 !important;
+}
+
+body[data-screen="settings"] .settings-profile-row p {
+  padding-right: 0 !important;
+  font-size: 9.5px !important;
+  font-weight: 500 !important;
+  line-height: 11px !important;
+  color: #4d6655 !important;
+}
+
+body[data-screen="settings"] .settings-profile-row button {
+  min-height: 24px !important;
+  padding: 0 8px !important;
+  border-radius: 7px !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+/* Chips do perfil */
+body[data-screen="settings"] .settings-chip-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 3px !important;
+}
+
+body[data-screen="settings"] .settings-chip-row .chip {
+  font-size: 9.5px !important;
+  padding: 1px 7px !important;
+  min-height: 16px !important;
+  background: #dcfce7 !important;
+  color: #166534 !important;
+  border: 1px solid #bbf7d0 !important;
+  border-radius: 8px !important;
+}
+
+/* Lista de grupos */
+body[data-screen="settings"] .settings-card-list {
+  display: grid !important;
+  gap: 14px !important;
+}
+
+/* Grupo de configuração — card limpo sem gap interno */
+body[data-screen="settings"] .settings-group-card {
+  display: grid !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  border: 1px solid #ddeae0 !important;
+  box-shadow: 0 1px 3px rgba(0, 40, 20, 0.04) !important;
+  overflow: hidden !important;
+}
+
+/* Cabeçalho do grupo — fundo levemente tintado */
+body[data-screen="settings"] .settings-group-heading {
+  display: grid !important;
+  gap: 1px !important;
+  padding: 9px 14px 8px !important;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid #edf3ee !important;
+  background: #f8fbf9 !important;
+}
+
+body[data-screen="settings"] .settings-group-heading h2 {
+  margin: 0 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: #4a6652 !important;
+}
+
+body[data-screen="settings"] .settings-group-heading p {
+  margin: 0 !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  line-height: 11px !important;
+  color: #85a090 !important;
+}
+
+/* Item de configuração — layout estilo lista limpa */
+body[data-screen="settings"] .setting-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid #eef3ef !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+}
+
+/* Remove a borda do último item de cada grupo */
+body[data-screen="settings"] .setting-card:last-of-type {
+  border-bottom: none !important;
+}
+
+body[data-screen="settings"] .setting-card > div {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+body[data-screen="settings"] .setting-card h3 {
+  padding-right: 0 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 17px !important;
+  color: #0f1f14 !important;
+}
+
+body[data-screen="settings"] .setting-card p {
+  padding-right: 0 !important;
+  font-size: 11.5px !important;
+  font-weight: 400 !important;
+  line-height: 14px !important;
+  color: #5a7465 !important;
+  margin-top: 2px !important;
+}
+
+/* Chip de valor — destaque à direita */
+body[data-screen="settings"] .setting-card > .chip {
+  position: static !important;
+  flex-shrink: 0 !important;
+  align-self: center !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  padding: 3px 10px !important;
+  min-height: 22px !important;
+  border-radius: 20px !important;
+  white-space: nowrap !important;
+}
+
+/* Botão "Ajustar" — invisível mas cobre o card inteiro para manter funcionalidade */
+body[data-screen="settings"] .setting-card > button,
+body[data-screen="settings"] .setting-card > a:not(.settings-return-link) {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+  z-index: 2 !important;
+  text-decoration: none !important;
+}
+
+/* Botões finais do último grupo (Voltar / Apagar dados) */
+body[data-screen="settings"] .settings-return-link,
+body[data-screen="settings"] .settings-clear-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: calc(100% - 28px) !important;
+  margin: 6px 14px 0 !important;
+  min-height: 36px !important;
+  border-radius: 10px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+body[data-screen="settings"] .settings-clear-button {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+/* ─── Checkin: passo 4 — sem "Continuar", só "Voltar" + "Salvar" ─── */
+
+/* Garante espaçamento correto entre os elementos da área de ações */
+body[data-screen="checkin"] .checkin-actions {
+  gap: 10px !important;
+}
+
+/* No último passo, o step-actions tem só "Voltar" → ocupa coluna única */
+body[data-screen="checkin"] .checkin-actions.is-last-step .checkin-step-actions {
+  grid-template-columns: 1fr;
+}
+
+/* "Voltar" no último passo: visualmente secundário, altura confortável */
+body[data-screen="checkin"] .checkin-actions.is-last-step .checkin-step-actions .button {
+  min-height: 44px;
+  font-size: 13px;
 }

@@ -29,7 +29,20 @@
       "Bash(sed -n '2744,2800p' \"C:/Users/Luana/Desktop/plenna-web/css/pages.css\")",
       "Bash(dir \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\" /b /A-D)",
       "Bash(ls \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\" /b)",
-      "Bash(dir \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\" /b)"
+      "Bash(dir \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\" /b)",
+      "Bash(dir \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\*.html\" /b)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\" -Filter \"*.html\" -Depth 0)",
+      "Bash(Select-Object Name)",
+      "Bash(python3 scripts/search.py \"wellness productivity habit tracker mobile green\" --design-system -p \"Plenna\")",
+      "Bash(python scripts/search.py \"wellness productivity habit tracker mobile green\" --design-system -p \"Plenna\")",
+      "Bash(settings)",
+      "Bash(reminders\")",
+      "Bash(awk -F'\"' '{print $2}')",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\\\\task-form.html\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\\\\prototype-overview.html\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\\\\checkin-states.html\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Luana\\\\Desktop\\\\plenna-web\\\\pages\\\\empty-states.html\" -Force)",
+      "Bash(Write-Host \"HTML órfãos removidos\")"
     ]
   }
 }

@@ -101,12 +101,17 @@
     qsa("[data-toggle-setting]").forEach(function (button) {
       var key = button.dataset.toggleSetting;
       var active = data[key] !== false;
-      button.textContent = "Ajustar";
       button.setAttribute("aria-pressed", String(active));
-      button.setAttribute("aria-label", "Ajustar " + settingLabel(key) + ". Estado atual: " + (active ? "ativo" : "pausado"));
+      button.setAttribute("aria-label", button.textContent.trim() + ". Estado atual: " + (active ? "ativo" : "pausado"));
       var card = button.closest(".setting-card");
       if (card) card.classList.toggle("just-updated", key === lastSettingKey);
     });
+    var darkToggle = qs("#darkModeToggle");
+    if (darkToggle) {
+      var savedTheme = localStorage.getItem("plenna-theme");
+      var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      darkToggle.checked = savedTheme === "dark" || (!savedTheme && systemDark);
+    }
   }
 
   function renderMore() {
@@ -115,7 +120,10 @@
     qsa("[data-more-name]").forEach(function (node) { node.textContent = first; });
     qsa("[data-more-initial]").forEach(function (node) { node.textContent = first.charAt(0).toUpperCase(); });
     qsa("[data-count]").forEach(function (node) {
-      node.textContent = moduleCount(node.dataset.count);
+      var count = moduleCount(node.dataset.count);
+      node.textContent = count;
+      var chip = node.closest(".chip");
+      if (chip) chip.hidden = count === 0;
     });
   }
 
@@ -233,6 +241,54 @@
     }
     Object.keys(values).forEach(function (key) {
       qsa("[data-operational='" + key + "']").forEach(function (node) { node.textContent = values[key]; });
+    });
+
+    /* ── Barras de projeto dinâmicas ── */
+    var projectKeys = ["estudos", "trabalho", "pessoal"];
+    var projectCounts = {};
+    projectKeys.forEach(function (proj) {
+      projectCounts[proj] = tasks.filter(function (task) {
+        var p = String(task.projeto || task.categoria || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+        return p.includes(proj.replace("é", "e"));
+      }).length;
+    });
+    var maxProject = Math.max(1, Math.max.apply(null, projectKeys.map(function (k) { return projectCounts[k]; })));
+    var focusByProject = {};
+    projectKeys.forEach(function (proj) {
+      var projMin = focus.filter(function (s) {
+        var t = s.taskId ? Storage.find(Storage.KEYS.tasks, s.taskId) : null;
+        var p = String(t ? (t.projeto || t.categoria || "") : "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+        return p.includes(proj.replace("é", "e"));
+      }).reduce(function (sum, s) { return sum + Number(s.duracaoMinutos || 0); }, 0);
+      focusByProject[proj] = projMin;
+      var projTaskCount = projectCounts[proj];
+      var projFocusH = Math.floor(projMin / 60) + "h" + String(projMin % 60).padStart(2, "0");
+      qsa("[data-project='" + proj + "']").forEach(function (node) {
+        node.textContent = projTaskCount + " " + (projTaskCount === 1 ? "tarefa" : "tarefas") + " · " + projFocusH + " foco";
+      });
+    });
+    qsa("[data-bar-project]").forEach(function (bar) {
+      var proj = bar.dataset.barProject;
+      var pct = demoOnly ? { estudos: 78, trabalho: 58, pessoal: 34 }[proj] || 20 : Math.round((projectCounts[proj] / maxProject) * 88) + 8;
+      bar.style.setProperty("--bar", Math.min(96, pct) + "%");
+    });
+
+    /* ── Barras de prioridade dinâmicas ── */
+    var priorityTotal = Math.max(1, tasks.length);
+    var priorityCounts = {
+      alta: tasks.filter(function (t) { return String(t.prioridade || "").toLowerCase() === "alta"; }).length,
+      media: tasks.filter(function (t) { return String(t.prioridade || "").toLowerCase() === "media" || String(t.prioridade || "").toLowerCase() === "média"; }).length,
+      baixa: tasks.filter(function (t) { return String(t.prioridade || "").toLowerCase() === "baixa"; }).length,
+      adiada: delayed
+    };
+    if (demoOnly) {
+      priorityCounts = { alta: 8, media: 13, baixa: 10, adiada: 6 };
+      priorityTotal = 37;
+    }
+    qsa("[data-bar-priority]").forEach(function (bar) {
+      var key = bar.dataset.barPriority;
+      var pct = Math.round((priorityCounts[key] / priorityTotal) * 88) + 8;
+      bar.style.setProperty("--bar", Math.min(96, pct) + "%");
     });
     qsa("[data-operational-period]").forEach(function (button) {
       button.classList.toggle("active", button.dataset.operationalPeriod === period);
@@ -391,11 +447,15 @@
       return '<label class="figma-check-line dedicated-check-line"><span><strong>' + h(item[1]) + '</strong><small>' + h(item[2]) + ' · ' + filterByPeriod(Storage.all(item[0]), period).length + ' itens no período</small></span><input type="checkbox" data-export-module="' + h(item[0]) + '" checked></label>';
     }).join("");
     qsa("[data-export-period]").forEach(function (button) {
-      button.classList.toggle("active", button.dataset.exportPeriod === period);
+      var isActive = button.dataset.exportPeriod === period;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
     });
     var format = Storage.read("exportFormat", "resumo");
     qsa("[data-export-format]").forEach(function (button) {
-      button.classList.toggle("active", button.dataset.exportFormat === format);
+      var isActive = button.dataset.exportFormat === format;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
     });
     updateExportPreview();
   };
@@ -505,6 +565,12 @@
 
   function bindSharedActions() {
     document.addEventListener("click", async function (event) {
+      var closeDetails = event.target.closest("[data-close-details]");
+      if (closeDetails) {
+        var detailsEl = closeDetails.closest("details");
+        if (detailsEl) detailsEl.open = false;
+      }
+
       var toastButton = event.target.closest("[data-toast]");
       if (toastButton) {
         Utils.notify(toastButton.dataset.toast, { kind: "success" });
@@ -861,6 +927,7 @@
           tags: []
         });
         localNoteForm.reset();
+        renderNotes();
         Utils.notify("Nota salva. Caixa de notas atualizada.", { kind: "success" });
       }
 
@@ -913,6 +980,7 @@
       var period = Storage.read("exportPeriod", "7");
       var format = Storage.read("exportFormat", "resumo");
       var selected = qsa("[data-export-module]:checked").map(function (input) { return input.dataset.exportModule; });
+      var statusEl = qs("#exportStatus");
       if (!selected.length) {
         Utils.showError("Escolha ao menos uma área para continuar com o relatório.", {
           title: "Falta escolher o conteúdo",
@@ -932,10 +1000,15 @@
         });
         return;
       }
+      /* feedback visual durante o processamento */
+      exportButton.disabled = true;
+      exportButton.textContent = "Gerando…";
+      if (statusEl) statusEl.textContent = "Gerando relatório…";
       var content = JSON.stringify({ geradoEm: new Date().toISOString(), formato: format, periodo: period, inclui: selected, dados: payload }, null, 2);
       var fileName = "plenna-relatorio-" + Utils.todayISO() + ".json";
       downloadText(fileName, content);
       Storage.add(Storage.KEYS.exports, { id: Utils.uid("export"), data: new Date().toISOString(), tipo: "relatório do Plenna", nomeArquivo: fileName, conteudo: content });
+      if (statusEl) statusEl.textContent = "Relatório gerado com sucesso: " + fileName;
       Utils.notify("Relatório exportado com sucesso.", { kind: "success" });
       window.setTimeout(function () { window.location.href = "export-success.html"; }, 300);
     }, true);
@@ -944,6 +1017,33 @@
       if (document.body.dataset.screen !== "export" || !event.target.matches("[data-export-module]")) return;
       updateExportPreview();
     });
+  }
+
+  function renderNotes() {
+    var list = qs("#notesList");
+    var examples = qs("#notesExamples");
+    if (!list) return;
+    var notes = Storage.all(Storage.KEYS.entries).filter(function (e) { return e.tipo === "nota"; });
+    if (!notes.length) {
+      list.innerHTML = "";
+      if (examples) examples.hidden = false;
+      return;
+    }
+    if (examples) examples.hidden = true;
+    list.innerHTML = notes.slice().reverse().map(function (note) {
+      var date = new Date(note.data);
+      var dateLabel = Number.isNaN(date.getTime()) ? "Hoje" : date.toLocaleDateString("pt-BR", { day: "2-digit", month: "long" });
+      return [
+        '<article class="note-card">',
+        "<span>" + h(dateLabel) + "</span>",
+        "<h2>" + h(note.titulo) + "</h2>",
+        "<p>" + h(note.conteudo) + "</p>",
+        '<div class="row">',
+        '<button class="button secondary" type="button" data-static-note-task="' + h(note.titulo) + '" data-static-note-body="' + h(note.conteudo) + '">Virar tarefa</button>',
+        "</div>",
+        "</article>"
+      ].join("");
+    }).join("");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -957,5 +1057,24 @@
     if (screen === "planning-adjust") initPlanningAdjust();
     if (screen === "export") initExport();
     if (screen === "habit-edit") initHabitEdit();
+    if (screen === "notes") {
+      renderNotes();
+      var cancelBtn = qs("#cancelNoteForm");
+      if (cancelBtn) {
+        cancelBtn.addEventListener("click", async function () {
+          var form = qs('[data-local-form="note"]');
+          var hasContent = form && (form.elements.titulo.value.trim() || form.elements.conteudo.value.trim());
+          if (!hasContent) { window.location.href = "more.html"; return; }
+          var confirmed = await Utils.confirmAction({
+            title: "Descartar nota?",
+            body: "O conteúdo digitado será perdido.",
+            cancelLabel: "Continuar editando",
+            confirmLabel: "Descartar",
+            danger: true
+          });
+          if (confirmed) window.location.href = "more.html";
+        });
+      }
+    }
   });
 })();

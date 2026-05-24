@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hábitos | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../app.js" defer></script>
     <script src="../js/habits.js" defer></script>
   </head>
   <body data-page="habits" data-screen="habits">
@@ -18,18 +18,18 @@
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page habits-page">
         <header class="page-header">
-          <h1>Cuidados pequenos</h1>
-          <p>Crie hábitos flexíveis e marque o mínimo feito hoje.</p>
+          <h1>Hábitos</h1>
+          <p>Marque o mínimo feito hoje.</p>
           <div class="row between habit-today">
             <strong id="habitTodayTitle">Hoje</strong>
             <span id="habitProgressText">0 de 0 concluídos</span>
           </div>
-          <div class="habit-progress"><span id="habitProgressFill"></span></div>
+          <div class="habit-progress" id="habitProgressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso dos hábitos de hoje"><span id="habitProgressFill"></span></div>
         </header>
 
         <section class="stack-lg">
           <details class="habit-create">
-            <summary>+ Novo</summary>
+            <summary>+ Novo hábito</summary>
             <form class="card form" id="habitForm">
               <label class="field">
                 <span>Nome</span>
@@ -38,36 +38,29 @@
               <div class="grid-2">
                 <label class="field">
                   <span>Categoria</span>
-                  <select name="categoria" id="habitCategorySelect"></select>
+                  <select name="categoria" id="habitCategorySelect"><option value="" disabled selected>Categoria</option></select>
                 </label>
                 <label class="field">
                   <span>Frequência</span>
-                  <select name="frequencia" id="habitFrequencySelect"></select>
+                  <select name="frequencia" id="habitFrequencySelect"><option value="" disabled selected>Frequência</option></select>
                 </label>
               </div>
               <label class="field">
-                <span>Meta mínima</span>
-                <input name="metaMinima" placeholder="Ex.: 1 copo, 5 minutos" aria-label="Meta mínima do hábito">
+                <span>Meta</span>
+                <input name="metaMinima" placeholder="Ex.: 1 copo, 5 min" aria-label="Meta mínima do hábito">
               </label>
               <button class="button primary full" type="submit" aria-label="Adicionar hábito">Adicionar hábito</button>
               <button class="button secondary full" type="reset" data-close-details aria-label="Cancelar criação de hábito">Cancelar</button>
             </form>
           </details>
 
-          <div class="content-list" id="habitList"></div>
+          <div class="content-list" id="habitList">
+            <p class="card-loading-hint" aria-hidden="true">Carregando hábitos…</p>
+          </div>
 
           <section class="habit-support-minimal" aria-label="Apoios para hábitos">
-            <div>
-              <h2>Apoios leves</h2>
-              <p>Modelos e pausas ficam à mão, sem competir com a lista de hoje.</p>
-            </div>
             <a href="habit-templates.html">Modelos</a>
-            <a href="micro-pauses.html">Micro pausas</a>
-          </section>
-
-          <section class="habit-insight compact">
-            <strong>Insight</strong>
-            <p>Hidratação + check-in cedo ajudam a manter constância.</p>
+            <a href="micro-pauses.html">Pausas</a>
           </section>
         </section>
       </main>

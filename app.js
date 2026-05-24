@@ -10,7 +10,7 @@
   }
 
   var accessibilityObserverStarted = false;
-  var PRIVATE_SCREENS = ["prototype-overview", "checkin-states", "empty-states"];
+  var PRIVATE_SCREENS = [];
 
   function all(selector, root) {
     return Array.prototype.slice.call((root || document).querySelectorAll(selector));
@@ -418,7 +418,6 @@
     var map = {
       "task-new": "tasks.html",
       "task-edit": "tasks.html",
-      "task-form": "tasks.html",
       "habit-new": "habits.html",
       "habit-edit": "habits.html",
       "habit-templates": "habits.html",
@@ -465,10 +464,48 @@
     ].join("");
   }
 
+  /* ── Tema (dark mode) ── */
+  function initTheme() {
+    var saved = localStorage.getItem("plenna-theme");
+    if (saved === "dark" || saved === "light") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  }
+
+  function isDarkMode() {
+    var attr = document.documentElement.getAttribute("data-theme");
+    if (attr === "dark") return true;
+    if (attr === "light") return false;
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function setTheme(dark) {
+    var value = dark ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", value);
+    localStorage.setItem("plenna-theme", value);
+    /* Atualiza checkboxes do toggle se existirem */
+    document.querySelectorAll(".theme-switch input").forEach(function (cb) {
+      cb.checked = dark;
+    });
+  }
+
+  // Aplica antes de renderizar para evitar flash
+  initTheme();
+
   window.PlennaApp = {
     isRootPage: isRootPage,
-    pagePath: pagePath
+    pagePath: pagePath,
+    isDarkMode: isDarkMode,
+    setTheme: setTheme
   };
 
-  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", function () {
+    init();
+    // Bind toggle switches injetados dinamicamente
+    document.addEventListener("change", function (e) {
+      if (e.target && e.target.closest(".theme-switch")) {
+        setTheme(e.target.checked);
+      }
+    });
+  });
 })();

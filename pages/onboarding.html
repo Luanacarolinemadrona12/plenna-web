@@ -4,18 +4,36 @@
     <link rel="icon" href="../plenna-leaf.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Onboarding | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <title>Bem-vindo ao Plenna</title>
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
     <script src="../js/screens.js" defer></script>
   </head>
-  <body data-page="home" data-screen="onboarding">
+  <body data-page="onboarding" data-screen="onboarding">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
-      <main class="page page-center screen-page" data-screen-root></main>
+      <main class="page page-center screen-page" data-screen-root>
+        <!-- fallback estático enquanto o JS carrega -->
+        <section class="card hero-card">
+          <div class="cover-title">
+            <span class="leaf-mark" aria-hidden="true">
+              <img class="plenna-leaf" src="../assets/images/plenna-leaf.png" alt="">
+            </span>
+            <h1>Plenna</h1>
+            <p>Um lugar calmo para escolher o essencial e seguir no seu ritmo.</p>
+          </div>
+          <div class="content-list">
+            <article class="list-item">Escolha o que cabe no dia</article>
+            <article class="list-item">Proteja pausas entre blocos</article>
+            <article class="list-item">Adapte a rotina ao seu momento</article>
+          </div>
+          <a class="button primary full" href="checkin.html">Começar check-in</a>
+          <a class="button secondary full" href="home.html">Entrar no meu dia</a>
+        </section>
+      </main>
       <div data-bottom-nav></div>
     </div>
   </body>

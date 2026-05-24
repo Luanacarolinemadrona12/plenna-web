@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nova tarefa | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../app.js" defer></script>
     <script src="../js/task-form.js" defer></script>
   </head>
   <body data-page="tasks" data-screen="task-new">
@@ -34,7 +34,6 @@
           </section>
 
           <section class="card task-fields-card figma-task-fields-card">
-            <h3>Campos da tarefa</h3>
             <div class="figma-field-row">
               <span>Prioridade</span>
               <label class="choice-chip strong"><input type="radio" name="prioridade" value="alta" checked>Alta</label>
@@ -43,7 +42,7 @@
               <label class="choice-chip muted"><input type="radio" name="prioridade" value="nenhuma">Nenhuma</label>
             </div>
             <div class="figma-field-grid">
-              <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" value="--:--"></label>
+              <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" type="text" placeholder="ex.: 25 min" autocomplete="off"></label>
               <label class="figma-pill-input"><span>Prazo</span><input name="prazo" type="date" aria-label="Prazo da tarefa"></label>
             </div>
             <details class="task-advanced-toggle">
@@ -63,24 +62,37 @@
               <span class="chip">0 de 3 adicionadas</span>
             </div>
             <ol class="figma-subtask-list">
-              <li><b>+</b><span>Adicionar roteiro</span><i>≡</i></li>
-              <li><b>+</b><span>Adicionar imagens</span><i>≡</i></li>
-              <li><b>+</b><span>Adicionar revisão final</span><i>≡</i></li>
+              <li data-subtask-index="0">
+                <button class="subtask-mini-action" type="button" data-subtask-remove="0" aria-label="Remover subtarefa">-</button>
+                <span>Adicionar roteiro</span>
+                <i aria-hidden="true">≡</i>
+              </li>
+              <li data-subtask-index="1">
+                <button class="subtask-mini-action" type="button" data-subtask-remove="1" aria-label="Remover subtarefa">-</button>
+                <span>Adicionar imagens</span>
+                <i aria-hidden="true">≡</i>
+              </li>
+              <li data-subtask-index="2">
+                <button class="subtask-mini-action" type="button" data-subtask-remove="2" aria-label="Remover subtarefa">-</button>
+                <span>Adicionar revisão final</span>
+                <i aria-hidden="true">≡</i>
+              </li>
             </ol>
-            <textarea class="visually-hidden" name="subtarefas" aria-label="Subtarefas">Adicionar roteiro
+            <textarea class="visually-hidden" name="subtarefas" aria-hidden="true" tabindex="-1">Adicionar roteiro
 Adicionar imagens
 Adicionar revisão final</textarea>
           </section>
 
           <section class="card figma-task-meta-card">
-            <h3>Recorrência, lembretes e etiquetas</h3>
-            <div class="figma-meta-row"><span>Recorrência</span><label class="choice-chip mint"><input type="radio" name="recorrencia" value="mensal" checked>mensal</label><label class="choice-chip"><input type="radio" name="recorrencia" value="após conclusão">após conclusão</label><label class="choice-chip"><input type="radio" name="recorrencia" value="dias específicos">dias específicos</label></div>
-            <div class="figma-meta-row"><span>Lembretes</span><label class="choice-chip warm"><input type="radio" name="lembrete" value="30 min antes" checked>30 min antes</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="no horário">no horário</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="múltiplos">múltiplos</label></div>
-            <div class="figma-meta-row"><span>Tags</span><label class="choice-chip"><input type="checkbox" name="tags" value="#cliente" checked>#cliente</label><label class="choice-chip"><input type="checkbox" name="tags" value="#apresentação" checked>#apresentação</label></div>
+            <h3>Repetição e lembretes</h3>
+            <div class="figma-field-grid">
+              <label class="figma-pill-input mint"><span>Recorrência</span><select id="recurrenceSelect" name="recorrencia"></select></label>
+              <label class="figma-pill-input yellow"><span>Lembrete</span><select id="reminderSelect" name="lembrete"></select></label>
+            </div>
           </section>
 
           <button class="button primary full" type="submit">Salvar tarefa</button>
-          <a class="button secondary full" href="tasks.html">Cancelar</a>
+          <a class="button secondary full" href="tasks.html" data-cancel-form>Cancelar</a>
         </form>
       </main>
       <div data-bottom-nav></div>

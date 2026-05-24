@@ -47,10 +47,10 @@
     if (!card || Utils.qs("#sessionContextSummary")) return;
     card.insertAdjacentHTML("afterbegin", [
       '<section class="recognition-card focus-session-context" id="sessionContextSummary" aria-live="polite">',
-      '<span class="recognition-label">Contexto da sessao</span>',
+      '<span class="recognition-label">Contexto da sessão</span>',
       '<div class="recognition-stack">',
       '<p><small>Tarefa escolhida</small><strong id="sessionContextTask">Foco sem tarefa associada</strong></p>',
-      '<p><small>Duracao</small><strong id="sessionContextDuration">25 min</strong></p>',
+      '<p><small>Duração</small><strong id="sessionContextDuration">25 min</strong></p>',
       '<p><small>Tipo</small><strong id="sessionContextType">Foco leve</strong></p>',
       "</div>",
       '<div class="session-switcher-slot" id="sessionSwitcherSlot"></div>',

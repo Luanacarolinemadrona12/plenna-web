@@ -106,7 +106,7 @@
     Utils.qsa("[data-entry-type]").forEach(function (button) {
       var active = button.dataset.entryType === type;
       button.classList.toggle("active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.setAttribute("aria-selected", active ? "true" : "false");
     });
     Utils.showScreenStatus(type === "nota" ? "Tipo de registro: nota rápida." : "Tipo de registro: diário.", { kind: "success" });
   }

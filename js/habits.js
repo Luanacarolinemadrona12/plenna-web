@@ -29,7 +29,10 @@
       year: "numeric"
     }));
     Utils.setText("#habitProgressText", doneCount + " de " + habits.length + " concluídos");
-    Utils.qs("#habitProgressFill").style.width = habits.length ? Math.round((doneCount / habits.length) * 100) + "%" : "0%";
+    var pct = habits.length ? Math.round((doneCount / habits.length) * 100) : 0;
+    Utils.qs("#habitProgressFill").style.width = pct + "%";
+    var bar = Utils.qs("#habitProgressBar");
+    if (bar) bar.setAttribute("aria-valuenow", pct);
 
     if (!habits.length) {
       Utils.qs("#habitList").innerHTML = [

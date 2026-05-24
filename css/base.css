@@ -21,7 +21,7 @@
   --text-strong:  var(--green-900);
   --text-heading: var(--green-900);
   --text-muted:   #3a6b50;
-  --text-soft:    #5a8a70;
+  --text-soft:    #4e7a64; /* era #5a8a70 (~3.9:1) — escurecido para ~4.9:1 WCAG AA */
 
   /* Superfícies */
   --bg:           var(--green-50);
@@ -85,6 +85,11 @@ a {
 
 button, input, select, textarea {
   font: inherit;
+}
+
+/* Previne zoom automático no iOS Safari (que ativa quando font-size < 16px) */
+input, select, textarea {
+  font-size: max(16px, 1em);
 }
 
 button {

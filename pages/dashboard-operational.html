@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sua rotina | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260521-full-review" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
   </head>
   <body data-page="more" data-screen="dashboard-operational">
     <div class="app-shell">
@@ -53,17 +53,17 @@
 
         <section class="operational-card">
           <h2>Áreas com mais movimento</h2>
-          <div class="operational-progress-row"><span>Estudos · <b data-project="estudos">0 tarefas · 0h00 foco</b></span><i style="--bar:78%;--bar-color:#6f8fb8"></i></div>
-          <div class="operational-progress-row"><span>Trabalho · <b data-project="trabalho">0 tarefas · 0h00 foco</b></span><i style="--bar:58%;--bar-color:#35c98d"></i></div>
-          <div class="operational-progress-row"><span>Pessoal · <b data-project="pessoal">0 tarefas · 0h00 foco</b></span><i style="--bar:34%;--bar-color:#e2aa42"></i></div>
+          <div class="operational-progress-row"><span>Estudos · <b data-project="estudos">0 tarefas · 0h00 foco</b></span><i style="--bar:0%;--bar-color:#6f8fb8" data-bar-project="estudos" aria-hidden="true"></i></div>
+          <div class="operational-progress-row"><span>Trabalho · <b data-project="trabalho">0 tarefas · 0h00 foco</b></span><i style="--bar:0%;--bar-color:#35c98d" data-bar-project="trabalho" aria-hidden="true"></i></div>
+          <div class="operational-progress-row"><span>Pessoal · <b data-project="pessoal">0 tarefas · 0h00 foco</b></span><i style="--bar:0%;--bar-color:#e2aa42" data-bar-project="pessoal" aria-hidden="true"></i></div>
         </section>
 
         <section class="operational-card">
           <h2>Carga e prioridade</h2>
-          <div class="operational-progress-row"><span>Alta prioridade · <b data-operational="highLabel">0 tarefas</b></span><i style="--bar:45%;--bar-color:#ce6759"></i></div>
-          <div class="operational-progress-row"><span>Média prioridade · <b data-operational="mediumLabel">0 tarefas</b></span><i style="--bar:78%;--bar-color:#6f8fb8"></i></div>
-          <div class="operational-progress-row"><span>Baixa prioridade · <b data-operational="lowLabel">0 tarefas</b></span><i style="--bar:60%;--bar-color:#35c98d"></i></div>
-          <div class="operational-progress-row"><span>Pedindo cuidado · <b data-operational="delayedLabel">0 tarefas</b></span><i style="--bar:38%;--bar-color:#e2aa42"></i></div>
+          <div class="operational-progress-row"><span>Alta prioridade · <b data-operational="highLabel">0 tarefas</b></span><i style="--bar:0%;--bar-color:#ce6759" data-bar-priority="alta" aria-hidden="true"></i></div>
+          <div class="operational-progress-row"><span>Média prioridade · <b data-operational="mediumLabel">0 tarefas</b></span><i style="--bar:0%;--bar-color:#6f8fb8" data-bar-priority="media" aria-hidden="true"></i></div>
+          <div class="operational-progress-row"><span>Baixa prioridade · <b data-operational="lowLabel">0 tarefas</b></span><i style="--bar:0%;--bar-color:#35c98d" data-bar-priority="baixa" aria-hidden="true"></i></div>
+          <div class="operational-progress-row"><span>Pedindo cuidado · <b data-operational="delayedLabel">0 tarefas</b></span><i style="--bar:0%;--bar-color:#e2aa42" data-bar-priority="adiada" aria-hidden="true"></i></div>
         </section>
 
         <section class="operational-reading-card">

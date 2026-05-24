@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar tarefa | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
+    <script src="../app.js" defer></script>
     <script src="../js/task-form.js" defer></script>
   </head>
   <body data-page="tasks" data-screen="task-edit">
@@ -19,7 +19,6 @@
       <main class="page task-form-page figma-task-form-page">
         <header class="task-form-title-only">
           <h1 id="formTitle">Editar tarefa</h1>
-          <p>Ajuste o que precisa mudar e salve apenas quando estiver confortável.</p>
         </header>
 
         <form class="form figma-task-form" id="taskForm" data-skip-example="true">
@@ -35,7 +34,6 @@
           </section>
 
           <section class="card task-fields-card figma-task-fields-card">
-            <h3>Campos da tarefa</h3>
             <div class="figma-field-row">
               <span>Prioridade</span>
               <label class="choice-chip strong"><input type="radio" name="prioridade" value="alta" checked>Alta</label>
@@ -46,11 +44,16 @@
             <div class="figma-field-grid">
               <label class="figma-pill-input"><span>Tempo</span><input name="tempoEstimado" value="--:--"></label>
               <label class="figma-pill-input"><span>Prazo</span><input name="prazo" type="date" aria-label="Prazo da tarefa"></label>
-              <label class="figma-pill-input yellow"><span>Esforço</span><select name="esforco"><option value="nenhum">Nenhum</option><option value="baixo">Baixo</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></label>
-              <label class="figma-pill-input mint"><span>Impacto emocional</span><select name="impactoEmocional"><option value="neutro">Neutro</option><option value="leve">Leve</option><option value="positivo">Positivo</option><option value="motivadora" selected>Motivadora</option><option value="pesado">Pesado</option></select></label>
-              <label class="figma-pill-input"><span>Projeto</span><select name="projeto"><option>Trabalho</option><option>Pessoal</option><option>Saúde</option><option>Nenhum</option></select></label>
-              <label class="figma-pill-input"><span>Categoria</span><select name="categoria"><option>Cliente ABC</option><option>Rotina</option><option>Casa</option><option>Nenhuma</option></select></label>
             </div>
+            <details class="task-advanced-toggle">
+              <summary>Mais detalhes</summary>
+              <div class="figma-field-grid">
+                <label class="figma-pill-input yellow"><span>Esforço</span><select name="esforco"><option value="nenhum">Nenhum</option><option value="baixo">Baixo</option><option value="medio" selected>Médio</option><option value="alto">Alto</option></select></label>
+                <label class="figma-pill-input mint"><span>Impacto emocional</span><select name="impactoEmocional"><option value="neutro">Neutro</option><option value="leve">Leve</option><option value="positivo">Positivo</option><option value="motivadora" selected>Motivadora</option><option value="pesado">Pesado</option></select></label>
+                <label class="figma-pill-input"><span>Projeto</span><select name="projeto"><option>Trabalho</option><option>Pessoal</option><option>Saúde</option><option>Nenhum</option></select></label>
+                <label class="figma-pill-input"><span>Categoria</span><select name="categoria"><option>Cliente ABC</option><option>Rotina</option><option>Casa</option><option>Nenhuma</option></select></label>
+              </div>
+            </details>
           </section>
 
           <section class="card figma-subtasks-card">
@@ -69,15 +72,16 @@ Ajustar gráficos</textarea>
           </section>
 
           <section class="card figma-task-meta-card">
-            <h3>Ritmo, lembretes e etiquetas</h3>
-            <div class="figma-meta-row"><span>Ritmo</span><label class="choice-chip mint"><input type="radio" name="recorrencia" value="mensal" checked>mensal</label><label class="choice-chip"><input type="radio" name="recorrencia" value="após conclusão">após conclusão</label><label class="choice-chip"><input type="radio" name="recorrencia" value="dias específicos">dias específicos</label></div>
-            <div class="figma-meta-row"><span>Lembretes</span><label class="choice-chip warm"><input type="radio" name="lembrete" value="30 min antes" checked>30 min antes</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="no horário">no horário</label><label class="choice-chip warm"><input type="radio" name="lembrete" value="múltiplos">múltiplos</label></div>
-            <div class="figma-meta-row"><span>Tags</span><label class="choice-chip"><input type="checkbox" name="tags" value="#cliente" checked>#cliente</label><label class="choice-chip"><input type="checkbox" name="tags" value="#apresentação" checked>#apresentação</label></div>
+            <h3>Repetição e lembretes</h3>
+            <div class="figma-field-grid">
+              <label class="figma-pill-input mint"><span>Recorrência</span><select id="recurrenceSelect" name="recorrencia"></select></label>
+              <label class="figma-pill-input yellow"><span>Lembrete</span><select id="reminderSelect" name="lembrete"></select></label>
+            </div>
           </section>
 
           <section class="card figma-task-submit-card">
             <button class="button primary full" type="submit">Salvar alterações</button>
-            <a class="button secondary full" href="tasks.html">Voltar sem salvar</a>
+            <a class="button secondary full" href="tasks.html">Cancelar</a>
             <button class="button danger full" type="button" id="deleteTask">Excluir tarefa</button>
           </section>
         </form>

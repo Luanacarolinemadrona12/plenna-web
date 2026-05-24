@@ -760,10 +760,12 @@ body {
   justify-content: space-between;
 }
 
-.task-section-heading strong {
+.task-section-heading strong,
+.task-section-heading h2 {
   color: var(--green-900);
   font-size: 12px;
   font-weight: 800;
+  margin: 0;
 }
 
 /* Override amber #b96a26 from pages.css */
@@ -975,10 +977,15 @@ body {
 }
 
 .habit-create > summary {
+  width: auto;        /* cancela width: 78px de pages.css */
   min-height: 44px;
   display: flex;
   align-items: center;
   padding: 0 16px;
+  margin-left: 0;     /* cancela margin-left: auto de pages.css */
+  border: none;       /* cancela border verde de pages.css */
+  border-radius: 0;   /* cancela border-radius de pages.css */
+  background: transparent; /* cancela background verde de pages.css */
   font-size: 13px;
   font-weight: 700;
   color: var(--green-700);
@@ -2032,11 +2039,11 @@ body {
 .figma-adjust-main,
 .figma-compare-grid,
 .figma-adjust-schedule-card,
-.settings-figma-page,
-.reminders-figma-page,
 .figma-mini-action,
 .figma-note-actions,
 .figma-reminder-actions { all: unset; }
+
+/* settings-figma-page e reminders-figma-page são gerenciados por pages.css — não usar all:unset */
 
 .figma-mini-action,
 .figma-note-actions button,
@@ -2413,6 +2420,17 @@ select:focus-visible {
   border-color: var(--green-500) !important;
 }
 
+/* ── E2. Placeholder contrast global ──
+   Navegadores reduzem a opacidade do placeholder para ~54% por padrão,
+   tornando os textos de exemplo quase ilegíveis sobre fundo branco.
+   Definindo cor + opacity:1 garante contraste adequado em todos os campos.
+   ─────────────────────────────────────────────────────────────────────── */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-soft);   /* #5a8a70 — contraste ≈ 4.4:1 vs branco */
+  opacity: 1;                /* override: browsers aplicam ~0.54 por padrão */
+}
+
 /* ── F. Task form — botões Salvar/Cancelar estavam em 41px ── */
 .task-form-page .button,
 .task-form-page button.button {
@@ -2472,19 +2490,32 @@ select:focus-visible {
 
 /* ── H2. more-organization-links — links inline com 17px ── */
 /* Links inline de navegação rápida na seção Organização */
+.more-organization-links {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .more-organization-links a {
-  display: inline-block;
-  padding: 4px 6px;
-  margin: 2px 0;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--green-50);
+  font-size: 13px;
   font-weight: 700;
   color: var(--green-700);
   text-decoration: none;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .more-organization-links a:hover {
   background: var(--green-100);
+}
+
+.more-organization-links a:active {
+  transform: scale(0.96);
 }
 
 /* ── H. Hover states faltando em links de seção ── */
@@ -2829,6 +2860,623 @@ body[data-screen="checkin"] .recognition-grid strong {
   color: var(--green-900);
   font-size: 15px;
   font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Tabs segmentadas (task-view, dashboard, history)
+   Estas classes existiam só em design-overhaul.css (removido).
+   ═══════════════════════════════════════════════ */
+
+/* Container das tabs — pill pill pill */
+.task-view-tabs,
+.dashboard-mode-tabs,
+.history-period-tabs,
+.operational-period-tabs,
+.period-tabs {
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+/* Itens das tabs */
+.task-view-tabs a,
+.dashboard-mode-tabs a,
+.history-period-tabs button,
+.operational-period-tabs button,
+.period-tabs button {
+  flex: 1;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 0 !important;
+  border-radius: 9px !important;
+  background: transparent !important;
+  color: var(--text-soft) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* Estado ativo */
+.task-view-tabs a.active,
+.task-view-tabs a[aria-current="page"],
+.dashboard-mode-tabs a.active,
+.dashboard-mode-tabs a[aria-current="page"],
+.history-period-tabs button.active,
+.operational-period-tabs button.active,
+.period-tabs button.active {
+  background: var(--green-500) !important;
+  color: #fff !important;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Dashboard Histórico: cards e resumo
+   ═══════════════════════════════════════════════ */
+
+/* Card de resumo do período */
+.history-summary-card {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.history-summary-eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--green-700);
+}
+
+.history-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.history-summary-grid article {
+  display: grid;
+  gap: 3px;
+}
+
+.history-summary-grid small {
+  font-size: 10px;
+  color: var(--text-soft);
+  line-height: 1.3;
+}
+
+.history-summary-grid strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--green-900);
+  overflow-wrap: anywhere;
+}
+
+/* Lista de check-ins por data */
+.history-checkin-list {
+  display: grid;
+  gap: 8px;
+}
+
+.history-checkin-list h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-900);
+  margin: 0;
+}
+
+/* Card individual de check-in */
+.history-checkin-card {
+  display: grid;
+  grid-template-columns: 10px 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.history-checkin-card > div {
+  display: grid;
+  gap: 2px;
+}
+
+.history-checkin-card > div strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.history-checkin-card > div small {
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+/* Ponto colorido de humor */
+.history-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green-400);
+  flex-shrink: 0;
+}
+
+.history-dot.mood-bem,
+.history-dot.mood-otima,
+.history-dot.mood-alto { background: var(--green-500); }
+.history-dot.mood-neutro { background: var(--green-300); }
+.history-dot.mood-ruim,
+.history-dot.mood-cansada,
+.history-dot.mood-sensivel { background: oklch(65% 0.14 30); }
+
+/* Chips de humor/energia no histórico */
+.history-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green-800);
+  white-space: nowrap;
+}
+
+.history-chip.energy {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-soft);
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Home: stats row (.grid-3) cortada
+   minmax(0,1fr) impede colunas de crescerem além do container
+   ═══════════════════════════════════════════════ */
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Permite que o texto do label quebre ao invés de estourar */
+.home-metric-card b {
+  white-space: normal !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.4px !important;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Tasks: nome de tarefa não trunca com "..."
+   ═══════════════════════════════════════════════ */
+.task-title,
+.task-item .title,
+.task-card h3,
+.task-list-item strong {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: initial !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Dashboard Emocional: métricas/gráfico
+   ═══════════════════════════════════════════════ */
+.figma-metric-grid,
+.operational-metrics {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — More page: "12check-ins" → espaçamento
+   ═══════════════════════════════════════════════ */
+.figma-mini-action {
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Focus page: label "Iniciar" não sobrepõe botão
+   ═══════════════════════════════════════════════ */
+.focus-controls {
+  padding-bottom: 36px !important; /* espaço para os labels abaixo dos botões */
+}
+
+/* ═══════════════════════════════════════════════
+   FIX — Figma shortcuts (links do More)
+   ═══════════════════════════════════════════════ */
+.figma-shortcuts {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.figma-shortcuts a,
+.figma-shortcuts button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--green-50);
+  border: 1px solid var(--border);
+  color: var(--green-800);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.figma-shortcuts a:hover,
+.figma-shortcuts button:hover {
+  background: var(--green-100);
+}
+
+/* ═══════════════════════════════════════════════
+   COR — Camada de vitalidade
+   Cor estratégica: cada adição serve uma função.
+   Paleta cromática: mint (hábitos) · sky (foco) · amber (energia).
+   Princípio: os cards precisam ter identidade visual própria —
+   não são todos a mesma caixa branca.
+   ═══════════════════════════════════════════════ */
+
+/* ── K1. Home metric cards — identidade cromática por tipo ──
+   Habits (default): gradiente mint
+   Focus: gradiente sky-blue   Streak: gradiente amber
+   ─────────────────────────────────────────────────────── */
+.home-metric-card {
+  background: linear-gradient(160deg, #eaf8f0 0%, #fff 100%);
+  border-color: var(--green-200);
+}
+
+.home-metric-card.focus {
+  background: linear-gradient(160deg, #e0f2fe 0%, #f8fbff 100%);
+  border-color: #7dd3fc;
+}
+
+.home-metric-card.streak {
+  background: linear-gradient(160deg, #fef3c7 0%, #fffdf8 100%);
+  border-color: #fcd34d;
+}
+
+/* ── K2. Bottom nav — oval suave atrás do ícone ativo ──
+   Radial-gradient oval: não precisa de markup extra.
+   Posição calibrada: ícone (20px) centrado em ~19px do topo
+   dentro de uma célula de 56px.
+   ─────────────────────────────────────────────────────── */
+.bottom-nav a[aria-current="page"] {
+  color: var(--green-500);   /* mais saturado que green-700 */
+  background-image: radial-gradient(
+    ellipse 52px 38px at 50% 19px,
+    var(--green-100) 0%,
+    transparent 100%
+  );
+}
+
+/* ── K3. now-card — azul mais rico ──
+   A ação imediata merece mais presença visual.
+   ─────────────────────────────────────────────────────── */
+.now-card {
+  background: linear-gradient(145deg, #dbeafe 0%, #eff6ff 50%, #fff 100%);
+  border-color: #93c5fd;
+}
+
+/* ── K4. home-care-note — âmbar mais saturado ──
+   O card de "estado emocional" é o âncora afetivo da home.
+   ─────────────────────────────────────────────────────── */
+.home-care-note {
+  background: linear-gradient(145deg, #fef3c7 0%, #fffdf0 100%);
+  border-color: #fcd34d;
+}
+
+/* ── K5. habit-insight — verde esmeralda com profundidade ──
+   Era verde-100 sólido. Agora vai de esmeralda claro (#d1fae5)
+   para verde-100 — cria sensação de luz lateral.
+   ─────────────────────────────────────────────────────── */
+.habit-insight {
+  background: linear-gradient(135deg, #d1fae5 0%, var(--green-100) 100%);
+  border-color: var(--green-200);
+}
+
+/* ── K6. More-page items — tinta cromática por seção ──
+   Os ícones já tinham cor; agora os cards ressoam.
+   Hover já definido em .more-item:hover — aceita a leve
+   mudança para verde-50, que é transiente.
+   ─────────────────────────────────────────────────────── */
+.more-item:nth-child(1) { background: linear-gradient(160deg, #eff6ff,          #fff); border-color: #bfdbfe; }
+.more-item:nth-child(2) { background: linear-gradient(160deg, #fffbeb,          #fff); border-color: #fde68a; }
+.more-item:nth-child(3) { background: linear-gradient(160deg, #fdf2f8,          #fff); border-color: #fbcfe8; }
+.more-item:nth-child(4) { background: linear-gradient(160deg, var(--green-50),  #fff); border-color: var(--green-200); }
+.more-item:nth-child(5) { background: linear-gradient(160deg, #f5f3ff,          #fff); border-color: #ddd6fe; }
+.more-item:nth-child(6) { background: linear-gradient(160deg, #ecfdf5,          #fff); border-color: #a7f3d0; }
+
+/* ── K7. home-week-card — toque de menta ── */
+.home-week-card {
+  background: linear-gradient(145deg, var(--green-50) 0%, #fff 60%);
+  border-color: var(--green-200);
+}
+
+/* ── K8. home-priority-card — leve lavagem de menta no topo ── */
+.home-priority-card {
+  background: linear-gradient(175deg, #eaf8f0 0%, #fff 30%);
+  border-color: var(--green-200);
+}
+
+/* ── K9. Preset cards de foco — ativo com anel esmeralda ──
+   O estado selecionado era verde-100 sólido; agora tem
+   gradiente e um anel duplo de confirmação.
+   ─────────────────────────────────────────────────────── */
+.preset-card.active,
+.preset-card:has(input:checked) {
+  background: linear-gradient(145deg, #d1fae5 0%, var(--green-100) 100%);
+  border-color: var(--green-500);
+  box-shadow: 0 0 0 1.5px var(--green-400), 0 2px 10px rgba(42, 157, 111, 0.14);
+}
+
+/* ── K10. Atalho always-visible — tinta verde mais presente ── */
+.shortcut.always-visible {
+  background: linear-gradient(135deg, var(--green-100) 0%, var(--green-50) 100%);
+  border-color: var(--green-200);
+  color: var(--green-700);
+}
+
+/* ── K11. html background — sage mais saturado (frame desktop) ── */
+html { background: #9ec8b8; }
+
+/* ═══════════════════════════════════════════════
+   M1. Habit cards — borda lateral colorida
+   Layout: card branco + stripe na esquerda.
+   Remove o tint de fundo — cor fica só na borda.
+   ═══════════════════════════════════════════════ */
+
+/* Card branco com stripe colorida na esquerda */
+.habit-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--habit-color, var(--green-400));
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+/* Estado concluído — borda esquerda fica cheia para reforçar a conquista */
+.habit-item.done {
+  background: #fafbf9;
+}
+
+/* Estado atrasado — borda âmbar para sinalizar atenção */
+.habit-item.overdue {
+  border-left-color: #f59e0b;
+}
+
+/* Emoji button — mesmas dimensões originais, só muda o background */
+.habit-item .habit-emoji-button {
+  background: color-mix(in srgb, var(--habit-color, var(--green-400)) 15%, #fff);
+}
+
+/* Chips na linha de meta */
+.habit-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.habit-meta-line span {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--green-50);
+  color: var(--text-soft);
+  font-size: 10px;
+  font-weight: 600;
+  flex: initial;
+}
+
+.habit-meta-line a {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green-700);
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* ═══════════════════════════════════════════════
+   COR — Camada L: telas secundárias
+   Cada tela secundária ganha identidade cromática
+   própria alinhada ao seu propósito emocional.
+   Paleta: lavanda (reflexão) · âmbar (criatividade)
+           céu (descanso) · rosa (atenção) · menta (planejamento)
+   ═══════════════════════════════════════════════ */
+
+/* ── L1. Journal entries — lavanda (reflexão / diário pessoal) ──
+   Violeta claro evoca introspecção e privacidade.
+   Gradiente sutil: não compete com o texto do diário.
+   ─────────────────────────────────────────────────────── */
+.journal-entry {
+  background: linear-gradient(145deg, #f5f3ff 0%, #fff 65%);
+  border-color: #ddd6fe;
+}
+.journal-entry-header { border-bottom-color: #ede9fe; }
+
+/* Remove padding-top da .page para não ter espaço duplo acima do hero violet */
+.journal-page { padding-top: 0; }
+
+/* Cabeçalho da página Journal — faixa violeta escura para marcar a tela */
+.journal-page .page-header {
+  background: linear-gradient(155deg, #2e1065 0%, #4c1d95 42%, #6d28d9 100%);
+  margin: 0 -18px;
+  padding: 52px 18px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.journal-page .page-header::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.045);
+  top: -50px;
+  right: -40px;
+  pointer-events: none;
+}
+.journal-page .page-header h1 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+}
+.journal-page .page-header p { color: rgba(255,255,255,0.7); font-size: 12px; max-width: none; }
+
+/* Status bar branca sobre header violeta */
+body[data-screen="journal"] .status-bar { color: rgba(255,255,255,0.88); }
+
+/* ── L2. Note cards — âmbar suave (criatividade / bloco de notas) ──
+   Notas = papel = quente. Gradiente âmbar como sticky-note digital.
+   ─────────────────────────────────────────────────────── */
+.note-card {
+  background: linear-gradient(145deg, #fffbeb 0%, #fff 62%);
+  border-color: #fde68a;
+}
+
+/* ── L3. Micro-pause cards — céu aberto (descanso / paz) ──
+   Pausas evocam ar livre, leveza. Tint sky-blue.
+   ─────────────────────────────────────────────────────── */
+.micro-card {
+  background: linear-gradient(145deg, #f0f9ff 0%, #fff 62%);
+  border-color: #bae6fd;
+}
+
+/* ── L4. Reminder cards — rosa suave (atenção / lembrança afetiva) ──
+   Lembretes precisam de presença sem agressividade.
+   ─────────────────────────────────────────────────────── */
+.reminder-card {
+  background: linear-gradient(145deg, #fff1f2 0%, #fff 58%);
+  border-color: #fecdd3;
+}
+
+/* ── L5. Task cards — borda lateral colorida (mesmo padrão dos hábitos) ──
+   Branco + stripe esquerda. Cor varia pela badge da tarefa:
+   verde = recomendada · âmbar = pesada · azul = boa agora
+   ─────────────────────────────────────────────────────── */
+.task-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green-400);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.task-card.warning { border-left-color: #f59e0b; }
+.task-card.blue    { border-left-color: #38bdf8; }
+
+/* ── L6. Checkin cards — lavanda morna (autoconhecimento / emoção) ──
+   O check-in é o momento mais íntimo do app.
+   Tint off-white lavanda cria atmosfera de cuidado.
+   ─────────────────────────────────────────────────────── */
+.checkin-card {
+  background: linear-gradient(145deg, #faf9ff 0%, #fff 52%);
+  border-color: #e9d5ff;
+}
+
+/* ── L7. Planning cards — verde consistente com a marca ──
+   Planejamento = ação = verde Plenna.
+   ─────────────────────────────────────────────────────── */
+.planning-main-card {
+  background: linear-gradient(145deg, var(--green-50) 0%, #fff 52%);
+  border: 1px solid var(--green-200);
+  border-radius: var(--radius-xl);  /* 22px — próximo do original 24px */
+  box-shadow: 0 4px 18px rgba(30, 122, 82, 0.08);
+}
+.planning-block-card {
+  background: linear-gradient(145deg, var(--green-50) 0%, #fff 52%);
+  border: 1px solid var(--green-200);
+  border-radius: var(--radius-xl);
+}
+.planning-alert {
+  background: linear-gradient(145deg, #fef3c7 0%, #fffdf0 100%);
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-md);
+}
+.planning-alert strong { color: #92400e; }
+
+/* Planning blocks — menta para o bloco atual */
+.planning-block {
+  background: linear-gradient(145deg, #fafcfa 0%, #fff 40%);
+}
+.planning-block.current {
+  background: linear-gradient(145deg, var(--green-100) 0%, var(--green-50) 100%);
+  border-color: var(--green-400);
+}
+
+/* ── L8. Goals screen cards — âmbar para motivação ──
+   Metas: conquista, aspiração, energia positiva.
+   Escoped ao data-screen="goals" para não colorir outras telas.
+   ─────────────────────────────────────────────────────── */
+body[data-screen="goals"] .figma-card.figma-progress-card {
+  background: linear-gradient(145deg, #fffbeb 0%, #fff 55%);
+  border-color: #fde68a;
+}
+body[data-screen="goals"] .figma-card.figma-badges-card {
+  background: linear-gradient(145deg, var(--green-50) 0%, #fff 55%);
+  border-color: var(--green-200);
+}
+body[data-screen="goals"] .figma-card.figma-feedback-card {
+  background: linear-gradient(145deg, #e0f2fe 0%, #f8fbff 100%);
+  border-color: #7dd3fc;
+}
+
+/* ── L9. Notes screen cards — âmbar para criatividade ──
+   Notes screen usa .figma-card.figma-note-card.
+   ─────────────────────────────────────────────────────── */
+body[data-screen="notes"] .figma-card.figma-note-card {
+  background: linear-gradient(145deg, #fffbeb 0%, #fff 60%);
+  border-color: #fde68a;
+}
+
+/* ── L10. Dashboard / history — tint por seção ──
+   Usa data-screen para escopo seguro.
+   ─────────────────────────────────────────────────────── */
+body[data-screen="dashboard"] .figma-card,
+body[data-screen="dashboard-history"] .figma-card,
+body[data-screen="dashboard-operational"] .figma-card {
+  background: linear-gradient(145deg, var(--green-50) 0%, #fff 50%);
+  border-color: var(--green-200);
+}
+
+/* ── L11. Journal-night cards — azul noturno discreto ──
+   Escrita noturna: fundo quase-branco com leve tint de índigo,
+   como luz de lua. Contraste mantido para digitação.
+   ─────────────────────────────────────────────────────── */
+.figma-night-main-card,
+.night-prompt-card {
+  background: linear-gradient(145deg, #eef2ff 0%, #fff 58%);
+  border-color: #c7d2fe;
+}
+
+/* Page background da tela de fechamento — noite aconchegante */
+body[data-screen="journal-night"] .app-shell,
+body[data-screen="journal-night"] .page {
+  background: #f4f3ff;  /* lavanda muito clara — ≠ do verde habitual */
 }
 
 /* ═══════════════════════════════════════════════

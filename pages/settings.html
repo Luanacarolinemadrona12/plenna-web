@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Configurações | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260521-full-review" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
   </head>
   <body data-page="more" data-screen="settings">
     <div class="app-shell">
@@ -29,7 +29,7 @@
               <h3 data-settings-name>Luana Caroline</h3>
               <p>Equilíbrio · foco leve · apoio em dias difíceis</p>
             </div>
-            <button type="button" data-edit-settings aria-label="Ajustar perfil">Ajustar</button>
+            <button type="button" data-edit-settings aria-label="Ajustar perfil">Ajustar perfil</button>
           </div>
           <div class="settings-chip-row">
             <span class="chip" data-reminder-count>4 lembretes ativos</span>
@@ -49,7 +49,7 @@
                 <p><span data-focus-default>foco leve · 25 min</span> com pausa guiada</p>
               </div>
               <span class="chip">ativo</span>
-              <button type="button" data-edit-focus-default aria-label="Ajustar foco preferido">Ajustar</button>
+              <button type="button" data-edit-focus-default aria-label="Ajustar foco preferido">Ajustar foco</button>
             </article>
             <article class="setting-card">
               <div>
@@ -57,7 +57,7 @@
                 <p>Entram antes quando sua energia cai.</p>
               </div>
               <span class="chip" data-setting-key="pausasInteligentes">contextual</span>
-              <button type="button" data-toggle-setting="pausasInteligentes" aria-label="Ajustar pausas inteligentes">Ajustar</button>
+              <button type="button" data-toggle-setting="pausasInteligentes" aria-label="Ajustar pausas inteligentes">Ajustar pausas</button>
             </article>
             <article class="setting-card">
               <div>
@@ -65,7 +65,7 @@
                 <p>Reduz cobrança e prioriza acolhimento.</p>
               </div>
               <span class="chip" data-setting-key="modoDificil">protetivo</span>
-              <button type="button" data-toggle-setting="modoDificil" aria-label="Ajustar modo dia difícil">Ajustar</button>
+              <button type="button" data-toggle-setting="modoDificil" aria-label="Ajustar modo dia difícil">Ajustar modo</button>
             </article>
           </section>
 
@@ -80,7 +80,7 @@
                 <p>08:30 em dias úteis, com ajuste pelo dia.</p>
               </div>
               <span class="chip" data-setting-key="checkinDiario">ativo</span>
-              <button type="button" data-toggle-setting="checkinDiario" aria-label="Ajustar check-in e lembretes">Ajustar</button>
+              <button type="button" data-toggle-setting="checkinDiario" aria-label="Ajustar check-in e lembretes">Ajustar ritmo</button>
             </article>
             <article class="setting-card">
               <div>
@@ -90,6 +90,16 @@
               <span class="chip">legível</span>
               <a href="reminders.html">Ajustar apoios</a>
             </article>
+            <label class="setting-card theme-toggle-card">
+              <div class="theme-toggle-label">
+                <strong>Modo escuro</strong>
+                <span>Aparência escura para ambientes com pouca luz.</span>
+              </div>
+              <span class="theme-switch" aria-label="Ativar modo escuro">
+                <input type="checkbox" id="darkModeToggle" onchange="window.PlennaApp && window.PlennaApp.setTheme(this.checked)">
+                <span class="theme-switch-track"></span>
+              </span>
+            </label>
           </section>
 
           <section class="settings-group-card" aria-labelledby="settingsRemindersTitle">

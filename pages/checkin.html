@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Check-in | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/checkin.js?v=20260521-checkin-flow" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/checkin.js" defer></script>
   </head>
   <body data-page="home" data-screen="checkin">
     <div class="app-shell">
@@ -19,55 +19,57 @@
       <main class="page checkin-page">
         <header class="page-header figma-topbar">
           <h1>Como você está agora?</h1>
-          <p>Responda uma pergunta por vez. O Plenna adapta seu dia com cuidado.</p>
           <div class="ux-stepper" aria-label="Progresso do check-in">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <small id="checkinProgressText">1 de 4 · humor</small>
+            <span class="active" aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <small id="checkinProgressText" aria-live="polite">1 de 4 · humor</small>
           </div>
         </header>
 
         <form class="form" id="checkinForm" aria-describedby="checkinRequiredNote">
           <p class="sr-only" id="checkinRequiredNote">Para salvar o check-in, escolha como você está chegando (passo 1) e um apoio para hoje (passo 4).</p>
-          <section class="card checkin-card mood-card" data-checkin-step="1">
+          <section class="card checkin-card mood-card" data-checkin-step="1" aria-current="step">
             <h2>Como você chega agora?</h2>
-            <p>Escolha o que mais parece com este momento.</p>
-            <div class="choice-grid" id="humorChoices"></div>
+            <div class="choice-grid" id="humorChoices">
+              <p class="card-loading-hint" aria-hidden="true">Carregando opções…</p>
+            </div>
           </section>
 
-          <section class="card checkin-card energy-card" data-checkin-step="2">
+          <section class="card checkin-card energy-card" data-checkin-step="2" hidden>
             <h2>Quanta energia você tem?</h2>
-            <input id="energyRange" type="range" min="1" max="10" value="7" aria-label="Nível de energia">
+            <input id="energyRange" type="range" min="1" max="10" value="7" aria-label="Nível de energia" aria-describedby="energyLabel">
             <input id="energyValue" name="energia" type="hidden" value="media">
             <p id="energyLabel">7 / 10 · energia média-alta</p>
             <div class="energy-scale"><span>Baixa</span><span>Média</span><span>Alta</span></div>
           </section>
 
-          <section class="card checkin-card factor-card" data-checkin-step="3">
+          <section class="card checkin-card factor-card" data-checkin-step="3" hidden>
             <h2>O que pesou ou ajudou?</h2>
-            <p>Marque só o que fez diferença.</p>
-            <div class="choice-grid two" id="factorChoices"></div>
+            <div class="choice-grid two" id="factorChoices">
+              <p class="card-loading-hint" aria-hidden="true">Carregando opções…</p>
+            </div>
           </section>
 
-          <section class="card checkin-card need-card" data-checkin-step="4">
+          <section class="card checkin-card need-card" data-checkin-step="4" hidden>
             <h2>O que te ajudaria hoje?</h2>
-            <p>Escolha um apoio para guiar o próximo passo.</p>
-            <div class="choice-grid" id="needChoices"></div>
+            <div class="choice-grid" id="needChoices">
+              <p class="card-loading-hint" aria-hidden="true">Carregando opções…</p>
+            </div>
           </section>
 
           <div class="checkin-actions">
             <div class="checkin-step-actions">
-              <button class="button secondary" type="button" id="checkinBack">Voltar</button>
-              <button class="button primary" type="button" id="checkinNext">Continuar com calma</button>
+              <button class="button secondary" type="button" id="checkinBack" hidden>Voltar</button>
+              <button class="button primary" type="button" id="checkinNext">Continuar</button>
             </div>
             <button class="button primary full" type="submit" id="checkinSubmit" hidden>Salvar check-in</button>
             <div class="checkin-secondary-actions">
               <button class="button secondary" type="button" id="skipCheckin">Pular por hoje</button>
-              <a class="button secondary" href="home.html">Voltar ao dia</a>
+              <a class="button secondary" href="home.html" data-confirm-exit="Deseja descartar o check-in em andamento?">Voltar ao dia</a>
             </div>
-            <p class="checkin-skip-note">Se pular, tudo bem: você ainda pode usar o Plenna sem adaptar o dia.</p>
+            <p class="checkin-skip-note">Se pular, o Plenna ainda funciona normalmente.</p>
           </div>
         </form>
       </main>

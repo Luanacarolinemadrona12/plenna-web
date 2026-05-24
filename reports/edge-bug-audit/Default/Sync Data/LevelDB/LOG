@@ -1,8 +1,0 @@
-2026/05/20-08:36:54.411 39d8 Creating DB C:\Users\Luana\Desktop\plenna prototipo web\plenna-web\reports\edge-bug-audit\Default\Sync Data\LevelDB since it was missing.
-2026/05/20-08:36:54.455 39d8 Reusing MANIFEST C:\Users\Luana\Desktop\plenna prototipo web\plenna-web\reports\edge-bug-audit\Default\Sync Data\LevelDB/MANIFEST-000001
-2026/05/20-08:37:17.613 1e54 Level-0 table #5: started
-2026/05/20-08:37:17.620 1e54 Level-0 table #5: 517723 bytes OK
-2026/05/20-08:37:17.622 1e54 Delete type=0 #3
-2026/05/20-08:38:05.376 39d8 Level-0 table #7: started
-2026/05/20-08:38:05.380 39d8 Level-0 table #7: 103195 bytes OK
-2026/05/20-08:38:05.383 39d8 Delete type=0 #4

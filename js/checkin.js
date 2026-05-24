@@ -132,6 +132,8 @@
     Utils.qs("#checkinNext").hidden = currentStep === totalSteps;
     Utils.qs("#checkinSubmit").hidden = currentStep !== totalSteps;
     Utils.qs("#checkinSubmit").disabled = !ready;
+    var actions = Utils.qs(".checkin-actions");
+    if (actions) actions.classList.toggle("is-last-step", currentStep === totalSteps);
     var summary = Utils.qs("#checkinSummary");
     if (summary) summary.hidden = currentStep !== totalSteps;
     updateProgress(currentStep);
@@ -297,5 +299,18 @@
     Utils.qs("#checkinBack").addEventListener("click", previousStep);
     Utils.qs("#skipCheckin").addEventListener("click", skipCheckin);
     setStep(1);
+
+    /* Confirmação antes de descartar o check-in em andamento */
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest("[data-confirm-exit]");
+      if (!link) return;
+      var hasInput = currentStep > 1 || Utils.qs('[name="humor"]:checked');
+      if (!hasInput) return;
+      event.preventDefault();
+      var href = link.getAttribute("href");
+      Utils.confirm({ title: "Sair do check-in?", body: link.dataset.confirmExit || "O preenchimento atual não será salvo.", confirmLabel: "Sair", cancelLabel: "Continuar" }).then(function (ok) {
+        if (ok) window.location.href = href;
+      });
+    });
   });
 })();

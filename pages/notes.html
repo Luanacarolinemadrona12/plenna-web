@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Notas conectadas | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260521-full-review" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
   </head>
   <body data-page="more" data-screen="notes">
     <div class="app-shell">
@@ -18,59 +18,58 @@
       <main class="page notes-figma">
         <header class="proto-topbar">
           <h1>Notas</h1>
-          <p>Transforme ideias em ação, hábito, projeto ou insight sem perder contexto.</p>
         </header>
 
-        <section class="note-card quick">
-          <span>Ideia rápida</span>
-          <h2>“Preciso beber mais água durante a manhã.”</h2>
-          <p>Sugestão do Plenna: isso parece um hábito de hidratação.</p>
-          <div class="row">
-            <button class="button secondary" type="button" data-static-note-habit="Hidratação 15h">Virar hábito</button>
-            <button class="button secondary" type="button" data-static-note-task="Beber mais água" data-static-note-body="Preciso beber mais água durante a manhã.">Virar tarefa</button>
-          </div>
-        </section>
+        <div id=”notesList”>
+          <p class=”card-loading-hint” aria-hidden=”true”>Carregando notas…</p>
+        </div>
 
-        <section class="note-card long">
-          <h2>Nota longa · apresentação Q2</h2>
-          <p>Pontos para abertura, referências da orientadora e tarefa de revisar o roteiro amanhã.</p>
-          <div class="chip-row">
-            <span class="chip">pode virar tarefa</span>
-            <span class="chip">pode entrar no projeto</span>
-          </div>
-          <div class="row">
-            <button class="button secondary" type="button" data-static-note-task="Revisar roteiro amanhã" data-static-note-body="Nota anexada à apresentação Q2.">Transformar em tarefa</button>
-            <button class="button secondary" type="button" data-static-note-project="Projeto Q2">Mover para projeto</button>
-          </div>
-        </section>
+        <div id=”notesExamples”>
+          <section class=”note-card quick”>
+            <span>Ideia rápida</span>
+            <h2>”Preciso beber mais água durante a manhã.”</h2>
+            <p>Parece um hábito de hidratação.</p>
+            <div class=”row”>
+              <button class=”button secondary” type=”button” data-static-note-habit=”Hidratação 15h”>Virar hábito</button>
+              <button class=”button secondary” type=”button” data-static-note-task=”Beber mais água” data-static-note-body=”Preciso beber mais água durante a manhã.”>Virar tarefa</button>
+            </div>
+          </section>
 
-        <section class="note-card examples">
-          <h2>Exemplos concretos de nota conectada</h2>
-          <div class="note-example-grid">
-            <article><small>Virou tarefa</small><strong>Revisar roteiro amanhã</strong><span>a partir da nota da apresentação</span></article>
-            <article><small>Virou hábito</small><strong>Hidratação 15h</strong><span>a partir da ideia rápida de água</span></article>
-            <article><small>Virou item de projeto</small><strong>Projeto Q2</strong><span>nota anexada à apresentação</span></article>
-          </div>
-        </section>
+          <section class=”note-card long”>
+            <h2>Nota longa · apresentação Q2</h2>
+            <p>Pontos para abertura, referências da orientadora e tarefa de revisar o roteiro amanhã.</p>
+            <div class=”chip-row”>
+              <span class=”chip”>pode virar tarefa</span>
+              <span class=”chip”>pode entrar no projeto</span>
+            </div>
+            <div class=”row”>
+              <button class=”button secondary” type=”button” data-static-note-task=”Revisar roteiro amanhã” data-static-note-body=”Nota anexada à apresentação Q2.”>Transformar em tarefa</button>
+              <button class=”button secondary” type=”button” data-static-note-project=”Projeto Q2”>Mover para projeto</button>
+            </div>
+          </section>
 
-        <section class="note-card insight">
-          <h2>Insight da nota</h2>
-          <p>Você repete anotações sobre hidratação e pausas em semanas de maior carga. Isso indica necessidade de suporte, não falta de disciplina.</p>
-          <a class="button secondary full" href="dashboard.html">Ver no painel</a>
-        </section>
+          <section class=”note-card insight”>
+            <h2>Insight da nota</h2>
+            <p>Hidratação e pausas aparecem mais nas semanas mais cheias.</p>
+            <a class=”button secondary full” href=”dashboard.html”>Ver no painel</a>
+          </section>
+        </div>
 
-        <form class="note-create-form" data-local-form="note">
-          <label class="field compact-field">
-            <span>Título da nota rápida</span>
-            <input name="titulo" required placeholder="Ex.: Ideia para amanhã" aria-label="Título da nota rápida">
-          </label>
-          <label class="field compact-field">
-            <span>Conteúdo da nota</span>
-            <textarea name="conteudo" required placeholder="Escreva uma nota" aria-label="Conteúdo da nota"></textarea>
-          </label>
-          <button class="button primary full" type="submit">Salvar</button>
-          <a class="button secondary full" href="more.html">Cancelar</a>
-        </form>
+        <details class=”note-create-shell”>
+          <summary>+ Nova nota</summary>
+          <form class=”note-create-form” data-local-form=”note”>
+            <label class=”field compact-field”>
+              <span>Título da nota rápida</span>
+              <input name=”titulo” required placeholder=”Ex.: Ideia para amanhã” aria-label=”Título da nota rápida”>
+            </label>
+            <label class=”field compact-field”>
+              <span>Conteúdo da nota</span>
+              <textarea name=”conteudo” required placeholder=”Escreva uma nota” aria-label=”Conteúdo da nota”></textarea>
+            </label>
+            <button class=”button primary full” type=”submit”>Salvar</button>
+            <button class=”button secondary full” type=”button” data-close-details>Cancelar</button>
+          </form>
+        </details>
       </main>
       <div data-bottom-nav></div>
     </div>

@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Início | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../js/mood-states.js?v=20260521-cleanup" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/home.js?v=20260520-warm-pass" defer></script>
+    <script src="../js/mood-states.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/home.js" defer></script>
   </head>
   <body data-page="home" data-screen="home">
     <div class="app-shell">
@@ -27,36 +27,43 @@
         <section class="stack-lg home-stack">
           <section class="home-care-note" id="homeCareNote" aria-live="polite"></section>
 
-          <article class="card now-card" id="recommendationCard"></article>
+          <article class="card now-card" id="recommendationCard" aria-live="polite">
+            <span class="eyebrow">Seu dia</span>
+            <h2>O que quer fazer agora?</h2>
+            <div class="row">
+              <a class="button primary" href="planning.html">Planejar meu dia</a>
+              <a class="button secondary" href="focus.html">Iniciar foco</a>
+            </div>
+          </article>
 
           <section class="card home-priority-card">
             <div class="row between">
-              <h2>Suas prioridades de hoje</h2>
-              <a class="button small secondary" href="tasks.html">Ver rotina</a>
+              <h2>Prioridades de hoje</h2>
+              <a class="button small secondary" href="tasks.html">Ver todas</a>
             </div>
-            <div class="content-list" id="priorityList"></div>
+            <div class="content-list" id="priorityList">
+              <p class="home-card-loading" aria-hidden="true">Carregando prioridades…</p>
+            </div>
           </section>
 
-          <section class="card appointment-card" id="appointmentCard"></section>
+          <section class="card appointment-card" id="appointmentCard" aria-live="polite">
+            <p class="home-card-loading" aria-hidden="true">Carregando…</p>
+          </section>
 
-          <section class="card home-message-card" id="homeMessageCard"></section>
+          <section class="card home-message-card" id="homeMessageCard" hidden></section>
 
-          <div class="grid-3" id="homeMetrics"></div>
+          <div class="grid-3" id="homeMetrics" role="region" aria-label="Métricas de progresso" aria-live="polite"></div>
 
           <section class="home-week-card" aria-label="Sua semana">
-            <div>
-              <h2>Sua semana</h2>
-              <p>Veja o ritmo dos próximos dias sem pressa.</p>
-            </div>
+            <h2>Sua semana</h2>
+            <p class="home-week-hint">Tarefas e blocos dos próximos dias.</p>
             <a class="button secondary small" href="calendar-week.html">Ver semana</a>
           </section>
 
           <section class="shortcut-grid home-shortcuts" id="homeShortcuts" aria-label="Atalhos rápidos">
-            <a class="shortcut home-action-shortcut" href="task-new.html">+ Tarefa</a>
-            <a class="shortcut home-action-shortcut" href="focus.html">Iniciar foco</a>
-            <a class="shortcut home-action-shortcut" href="micro-pauses.html">Respirar 3 min</a>
+            <button class="shortcut home-action-shortcut" type="button" data-home-action="breathe">Respirar 3 min</button>
             <a class="shortcut home-action-shortcut" href="journal-night.html">Fechar o dia</a>
-            <a class="shortcut home-action-shortcut always-visible" href="planning.html">Ajustar com calma</a>
+            <a class="shortcut home-action-shortcut always-visible" href="planning.html">Reorganizar com calma</a>
           </section>
         </section>
       </main>

@@ -10,7 +10,7 @@
   }
 
   function symbolHref(name) {
-    return assetPath("assets/icons/plenna-icons.svg?v=20260429-icons") + "#icon-" + name;
+    return assetPath("assets/icons/plenna-icons.svg") + "#icon-" + name;
   }
 
   function svg(name, className, label) {

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exportar | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/dedicated-pages.js?v=20260521-full-review" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/dedicated-pages.js" defer></script>
   </head>
   <body data-page="more" data-screen="export">
     <div class="app-shell">
@@ -25,20 +25,20 @@
 
         <section class="export-format-card">
           <h2>Como o relatório é preparado</h2>
-          <div class="chip-row">
-            <button class="chip active" type="button" data-export-format="resumo">PDF · resumo visual</button>
-            <button class="chip" type="button" data-export-format="planilha">Planilha · detalhes</button>
-            <button class="chip" type="button" data-export-format="backup">Arquivo · backup</button>
+          <div class="chip-row" role="group" aria-label="Formato do relatório">
+            <button class="chip active" type="button" data-export-format="resumo" aria-pressed="true">PDF · resumo visual</button>
+            <button class="chip" type="button" data-export-format="planilha" aria-pressed="false">Planilha · detalhes</button>
+            <button class="chip" type="button" data-export-format="backup" aria-pressed="false">Arquivo · backup</button>
           </div>
           <p>O arquivo respeita o período escolhido e reúne tarefas, hábitos, foco, diário e check-ins em um lugar só.</p>
         </section>
 
         <section class="export-simple-card">
           <h2>Período</h2>
-          <div class="chip-row export-period-tabs">
-            <button class="chip active" type="button" data-export-period="7">Semana</button>
-            <button class="chip" type="button" data-export-period="30">Mês</button>
-            <button class="chip" type="button" data-export-period="all">Tudo</button>
+          <div class="chip-row export-period-tabs" role="group" aria-label="Período do relatório">
+            <button class="chip active" type="button" data-export-period="7" aria-pressed="true">Semana</button>
+            <button class="chip" type="button" data-export-period="30" aria-pressed="false">Mês</button>
+            <button class="chip" type="button" data-export-period="all" aria-pressed="false">Tudo</button>
           </div>
         </section>
 
@@ -56,7 +56,7 @@
 
         <section class="export-simple-card">
           <h2>Prévia do arquivo</h2>
-          <pre class="export-preview" data-dedicated-export-preview>Período: Semana
+          <pre class="export-preview" data-dedicated-export-preview aria-live="polite" aria-atomic="true">Período: Semana
 Inclui: 5 áreas
 Informações encontradas: 0</pre>
         </section>
@@ -64,6 +64,7 @@ Informações encontradas: 0</pre>
         <section class="export-actions-row">
           <button class="button primary" type="button" data-dedicated-export>Concluir relatório</button>
           <a class="button secondary" href="dashboard.html">Usar na revisão</a>
+          <p id="exportStatus" class="export-status-msg" aria-live="polite" aria-atomic="true"></p>
         </section>
       </main>
       <div data-bottom-nav></div>

@@ -5,37 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Planejamento | Plenna</title>
-    <link rel="stylesheet" href="../style.css?v=20260521-cleanup">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/storage.js" defer></script>
-    <script src="../js/utils.js?v=20260521-cleanup" defer></script>
-    <script src="../js/icons.js?v=20260429-icons" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/icons.js" defer></script>
     <script src="../js/data.js" defer></script>
-    <script src="../app.js?v=20260430-figma" defer></script>
-    <script src="../js/planning.js?v=20260520-energy-rules" defer></script>
+    <script src="../app.js" defer></script>
+    <script src="../js/planning.js" defer></script>
   </head>
   <body data-page="tasks" data-screen="planning">
     <div class="app-shell">
       <div class="status-bar"><span data-status-time>9:41</span><span class="status-glyphs" aria-hidden="true"><i class="dot"></i><i class="signal"></i><i class="battery"></i></span></div>
       <main class="page planning-page">
         <header class="page-header">
-          <h1>Planejamento do dia</h1>
-          <p>Sugestão automática baseada no check-in. Você pode ajustar se quiser.</p>
+          <h1>Planejamento</h1>
         </header>
 
         <section class="stack-lg">
-          <p class="context-help">A sugestão considera seu check-in e suas tarefas abertas.</p>
-
-          <section class="planning-alert">
-            <strong>Energia 4/10 · risco de sobrecarga</strong>
-            <p>O Plenna reduziu a carga e protegeu uma pausa antes do período mais cheio.</p>
+          <section class="planning-alert" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <strong id="planningAlertTitle">Energia baixa · risco de sobrecarga</strong>
+            <p id="planningAlertBody">O Plenna reduziu a carga e protegeu uma pausa antes do período mais cheio.</p>
           </section>
 
           <section class="planning-main-card">
-            <span class="eyebrow">PLANO SUGERIDO AUTOMATICAMENTE</span>
             <h2 id="planningRecommendation">Organize três prioridades possíveis</h2>
-            <p id="planningSummary">O plano usa seu último check-in e tarefas abertas.</p>
-            <div class="planning-metrics">
-              <span><strong>3</strong>prioridades</span>
+            <p id="planningSummary" aria-live="polite">Combine foco e pausas para terminar o dia com energia.</p>
+            <div class="planning-metrics" aria-live="polite" aria-atomic="true">
+              <span><strong>3</strong> prioridades</span>
               <span><strong>15h</strong>pausa</span>
               <span><strong>-1 pesada</strong>carga</span>
             </div>
@@ -47,15 +43,9 @@
 
           <section class="planning-block-card">
             <h2>Blocos de horário</h2>
-            <p>Veja primeiro o essencial e ajuste só se precisar.</p>
-            <div class="content-list" id="planningList"></div>
-            <section class="planning-minimal-support planning-view-links" aria-label="Outras visualizações">
-              <strong>Outras visualizações</strong>
-              <div class="planning-support-actions">
-                <a class="button secondary small" href="calendar-week.html">Ver tarefas por semana</a>
-                <a class="button secondary small" href="calendar-month.html">Ver tarefas por mês</a>
-              </div>
-            </section>
+            <div class="content-list" id="planningList">
+              <p class="card-loading-hint" aria-hidden="true">Carregando blocos…</p>
+            </div>
           </section>
         </section>
       </main>
