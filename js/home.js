@@ -13,9 +13,12 @@
   }
 
   function renderHeader(data, checkin) {
-    var settings = window.PlennaStorage.read(window.PlennaStorage.KEYS.settings, { nome: "Luana" });
-    var firstName = String(settings.nome || "Luana").trim().split(/\s+/)[0] || "Luana";
-    Utils.setText("#homeGreeting", checkin ? (data.careTitle || "Vamos cuidar do essencial") : ("Olá, " + firstName));
+    var settings = window.PlennaStorage.read(window.PlennaStorage.KEYS.settings, {});
+    var firstName = String(settings.nome || "").trim().split(/\s+/)[0] || "";
+    var greeting = checkin
+      ? (data.careTitle || "Vamos cuidar do essencial")
+      : (firstName ? ("Olá, " + firstName) : "Que bom ter você aqui");
+    Utils.setText("#homeGreeting", greeting);
     Utils.setText("#homeDate", data.date);
     Utils.qs("#checkinChips").innerHTML = [
       '<span class="chip solid">' + Utils.escapeHtml(data.moodChip) + "</span>",

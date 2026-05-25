@@ -25,7 +25,7 @@
 
   function defaultSettings() {
     return {
-      nome: "Luana Caroline",
+      nome: "",
       focoPadrao: 25,
       pausasInteligentes: true,
       checkinDiario: true,
@@ -84,8 +84,8 @@
   function initSettingsPage() {
     var data = settings();
     var reminders = Storage.all(Storage.KEYS.reminders).filter(function (item) { return item.active !== false; }).length;
-    qs("[data-settings-initial]").textContent = (data.nome || "L").charAt(0).toUpperCase();
-    qs("[data-settings-name]").textContent = data.nome || "Luana Caroline";
+    qs("[data-settings-initial]").textContent = (data.nome || "?").charAt(0).toUpperCase();
+    qs("[data-settings-name]").textContent = data.nome || "Não definido";
     qsa("[data-focus-default]").forEach(function (node) {
       node.textContent = "foco leve · " + (data.focoPadrao || 25) + " min";
     });
@@ -109,16 +109,16 @@
     var darkToggle = qs("#darkModeToggle");
     if (darkToggle) {
       var savedTheme = localStorage.getItem("plenna-theme");
-      var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      darkToggle.checked = savedTheme === "dark" || (!savedTheme && systemDark);
+      // Só ativa o toggle se o usuário escolheu explicitamente modo escuro
+      darkToggle.checked = savedTheme === "dark";
     }
   }
 
   function renderMore() {
     var data = settings();
-    var first = (data.nome || "Luana").split(/\s+/)[0] || "Luana";
-    qsa("[data-more-name]").forEach(function (node) { node.textContent = first; });
-    qsa("[data-more-initial]").forEach(function (node) { node.textContent = first.charAt(0).toUpperCase(); });
+    var first = (data.nome || "").split(/\s+/)[0] || "";
+    qsa("[data-more-name]").forEach(function (node) { node.textContent = first || "Seu perfil"; });
+    qsa("[data-more-initial]").forEach(function (node) { node.textContent = first ? first.charAt(0).toUpperCase() : "?"; });
     qsa("[data-count]").forEach(function (node) {
       var count = moduleCount(node.dataset.count);
       node.textContent = count;
@@ -583,12 +583,12 @@
           title: "Ajustar perfil",
           body: "Esse nome aparece nas telas de rotina e nos lembretes salvos neste aparelho.",
           fields: [
-            { name: "nome", label: "Nome", value: current.nome || "Luana Caroline", required: true }
+            { name: "nome", label: "Nome", value: current.nome || "", required: true }
           ],
           confirmLabel: "Salvar"
         });
         if (!profileValues) return;
-        Storage.write(Storage.KEYS.settings, Object.assign({}, current, { nome: profileValues.nome || current.nome || "Luana Caroline" }));
+        Storage.write(Storage.KEYS.settings, Object.assign({}, current, { nome: profileValues.nome || current.nome || "" }));
         Utils.notify("Perfil atualizado. O nome aparece nas telas principais.", { kind: "success" });
         initSettingsPage();
         renderMore();
@@ -1046,6 +1046,17 @@
     }).join("");
   }
 
+  function initJournalNight() {
+    var dateEl = qs("#journalNightDate");
+    if (dateEl) {
+      dateEl.textContent = new Date().toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "long",
+        weekday: "long"
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var screen = document.body.dataset.screen;
     bindExportActions();
@@ -1057,6 +1068,7 @@
     if (screen === "planning-adjust") initPlanningAdjust();
     if (screen === "export") initExport();
     if (screen === "habit-edit") initHabitEdit();
+    if (screen === "journal-night") initJournalNight();
     if (screen === "notes") {
       renderNotes();
       var cancelBtn = qs("#cancelNoteForm");

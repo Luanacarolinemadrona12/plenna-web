@@ -403,7 +403,7 @@
   function ensureBackLink() {
     if (isRootPage() || document.querySelector(".page-back-link")) return;
     var screen = document.body.dataset.screen || "";
-    if (["home", "tasks", "habits", "focus", "more"].indexOf(screen) >= 0) return;
+    if (["home", "tasks", "habits", "focus", "more", "onboarding"].indexOf(screen) >= 0) return;
     var main = document.querySelector("main");
     var shell = document.querySelector(".app-shell");
     if (!main || !shell) return;
@@ -469,6 +469,10 @@
     var saved = localStorage.getItem("plenna-theme");
     if (saved === "dark" || saved === "light") {
       document.documentElement.setAttribute("data-theme", saved);
+    } else {
+      // Padrão sempre claro — o usuário escolhe escuro manualmente
+      document.documentElement.setAttribute("data-theme", "light");
+      try { localStorage.setItem("plenna-theme", "light"); } catch (e) {}
     }
   }
 
@@ -492,15 +496,88 @@
   // Aplica antes de renderizar para evitar flash
   initTheme();
 
+  /* ── Modal de boas-vindas / configuração do nome ── */
+  function showNameSetupModal() {
+    if (document.querySelector(".name-setup-overlay")) return;
+    var imgPath = isRootPage() ? "assets/images/plenna-leaf.png" : "../assets/images/plenna-leaf.png";
+    var overlay = document.createElement("div");
+    overlay.className = "confirm-overlay name-setup-overlay";
+    overlay.setAttribute("role", "presentation");
+    overlay.innerHTML = [
+      '<section class="confirm-dialog name-setup-dialog" role="dialog" aria-modal="true" aria-labelledby="nameSetupTitle">',
+      '<div class="name-setup-leaf" aria-hidden="true"><img src="' + imgPath + '" alt=""></div>',
+      "<h2 id=\"nameSetupTitle\">Boas-vindas ao Plenna!</h2>",
+      "<p>Como podemos te chamar? Você pode mudar isso depois em Configurações.</p>",
+      '<form id="nameSetupForm" class="edit-dialog-form" novalidate>',
+      '<label class="field compact-field">',
+      "<span>Seu nome</span>",
+      '<input type="text" name="nome" id="nameSetupInput" placeholder="Como você prefere ser chamado" autocomplete="given-name" maxlength="60">',
+      "</label>",
+      '<div class="confirm-actions">',
+      '<button class="button secondary" type="button" id="nameSetupSkip">Agora não</button>',
+      '<button class="button primary" type="submit">Vamos começar</button>',
+      "</div>",
+      "</form>",
+      "</section>"
+    ].join("");
+
+    function close() { overlay.remove(); }
+
+    overlay.querySelector("#nameSetupSkip").addEventListener("click", function () {
+      try { sessionStorage.setItem("plenna-name-skipped", "1"); } catch (e) {}
+      close();
+    });
+
+    overlay.querySelector("#nameSetupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var nome = String((overlay.querySelector("#nameSetupInput") || {}).value || "").trim();
+      if (!nome) {
+        var input = overlay.querySelector("#nameSetupInput");
+        if (input) input.focus();
+        return;
+      }
+      if (window.PlennaStorage) {
+        var current = window.PlennaStorage.read(window.PlennaStorage.KEYS.settings, {});
+        window.PlennaStorage.write(window.PlennaStorage.KEYS.settings, Object.assign({}, current, { nome: nome }));
+      }
+      close();
+      /* Atualiza saudação na home se estiver visível */
+      var greetingEl = document.querySelector("#homeGreeting");
+      if (greetingEl) {
+        var firstName = nome.split(/\s+/)[0] || nome;
+        greetingEl.textContent = "Olá, " + firstName;
+      }
+    });
+
+    document.body.appendChild(overlay);
+    window.setTimeout(function () {
+      var input = overlay.querySelector("#nameSetupInput");
+      if (input) input.focus();
+    }, 120);
+  }
+
+  function maybeShowNameSetup() {
+    if (isRootPage()) return;
+    var screen = document.body.dataset.screen || "";
+    if (screen === "onboarding") return;
+    try { if (sessionStorage.getItem("plenna-name-skipped") === "1") return; } catch (e) {}
+    if (!window.PlennaStorage) return;
+    var settings = window.PlennaStorage.read(window.PlennaStorage.KEYS.settings, {});
+    if (settings && settings.nome && String(settings.nome).trim()) return;
+    window.setTimeout(showNameSetupModal, 350);
+  }
+
   window.PlennaApp = {
     isRootPage: isRootPage,
     pagePath: pagePath,
     isDarkMode: isDarkMode,
-    setTheme: setTheme
+    setTheme: setTheme,
+    showNameSetupModal: showNameSetupModal
   };
 
   document.addEventListener("DOMContentLoaded", function () {
     init();
+    maybeShowNameSetup();
     // Bind toggle switches injetados dinamicamente
     document.addEventListener("change", function (e) {
       if (e.target && e.target.closest(".theme-switch")) {

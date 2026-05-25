@@ -26,12 +26,20 @@
     if (!checkin) return fallback || "Humor não informado";
     var map = {
       sensivel: "Muito sensível",
-      ruim: "Cansada",
-      neutro: "Neutra",
+      ruim: "Com energia baixa",
+      neutro: "Neutro",
       bom: "Bem",
-      otimo: "Ótima"
+      otimo: "Ótimo"
     };
     return map[checkin.humor] || fallback || "Humor registrado";
+  }
+
+  function currentDateLabel() {
+    return new Date().toLocaleDateString("pt-BR", {
+      weekday: "long",
+      day: "2-digit",
+      month: "long"
+    });
   }
 
   function clone(value) {
@@ -64,8 +72,8 @@
         careTitle: "Você já começou bem",
         careLead: "Aproveite o ritmo sem esquecer a pausa.",
         careCopy: "Use esse fôlego para uma prioridade importante e preserve um respiro depois.",
-        date: "Terça-feira, 15 de abril",
-        moodChip: "😄 Animada",
+        date: currentDateLabel(),
+        moodChip: "😄 Animado",
         energyChip: "Energia 9/10",
         actionTag: "Próximo passo",
         actionTitle: "Escolha uma prioridade importante e proteja uma pausa depois.",
@@ -123,8 +131,8 @@
         careTitle: "Vamos cuidar do essencial",
         careLead: "Seu dia pode seguir com calma.",
         careCopy: "Escolha uma prioridade, uma pausa e um fechamento simples para hoje.",
-        date: "Terça-feira, 15 de abril",
-        moodChip: "🙂 Bem-disposta (o)",
+        date: currentDateLabel(),
+        moodChip: "🙂 Bem-disposto",
         energyChip: "Energia 7/10",
         actionTag: "Próximo passo leve",
         actionTitle: "Organize 3 prioridades e respire no meio.",
@@ -184,8 +192,8 @@
         careTitle: "Hoje pede leveza",
         careLead: "Diminua a carga antes de começar.",
         careCopy: "O Plenna pode proteger pausas e deixar só o essencial visível.",
-        date: "Terça-feira, 15 de abril",
-        moodChip: "😕 Cansada",
+        date: currentDateLabel(),
+        moodChip: "😕 Com baixa energia",
         energyChip: "Energia 3/10",
         actionTag: "Cuidar da energia",
         actionTitle: "Faça o mínimo importante e guarde energia.",
@@ -243,7 +251,7 @@
         careTitle: "Vamos com muito cuidado",
         careLead: "O plano de hoje pode ser menor.",
         careCopy: "Pausa, diário breve e uma tarefa mínima já contam como cuidado.",
-        date: "Terça-feira, 15 de abril",
+        date: currentDateLabel(),
         moodChip: "😢 Baixo há 3 dias",
         energyChip: "Energia 4/10",
         actionTag: "Sem pressa",
@@ -340,6 +348,8 @@
   function home(checkin) {
     var data = state(checkin);
     var result = Object.assign({ stateKey: data.key, className: data.className }, clone(data.home));
+    // Sempre usa a data real do sistema
+    result.date = currentDateLabel();
     if (!checkin) return result;
 
     var score = energyScore(checkin);

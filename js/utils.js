@@ -546,7 +546,10 @@
   }
 
   function updateStatusTime() {
-    setText("[data-status-time]", "9:41");
+    var now = new Date();
+    var h = String(now.getHours()).padStart(2, "0");
+    var m = String(now.getMinutes()).padStart(2, "0");
+    setText("[data-status-time]", h + ":" + m);
   }
 
   var lastStorageRecoveryAt = 0;

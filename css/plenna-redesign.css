@@ -17,7 +17,8 @@ html { background: #c8d8d0; }
 body[data-screen="home"] .status-bar,
 body[data-screen="habits"] .status-bar,
 body[data-screen="checkin"] .status-bar,
-body[data-screen="focus"] .status-bar {
+body[data-screen="focus"] .status-bar,
+body[data-screen="onboarding"] .status-bar {
   color: rgba(255, 255, 255, 0.88);
 }
 
@@ -1163,6 +1164,7 @@ body {
    ═══════════════════════════════════════════════ */
 
 .focus-page { padding-top: 0; }
+body[data-page="focus"] .focus-page { padding-top: 0; }
 
 .focus-page .page-header {
   background: linear-gradient(155deg, #0a3d24 0%, #1e7a52 45%, var(--green-500) 100%);
@@ -1210,7 +1212,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 24px 0 16px;
+  padding: 6px 0 16px;
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;

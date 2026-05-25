@@ -121,7 +121,7 @@
 
 /* Nav inferior oculta no onboarding — sem distração no primeiro acesso */
 body[data-screen="onboarding"] .bottom-nav { display: none; }
-body[data-screen="onboarding"] .page { padding-bottom: 32px; }
+body[data-screen="onboarding"] .page { padding: 0; }
 
 .home-page {
   padding-top: 58px;
@@ -460,7 +460,7 @@ body[data-screen="onboarding"] .page { padding-bottom: 32px; }
 }
 
 .checkin-page {
-  padding-top: 76px;
+  padding-top: 0;
 }
 
 .checkin-page .form {
@@ -719,7 +719,7 @@ body[data-screen="onboarding"] .page { padding-bottom: 32px; }
 }
 
 .focus-page {
-  padding-top: 20px;
+  padding-top: 0;
   background: var(--bg);
 }
 
@@ -2755,12 +2755,12 @@ body[data-page="home"][data-mood-state="protect"] .bottom-nav {
 }
 
 .focus-page {
-  padding: 58px 20px 70px;
+  padding: 0 20px 70px;
   background: #f4f7f4;
 }
 
 .focus-page .page-header {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .focus-page .page-header h1 {
@@ -3635,7 +3635,7 @@ body[data-screen="planning-adjust"] .status-bar {
 }
 
 body[data-page="focus"] .focus-page {
-  padding-top: 22px;
+  padding-top: 0;
 }
 
 body[data-screen="settings"] .screen-page {
@@ -5563,7 +5563,7 @@ body[data-screen="prototype-overview"] .app-shell {
 }
 
 body[data-screen="checkin"] .checkin-page {
-  padding-top: 73px;
+  padding-top: 0;
 }
 
 body[data-screen="checkin"] .checkin-page .form {
@@ -6144,7 +6144,7 @@ body[data-screen="checkin"] #skipCheckin {
   padding-top: 55px !important;
 }
 body[data-screen="checkin"] .checkin-page {
-  padding-top: 74px !important;
+  padding-top: 0 !important;
 }
 
 body[data-screen="checkin"] .checkin-page .form {
@@ -6223,7 +6223,7 @@ body[data-screen="checkin"] .checkin-actions {
 
 /* Visual parity pass 5: compact touch targets visually, keep large tap area via ::after. */
 body[data-screen="checkin"] .checkin-page {
-  padding-top: 72px;
+  padding-top: 0;
 }
 body[data-screen="checkin"] .ux-stepper {
   margin-top: 9px;

@@ -209,6 +209,12 @@
       });
     }
     Utils.qs("#startFocus").addEventListener("click", start);
+    Utils.qs("#pauseFocus").addEventListener("click", function () {
+      window.history.length > 1 ? window.history.back() : (window.location.href = "home.html");
+    });
+    Utils.qs("#finishFocus").addEventListener("click", function () {
+      window.location.href = "home.html";
+    });
     var repeatButton = Utils.qs("#repeatLastFocus");
     if (repeatButton) repeatButton.addEventListener("click", repeatLastFocus);
     Utils.qs("#useSuggestedTask").addEventListener("click", function () {

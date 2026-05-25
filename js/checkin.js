@@ -10,10 +10,10 @@
 
   var moodLabel = {
     sensivel: "Muito sensível",
-    ruim: "Cansada",
+    ruim: "Com energia baixa",
     neutro: "Neutro",
     bom: "Bem",
-    otimo: "Ótima"
+    otimo: "Ótimo"
   };
   var moodEmoji = {
     sensivel: "😢",

@@ -22,31 +22,28 @@
 
         <form class="night-summary-flow night-card-form" data-night-form>
           <input type="hidden" name="tituloEdit" value="Fechamento do dia">
-          <input type="hidden" name="tags" value="humor ok, aprendizado salvo, plano">
+          <input type="hidden" name="tags" value="">
 
           <label class="figma-night-main-card night-quick-card">
-            <span>15 de abril · quarta-feira</span>
+            <span id="journalNightDate">Hoje</span>
             <strong>Você chegou até aqui</strong>
-            <textarea name="resumoEdit" required>Consegui fechar a apresentação, respeitei uma pausa e quero repetir isso amanhã.</textarea>
-            <div class="chip-row" aria-label="Tags do registro">
-              <span class="chip">humor ok</span>
-              <span class="chip">aprendizado salvo</span>
-            </div>
+            <textarea name="resumoEdit" required placeholder="Como foi o dia? Escreva o que quiser registrar…"></textarea>
+            <div class="chip-row" aria-label="Tags do registro"></div>
           </label>
 
           <label class="night-prompt-card night-quick-field">
             <span>Vitória de hoje</span>
-            <textarea name="vitoriaEdit" required>Fechei a apresentação e mantive o treino curto.</textarea>
+            <textarea name="vitoriaEdit" required placeholder="O que funcionou bem hoje?"></textarea>
           </label>
 
           <label class="night-prompt-card night-quick-field">
             <span>O que me drenou</span>
-            <textarea name="drenouEdit" required>Reuniões longas em sequência.</textarea>
+            <textarea name="drenouEdit" required placeholder="O que pesou mais hoje?"></textarea>
           </label>
 
           <label class="night-prompt-card night-quick-field">
             <span>Plano de amanhã</span>
-            <textarea name="planoEdit" required>Começar pelo relatório e proteger 1 pausa.</textarea>
+            <textarea name="planoEdit" required placeholder="Com o que você quer começar amanhã?"></textarea>
           </label>
 
           <div class="night-submit-card">

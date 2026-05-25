@@ -770,6 +770,60 @@ input:checked + .choice-card {
   margin-top: 18px;
 }
 
+/* ─── Modal de boas-vindas / nome ──────────────── */
+
+.name-setup-overlay {
+  place-items: center;
+  background: rgba(13, 61, 38, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.name-setup-dialog {
+  width: min(100%, 360px);
+  padding: 28px 24px 22px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: 0 24px 56px rgba(13, 61, 38, 0.22);
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+.name-setup-leaf {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.name-setup-leaf img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.name-setup-dialog h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.name-setup-dialog p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.name-setup-dialog .edit-dialog-form {
+  text-align: left;
+  margin-top: 4px;
+}
+
+.name-setup-dialog .confirm-actions {
+  margin-top: 14px;
+}
+
 /* ─── Page back link ──────────────────────────── */
 
 .page-back-link {

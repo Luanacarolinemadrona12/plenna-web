@@ -539,10 +539,10 @@
   }
 
   function settingsTemplate() {
-    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
-    var initial = (settingsData.nome || "L").charAt(0).toUpperCase();
+    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+    var initial = (settingsData.nome || "?").charAt(0).toUpperCase();
     return figmaShell("Configurações", "Ajuste o Plenna ao seu ritmo sem perder contexto do seu dia.", [
-      '<form class="figma-profile-card" data-local-form="settings"><div class="row"><span class="avatar">' + h(initial) + '</span><div><h2>' + h(settingsData.nome || "Luana Caroline") + '</h2><p>Dados salvos apenas neste navegador.</p></div></div><div class="grid-2"><label class="field"><span>Nome</span><input name="nome" value="' + h(settingsData.nome || "Luana Caroline") + '"></label><label class="field"><span>Foco padrão</span><input name="focoPadrao" type="number" min="5" max="120" value="' + h(settingsData.focoPadrao || 25) + '"></label></div><label class="settings-toggle"><input type="checkbox" name="pausasInteligentes"' + (settingsData.pausasInteligentes ? " checked" : "") + '> Pausas inteligentes</label><label class="settings-toggle"><input type="checkbox" name="checkinDiario"' + (settingsData.checkinDiario ? " checked" : "") + '> Check-in diário</label><button class="button primary full" type="submit">Salvar</button><a class="button secondary full" href="more.html">Cancelar</a></form>',
+      '<form class="figma-profile-card" data-local-form="settings"><div class="row"><span class="avatar">' + h(initial) + '</span><div><h2>' + h(settingsData.nome || "Não definido") + '</h2><p>Dados salvos apenas neste navegador.</p></div></div><div class="grid-2"><label class="field"><span>Nome</span><input name="nome" value="' + h(settingsData.nome || "") + '"></label><label class="field"><span>Foco padrão</span><input name="focoPadrao" type="number" min="5" max="120" value="' + h(settingsData.focoPadrao || 25) + '"></label></div><label class="settings-toggle"><input type="checkbox" name="pausasInteligentes"' + (settingsData.pausasInteligentes ? " checked" : "") + '> Pausas inteligentes</label><label class="settings-toggle"><input type="checkbox" name="checkinDiario"' + (settingsData.checkinDiario ? " checked" : "") + '> Check-in diário</label><button class="button primary full" type="submit">Salvar</button><a class="button secondary full" href="more.html">Cancelar</a></form>',
       '<section class="figma-settings-list">' +
         figmaLine("Check-in", "Ajusta recomendações pela energia do dia.", chip(settingsData.checkinDiario ? "ativo" : "pausado"), '<a class="figma-mini-action" href="checkin.html">Editar</a>') +
         figmaLine("Pausas inteligentes", "Sugestões antes de tarefas pesadas.", chip(settingsData.pausasInteligentes ? "ativo" : "pausado"), '<a class="figma-mini-action" href="micro-pauses.html">Abrir</a>') +
@@ -599,7 +599,23 @@
   }
 
   function onboarding() {
-    return '<section class="card hero-card"><div class="cover-title"><span class="leaf-mark"><img class="plenna-leaf" src="' + h(window.PlennaIcons ? window.PlennaIcons.leafImage() : "../assets/images/plenna-leaf.png") + '" alt=""></span><h1>Plenna</h1><p>Um lugar calmo para escolher o essencial e seguir no seu ritmo.</p></div><div class="content-list"><article class="list-item icon-list-item">' + icon("check", "inline-list-icon") + 'Escolha o que cabe no dia</article><article class="list-item icon-list-item">' + icon("focus", "inline-list-icon") + 'Proteja pausas entre blocos</article><article class="list-item icon-list-item">' + icon("heart", "inline-list-icon") + 'Adapte a rotina ao seu momento</article></div><a class="button primary full" href="checkin.html">Começar check-in</a><a class="button secondary full" href="home.html">Entrar no meu dia</a></section>';
+    var leafSrc = h(window.PlennaIcons ? window.PlennaIcons.leafImage() : "../assets/images/plenna-leaf.png");
+    return '<div class="onboarding-v2">' +
+      '<div class="onboarding-hero">' +
+      '<span class="leaf-mark" aria-hidden="true"><img class="plenna-leaf" src="' + leafSrc + '" alt=""></span>' +
+      '<h1>Plenna</h1>' +
+      '<p>Um lugar calmo para escolher o essencial e seguir no seu ritmo.</p>' +
+      '</div>' +
+      '<div class="onboarding-cards">' +
+      '<div class="onboarding-feature"><span>' + icon("check", "plenna-icon") + '</span><strong>Escolha o que cabe no dia</strong></div>' +
+      '<div class="onboarding-feature"><span>' + icon("focus", "plenna-icon") + '</span><strong>Proteja pausas entre blocos</strong></div>' +
+      '<div class="onboarding-feature"><span>' + icon("heart", "plenna-icon") + '</span><strong>Adapte a rotina ao seu momento</strong></div>' +
+      '</div>' +
+      '<div class="onboarding-actions">' +
+      '<a class="button primary full onboarding-start" href="checkin.html">Começar check-in</a>' +
+      '<a class="button secondary full" href="home.html">Entrar no meu dia</a>' +
+      '</div>' +
+      '</div>';
   }
 
   function prototypeLinks() {
@@ -750,10 +766,10 @@
   }
 
   function moreTemplatePolished() {
-    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
-    var initials = (settingsData.nome || "Luana").slice(0, 1).toUpperCase();
+    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+    var initials = (settingsData.nome || "?").slice(0, 1).toUpperCase();
     return figmaShell("Mais", "Acesse painéis, ajustes e recursos de fechamento.", [
-      '<section class="figma-more-profile"><span class="avatar">' + h(initials) + '</span><div><h2>' + h(settingsData.nome || "Luana") + '</h2><p>Configurações, lembretes, metas e relatórios.</p></div><a class="figma-mini-action" href="settings.html">Editar</a></section>',
+      '<section class="figma-more-profile"><span class="avatar">' + h(initials) + '</span><div><h2>' + h(settingsData.nome || "Seu perfil") + '</h2><p>Configurações, lembretes, metas e relatórios.</p></div><a class="figma-mini-action" href="settings.html">Editar</a></section>',
       '<section class="figma-shortcuts more-primary-actions"><a href="settings.html">Configurações</a><a href="reminders.html">Lembretes</a><a href="dashboard.html">Seu progresso</a></section>',
       figmaCard("Organização", "Veja tarefas em lista, por semana, por mês ou ajuste o planejamento.", '<div class="more-organization-links"><a href="tasks.html">Tarefas</a><a href="calendar-week.html">Semana</a><a href="calendar-month.html">Mês</a><a href="planning.html">Planejamento</a></div>', "more-organization-card"),
       figmaCard("Preferências", "Ajuste o Plenna ao seu ritmo.", [
@@ -821,14 +837,14 @@
   }
 
   function settingsTemplatePolished() {
-    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
-    var initial = (settingsData.nome || "L").charAt(0).toUpperCase();
+    var settingsData = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+    var initial = (settingsData.nome || "?").charAt(0).toUpperCase();
     function settingRow(title, copy, status, action) {
       return '<article class="setting-card"><div><h3>' + h(title) + '</h3><p>' + h(copy) + '</p></div>' + chip(status) + action + "</article>";
     }
     return figmaShell("Configurações", "Ajuste o Plenna ao seu ritmo sem perder contexto do seu dia.", [
       contextHelp("Suas preferências ficam salvas neste aparelho."),
-      '<section class="figma-profile-card settings-summary-figma settings-summary-card"><h2>Perfil</h2><div class="row"><span class="avatar">' + h(initial) + '</span><div><h3>' + h(settingsData.nome || "Luana Caroline") + '</h3><p>Seu ritmo, preferências e lembretes salvos neste aparelho.</p></div><button class="figma-mini-action" type="button" data-edit-settings>Editar</button></div><div class="chip-row">' + chip(moduleCount(Storage.KEYS.reminders) + " lembretes ativos") + chip("foco leve · " + (settingsData.focoPadrao || 25) + " min") + "</div></section>",
+      '<section class="figma-profile-card settings-summary-figma settings-summary-card"><h2>Perfil</h2><div class="row"><span class="avatar">' + h(initial) + '</span><div><h3>' + h(settingsData.nome || "Não definido") + '</h3><p>Seu ritmo, preferências e lembretes salvos neste aparelho.</p></div><button class="figma-mini-action" type="button" data-edit-settings>Editar</button></div><div class="chip-row">' + chip(moduleCount(Storage.KEYS.reminders) + " lembretes ativos") + chip("foco leve · " + (settingsData.focoPadrao || 25) + " min") + "</div></section>",
       '<section class="settings-card-list settings-groups">' +
         '<section class="settings-group-card"><div class="settings-group-heading"><h2>Preferências de foco</h2><p>Sessões prontas para começar sem configurar tudo de novo.</p></div>' +
           settingRow("Foco preferido", "Leve · " + (settingsData.focoPadrao || 25) + " min com pausa guiada.", "ativo", '<button class="button secondary" type="button" data-edit-focus-default>Editar</button>') +
@@ -1346,23 +1362,23 @@
 
       var editSettings = event.target.closest("[data-edit-settings]");
       if (editSettings) {
-        var currentSettings = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+        var currentSettings = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
         var profileValues = await Utils.editDialog({
           title: "Editar perfil",
           body: "Esse nome aparece nas telas de rotina e nos lembretes salvos neste aparelho.",
           fields: [
-            { name: "nome", label: "Nome", value: currentSettings.nome || "Luana", required: true }
+            { name: "nome", label: "Nome", value: currentSettings.nome || "", required: true }
           ],
           confirmLabel: "Salvar"
         });
         if (!profileValues) return;
-        Storage.write(Storage.KEYS.settings, Object.assign({}, currentSettings, { nome: profileValues.nome || currentSettings.nome || "Luana" }));
+        Storage.write(Storage.KEYS.settings, Object.assign({}, currentSettings, { nome: profileValues.nome || currentSettings.nome || "" }));
         refreshScreen("Configuração alterada.", { kind: "success" });
       }
 
       var toggleSetting = event.target.closest("[data-toggle-setting]");
       if (toggleSetting) {
-        var storedSettings = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+        var storedSettings = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
         var key = toggleSetting.dataset.toggleSetting;
         storedSettings[key] = !storedSettings[key];
         Storage.write(Storage.KEYS.settings, storedSettings);
@@ -1371,7 +1387,7 @@
 
       var editFocusDefault = event.target.closest("[data-edit-focus-default]");
       if (editFocusDefault) {
-        var focusSettings = Storage.read(Storage.KEYS.settings, { nome: "Luana", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
+        var focusSettings = Storage.read(Storage.KEYS.settings, { nome: "", focoPadrao: 25, pausasInteligentes: true, checkinDiario: true });
         var focusValues = await Utils.editDialog({
           title: "Editar foco preferido",
           body: "Escolha uma duração confortável para começar rápido sem configurar tudo de novo.",
@@ -1497,7 +1513,7 @@
       }
       if (form.dataset.localForm === "settings") {
         Storage.write(Storage.KEYS.settings, {
-          nome: data.get("nome") || "Luana",
+          nome: data.get("nome") || "",
           focoPadrao: Number(data.get("focoPadrao") || 25),
           pausasInteligentes: Boolean(data.get("pausasInteligentes")),
           checkinDiario: Boolean(data.get("checkinDiario"))

@@ -109,13 +109,13 @@
     setDuration(button.dataset.duration, button.dataset.microPause);
     updateSelectedCopy(button.dataset.microPause);
     revealPanel();
-    setBreakStatus(selectedName + " preparada", "");
+    setBreakStatus(selectedName + " preparado", "");
     setPrimaryState("");
     Utils.qsa("[data-micro-pause]").forEach(function (item) {
       item.closest(".micro-card").classList.toggle("active", item === button);
     });
     if (options.autoStart) start();
-    else Utils.notify(selectedName + " pronta para você.", { kind: "success" });
+    else Utils.notify(selectedName + " pronto para começar.", { kind: "success" });
   }
 
   function start() {

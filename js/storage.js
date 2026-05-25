@@ -643,7 +643,7 @@
     ];
 
     var settings = {
-      nome: "Luana Caroline",
+      nome: "",
       focoPadrao: 25,
       pausasInteligentes: true,
       checkinDiario: true,
@@ -762,5 +762,6 @@
   };
 
   seedFromQuery();
-  seedDemoData();
+  // seedDemoData() removido: o app inicia com estado limpo.
+  // Para carregar dados de exemplo em desenvolvimento, use ?seed=demo na URL.
 })();
